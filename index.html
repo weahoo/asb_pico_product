@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SmartHub by visualbuild.local — SoftAP remote & DualSense hub</title>
+  <meta name="description" content="SmartHub is the Pico SoftAP remote and DualSense hub from visualbuild.local — USB HID keyboard, mouse and joystick without installing software on the target.">
+  <meta name="theme-color" content="#0b0d10">
+  <link rel="canonical" href="https://visualbuild.shop/">
+  <meta property="og:title" content="SmartHub by visualbuild.local">
+  <meta property="og:description" content="Physical SoftAP remote and DualSense hub for phones, tablets and controllers.">
+  <meta property="og:url" content="https://visualbuild.shop/">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="/">
+        <div class="brand-mark" aria-hidden="true"><span>SH</span></div>
+        <div class="brand-text">
+          <b>SmartHub</b>
+          <small>by visualbuild.local</small>
+        </div>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#how" data-i18n="nav.how">How it works</a>
+        <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="#specs" data-i18n="nav.specs">Specs</a>
+        <a href="#buy" data-i18n="nav.buy">Buy</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <label class="sr-only" for="lang" data-i18n="lang.label">Language</label>
+        <select id="lang" class="lang" aria-label="Language">
+          <option value="en">EN</option>
+          <option value="zh">中文</option>
+        </select>
+        <a class="btn btn-primary btn-sm" href="#buy" data-i18n="nav.cta">Get SmartHub</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow" data-i18n="hero.eyebrow">SoftAP · DualSense · USB HID</span>
+          <h1 data-i18n-html="hero.title">Control any USB target.<br><span class="accent">No software on the machine.</span></h1>
+          <p class="lead" data-i18n="hero.lead">SmartHub is a pocket-sized Pico SoftAP remote and DualSense hub from visualbuild.local. Join its hotspot, open the web UI, and send keyboard, mouse and gamepad actions over USB HID.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#buy" data-i18n="hero.ctaPrimary">Buy SmartHub</a>
+            <a class="btn btn-ghost" href="#how" data-i18n="hero.ctaSecondary">See how it works</a>
+          </div>
+          <div class="meta-row">
+            <span><b data-i18n="hero.m1l">SoftAP</b> · visualbuild.local</span>
+            <span><b data-i18n="hero.m2l">USB HID</b> · keyboard / mouse / joystick</span>
+            <span><b data-i18n="hero.m3l">Controllers</b> · DualSense & more</span>
+          </div>
+        </div>
+        <aside class="hero-visual" aria-label="Product flow">
+          <div class="flow">
+            <div class="flow-card"><strong data-i18n="flow.phone">Phone / Pad</strong><span data-i18n="flow.phoneSub">Web remote</span></div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-card"><strong>SmartHub</strong><span data-i18n="flow.hubSub">Pico SoftAP</span></div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-card"><strong data-i18n="flow.target">Target</strong><span data-i18n="flow.targetSub">USB HID</span></div>
+          </div>
+          <div class="chip-row">
+            <span class="chip on">SoftAP</span>
+            <span class="chip">DualSense</span>
+            <span class="chip">Recording</span>
+            <span class="chip">Apple TV remote</span>
+            <span class="chip">BOOTSEL scripts</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <div class="section-head">
+          <small data-i18n="how.kicker">How it works</small>
+          <h2 data-i18n="how.title">One bridge. Three simple steps.</h2>
+          <p data-i18n="how.lead">SmartHub sits between your phone or controller and the USB target — a thin physical execution layer, not another cloud agent.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="num">01</div>
+            <h3 data-i18n="how.s1t">Plug in</h3>
+            <p data-i18n="how.s1p">Connect SmartHub to the target over USB. It enumerates as keyboard, mouse and joystick HID (manufacturer visualbuild.me).</p>
+          </article>
+          <article class="card">
+            <div class="num">02</div>
+            <h3 data-i18n="how.s2t">Join SoftAP</h3>
+            <p data-i18n="how.s2p">Connect to the visualbuild.local hotspot (initial password build.me) and open the hosted web UI on your phone or tablet.</p>
+          </article>
+          <article class="card">
+            <div class="num">03</div>
+            <h3 data-i18n="how.s3t">Control</h3>
+            <p data-i18n="how.s3p">Drive touch, mouse, keyboard, DualSense, remotes and recordings — without installing software on the target machine.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="band">
+      <div class="wrap">
+        <div class="section-head">
+          <small data-i18n="feat.kicker">Product highlights</small>
+          <h2 data-i18n="feat.title">Built for SoftAP stability first.</h2>
+          <p data-i18n="feat.lead">SmartHub prioritizes a usable local hotspot under real phone and controller load — then layers remotes, gamepads and recording on top.</p>
+        </div>
+        <div class="features">
+          <article class="feature">
+            <div class="icon" aria-hidden="true">AP</div>
+            <div>
+              <h3 data-i18n="feat.f1t">SoftAP web remote</h3>
+              <p data-i18n="feat.f1p">Pico-hosted HTTP / WebSocket UI. Join the hotspot, authenticate once, and keep control local — no cloud round-trip for input.</p>
+            </div>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true">DS</div>
+            <div>
+              <h3 data-i18n="feat.f2t">DualSense & controllers</h3>
+              <p data-i18n="feat.f2p">Pair DualSense and supported pads, map sticks and buttons, and bridge them to USB HID joystick / mouse / keyboard on the target.</p>
+            </div>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true">HID</div>
+            <div>
+              <h3 data-i18n="feat.f3t">USB HID bridge</h3>
+              <p data-i18n="feat.f3p">Keyboard, mouse and joystick output for machines that cannot (or must not) install a control agent — legacy PCs, kiosks, locked images.</p>
+            </div>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true">REC</div>
+            <div>
+              <h3 data-i18n="feat.f4t">Recording & BOOTSEL</h3>
+              <p data-i18n="feat.f4p">Capture actions in the browser, export/import libraries, store a script on the Pico, and trigger playback from configurable BOOTSEL actions.</p>
+            </div>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true">TV</div>
+            <div>
+              <h3 data-i18n="feat.f5t">Remotes & Pencil</h3>
+              <p data-i18n="feat.f5p">Apple TV / Google-style remotes, touch gestures, and iPad + Apple Pencil input paths designed for real tablet use.</p>
+            </div>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true">SEC</div>
+            <div>
+              <h3 data-i18n="feat.f6t">Access password</h3>
+              <p data-i18n="feat.f6p">One device access password for SoftAP and home-network HTTP / WebSocket. Change it in Settings; factory reset restores the initial password.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="wrap band-grid">
+        <div class="section-head" style="margin-bottom:0">
+          <small data-i18n="why.kicker">Why SmartHub</small>
+          <h2 data-i18n="why.title">When software cannot cross the boundary, actions still can.</h2>
+          <p data-i18n="why.lead">Use it as a physical layer beside ASB workflows — or on its own as a SoftAP remote for devices you already own.</p>
+        </div>
+        <div class="stat-list">
+          <div class="stat"><b data-i18n="why.s1t">Legacy & restricted targets</b><span data-i18n="why.s1p">Extend useful hardware instead of replacing it. No target-side install for basic HID control.</span></div>
+          <div class="stat"><b data-i18n="why.s2t">Phone as input surface</b><span data-i18n="why.s2p">Turn a phone or tablet into keyboard, mouse, remotes and gamepad tooling over the local SoftAP UI.</span></div>
+          <div class="stat"><b data-i18n="why.s3t">Thin by design</b><span data-i18n="why.s3p">SmartHub is an execution bridge. AI planning and skill packaging stay upstream in ASB / visualbuild.me when you need them.</span></div>
+          <div class="stat"><b data-i18n="why.s4t">Local-first radio</b><span data-i18n="why.s4p">SoftAP stability comes first. BLE command reception stays opt-in and off by default.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="specs" class="band">
+      <div class="wrap">
+        <div class="section-head">
+          <small data-i18n="specs.kicker">At a glance</small>
+          <h2 data-i18n="specs.title">Hardware identity & defaults</h2>
+          <p data-i18n="specs.lead">Aligned with the asb_pico_ds5 SoftAP / DualSense firmware baseline. Final retail packaging may differ.</p>
+        </div>
+        <div class="specs">
+          <div class="spec"><small data-i18n="specs.a1l">Local name</small><strong>visualbuild.local</strong></div>
+          <div class="spec"><small data-i18n="specs.a2l">Initial access</small><strong>build.me</strong></div>
+          <div class="spec"><small data-i18n="specs.a3l">USB HID</small><strong>visualbuild.me / ASB</strong></div>
+          <div class="spec"><small data-i18n="specs.a4l">Board class</small><strong>Pico 2 W class</strong></div>
+          <div class="spec"><small data-i18n="specs.a5l">Outputs</small><strong data-i18n="specs.a5v">Keyboard · Mouse · Joystick</strong></div>
+          <div class="spec"><small data-i18n="specs.a6l">Control</small><strong data-i18n="specs.a6v">HTTP + WebSocket UI</strong></div>
+          <div class="spec"><small data-i18n="specs.a7l">Controllers</small><strong data-i18n="specs.a7v">DualSense & supported pads</strong></div>
+          <div class="spec"><small data-i18n="specs.a8l">Companion</small><strong data-i18n="specs.a8v">Android + ASB Burn</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="buy">
+      <div class="wrap buy">
+        <div class="buy-copy">
+          <small class="eyebrow" data-i18n="buy.kicker">visualbuild.shop</small>
+          <h2 data-i18n="buy.title">SmartHub — physical SoftAP remote, ready when you are.</h2>
+          <p class="lead" style="margin-bottom:0" data-i18n="buy.lead">Checkout, shipping regions and warranty terms will be confirmed before orders open. This page is the product marketing shell for review — no live payment yet.</p>
+        </div>
+        <aside class="buy-card">
+          <div class="price" id="price">$—</div>
+          <p class="price-note" id="priceNote" data-i18n="buy.priceNote">Price to be announced</p>
+          <a id="buyButton" class="btn btn-primary" href="#" data-i18n="buy.cta">Coming soon</a>
+          <p class="fine" data-i18n="buy.fine">Secure checkout will open on visualbuild.shop</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="faq" class="band">
+      <div class="wrap faq">
+        <div class="section-head">
+          <small data-i18n="faq.kicker">FAQ</small>
+          <h2 data-i18n="faq.title">Before you buy</h2>
+        </div>
+        <details>
+          <summary data-i18n="faq.q1">Does the target need ASB or SmartHub software installed?</summary>
+          <p data-i18n="faq.a1">No for basic USB HID bridge use. The target only needs to accept a standard keyboard / mouse / joystick. ASB on visualbuild.me is the optional upstream automation plane.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq.q2">Is SmartHub the same as Automation Skill Builder?</summary>
+          <p data-i18n="faq.a2">No. SmartHub is the Pico SoftAP / DualSense hardware bridge (visualbuild.local). Automation Skill Builder is the desktop/local AI automation product on visualbuild.me. They can work together; they are not the same product.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq.q3">How do I connect the first time?</summary>
+          <p data-i18n="faq.a3">Plug SmartHub into USB, join the visualbuild.local SoftAP (initial password build.me), open the hosted page, and sign in with the same access password. You can change the password later in Settings.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq.q4">Can firmware be updated from Android?</summary>
+          <p data-i18n="faq.a4">Yes — ASB Burn is the standalone Android / desktop companion for firmware install and recovery.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq.q5">Does BLE stay on all the time?</summary>
+          <p data-i18n="faq.a5">BLE command reception is opt-in and default-off. SoftAP stability takes priority over always-on radio features.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div class="foot-brand">SmartHub <span>by visualbuild.local</span></div>
+      <div>
+        <a href="privacy.html" data-i18n="foot.privacy">Privacy</a> ·
+        <a href="terms.html" data-i18n="foot.terms">Terms</a> ·
+        <a href="refund.html" data-i18n="foot.refund">Refunds</a> ·
+        <a href="https://visualbuild.me" rel="noopener">visualbuild.me</a>
+      </div>
+      <p style="margin:0;width:100%" data-i18n="foot.copy">© 2026 VisualBuild. Domain target: visualbuild.shop</p>
+    </div>
+  </footer>
+
+  <style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}</style>
+  <script src="config.js"></script>
+  <script src="site.js"></script>
+</body>
+</html>
