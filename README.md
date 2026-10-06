@@ -7,6 +7,7 @@ Product marketing site for **SmartHub** (asb_pico_ds5 SoftAP remote / Pico DualS
 - Domain target (later): visualbuild.shop
 - Palette: orange · dark · white
 - Languages: EN + 中文 (toggle in header)
+- Tone: earnest / human / warm (认真和人性温暖) — accessibility, demos, coarse remote complementary to phone; not gaming-first
 
 ## Stack
 
@@ -20,7 +21,8 @@ config.js       price / Creem checkout URL (empty until launch)
 privacy.html    Placeholder
 terms.html      Placeholder
 refund.html     Placeholder
-assets/mark.svg Favicon / mark
+assets/mark.svg                 Favicon / mark
+assets/product-illustration.svg Hero product illustration (SVG)
 ```
 
 ## Preview locally
@@ -38,8 +40,7 @@ Or open `index.html` directly in a browser (i18n and relative assets still work)
 
 ## Not done yet (by design)
 
-- No GitHub push
-- No Vercel / domain wiring
+- No Vercel / domain wiring yet
 - No live Creem checkout — set `config.js` when ready
 
 ## Related
