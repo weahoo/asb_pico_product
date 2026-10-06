@@ -58,8 +58,8 @@ button{font:inherit}
 .meta-row{display:flex;flex-wrap:wrap;gap:10px}
 .meta-row span{padding:6px 12px;border-radius:999px;background:#fff;border:1px solid var(--gray);color:var(--muted);font-size:.85rem;font-weight:600;box-shadow:0 2px 8px rgba(26,26,26,.04)}
 
-.hero-visual{border-radius:var(--radius-lg);background:#fff;border:1px solid var(--gray);box-shadow:0 24px 60px rgba(26,26,26,.10);padding:22px 22px 18px;display:grid;gap:14px;align-content:center}
-.product-illust{margin:0;display:grid;place-items:center;min-height:150px;padding:28px}
+.hero-visual{border-radius:var(--radius-lg);background:#fff;border:1px solid var(--gray);box-shadow:0 24px 60px rgba(26,26,26,.10);padding:36px 22px 30px;display:grid;gap:22px;align-content:center}
+.product-illust{margin:0;display:grid;place-items:center;min-height:220px;padding:56px 28px}
 .product-illust img{width:50%;max-width:100%;height:auto;max-height:190px;object-fit:contain}
 .chip-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
 .chip{padding:6px 12px;border-radius:999px;font-size:.78rem;font-weight:700;background:var(--gray);border:1px solid var(--gray);color:var(--text)}
@@ -126,7 +126,7 @@ footer{border-top:1px solid var(--gray);padding:36px 0 56px;color:var(--muted);b
 }
 @media (max-width:520px){
   .nav-actions .btn-sm{display:none}
-  .product-illust{min-height:110px}
+  .product-illust{min-height:160px;padding:40px 20px}
   .product-illust img{max-height:140px}
 }
 
