@@ -5,9 +5,10 @@ Product marketing site for **SmartHub** (asb_pico_ds5 SoftAP remote / Pico DualS
 - Brand: SmartHub by visualbuild.local
 - Manufacturer: visualbuild.me / visualbuild.local
 - Domain target (later): visualbuild.shop
-- Palette: orange · dark · white
+- Palette: sunny white — white background, orange · sky blue · sunshine yellow accents
 - Languages: EN + 中文 (toggle in header)
-- Tone: earnest / human / warm (认真和人性温暖) — accessibility, demos, coarse remote complementary to phone; not gaming-first
+- Audience: end customers (not developers). Tone: sunny, friendly, benefit-first, minimal tech talk
+- Messaging pillars: (1) reuse old phones/tablets full of memories as a wireless controller, (2) cable-free play with a controller, (3) a spare/backup remote
 
 ## Stack
 
@@ -22,7 +23,7 @@ privacy.html    Placeholder
 terms.html      Placeholder
 refund.html     Placeholder
 assets/mark.svg                 Favicon / mark
-assets/product-illustration.svg Hero product illustration (SVG)
+assets/product-illustration.svg Hero product illustration (SVG, colored for white backgrounds)
 ```
 
 ## Preview locally
