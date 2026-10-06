@@ -16,7 +16,7 @@
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font:16px/1.65 var(--font);color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased}
+body{margin:0;font:16px/1.65 var(--font);color:var(--text);background:var(--bg);text-align:left;-webkit-font-smoothing:antialiased}
 img,svg{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button{font:inherit}
@@ -62,14 +62,14 @@ button{font:inherit}
 .hero-visual{border-radius:var(--radius-lg);background:#fff;border:1px solid var(--gray);box-shadow:0 28px 64px rgba(26,26,26,.14);padding:36px 22px 30px;display:grid;gap:22px;align-content:center}
 .product-illust{margin:0;display:grid;place-items:center;min-height:220px;padding:56px 28px}
 .product-illust img{width:50%;max-width:100%;height:auto;max-height:190px;object-fit:contain;filter:drop-shadow(0 10px 18px rgba(26,26,26,.12))}
-.chip-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.chip-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-start}
 .chip{padding:6px 12px;border-radius:999px;font-size:.78rem;font-weight:600;background:var(--gray);border:1px solid transparent;color:var(--muted);box-shadow:none}
 .chip.on{color:var(--text);border-color:#cfcfcf;background:#f3f3f3}
 
 /* Sections */
 section{padding:88px 0}
 .section-head{max-width:40rem;margin-bottom:40px}
-.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.section-head.center{margin-left:0;margin-right:auto;text-align:left}
 .section-head small{display:inline-block;margin-bottom:10px;color:var(--muted);font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
 h2{margin:0 0 12px;font-size:clamp(1.8rem,3.2vw,2.5rem);line-height:1.15;letter-spacing:-.025em;font-weight:800}
 .section-head p{margin:0;color:var(--muted);font-size:1.07rem}
@@ -84,12 +84,12 @@ h2{margin:0 0 12px;font-size:clamp(1.8rem,3.2vw,2.5rem);line-height:1.15;letter-
 .benefit p{margin:0;color:var(--muted);font-size:.98rem}
 
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:#fff;border:1px solid var(--gray);border-radius:var(--radius);padding:28px 24px;box-shadow:none;text-align:center}
-.card .num{width:44px;height:44px;margin:0 auto;border-radius:50%;display:grid;place-items:center;background:#6b6b6b;color:#fff;font-weight:800;font-size:1.1rem;box-shadow:none}
+.card{background:#fff;border:1px solid var(--gray);border-radius:var(--radius);padding:28px 24px;box-shadow:none;text-align:left}
+.card .num{width:44px;height:44px;margin:0;border-radius:50%;display:grid;place-items:center;background:#6b6b6b;color:#fff;font-weight:800;font-size:1.1rem;box-shadow:none}
 .card h3{margin:14px 0 8px;font-size:1.15rem}
 .card p{margin:0;color:var(--muted);font-size:.96rem}
 
-.quote-band{padding:64px 0;background:var(--accent);color:#fff;text-align:center}
+.quote-band{padding:64px 0;background:var(--accent);color:#fff;text-align:left}
 .quote p{margin:0 0 8px;font-size:clamp(1.6rem,3.4vw,2.4rem);font-weight:800;letter-spacing:-.02em}
 .quote span{font-size:1.05rem;opacity:.95}
 
@@ -100,7 +100,7 @@ h2{margin:0 0 12px;font-size:clamp(1.8rem,3.2vw,2.5rem);line-height:1.15;letter-
 .price{font-size:2.6rem;font-weight:800;letter-spacing:-.03em;color:var(--accent)}
 .price-note{color:var(--muted);margin:0}
 .buy-card .btn{width:100%;margin-top:8px}
-.fine{color:var(--muted-2);font-size:.8rem;text-align:center}
+.fine{color:var(--muted-2);font-size:.8rem;text-align:left}
 
 .faq details{background:#fff;border:1px solid var(--gray);border-radius:14px;padding:18px 22px;max-width:48rem;margin-bottom:12px}
 .faq summary{cursor:pointer;font-weight:700;list-style:none}
@@ -137,7 +137,7 @@ footer{border-top:1px solid var(--gray);padding:36px 0 56px;color:var(--muted);b
 .freedom .b-icon{flex:0 0 auto}
 .freedom h3{margin:0 0 8px;font-size:1.3rem;line-height:1.3}
 .freedom p{margin:0;color:var(--muted);font-size:1rem}
-.how-note{margin:22px auto 0;max-width:760px;text-align:center;background:var(--gray);border:1px solid var(--gray);border-radius:var(--radius-lg);padding:18px 22px}
+.how-note{margin:22px 0 0;max-width:760px;text-align:left;background:var(--gray);border:1px solid var(--gray);border-radius:var(--radius-lg);padding:18px 22px}
 .how-note b{display:block;margin-bottom:4px;color:var(--text)}
 .how-note p{margin:0;color:var(--muted)}
 @media (max-width:520px){.freedom{flex-direction:column;padding:22px}}
@@ -148,10 +148,10 @@ footer{border-top:1px solid var(--gray);padding:36px 0 56px;color:var(--muted);b
 .devices h3{margin:0 0 6px;font-size:1.25rem;line-height:1.3}
 .devices p{margin:0;color:var(--muted)}
 .device-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px}
-.device-list li{display:flex;flex-direction:column;align-items:center;gap:8px;min-width:96px;padding:14px 16px;border-radius:var(--radius);background:var(--gray);font-size:.92rem;box-shadow:none;border:1px solid transparent}
+.device-list li{display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:96px;padding:14px 16px;border-radius:var(--radius);background:var(--gray);font-size:.92rem;box-shadow:none;border:1px solid transparent}
 .device-list li .d-icon{display:grid;place-items:center;width:36px;height:36px;color:#6b6b6b}
 .device-list li .d-icon svg{width:26px;height:26px;display:block}
-.bonus{margin:22px auto 0;max-width:760px;text-align:center;background:#f7f7f7;border:1px solid var(--gray);border-radius:var(--radius-lg);padding:16px 22px;box-shadow:none}
+.bonus{margin:22px 0 0;max-width:760px;text-align:left;background:#f7f7f7;border:1px solid var(--gray);border-radius:var(--radius-lg);padding:16px 22px;box-shadow:none}
 .bonus b{display:block;margin-bottom:4px;color:var(--text);font-size:.95rem}
 .bonus p{margin:0;color:var(--muted);font-size:.93rem}
 @media (max-width:520px){.devices{padding:22px}.device-list{width:100%;justify-content:space-between}.device-list li{flex:1 1 0;min-width:0}}
@@ -171,7 +171,7 @@ footer{border-top:1px solid var(--gray);padding:36px 0 56px;color:var(--muted);b
 
 /* USB vs Bluetooth comparison table */
 .compare{margin:28px 0 0}
-.compare-head{text-align:center;max-width:40rem;margin:0 auto 18px}
+.compare-head{text-align:left;max-width:40rem;margin:0 0 18px}
 .compare-head h3{margin:0 0 8px;font-size:1.35rem;letter-spacing:-.02em;font-weight:800}
 .compare-head p{margin:0;color:var(--muted);font-size:1rem}
 .compare-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--radius-lg);border:1px solid var(--gray);box-shadow:var(--shadow);background:#fff}
@@ -192,3 +192,24 @@ footer{border-top:1px solid var(--gray);padding:36px 0 56px;color:var(--muted);b
   .compare-table{font-size:.88rem;min-width:480px}
   .compare-table thead th,.compare-table tbody th,.compare-table tbody td{padding:12px 14px}
 }
+
+
+/* Force left-aligned text sitewide (labels, titles, badges, chips, hero, FAQ) */
+.hero,.hero h1,.lead,.eyebrow,.meta-row,.meta-row span,
+.section-head,.section-head.center,.section-head small,.section-head p,h2,h3,
+.benefit,.benefit h3,.benefit p,
+.card,.card h3,.card p,.card .num,
+.chip-row,.chip,
+.quote-band,.quote,.quote p,.quote span,
+.how-note,.how-note b,.how-note p,
+.bonus,.bonus b,.bonus p,
+.compare-head,.compare-head h3,.compare-head p,
+.faq,.faq details,.faq summary,.faq p,
+.fine,.mode,.mode h3,.mode p,.mode-tag,.mode-best,
+.devices,.devices h3,.devices p,.device-list li,
+.freedom,.freedom h3,.freedom p,
+.buy-copy,.buy-card,.price,.price-note{
+  text-align:left;
+}
+.chip-row{justify-content:flex-start}
+.device-list li{align-items:flex-start}
