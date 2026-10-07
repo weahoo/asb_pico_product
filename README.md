@@ -10,7 +10,7 @@ Product marketing site for **SmartHub** (asb_pico_ds5 SoftAP remote / Pico DualS
 - Languages: EN + 中文 (toggle in header)
 - Audience: end customers (not developers). Tone: sunny, friendly, benefit-first, minimal tech talk
 - Messaging pillars: (1) your phone, tablet or computer becomes a **mouse, keyboard and drawing pad**, (2) works with phones, tablets and computers (old or new), (3) no app for everyday use (app only for updates). Remote control is only a small bonus, never the headline.
-- Two usage modes (confirmed against asb_pico_ds5 firmware `src/main.cpp` chooseLink/startSharedRadio and SoftAP UI strings): **USB** — SmartHub plugged into the target device with a USB data cable acts as a USB keyboard/mouse; **Bluetooth** — SmartHub on power only (charger/power bank) advertises as `visualbuild-ble` and is paired in the target device's Bluetooth settings. Mode is picked automatically at power-up; replug to switch. In both modes the controlling phone/tablet/computer joins SmartHub's Wi-Fi hotspot (`visualbuild.local`) and uses the web page — no app.
+- Two usage modes (confirmed against asb_pico_ds5 firmware `src/main.cpp` chooseLink/startSharedRadio and SoftAP UI strings): **USB** — SmartHub plugged into the target device with a USB data cable acts as a USB keyboard/mouse; **Bluetooth** — SmartHub on power only (charger/power bank) advertises as `visualbuild-ble` and is paired in the target device's Bluetooth settings. Mode is picked automatically at power-up; replug to switch. In both modes the controlling phone/tablet/computer joins SmartHub's Wi-Fi hotspot (`asb.local`) and uses the web page — no app.
 
 ## Stack
 
