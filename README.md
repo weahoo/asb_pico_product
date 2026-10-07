@@ -9,6 +9,7 @@ Product marketing site for **SmartHub** (asb_pico_ds5 SoftAP remote / Pico DualS
 - Product illustration: keep the original line drawing — white device body with red accents (matches the real hardware); do not recolor
 - Languages: EN + 中文 (toggle in header)
 - Audience: end customers (not developers). Tone: sunny, friendly, benefit-first, minimal tech talk
+- Storefront copy rule: **no ASB Agent / MCP / AI / Skill / enterprise automation narrative** on customer pages. Product sells mouse · keyboard · drawing pad · USB/Bluetooth HID · optional spare remote. `asb.local` is only the SoftAP page address from firmware, not a product brand claim.
 - Messaging pillars: (1) your phone, tablet or computer becomes a **mouse, keyboard and drawing pad**, (2) works with phones, tablets and computers (old or new), (3) no app for everyday use (app only for updates). Remote control is only a small bonus, never the headline.
 - Two usage modes (confirmed against asb_pico_ds5 firmware `src/main.cpp` chooseLink/startSharedRadio and SoftAP UI strings): **USB** — SmartHub plugged into the target device with a USB data cable acts as a USB keyboard/mouse; **Bluetooth** — SmartHub on power only (charger/power bank) advertises as `visualbuild-ble` and is paired in the target device's Bluetooth settings. Mode is picked automatically at power-up; replug to switch. In both modes the controlling phone/tablet/computer joins SmartHub's Wi-Fi hotspot (`asb.local`) and uses the web page — no app.
 
