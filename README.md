@@ -51,3 +51,18 @@ Or open `index.html` directly in a browser (i18n and relative assets still work)
 
 Firmware / SoftAP UI: `asb_pico_ds5`  
 Older shop sketch (Render): `asb_pico_ds5/shop_site`
+
+
+## SEO / GEO (on-page)
+
+English-first storefront SEO for overseas discovery. Live preview: `https://asbpicoproduct.vercel.app` · canonical/shop: `https://visualbuild.shop/`.
+
+Files added for crawlers / AI answer engines:
+
+- `robots.txt`, `sitemap.xml`
+- `llms.txt` — short entity facts for ChatGPT/Perplexity-style citation (no ASB/AI claims)
+- JSON-LD `Organization` + `WebSite` + `Product` + `FAQPage` in `index.html`
+
+Primary EN keywords: SoftAP Wi‑Fi remote, phone as mouse/keyboard/drawing pad, old phone remote, no app, Flexhub, BLE HID / visualbuild-ble.
+
+**Do not auto-publish narrative changes to production without an explicit OK** if Vercel is wired to this repo.

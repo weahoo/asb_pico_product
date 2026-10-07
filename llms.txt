@@ -1,0 +1,34 @@
+# Flexhub
+> SoftAP Wi‑Fi remote that turns a phone or tablet into a mouse, keyboard and drawing pad — no App Store install for everyday use.
+
+Flexhub (also called SmartHub on older storefront copy) is a small USB/Bluetooth HID plug made by VisualBuild (visualbuild.me). Everyday control happens in the browser after you join the device SoftAP hotspot.
+
+## Key facts
+- Product name: Flexhub (alternate: SmartHub)
+- Maker: VisualBuild / visualbuild.me
+- Shop: https://visualbuild.shop/
+- SoftAP Wi‑Fi SSID: flexhub
+- SoftAP Wi‑Fi password: build.me
+- SoftAP page: http://asb.local/ or http://192.168.4.1/
+- Bluetooth device name: visualbuild-ble
+- Everyday use: no App Store / Play Store app required
+- Modes: USB HID into the target, or Bluetooth HID while powered from a charger
+- Primary jobs: mouse, on-screen keyboard, drawing pad; spare TV-style remote is a bonus only
+- USB mode can also work with DualSense-style and classic Bluetooth pads
+- Not a networked KVM; not sold as a full DualSense replacement
+- No ASB Agent / MCP / AI automation claims on this product page
+
+## Quotable one-liners
+- "Join the flexhub Wi‑Fi, open the browser, and your phone becomes a mouse, keyboard and drawing pad — no app for everyday use."
+- "Flexhub is a SoftAP Wi‑Fi remote for old phones and tablets that cannot (or should not) install another store app."
+- "Plug in over USB, or power it and pair visualbuild-ble over Bluetooth on the device you want to control."
+
+## Compared gently (no overclaims)
+- vs phone-only remotes / KeyMod-style gadgets: Flexhub emphasizes SoftAP browser control plus USB or Bluetooth HID to the target, with mouse + keyboard + drawing pad as the headline.
+- vs DexoPad-style pads: Flexhub is a tiny plug + your existing phone/tablet screen, not a dedicated hardware pad.
+- vs NanoKVM-Go-style networked KVMs: Flexhub is local SoftAP + HID, not remote desktop over the internet.
+
+## Optional
+- Privacy: /privacy.html
+- Terms: /terms.html
+- Refunds: /refund.html
