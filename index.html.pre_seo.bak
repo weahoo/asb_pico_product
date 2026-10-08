@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SmartHub — your phone, tablet or computer as a mouse, keyboard &amp; drawing pad</title>
+  <meta name="description" content="SmartHub turns your phone, tablet or computer into a smooth mouse, a handy keyboard and a natural drawing pad. No app needed for everyday use — plug it in with USB or connect over Bluetooth.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://visualbuild.shop/">
+  <meta property="og:title" content="SmartHub — mouse, keyboard &amp; drawing pad, right in your hand">
+  <meta property="og:description" content="Plug in SmartHub and use your phone, tablet or computer as a mouse, keyboard and drawing pad. No app, plug in or pair over Bluetooth.">
+  <meta property="og:url" content="https://visualbuild.shop/">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="/">
+        <div class="brand-mark" aria-hidden="true"><span>SH</span></div>
+        <div class="brand-text">
+          <b>SmartHub</b>
+          <small>by visualbuild.local</small>
+        </div>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#benefits" data-i18n="nav.benefits">What it does</a>
+        <a href="#modes" data-i18n="nav.modes">Two ways to connect</a>
+        <a href="#how" data-i18n="nav.how">How it works</a>
+        <a href="#buy" data-i18n="nav.buy">Buy</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <label class="sr-only" for="lang" data-i18n="lang.label">Language</label>
+        <select id="lang" class="lang" aria-label="Language">
+          <option value="en">EN</option>
+          <option value="zh">中文</option>
+        </select>
+        <a class="btn btn-primary btn-sm" href="#buy" data-i18n="nav.cta">Get SmartHub</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow" data-i18n="hero.eyebrow">Mouse · keyboard · drawing pad · no app</span>
+          <h1 data-i18n-html="hero.title">Mouse, keyboard, drawing pad —<br><span class="accent">right in your hand.</span></h1>
+          <p class="lead" data-i18n="hero.lead">Pick up your phone, tablet or computer and it becomes a smooth mouse, a handy keyboard and a natural drawing pad — no app to download. Plug SmartHub into the device you want to control, or go wireless over Bluetooth. Point, type and sketch from wherever you&#39;re comfy.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#buy" data-i18n="hero.ctaPrimary">Get SmartHub</a>
+            <a class="btn btn-ghost" href="#benefits" data-i18n="hero.ctaSecondary">See what it can do</a>
+          </div>
+          <div class="meta-row">
+            <span data-i18n="hero.m0">✓ No app for everyday use</span>
+            <span data-i18n="hero.m1">◎ Smooth mouse</span>
+            <span data-i18n="hero.m2">⌨ Handy keyboard</span>
+            <span data-i18n="hero.m3">✎ Natural drawing pad</span>
+            <span data-i18n="hero.m4">⇄ USB or Bluetooth</span>
+          </div>
+        </div>
+        <aside class="hero-visual" aria-label="SmartHub product illustration">
+          <figure class="product-illust">
+            <img
+              src="assets/product-illustration.svg"
+              width="1196"
+              height="1081"
+              alt="SmartHub — a small white plug with red accents that turns your phone, tablet or computer into a mouse, keyboard and drawing pad"
+              decoding="async"
+            >
+            <figcaption class="sr-only" data-i18n="hero.illustCaption">SmartHub product illustration</figcaption>
+          </figure>
+        </aside>
+      </div>
+    </section>
+
+    <section id="benefits" class="band">
+      <div class="wrap">
+        <div class="section-head">
+          <small data-i18n="ben.kicker">What it does</small>
+          <h2 data-i18n="ben.title">One little plug. Three handy tools.</h2>
+        </div>
+        <article class="freedom">
+          <div class="b-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 12l2.2 2.2L15.5 10"/></svg></div>
+          <div>
+            <h3 data-i18n="ben.f1t">Everyday use, zero apps</h3>
+            <p data-i18n="ben.f1p">No downloads, no sign-ups, no account to remember. SmartHub just works on its own — plug it in, open your device and go. The only time you'll ever open an app is when you choose to update SmartHub with new improvements.</p>
+          </div>
+        </article>
+        <div class="benefits">
+          <article class="benefit">
+            <div class="b-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="5"/><path d="M12 7v4"/></svg></div>
+            <h3 data-i18n="ben.b1t">A smooth mouse, anywhere</h3>
+            <p data-i18n="ben.b1p">Glide your finger across the screen to move, tap to click and scroll with ease. Perfect from the sofa, the bed, or for a presentation across the room.</p>
+          </article>
+          <article class="benefit">
+            <div class="b-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M8 14h8"/></svg></div>
+            <h3 data-i18n="ben.b2t">A keyboard within reach</h3>
+            <p data-i18n="ben.b2p">Type messages, search and fill things in using the familiar keyboard on your phone, tablet or laptop — no extra keyboard to carry around.</p>
+          </article>
+          <article class="benefit">
+            <div class="b-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+            <h3 data-i18n="ben.b3t">A drawing pad that feels natural</h3>
+            <p data-i18n="ben.b3p">Sketch, doodle, jot handwritten notes or sign your name with a finger or stylus. Your lines appear on the big screen, smooth and easy.</p>
+          </article>
+        </div>
+        <div class="devices">
+          <div class="devices-copy">
+            <h3 data-i18n="dev.title">Works with what you already have</h3>
+            <p data-i18n="dev.lead">Phones, tablets and computers — new or old. Even that phone in your drawer gets a fun new job.</p>
+          </div>
+          <ul class="device-list">
+            <li><span class="d-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span><b data-i18n="dev.phone">Phones</b></li>
+            <li><span class="d-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M11 17h2"/></svg></span><b data-i18n="dev.tablet">Tablets</b></li>
+            <li><span class="d-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span><b data-i18n="dev.computer">Computers</b></li>
+          </ul>
+        </div>
+        <div class="bonus">
+          <b data-i18n="ben.bonusT">Little bonus: a spare remote</b>
+          <p data-i18n="ben.bonusP">Remote slipped under the cushions? Your phone can step in for the simple stuff while you look. Nice to have — but SmartHub is really all about pointing, typing and drawing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="modes">
+      <div class="wrap">
+        <div class="section-head">
+          <small data-i18n="modes.kicker">Two ways to connect</small>
+          <h2 data-i18n="modes.title">Plug it in, or go wireless.</h2>
+          <p data-i18n="modes.lead">SmartHub talks to the device you want to control in whichever way suits you. Either way, your phone, tablet or computer is the one in your hand.</p>
+        </div>
+        <div class="modes">
+          <article class="mode">
+            <div class="mode-head">
+              <div class="b-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="M8 8l4-4 4 4"/><circle cx="12" cy="18" r="2"/><path d="M7 14h2M15 12h2"/><circle cx="6" cy="14" r="1.5"/><rect x="14.5" y="10.5" width="3" height="3" rx="0.5"/></svg></div>
+              <span class="mode-tag" data-i18n="modes.usbTag">With a cable</span>
+            </div>
+            <h3 data-i18n="modes.usbT">Plug straight in (USB)</h3>
+            <p data-i18n="modes.usbP">Connect SmartHub to the computer, screen or TV box you want to control with a USB data cable. It's recognised right away as a mouse and keyboard — nothing to install, nothing to pair.</p>
+            <p class="mode-best" data-i18n="modes.usbBest">Great for: your desk computer, a work laptop, anything with a free USB port.</p>
+          </article>
+          <article class="mode">
+            <div class="mode-head">
+              <div class="b-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8l10 8-5 4V4l5 4L7 16"/></svg></div>
+              <span class="mode-tag" data-i18n="modes.btTag">Wireless</span>
+            </div>
+            <h3 data-i18n="modes.btT">Pair over Bluetooth</h3>
+            <p data-i18n="modes.btP">Just give SmartHub power — a phone charger or power bank is perfect. After a few seconds, open the Bluetooth settings on the device you want to control and pick “visualbuild-ble”. Done!</p>
+            <p class="mode-best" data-i18n="modes.btBest">Great for: tablets, TV boxes like Apple TV, and devices without a spare USB port.</p>
+          </article>
+        </div>
+
+        <div class="compare" aria-labelledby="compareTitle">
+          <div class="compare-head">
+            <h3 id="compareTitle" data-i18n="compare.title">USB vs Bluetooth — at a glance</h3>
+            <p data-i18n="compare.lead">Same sunny control from your phone either way. Here's what each mode brings.</p>
+          </div>
+          <div class="compare-scroll" role="region" aria-label="USB versus Bluetooth comparison" tabindex="0">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th scope="col" data-i18n="compare.colFeature">What you get</th>
+                  <th scope="col"><span class="compare-pill" data-i18n="compare.colUsb">USB mode</span></th>
+                  <th scope="col"><span class="compare-pill" data-i18n="compare.colBt">Bluetooth mode</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" data-i18n="compare.r0f">How it connects</th>
+                  <td data-i18n="compare.r0u">USB data cable into the device you want to control</td>
+                  <td data-i18n-html="compare.r0b">Power only, then pair <b>visualbuild-ble</b> on that device</td>
+                </tr>
+                <tr>
+                  <th scope="row" data-i18n="compare.r1f">Keyboard &amp; mouse</th>
+                  <td><span class="yes" aria-hidden="true">✓</span> <span data-i18n="compare.r1u">Yes — shows up right away</span></td>
+                  <td><span class="yes" aria-hidden="true">✓</span> <span data-i18n="compare.r1b">Yes — as visualbuild-ble</span></td>
+                </tr>
+                <tr>
+                  <th scope="row" data-i18n="compare.r2f">Gamepad (DualSense &amp; classic BT)</th>
+                  <td><span class="yes" aria-hidden="true">✓</span> <span data-i18n="compare.r2u">Yes — DualSense &amp; classic Bluetooth pads</span></td>
+                  <td><span class="no" aria-hidden="true">–</span> <span data-i18n="compare.r2b">No gamepad in Bluetooth mode</span></td>
+                </tr>
+                <tr>
+                  <th scope="row" data-i18n="compare.r3f">Control from your phone's browser</th>
+                  <td><span class="yes" aria-hidden="true">✓</span> <span data-i18n="compare.r3u">Yes — phone / tablet / computer browser</span></td>
+                  <td><span class="yes" aria-hidden="true">✓</span> <span data-i18n="compare.r3b">Yes — same Wi‑Fi page</span></td>
+                </tr>
+                <tr>
+                  <th scope="row" data-i18n="compare.r4f">At power-up</th>
+                  <td colspan="2" data-i18n="compare.r4">Auto — data cable ready? USB. Only power? Bluetooth. Unplug and replug to switch.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="how-note mode-tip">
+          <b data-i18n="modes.tipT">SmartHub chooses for you</b>
+          <p data-i18n="modes.tipP">When it powers up, SmartHub checks: connected to a device by cable? It works over USB. Only getting power? It switches to Bluetooth. Want to change? Just unplug it and plug it back in the other way.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="band">
+      <div class="wrap">
+        <div class="section-head">
+          <small data-i18n="how.kicker">How it works</small>
+          <h2 data-i18n="how.title">Ready in under a minute.</h2>
+          <p data-i18n="how.lead">Nothing to download, nothing to sign up for. If you can plug in a USB stick or connect Bluetooth headphones, you're all set.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="num">1</div>
+            <h3 data-i18n="how.s1t">Plug it in — or pair it</h3>
+            <p data-i18n="how.s1p">Connect SmartHub to the device you want to control with a USB cable, or just power it up and pair it over Bluetooth.</p>
+          </article>
+          <article class="card">
+            <div class="num">2</div>
+            <h3 data-i18n="how.s2t">Open your device</h3>
+            <p data-i18n="how.s2p">On your phone, tablet or computer, join the Wi-Fi named flexhub (password build.me) and open http://asb.local/ or http://192.168.4.1/ in the browser — no app needed, that's it.</p>
+          </article>
+          <article class="card">
+            <div class="num">3</div>
+            <h3 data-i18n="how.s3t">Point, type and draw</h3>
+            <p data-i18n="how.s3p">Use it as a mouse, a keyboard or a drawing pad — switch whenever you like, from wherever you're comfy.</p>
+          </article>
+        </div>
+        <div class="how-note">
+          <b data-i18n="how.noteT">The only time you need an app: updates</b>
+          <p data-i18n="how.noteP">Every so often we may release improvements for SmartHub. That's the one moment you'll use our app — open it, tap update, done. Day to day, you can forget it exists.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-band">
+      <div class="wrap quote">
+        <p data-i18n="quote.text">Point. Type. Draw. All from the device in your hand.</p>
+        <span data-i18n="quote.by">Your phone, tablet or laptop — with a happy new job.</span>
+      </div>
+    </section>
+
+    <section id="buy">
+      <div class="wrap buy">
+        <div class="buy-copy">
+          <small class="eyebrow" data-i18n="buy.kicker">Coming soon</small>
+          <h2 data-i18n="buy.title">One little plug, three handy tools.</h2>
+          <p class="lead" style="margin-bottom:0" data-i18n="buy.lead">SmartHub will be available at visualbuild.shop very soon. Pricing and shipping details are on the way — check back shortly!</p>
+        </div>
+        <aside class="buy-card">
+          <div class="price" id="price">$—</div>
+          <p class="price-note" id="priceNote" data-i18n="buy.priceNote">Price coming soon</p>
+          <a id="buyButton" class="btn btn-primary" href="#" data-i18n="buy.cta">Coming soon</a>
+          <p class="fine" data-i18n="buy.fine">Secure checkout on visualbuild.shop</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="faq" class="band">
+      <div class="wrap faq">
+        <div class="section-head">
+          <small data-i18n="faq.kicker">FAQ</small>
+          <h2 data-i18n="faq.title">Good questions, quick answers</h2>
+        </div>
+        <details open>
+          <summary data-i18n="faq.q0">Do I need to download an app?</summary>
+          <p data-i18n="faq.a0">Not for everyday use — point, type and draw without installing anything. You'll only need our app when you want to update SmartHub to the latest version, and that takes just a few taps.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq.q1">Which devices work?</summary>
+          <p data-i18n="faq.a1">Phones, tablets and computers — almost anything with a web browser, old or new. Even a phone that no longer gets updates works great.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq.q2">Can I really draw with it?</summary>
+          <p data-i18n="faq.a2">Yes! Use your finger or a stylus on a phone or tablet, and your strokes show up on the bigger screen — great for sketches, doodles, handwritten notes and signatures.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq.q3">Can I switch between mouse, keyboard and drawing?</summary>
+          <p data-i18n="faq.a3">Anytime. Move the pointer, type a few words, then sketch — all from the same device, with a single tap to switch.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq.q4">Do I need to install anything on the device I control?</summary>
+          <p data-i18n="faq.a4">Nope. Whether you plug in with a USB cable or pair over Bluetooth, SmartHub shows up as an ordinary mouse and keyboard. An app only comes in on the occasional day you update SmartHub.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq.q7">USB or Bluetooth — which should I choose?</summary>
+          <p data-i18n="faq.a7">Whatever is easiest! Got a free USB port? Plug in and you're done. No port, or controlling a tablet or TV box? Power SmartHub from a charger and pair it over Bluetooth. Tip: pair it on the device you want to control — not on the phone in your hand.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq.q5">Is it a remote control?</summary>
+          <p data-i18n="faq.a5">Only as a little extra. SmartHub is made for pointing, typing and drawing — but if your usual remote goes missing, your phone can help out in a pinch.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq.q6">Will it change anything on my device?</summary>
+          <p data-i18n="faq.a6">No. Your photos, messages and files stay exactly as they are. SmartHub simply gives your device one more way to be useful.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div class="foot-brand">SmartHub <span>by visualbuild.local</span></div>
+      <div>
+        <a href="privacy.html" data-i18n="foot.privacy">Privacy</a> ·
+        <a href="terms.html" data-i18n="foot.terms">Terms</a> ·
+        <a href="refund.html" data-i18n="foot.refund">Refunds</a>
+      </div>
+      <p style="margin:0;width:100%" data-i18n="foot.copy">© 2026 VisualBuild · visualbuild.shop</p>
+    </div>
+  </footer>
+
+  <style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}</style>
+  <script src="config.js"></script>
+  <script src="site.js"></script>
+</body>
+</html>
