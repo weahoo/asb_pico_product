@@ -1,14 +1,15 @@
 # Flexhub
-> Wi‑Fi hotspot controller that turns an old phone or tablet into a cheap wireless left-hand shortcut / macro panel — plus secondary trackpad, presenter, signature pad and light annotate. No App Store install for everyday use.
+> Wi‑Fi hotspot controller that turns an old phone or tablet into a cheap wireless shortcut / macro panel — plus trackpad, presenter, signature pad and light annotate. No App Store install for everyday use.
 
 Flexhub is a small USB/Bluetooth HID plug. Everyday control happens in the browser after you join the device Wi‑Fi hotspot named flexhub.
 
-## Positioning (expectations)
-- Target: light non-pro users and a second auxiliary tool (about entry-level accessory pricing) — not Blackmagic edit keyboards, Wacom tablets, or Apple Pencil.
-- Primary pitch: Stream Deck–like left-hand efficiency panel using a phone you already own; custom key combos and recorded macros on the Wi‑Fi hotspot page.
-- Also: secondary trackpad, wireless presenter, signature pad, multimedia shortcuts.
-- Drawing: long-tail occasional use only (PDF annotate, contract signature, kids doodle, beginners) — cannot replace a Wacom pressure tablet; do not claim smooth pro editing.
-- Travel / driver-free: plug Flexhub into the desk PC, lounge with the old phone controlling it — lighter than packing pro peripherals.
+## Positioning
+- Portable light tool for non-pro and second-screen setups.
+- Pitch: record macros on the Wi‑Fi page, save to the device, replay as shortcut-like actions — Stream Deck–like shortcuts without another dedicated deck.
+- Also: light trackpad, wireless presenter, signature pad, multimedia shortcut controller.
+- Drawing: light/occasional only (PDF annotate, contract signature, kids doodle, beginner doodle). No pressure — not a Wacom tablet.
+- Travel / driver-free: plug Flexhub into the desk PC, lounge with the phone controlling it.
+- Works with older devices too (example: first-gen Apple iPad mini).
 
 ## Key facts
 - Product name: Flexhub
@@ -19,20 +20,13 @@ Flexhub is a small USB/Bluetooth HID plug. Everyday control happens in the brows
 - Bluetooth device name: flexhub
 - Everyday use: no App Store / Play Store app required
 - Modes: USB HID into the target (driver-free), or Bluetooth HID while powered from a charger
-- Shortcuts: Wi‑Fi hotspot UI can send key combinations, bind shortcuts to the physical BOOTSEL button, and record macros saved on-device for replay
-- Not a networked KVM; not a full DualSense replacement; not a Wacom / pro edit-deck rival
+- Macros: record on the Wi‑Fi hotspot page, save on-device, replay later
 - No ASB Agent / MCP / AI automation claims on this product page
 
 ## Quotable one-liners
-- "Join the flexhub Wi‑Fi, open the browser, and your old phone becomes a wireless left-hand shortcut panel — macros included, no app for everyday use."
-- "Plug Flexhub into the PC, stay on the sofa with the phone — driver-free secondary control, not another bulky pro deck."
-- "Perfect for shortcuts, presenting, signatures and light PDF annotate — not a Wacom replacement."
-
-## Compared gently (no overclaims)
-- vs Stream Deck–style decks: Flexhub uses your existing phone/tablet screen over a Wi‑Fi hotspot plus USB/Bluetooth HID — cheaper spare-phone path, not a dedicated illuminated key grid.
-- vs Wacom / Apple Pencil: no pressure levels; occasional annotate/sign/doodle only.
-- vs Blackmagic / pro edit keyboards: not a dedicated edit surface; light auxiliary shortcuts and pointing.
-- vs NanoKVM-style networked KVMs: local Wi‑Fi hotspot + HID, not remote desktop over the internet.
+- "Join the flexhub Wi‑Fi, open the browser, and your old phone becomes a wireless shortcut panel — macros included, no app for everyday use."
+- "Plug Flexhub into the PC, stay on the sofa with the phone — driver-free portable control."
+- "Light trackpad, presenter, signatures and PDF annotate — not a Wacom tablet."
 
 ## Optional
 - Privacy: /privacy.html
