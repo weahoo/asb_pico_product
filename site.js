@@ -132,7 +132,7 @@
       "lang.label": "语言",
       "hero.eyebrow": "无线热点 · 鼠标 · 键盘 · 手绘板 · 无需 App",
       "hero.title": "旧手机新用途—鼠标、键盘、手绘板<br><span class=\"accent\">无线热点连接，日常无需 App。</span>",
-      "hero.lead": "Flexhub把你手里的手机或平板变成顺手的鼠标、好用的键盘和自然的手绘板。连上它的 Wi‑Fi hotspot 热点，用浏览器打开页面—日常使用不必装应用商店 App。用 USB 插到想控制的设备，或通过蓝牙无线连接。",
+      "hero.lead": "Flexhub把你手里的手机或平板变成顺手的鼠标、好用的键盘和自然的手绘板。连上它的无线热点，用浏览器打开页面—日常使用不必装应用商店 App。用 USB 插到想控制的设备，或通过蓝牙无线连接。",
       "hero.ctaPrimary": "获取 Flexhub",
       "hero.ctaSecondary": "看看它能做什么",
       "hero.m0": "✓ 日常使用无需 App",
