@@ -1,32 +1,38 @@
 # Flexhub
-> Wi‑Fi hotspot remote that turns a phone or tablet into a mouse, keyboard and drawing pad — no App Store install for everyday use.
+> Wi‑Fi hotspot controller that turns an old phone or tablet into a cheap wireless left-hand shortcut / macro panel — plus secondary trackpad, presenter, signature pad and light annotate. No App Store install for everyday use.
 
-Flexhub (formerly may have been called SmartHub) is a small USB/Bluetooth HID plug Everyday control happens in the browser after you join the device Wi-Fi hotspot.
+Flexhub is a small USB/Bluetooth HID plug. Everyday control happens in the browser after you join the device Wi‑Fi hotspot named flexhub.
+
+## Positioning (expectations)
+- Target: light non-pro users and a second auxiliary tool (about entry-level accessory pricing) — not Blackmagic edit keyboards, Wacom tablets, or Apple Pencil.
+- Primary pitch: Stream Deck–like left-hand efficiency panel using a phone you already own; custom key combos and recorded macros on the Wi‑Fi hotspot page.
+- Also: secondary trackpad, wireless presenter, signature pad, multimedia shortcuts.
+- Drawing: long-tail occasional use only (PDF annotate, contract signature, kids doodle, beginners) — cannot replace a Wacom pressure tablet; do not claim smooth pro editing.
+- Travel / driver-free: plug Flexhub into the desk PC, lounge with the old phone controlling it — lighter than packing pro peripherals.
 
 ## Key facts
-- Product name: Flexhub (alternate: SmartHub)
-- Product: Flexhub (storefront visualbuild.shop)
+- Product name: Flexhub
 - Shop: https://visualbuild.shop/
-- Wi-Fi hotspot SSID: flexhub
-- Wi-Fi hotspot password: build.me
+- Wi‑Fi hotspot SSID: flexhub
+- Wi‑Fi hotspot password: build.me
 - Hotspot page: http://flexhub.local/ or http://192.168.4.1/
 - Bluetooth device name: flexhub
 - Everyday use: no App Store / Play Store app required
-- Modes: USB HID into the target, or Bluetooth HID while powered from a charger
-- Primary jobs: mouse, on-screen keyboard, drawing pad; spare TV-style remote is a bonus only
-- USB mode can also work with DualSense-style and classic Bluetooth pads
-- Not a networked KVM; not sold as a full DualSense replacement
+- Modes: USB HID into the target (driver-free), or Bluetooth HID while powered from a charger
+- Shortcuts: Wi‑Fi hotspot UI can send key combinations, bind shortcuts to the physical BOOTSEL button, and record macros saved on-device for replay
+- Not a networked KVM; not a full DualSense replacement; not a Wacom / pro edit-deck rival
 - No ASB Agent / MCP / AI automation claims on this product page
 
 ## Quotable one-liners
-- "Join the flexhub Wi‑Fi, open the browser, and your phone becomes a mouse, keyboard and drawing pad — no app for everyday use."
-- "Flexhub is a Wi‑Fi hotspot remote for old phones and tablets that cannot (or should not) install another store app."
-- "Plug in over USB, or power it and pair flexhub over Bluetooth on the device you want to control."
+- "Join the flexhub Wi‑Fi, open the browser, and your old phone becomes a wireless left-hand shortcut panel — macros included, no app for everyday use."
+- "Plug Flexhub into the PC, stay on the sofa with the phone — driver-free secondary control, not another bulky pro deck."
+- "Perfect for shortcuts, presenting, signatures and light PDF annotate — not a Wacom replacement."
 
 ## Compared gently (no overclaims)
-- vs phone-only remotes / KeyMod-style gadgets: Flexhub emphasizes browser control over its Wi-Fi hotspot plus USB or Bluetooth HID to the target, with mouse + keyboard + drawing pad as the headline.
-- vs DexoPad-style pads: Flexhub is a tiny plug + your existing phone/tablet screen, not a dedicated hardware pad.
-- vs NanoKVM-Go-style networked KVMs: Flexhub is a local Wi-Fi hotspot + HID, not remote desktop over the internet.
+- vs Stream Deck–style decks: Flexhub uses your existing phone/tablet screen over a Wi‑Fi hotspot plus USB/Bluetooth HID — cheaper spare-phone path, not a dedicated illuminated key grid.
+- vs Wacom / Apple Pencil: no pressure levels; occasional annotate/sign/doodle only.
+- vs Blackmagic / pro edit keyboards: not a dedicated edit surface; light auxiliary shortcuts and pointing.
+- vs NanoKVM-style networked KVMs: local Wi‑Fi hotspot + HID, not remote desktop over the internet.
 
 ## Optional
 - Privacy: /privacy.html
