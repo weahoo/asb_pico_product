@@ -31,7 +31,7 @@
       "ben.b1t": "Secondary trackpad &amp; wireless presenter",
       "ben.b1p": "Move, click and scroll from across the room. Ideal as a second pointing surface beside a main mouse — or as a simple wireless presenter — not as your only pro pointing device.",
       "ben.b2t": "Shortcuts &amp; macros on the phone",
-      "ben.b2p": "Tap common combos (like Ctrl+C) from the SoftAP page, bind key shortcuts to the physical button, and record macros you can replay. A Stream Deck–like left-hand efficiency panel — built from an old phone instead of a dedicated pad.",
+      "ben.b2p": "Tap common combos (like Ctrl+C) from the Wi‑Fi page, bind key shortcuts to the physical button, and record macros you can replay. A Stream Deck–like left-hand efficiency panel — built from an old phone instead of a dedicated pad.",
       "ben.b3t": "Occasional annotate, sign &amp; doodle",
       "ben.b3p": "Great for PDF markup, contract signatures, kids’ doodles and beginner sketches. Long-tail, light use — not an 8-hour-a-day artist tablet, and it cannot replace a Wacom pressure tablet.",
       "dev.title": "Works with what you already have",
