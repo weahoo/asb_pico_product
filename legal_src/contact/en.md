@@ -1,5 +1,5 @@
 title: Contact and Imprint — Flexhub
-description: How to contact the team behind Flexhub and visualbuild.shop, and the legally required provider information (imprint).
+description: How to contact the operator of Flexhub and visualbuild.shop, and the legally required provider information (imprint).
 h1: Contact and Imprint
 nav: Contact & imprint
 ---

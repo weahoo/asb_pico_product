@@ -30,6 +30,9 @@ Flexhub is a small USB/Bluetooth HID plug. Everyday control happens in the brows
 
 ## Optional
 - User guide (setup, USB/Bluetooth pairing, every mode, macros, settings, updates, troubleshooting): /guide.html
-- Privacy: /privacy.html
+- Privacy (no accounts, no analytics, no cookies; settings and macros stay on the device): /privacy.html
 - Terms: /terms.html
-- Refunds: /refund.html
+- Refunds and returns (30-day returns, EU 14-day withdrawal): /refund.html
+- Shipping: /shipping.html
+- Contact and imprint: /contact.html
+- Legal pages are available in en, zh, de, fr, ja, ko, ar via ?lang=; the English version prevails.

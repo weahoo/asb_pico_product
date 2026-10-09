@@ -1,5 +1,5 @@
 title: Contact et mentions légales — Flexhub
-description: Comment contacter l’équipe de Flexhub et de visualbuild.shop, et les informations légales obligatoires sur l’éditeur (mentions légales).
+description: Comment contacter l’exploitant de Flexhub et de visualbuild.shop, et les informations légales obligatoires sur l’éditeur (mentions légales).
 h1: Contact et mentions légales
 nav: Contact et mentions légales
 ---

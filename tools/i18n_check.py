@@ -7,13 +7,20 @@ Static checks (no browser):
     no manual "1." step prefixes, data-ph-* placeholders for every language.
   * site.js dict: same key set in every language, same checks per value, no value copied from
     another language.
+  * Legal pages (privacy, terms, refund, shipping, contact): tools/build_legal.py --check (every
+    language has the same block structure, [placeholders] and link targets as EN), script checks on
+    every source block, built HTML is up to date and has 7 articles with lang/dir, and every
+    non-English article carries the "English version prevails" note.
 Dynamic checks (Chrome via CDP, default http://127.0.0.1:9222; site served at --base):
-  * index.html and guide.html in all 7 languages (guide in USB and wireless mode), all <details>
+  * index.html, guide.html and the 5 legal pages in all 7 languages (guide in USB and wireless mode), all <details>
     opened, every tour tab / device picker visited; collects visible text plus aria-label, title,
     alt, placeholder, <title>, meta description/og/twitter and flags script mismatches, wrong-language
     spans that are visible, EN text leaking onto other languages, JS strings.
   * Step numbering: each stepper step / How card shows exactly one number; stepper list items are
     direct children (no HTML nesting damage); dot count == step count.
+  * Legal pages: localized <title>/meta description match the page metadata, the chosen
+    language is remembered (localStorage flexhub_lang), language picker shows the language,
+    no horizontal overflow (incl. RTL Arabic).
   * Console errors / page errors.
 
 Usage:  python3 -m http.server 8765  (in repo root), then
@@ -28,6 +35,9 @@ from html.parser import HTMLParser
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LANGS = ["en", "zh", "de", "fr", "ja", "ko", "ar"]
 LANG_HTML = {"en": "en", "zh": "zh-Hans", "de": "de", "fr": "fr", "ja": "ja", "ko": "ko", "ar": "ar"}
+LEGAL_PAGES = ["privacy", "terms", "refund", "shipping", "contact"]
+# [Placeholders] in the legal pages stay in English in every language on purpose.
+LEGAL_PH_RX = re.compile(r"\[[^\]\n]+\](?!\()")
 
 RX = {
     "kana": re.compile(r"[\u3040-\u30ff\u31f0-\u31ff\uff66-\uff9f]"),
@@ -116,8 +126,8 @@ def script_issues(lang, text):
         return issues
     if text.strip() in UI_EXACT:
         return issues
-    raw = text
-    text = UI_LITERALS_RX.sub(" ", text)
+    raw = LEGAL_PH_RX.sub(" ", text)
+    text = UI_LITERALS_RX.sub(" ", raw)
     for k in FORBID[lang]:
         m = RX[k].findall(text)
         if m:
@@ -373,6 +383,55 @@ def check_site_static(issues):
                         add(issues, "copied-across-langs", where, l + "," + l2, txt[:70])
 
 
+# ---------------------------------------------------------------- static: legal pages
+def check_legal_static(issues):
+    r = subprocess.run([sys.executable, os.path.join(ROOT, "tools", "build_legal.py"), "--check"], capture_output=True, text=True)
+    for ln in (r.stdout + r.stderr).splitlines():
+        if ln.strip():
+            add(issues, "legal-structure", "build_legal --check", "*", ln.strip()[:200])
+    if r.returncode and not (r.stdout + r.stderr).strip():
+        add(issues, "legal-structure", "build_legal --check", "*", "exit %d" % r.returncode)
+    common = json.load(open(os.path.join(ROOT, "legal_src", "common.json"), encoding="utf-8"))
+    n = 0
+    for page in LEGAL_PAGES:
+        for l in LANGS:
+            f = os.path.join(ROOT, "legal_src", page, l + ".md")
+            if not os.path.exists(f):
+                add(issues, "legal-missing", f, l, "source missing")
+                continue
+            for i, ln in enumerate(open(f, encoding="utf-8").read().split("\n")):
+                s = ln.strip()
+                if not s or s == "---":
+                    continue
+                s = re.sub(r"^(title|description|h1|nav):\s*", "", s)
+                s = re.sub(r"^(#+|-)\s*", "", s)
+                s = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", s).replace("**", "")
+                n += 1
+                for kind, d in script_issues(l, s):
+                    add(issues, kind, "legal_src/%s/%s.md:%d" % (page, l, i + 1), l, "%s | %s" % (d, s[:80]), "warn" if kind == "latin-fragment" else "error")
+        hp = os.path.join(ROOT, page + ".html")
+        if not os.path.exists(hp):
+            add(issues, "legal-missing", page + ".html", "*", "not built")
+            continue
+        src = open(hp, encoding="utf-8").read()
+        arts = re.findall(r'<article class="legal-doc" data-l="(\w+)" lang="([\w-]+)" dir="(\w+)"', src)
+        if [a[0] for a in arts] != LANGS:
+            add(issues, "legal-articles", page + ".html", "*", "articles %s" % [a[0] for a in arts])
+        for l, hl, d in arts:
+            if hl != LANG_HTML[l] or d != ("rtl" if l == "ar" else "ltr"):
+                add(issues, "legal-articles", page + ".html", l, "lang=%s dir=%s" % (hl, d))
+        parts = re.split(r'<article class="legal-doc" data-l="', src)[1:]
+        for part in parts:
+            l = part.split('"', 1)[0]
+            body = part.split("</article>", 1)[0]
+            note = html.escape(common["prevails"][l]) if l in common.get("prevails", {}) else None
+            if l != "en" and (not note or note not in body):
+                add(issues, "legal-prevails-note", page + ".html", l, "missing 'English version prevails' note")
+            if l == "en" and "prevail" in body.lower() and "legal-note" in body:
+                add(issues, "legal-prevails-note", page + ".html", l, "note shown on English")
+    return n
+
+
 # ---------------------------------------------------------------- dynamic (CDP)
 COLLECT_JS = r"""
 (lang) => {
@@ -431,13 +490,34 @@ STEPS_JS = r"""
       const exp = String(k + 1); (b ? ['badge:' + b.textContent.trim()] : []).concat(shown.filter(s => /^dot:/.test(s))).forEach(s => { if (s.split(':')[1] !== exp) res.push({kind: 'step-number-wrong', box: box.className, step: k+1, detail: s}); });
     });
   });
-  document.querySelectorAll('ol').forEach(ol => { if (ol.closest('.stepper') || !vis(ol)) return;
+  document.querySelectorAll('ol').forEach(ol => { if (ol.closest('.stepper') || ol.closest('.legal-toc') || !vis(ol)) return;  // legal TOC items are section titles; a title may itself start with a number ('30-day ...')
     ol.querySelectorAll(':scope > li').forEach((li, k) => { if (!marker(li)) return; const t = li.innerText.trim(); if (startsNum(t)) res.push({kind: 'step-number-count', box: 'ol', step: k+1, detail: 'marker + text ' + t.slice(0, 20)}); }); });
   document.querySelectorAll('.num').forEach((num, k) => { if (!vis(num)) return; const card = num.parentElement; const h = card.querySelector('h3');
     const vt = h ? [...h.querySelectorAll('[data-l],[data-i18n]')].filter(vis).map(e => e.textContent).join(' ').trim() || h.innerText.trim() : '';
     if (startsNum(vt)) res.push({kind: 'step-number-count', box: '.num card', step: k+1, detail: num.textContent.trim() + ' + ' + vt.slice(0, 20)}); });
   document.querySelectorAll('[data-i18n],[data-i18n-html]').forEach(el => { if (!vis(el)) return; const p = el.previousElementSibling; const t = el.textContent.trim();
     if (p && /^\d+$/.test(p.textContent.trim()) && vis(p) && startsNum(t)) res.push({kind: 'step-number-count', box: 'landing', detail: p.textContent.trim() + ' + ' + t.slice(0, 20)}); });
+  return res;
+}
+"""
+
+LEGAL_JS = r"""
+(lang) => {
+  const res = [];
+  let meta = {}; try { meta = JSON.parse(document.getElementById('legal-meta').textContent)[lang] || {}; } catch (e) { res.push(['legal-meta', 'no legal-meta']); }
+  if (meta.title && document.title !== meta.title) res.push(['legal-title', document.title + ' != ' + meta.title]);
+  const d = document.querySelector('meta[name=description]');
+  if (meta.description && (!d || d.content !== meta.description)) res.push(['legal-meta-desc', d ? d.content.slice(0, 60) : 'none']);
+  let stored = null; try { stored = localStorage.getItem('flexhub_lang'); } catch (e) {}
+  if (stored !== lang) res.push(['lang-not-sticky', 'localStorage flexhub_lang=' + stored]);
+  const sel = document.querySelector('select#lang, select[data-lang-picker], .lang select, select');
+  if (!sel) res.push(['lang-picker', 'no picker']); else if (sel.value !== lang) res.push(['lang-picker', 'picker shows ' + sel.value]);
+  const arts = [...document.querySelectorAll('article.legal-doc')].filter(a => a.checkVisibility());
+  if (arts.length !== 1 || arts[0].getAttribute('data-l') !== lang) res.push(['legal-visible-article', arts.map(a => a.getAttribute('data-l')).join(',') || 'none']);
+  arts.forEach(a => { const toc = a.querySelectorAll('.legal-toc li').length, h2 = a.querySelectorAll('h2').length; if (toc !== h2) res.push(['legal-toc', toc + ' toc items for ' + h2 + ' sections']); a.querySelectorAll('.legal-toc a').forEach(x => { if (!a.querySelector(x.getAttribute('href'))) res.push(['legal-toc', 'broken ' + x.getAttribute('href')]); }); });
+  const se = document.scrollingElement; if (se.scrollWidth > se.clientWidth + 1) res.push(['overflow-x', se.scrollWidth + ' > ' + se.clientWidth]);
+  const hl = [...document.querySelectorAll('link[rel=alternate][hreflang]')].map(l => l.hreflang);
+  for (const h of ['en','zh-Hans','de','fr','ja','ko','ar','x-default']) if (!hl.includes(h)) res.push(['hreflang', 'missing ' + h]);
   return res;
 }
 """
@@ -470,7 +550,7 @@ def check_dynamic(issues, base, cdp):
         page.on("console", lambda m: console.append((m.type, m.text)) if m.type == "error" else None)
         page.on("pageerror", lambda e: console.append(("pageerror", str(e))))
         en_texts = {}
-        targets = [("index.html", None)] + [("guide.html", m) for m in ("usb", "wireless")]
+        targets = [("index.html", None)] + [("guide.html", m) for m in ("usb", "wireless")] + [(p + ".html", None) for p in LEGAL_PAGES]
         for lang in LANGS:
             for path, mode in targets:
                 console.clear()
@@ -502,6 +582,9 @@ def check_dynamic(issues, base, cdp):
                         add(issues, kind, label + " " + where, lang, "%s | %s" % (d, t[:80]), "warn" if kind == "latin-fragment" else "error")
                     if lang != "en" and t in en_texts.get(label, ()) and len(t) > 12 and len(unknown_latin(UI_LITERALS_RX.sub(" ", t))) >= 2:
                         add(issues, "english-leak", label + " " + where, lang, t[:80], "error" if lang in NATIVE else "warn")
+                if path[:-5] in LEGAL_PAGES:
+                    for kind, d in page.evaluate(LEGAL_JS, lang):
+                        add(issues, kind, label, lang, d)
                 for typ, txt in console:
                     add(issues, "console-error", label, lang, txt[:200])
         page.close()
@@ -531,7 +614,8 @@ def main():
     issues = []
     g = check_guide_static(issues)
     check_site_static(issues)
-    print("static: %d guide.html span groups checked" % g)
+    nl = check_legal_static(issues)
+    print("static: %d guide.html span groups, %d legal source lines checked" % (g, nl))
     if not a.static_only:
         st = check_dynamic(issues, a.base, a.cdp)
         print("dynamic: visible strings per language:", dict(st))

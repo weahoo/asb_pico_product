@@ -1,5 +1,5 @@
 title: お問い合わせ・事業者情報 — Flexhub
-description: Flexhub と visualbuild.shop の運営チームへの連絡方法、および法令で定められた事業者情報。
+description: Flexhub と visualbuild.shop の運営者へのの連絡方法、および法令で定められた事業者情報。
 h1: お問い合わせ・事業者情報
 nav: お問い合わせ・事業者情報
 ---

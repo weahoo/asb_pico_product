@@ -1,5 +1,5 @@
 title: 联系与经营者信息 — Flexhub
-description: 如何联系 Flexhub 与 visualbuild.shop 团队，以及法律要求披露的经营者信息。
+description: 如何联系 Flexhub 与 visualbuild.shop 的经营者，以及法律要求披露的经营者信息。
 h1: 联系与经营者信息
 nav: 联系与经营者信息
 ---

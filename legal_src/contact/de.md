@@ -1,5 +1,5 @@
 title: Kontakt und Impressum — Flexhub
-description: So erreichen Sie das Team hinter Flexhub und visualbuild.shop, sowie die gesetzlich vorgeschriebenen Anbieterangaben (Impressum).
+description: So erreichen Sie den Betreiber von Flexhub und visualbuild.shop, sowie die gesetzlich vorgeschriebenen Anbieterangaben (Impressum).
 h1: Kontakt und Impressum
 nav: Kontakt & Impressum
 ---

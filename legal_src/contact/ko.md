@@ -1,5 +1,5 @@
 title: 연락처 및 사업자 정보 — Flexhub
-description: Flexhub와 visualbuild.shop 운영팀에 연락하는 방법과 법적으로 요구되는 사업자 정보.
+description: Flexhub와 visualbuild.shop 운영자에게 연락하는 방법과 법적으로 요구되는 사업자 정보.
 h1: 연락처 및 사업자 정보
 nav: 연락처 및 사업자 정보
 ---
