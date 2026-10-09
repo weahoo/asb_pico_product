@@ -1,0 +1,128 @@
+{
+ "skip": {
+  "en": "Skip to content",
+  "zh": "跳到正文",
+  "de": "Zum Inhalt springen",
+  "fr": "Aller au contenu",
+  "ja": "本文へスキップ",
+  "ko": "본문으로 건너뛰기",
+  "ar": "انتقل إلى المحتوى"
+ },
+ "brandTag": {
+  "en": "Legal information",
+  "zh": "法律信息",
+  "de": "Rechtliches",
+  "fr": "Informations légales",
+  "ja": "法的情報",
+  "ko": "법적 고지",
+  "ar": "معلومات قانونية"
+ },
+ "langLabel": {
+  "en": "Language",
+  "zh": "语言",
+  "de": "Sprache",
+  "fr": "Langue",
+  "ja": "言語",
+  "ko": "언어",
+  "ar": "اللغة"
+ },
+ "back": {
+  "en": "Back to Flexhub",
+  "zh": "返回 Flexhub",
+  "de": "Zurück zu Flexhub",
+  "fr": "Retour à Flexhub",
+  "ja": "Flexhub に戻る",
+  "ko": "Flexhub로 돌아가기",
+  "ar": "العودة إلى Flexhub"
+ },
+ "updated": {
+  "en": "Last updated:",
+  "zh": "最后更新：",
+  "de": "Zuletzt aktualisiert:",
+  "fr": "Dernière mise à jour :",
+  "ja": "最終更新日：",
+  "ko": "최종 업데이트:",
+  "ar": "آخر تحديث:"
+ },
+ "toc": {
+  "en": "On this page",
+  "zh": "本页内容",
+  "de": "Auf dieser Seite",
+  "fr": "Sur cette page",
+  "ja": "このページの内容",
+  "ko": "이 페이지의 내용",
+  "ar": "في هذه الصفحة"
+ },
+ "prevails": {
+  "en": "",
+  "zh": "本页为英文版本的翻译，仅供参考。如中文版本与英文版本存在任何不一致，以英文版本为准。",
+  "de": "Diese Seite ist eine Übersetzung der englischen Fassung. Bei Abweichungen zwischen der deutschen und der englischen Fassung ist die englische Fassung maßgeblich.",
+  "fr": "Cette page est une traduction de la version anglaise. En cas de divergence entre la version française et la version anglaise, la version anglaise prévaut.",
+  "ja": "このページは英語版の翻訳です。日本語版と英語版の内容に相違がある場合は、英語版が優先します。",
+  "ko": "이 페이지는 영문판의 번역본입니다. 한국어판과 영문판의 내용이 다를 경우 영문판이 우선합니다.",
+  "ar": "هذه الصفحة ترجمة للنسخة الإنجليزية. في حال وجود أي اختلاف بين النسخة العربية والنسخة الإنجليزية، تسود النسخة الإنجليزية."
+ },
+ "enLink": {
+  "en": "",
+  "zh": "查看英文版本",
+  "de": "Englische Fassung anzeigen",
+  "fr": "Voir la version anglaise",
+  "ja": "英語版を表示",
+  "ko": "영문판 보기",
+  "ar": "عرض النسخة الإنجليزية"
+ },
+ "f.guide": {
+  "en": "User guide",
+  "zh": "使用说明",
+  "de": "Benutzerhandbuch",
+  "fr": "Guide de l’utilisateur",
+  "ja": "ユーザーガイド",
+  "ko": "사용 설명서",
+  "ar": "دليل المستخدم"
+ },
+ "f.privacy": {
+  "en": "Privacy",
+  "zh": "隐私政策",
+  "de": "Datenschutz",
+  "fr": "Confidentialité",
+  "ja": "プライバシー",
+  "ko": "개인정보처리방침",
+  "ar": "الخصوصية"
+ },
+ "f.terms": {
+  "en": "Terms",
+  "zh": "销售与使用条款",
+  "de": "AGB",
+  "fr": "Conditions",
+  "ja": "利用規約",
+  "ko": "이용약관",
+  "ar": "الشروط"
+ },
+ "f.refund": {
+  "en": "Refunds",
+  "zh": "退款与退货",
+  "de": "Erstattungen",
+  "fr": "Remboursements",
+  "ja": "返品・返金",
+  "ko": "환불",
+  "ar": "الاسترداد"
+ },
+ "f.shipping": {
+  "en": "Shipping",
+  "zh": "配送",
+  "de": "Versand",
+  "fr": "Livraison",
+  "ja": "配送",
+  "ko": "배송",
+  "ar": "الشحن"
+ },
+ "f.contact": {
+  "en": "Contact & imprint",
+  "zh": "联系与经营者信息",
+  "de": "Kontakt & Impressum",
+  "fr": "Contact et mentions légales",
+  "ja": "お問い合わせ・運営者情報",
+  "ko": "문의 및 사업자 정보",
+  "ar": "التواصل والبيانات القانونية"
+ }
+}
