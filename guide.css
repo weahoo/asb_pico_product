@@ -239,3 +239,79 @@ body[data-mode="usb"] .compare-table tbody td.c-usb[colspan]{box-shadow:none}
 .how-note p b,.how-note li b,.how-note p code{display:inline;margin:0}
 ul.how-note{color:var(--muted)}
 ul.how-note li{margin:0 0 8px}
+
+/* Step illustrations (flat, site palette; animations restart whenever a step becomes visible) */
+.st-ill{margin:4px 0 12px;border:var(--rule);border-radius:var(--radius);padding:10px 12px;background:#fff}
+.st-ill svg{display:block;width:100%;height:auto;max-height:210px}
+.il-ln{fill:#fff;stroke:#6b6b6b;stroke-width:2;stroke-linejoin:round}
+.il-ln2{fill:#fff;stroke:var(--gray);stroke-width:1.5}
+.il-thin{fill:none;stroke:#6b6b6b;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.il-g{fill:var(--gray)}
+.il-acc,.il-accf{fill:var(--accent)}
+.il-dk,.il-dkf{fill:var(--text)}
+.il-mutf{fill:#6b6b6b}
+.il-wh{fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.il-cable{fill:none;stroke:#6b6b6b;stroke-width:3;stroke-linecap:round}
+.il-flow,.il-bt{fill:none;stroke:var(--accent);stroke-width:2.5;stroke-linecap:round;stroke-dasharray:6 8;animation:gDash 1.2s linear infinite}
+.il-wv{fill:none;stroke:#6b6b6b;stroke-width:2;stroke-linecap:round}
+.il-row{fill:#fff;stroke:var(--accent);stroke-width:1.5}
+.il-row.on{fill:#fff}
+.il-pad{fill:#fff;stroke:var(--gray);stroke-width:1.5;stroke-dasharray:4 4}
+.il-fing{fill:rgba(255,106,26,.22);stroke:var(--accent);stroke-width:2}
+.il-tap{fill:none;stroke:var(--accent);stroke-width:2;opacity:0}
+.il-wtile{fill:#fff}
+.il-sel{fill:none;stroke:var(--accent);stroke-width:3}
+.il-t{font:600 12px/1 Inter,-apple-system,"Segoe UI","PingFang SC",sans-serif;fill:var(--text)}
+.il-s{font:600 11px/1 Inter,-apple-system,"Segoe UI","PingFang SC",sans-serif;fill:#6b6b6b}
+.il-xs{font:600 9.5px/1 Inter,-apple-system,"Segoe UI","PingFang SC",sans-serif;fill:#6b6b6b}
+.st-ill .a-plug,.st-ill .a-plug2,.st-ill .a-pop,.st-ill .a-tap,.st-ill .a-sheet,.st-ill .a-sel,.st-ill .a-prog,.st-ill .a-prog2,.st-ill .a-appear,.st-ill .a-fing,.st-ill .a-cur{transform-box:fill-box;transform-origin:center}
+.a-plug{animation:ilPlug 4s ease infinite}
+@keyframes ilPlug{0%,8%{transform:translateX(36px)}30%,100%{transform:none}}
+.a-plug2{animation:ilPlug2 4s ease infinite}
+@keyframes ilPlug2{0%,8%{transform:translateX(-30px)}30%,100%{transform:none}}
+.a-led{animation:ilLed 4s steps(1) infinite}
+@keyframes ilLed{0%,30%{opacity:.15}38%{opacity:1}46%{opacity:.25}54%,100%{opacity:1}}
+.a-pop{animation:ilPop 4s ease infinite}
+@keyframes ilPop{0%,40%{opacity:0;transform:scale(.4)}52%,100%{opacity:1;transform:none}}
+.a-wv0,.a-wv1,.a-wv2{animation:gWave 2.4s ease-in-out infinite}
+.a-wv1{animation-delay:.3s}.a-wv2{animation-delay:.6s}
+.a-hl{animation:ilHl 4s ease infinite}
+@keyframes ilHl{0%,20%{stroke:var(--gray)}30%,100%{stroke:var(--accent)}}
+.a-type{animation:ilType 4s steps(1) infinite}
+@keyframes ilType{0%,45%{opacity:0}50%,100%{opacity:1}}
+.a-tap{animation:ilTap 4s ease-out infinite}
+.a-tap.a-late{animation-name:ilTapLate}
+.a-tap.a-late2{animation-name:ilTapLate2}
+@keyframes ilTap{0%,18%{opacity:0;transform:scale(.4)}22%{opacity:1;transform:scale(.6)}40%,100%{opacity:0;transform:scale(1.8)}}
+@keyframes ilTapLate{0%,68%{opacity:0;transform:scale(.4)}72%{opacity:1;transform:scale(.6)}90%,100%{opacity:0;transform:scale(1.8)}}
+@keyframes ilTapLate2{0%,74%{opacity:0;transform:scale(.4)}78%{opacity:1;transform:scale(.6)}96%,100%{opacity:0;transform:scale(1.8)}}
+.a-sheet{animation:ilSheet 4s ease infinite}
+@keyframes ilSheet{0%,35%{transform:translateY(80px);opacity:0}55%,100%{transform:none;opacity:1}}
+.a-dot{animation:ilDot 4s steps(1) infinite}
+.a-d1{animation-name:ilDot1}.a-d2{animation-name:ilDot2}.a-d3{animation-name:ilDot3}.a-d4{animation-name:ilDot4}.a-d5{animation-name:ilDot5}.a-d6{animation-name:ilDot6}.a-d7{animation-name:ilDot7}
+@keyframes ilDot{0%,10%{opacity:0}12%,100%{opacity:1}}
+@keyframes ilDot1{0%,16%{opacity:0}18%,100%{opacity:1}}
+@keyframes ilDot2{0%,22%{opacity:0}24%,100%{opacity:1}}
+@keyframes ilDot3{0%,28%{opacity:0}30%,100%{opacity:1}}
+@keyframes ilDot4{0%,34%{opacity:0}36%,100%{opacity:1}}
+@keyframes ilDot5{0%,40%{opacity:0}42%,100%{opacity:1}}
+@keyframes ilDot6{0%,46%{opacity:0}48%,100%{opacity:1}}
+@keyframes ilDot7{0%,52%{opacity:0}54%,100%{opacity:1}}
+.a-cur{animation:ilCur 4s ease-in-out infinite}
+.a-fing{animation:ilCur 4s ease-in-out infinite}
+@keyframes ilCur{0%,100%{transform:translate(0,0)}35%{transform:translate(34px,18px)}65%{transform:translate(14px,-6px)}}
+.a-prog{animation:ilProg 4s linear infinite}
+@keyframes ilProg{0%{transform:translateX(0)}70%,100%{transform:translateX(240px)}}
+.a-prog2{animation:ilProg2 5s linear infinite}
+@keyframes ilProg2{0%{transform:translateX(0)}55%,100%{transform:translateX(320px)}}
+.a-appear{animation:ilAppear 5s ease infinite}
+@keyframes ilAppear{0%,55%{opacity:0}65%,100%{opacity:1}}
+.a-tap.a-late2{animation-duration:5s}
+.a-sel{animation:ilSel 4s steps(1) infinite}
+@keyframes ilSel{0%,24%{transform:translateX(0)}25%,49%{transform:translateX(40px)}50%,74%{transform:translateX(80px)}75%,100%{transform:translateX(120px)}}
+@media (max-width:620px){.st-ill{padding:8px}.st-ill svg{max-height:none}}
+@media (prefers-reduced-motion:reduce){
+  .st-ill .a-prog{transform:translateX(240px)}
+  .st-ill .a-prog2{transform:translateX(320px)}
+  .st-ill .a-tap{opacity:0}
+}
