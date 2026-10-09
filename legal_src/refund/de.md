@@ -19,7 +19,7 @@ Wenn Sie Verbraucher in der Europäischen Union, im Europäischen Wirtschaftsrau
 ### Widerrufsrecht
 Sie haben das Recht, binnen 14 Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt 14 Tage ab dem Tag, an dem Sie oder ein von Ihnen benannter Dritter, der nicht der Beförderer ist, die Waren in Besitz genommen haben bzw. hat. Haben Sie mehrere Waren im Rahmen einer einheitlichen Bestellung bestellt, die getrennt geliefert werden, endet die Frist 14 Tage nachdem Sie oder ein von Ihnen benannter Dritter die letzte Ware in Besitz genommen haben bzw. hat.
 
-Um Ihr Widerrufsrecht auszuüben, müssen Sie uns ([Company name], [Registered address], E-Mail: [Contact email]) mittels einer eindeutigen Erklärung (z. B. ein mit der Post versandter Brief oder eine E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren. Sie können dafür das unten stehende Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist. Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.
+Um Ihr Widerrufsrecht auszuüben, müssen Sie uns ([Your full legal name], [Postal address / country], E-Mail: [Contact email]) mittels einer eindeutigen Erklärung (z. B. ein mit der Post versandter Brief oder eine E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren. Sie können dafür das unten stehende Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist. Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.
 
 ### Folgen des Widerrufs
 Wenn Sie diesen Vertrag widerrufen, haben wir Ihnen alle Zahlungen, die wir von Ihnen erhalten haben, einschließlich der Lieferkosten (mit Ausnahme der zusätzlichen Kosten, die sich daraus ergeben, dass Sie eine andere Art der Lieferung als die von uns angebotene, günstigste Standardlieferung gewählt haben), unverzüglich und spätestens binnen 14 Tagen ab dem Tag zurückzuzahlen, an dem die Mitteilung über Ihren Widerruf dieses Vertrags bei uns eingegangen ist. Für diese Rückzahlung verwenden wir dasselbe Zahlungsmittel, das Sie bei der ursprünglichen Transaktion eingesetzt haben, es sei denn, mit Ihnen wurde ausdrücklich etwas anderes vereinbart; in keinem Fall werden Ihnen wegen dieser Rückzahlung Entgelte berechnet. Wir können die Rückzahlung verweigern, bis wir die Waren wieder zurückerhalten haben oder bis Sie den Nachweis erbracht haben, dass Sie die Waren zurückgesandt haben, je nachdem, welches der frühere Zeitpunkt ist.
@@ -28,7 +28,7 @@ Sie haben die Waren unverzüglich und in jedem Fall spätestens binnen 14 Tagen 
 
 ### Muster-Widerrufsformular
 (Wenn Sie den Vertrag widerrufen wollen, dann füllen Sie bitte dieses Formular aus und senden Sie es zurück.)
-- An: [Company name], [Registered address], E-Mail: [Contact email]
+- An: [Your full legal name], [Postal address / country], E-Mail: [Contact email]
 - Hiermit widerrufe(n) ich/wir (*) den von mir/uns (*) abgeschlossenen Vertrag über den Kauf der folgenden Waren (*):
 - Bestellt am (*) / erhalten am (*):
 - Name des/der Verbraucher(s):
@@ -64,4 +64,4 @@ Sie können eine Vorbestellung jederzeit vor dem Versand per E-Mail an [Contact 
 Wir erstatten auf das ursprüngliche Zahlungsmittel innerhalb von 14 Tagen nach Erhalt des zurückgesandten Produkts (bei einem Widerruf alternativ nach Erhalt des Nachweises, dass Sie es abgesandt haben). Wir bestätigen die Erstattung per E-Mail. Je nach Bank oder Kartenaussteller kann es einige weitere Werktage dauern, bis der Betrag auf Ihrem Konto erscheint.
 
 ## 9. Kontakt
-[Company name], [Registered address]. E-Mail: [Contact email].
+[Your full legal name], [Postal address / country]. E-Mail: [Contact email].

@@ -3,11 +3,11 @@ description: Flexhub 与 visualbuild.shop 如何处理个人数据：静态网�
 h1: 隐私政策
 nav: 隐私政策
 ---
-本隐私政策说明 [Company name]（“我们”）在你访问 visualbuild.shop（“本网站”）、购买 Flexhub 设备、联系我们，或使用 Flexhub 设备及其内置控制页面时如何处理个人数据。请将本政策与我们的[销售与使用条款](terms.html)一并阅读。
+本隐私政策说明 [Your full legal name]（“我们”）在你访问 visualbuild.shop（“本网站”）、购买 Flexhub 设备、联系我们，或使用 Flexhub 设备及其内置控制页面时如何处理个人数据。请将本政策与我们的[销售与使用条款](terms.html)一并阅读。
 ## 1. 谁负责处理（数据控制者）
-对本政策所述处理活动负责的控制者为：
-- [Company name]，[Legal form]
-- [Registered address]
+对本政策所述处理活动负责的控制者为经营 Flexhub 和 visualbuild.shop 的个人（个体经营者）：
+- [Your full legal name] — Flexhub / visualbuild.shop
+- [Postal address / country]
 - 电子邮件：[Contact email]
 如有隐私相关问题或请求，请发送邮件至 [Privacy contact email]。在法律要求的情况下，我们在欧盟的代表为 [EU representative (Art. 27 GDPR), if required]，在英国的代表为 [UK representative, if required]。
 ## 2. 摘要
@@ -88,4 +88,4 @@ Flexhub 是一款基于 Raspberry Pi Pico 2 W 的小型硬件设备。它会创�
 ## 16. 本政策的变更
 当我们的服务或法律发生变化时，我们可能会更新本政策。当前版本及其最后更新日期始终公布在本页面。如变更重大，我们会在适当时通过电子邮件通知客户。
 ## 17. 联系我们
-[Company name]，[Registered address]。电子邮件：[Privacy contact email]。另请参阅我们的[联系与经营者信息页面](contact.html)。
+[Your full legal name]，[Postal address / country]。电子邮件：[Privacy contact email]。另请参阅我们的[联系与经营者信息页面](contact.html)。

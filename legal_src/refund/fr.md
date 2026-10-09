@@ -19,7 +19,7 @@ Si vous êtes un consommateur résidant dans l’Union européenne, l’Espace �
 ### Droit de rétractation
 Vous avez le droit de vous rétracter du présent contrat sans donner de motif dans un délai de 14 jours. Le délai de rétractation expire 14 jours après le jour où vous-même, ou un tiers autre que le transporteur et désigné par vous, prend physiquement possession du bien. Si vous avez commandé plusieurs biens dans une seule commande et que ceux-ci sont livrés séparément, le délai expire 14 jours après que vous-même ou la personne désignée avez pris possession du dernier bien.
 
-Pour exercer le droit de rétractation, vous devez nous notifier ([Company name], [Registered address], e-mail : [Contact email]) votre décision de rétractation du présent contrat au moyen d’une déclaration dénuée d’ambiguïté (par exemple, lettre envoyée par la poste ou courrier électronique). Vous pouvez utiliser le modèle de formulaire de rétractation ci-dessous, mais ce n’est pas obligatoire. Pour que le délai de rétractation soit respecté, il suffit que vous transmettiez votre communication relative à l’exercice du droit de rétractation avant l’expiration du délai de rétractation.
+Pour exercer le droit de rétractation, vous devez nous notifier ([Your full legal name], [Postal address / country], e-mail : [Contact email]) votre décision de rétractation du présent contrat au moyen d’une déclaration dénuée d’ambiguïté (par exemple, lettre envoyée par la poste ou courrier électronique). Vous pouvez utiliser le modèle de formulaire de rétractation ci-dessous, mais ce n’est pas obligatoire. Pour que le délai de rétractation soit respecté, il suffit que vous transmettiez votre communication relative à l’exercice du droit de rétractation avant l’expiration du délai de rétractation.
 
 ### Effets de la rétractation
 En cas de rétractation de votre part du présent contrat, nous vous rembourserons tous les paiements reçus de vous, y compris les frais de livraison (à l’exception des frais supplémentaires découlant du fait que vous avez choisi, le cas échéant, un mode de livraison autre que le mode moins coûteux de livraison standard proposé par nous) sans retard excessif et, en tout état de cause, au plus tard 14 jours à compter du jour où nous sommes informés de votre décision de rétractation du présent contrat. Nous procéderons au remboursement en utilisant le même moyen de paiement que celui que vous aurez utilisé pour la transaction initiale, sauf si vous convenez expressément d’un moyen différent ; en tout état de cause, ce remboursement n’occasionnera pas de frais pour vous. Nous pouvons différer le remboursement jusqu’à ce que nous ayons reçu le bien ou jusqu’à ce que vous ayez fourni une preuve d’expédition du bien, la date retenue étant celle du premier de ces faits.
@@ -28,7 +28,7 @@ Vous devrez renvoyer ou rendre le bien à [Return address] sans retard excessif 
 
 ### Modèle de formulaire de rétractation
 (Veuillez compléter et renvoyer le présent formulaire uniquement si vous souhaitez vous rétracter du contrat.)
-- À l’attention de : [Company name], [Registered address], e-mail : [Contact email]
+- À l’attention de : [Your full legal name], [Postal address / country], e-mail : [Contact email]
 - Je/Nous (*) vous notifie/notifions (*) par la présente ma/notre (*) rétractation du contrat portant sur la vente du bien (*) ci-dessous :
 - Commandé le (*) / reçu le (*) :
 - Nom du (des) consommateur(s) :
@@ -64,4 +64,4 @@ Vous pouvez annuler une précommande à tout moment avant son expédition en éc
 Nous remboursons sur le moyen de paiement d’origine dans les 14 jours suivant la réception du Produit retourné (ou de la preuve de son expédition, en cas de rétractation). Nous vous confirmerons le remboursement par e-mail. Selon votre banque ou l’émetteur de votre carte, quelques jours ouvrables supplémentaires peuvent être nécessaires pour que le montant apparaisse sur votre compte.
 
 ## 9. Contact
-[Company name], [Registered address]. E-mail : [Contact email].
+[Your full legal name], [Postal address / country]. E-mail : [Contact email].

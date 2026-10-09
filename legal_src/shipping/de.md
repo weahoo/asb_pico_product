@@ -30,4 +30,4 @@ Bitte prüfen Sie, ob Ihre Lieferadresse vollständig und korrekt ist. Wenn Sie 
 Wenn Ihr Paket nicht innerhalb der erwarteten Zeit angekommen ist oder beschädigt ankommt, kontaktieren Sie uns unter [Contact email] mit Ihrer Bestellnummer und, bei Beschädigung, Fotos des Pakets und seines Inhalts. Wir klären den Fall mit dem Versandunternehmen und senden Ihnen entsprechend Ihren gesetzlichen Rechten Ersatz oder erstatten den Betrag. Bei Verbrauchern tragen wir das Risiko von Verlust oder Beschädigung bis zur Zustellung des Pakets.
 
 ## 9. Kontakt
-[Company name], [Registered address]. E-Mail: [Contact email].
+[Your full legal name], [Postal address / country]. E-Mail: [Contact email].

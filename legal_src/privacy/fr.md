@@ -3,11 +3,11 @@ description: Comment Flexhub et visualbuild.shop traitent les données personnel
 h1: Politique de confidentialité
 nav: Confidentialité
 ---
-La présente politique de confidentialité explique comment [Company name] (« nous ») traite les données personnelles lorsque vous visitez visualbuild.shop (le « Site »), achetez un appareil Flexhub, nous contactez ou utilisez l’appareil Flexhub et sa page de contrôle intégrée. Veuillez la lire conjointement avec nos [Conditions de vente et d’utilisation](terms.html).
+La présente politique de confidentialité explique comment [Your full legal name] (« nous ») traite les données personnelles lorsque vous visitez visualbuild.shop (le « Site »), achetez un appareil Flexhub, nous contactez ou utilisez l’appareil Flexhub et sa page de contrôle intégrée. Veuillez la lire conjointement avec nos [Conditions de vente et d’utilisation](terms.html).
 ## 1. Responsable du traitement
-Le responsable du traitement décrit dans la présente politique est :
-- [Company name], [Legal form]
-- [Registered address]
+Le responsable du traitement décrit dans la présente politique est la personne physique (entrepreneur individuel) qui exploite Flexhub et visualbuild.shop :
+- [Your full legal name] — Flexhub / visualbuild.shop
+- [Postal address / country]
 - E-mail : [Contact email]
 Pour toute question ou demande relative à la protection des données, écrivez à [Privacy contact email]. Lorsque la loi l’exige, notre représentant dans l’Union européenne est [EU representative (Art. 27 GDPR), if required] et au Royaume-Uni [UK representative, if required].
 ## 2. En bref
@@ -88,4 +88,4 @@ Pour exercer vos droits, envoyez un e-mail à [Privacy contact email]. Nous rép
 ## 16. Modifications de la présente politique
 Nous pouvons mettre à jour la présente politique lorsque nos services ou la législation évoluent. La version en vigueur est toujours publiée sur cette page avec sa date de mise à jour. En cas de modification importante, nous pourrons informer les clients par e-mail.
 ## 17. Contact
-[Company name], [Registered address]. E-mail : [Privacy contact email]. Voir aussi notre page [Contact et mentions légales](contact.html).
+[Your full legal name], [Postal address / country]. E-mail : [Privacy contact email]. Voir aussi notre page [Contact et mentions légales](contact.html).

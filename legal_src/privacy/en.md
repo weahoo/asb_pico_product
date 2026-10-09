@@ -3,12 +3,12 @@ description: How Flexhub and visualbuild.shop handle personal data: the static w
 h1: Privacy Policy
 nav: Privacy
 ---
-This Privacy Policy explains how [Company name] ("we", "us", "our") processes personal data when you visit visualbuild.shop (the "Website"), buy a Flexhub device, contact us, or use the Flexhub device and its built-in control page. Please read it together with our [Terms of Sale and Use](terms.html).
+This Privacy Policy explains how [Your full legal name] ("we", "us", "our") processes personal data when you visit visualbuild.shop (the "Website"), buy a Flexhub device, contact us, or use the Flexhub device and its built-in control page. Please read it together with our [Terms of Sale and Use](terms.html).
 
 ## 1. Who is responsible (data controller)
-The controller responsible for the processing described in this policy is:
-- [Company name], [Legal form]
-- [Registered address]
+The controller responsible for the processing described in this policy is the individual (sole proprietor) who operates Flexhub and visualbuild.shop:
+- [Your full legal name] — Flexhub / visualbuild.shop
+- [Postal address / country]
 - Email: [Contact email]
 
 For privacy questions and requests, write to [Privacy contact email]. Where the law requires it, our representative in the European Union is [EU representative (Art. 27 GDPR), if required] and in the United Kingdom [UK representative, if required].
@@ -122,4 +122,4 @@ To exercise any of your rights, email [Privacy contact email]. We will respond w
 We may update this policy when our services or the law change. The current version is always published on this page with its last updated date. If the changes are significant, we will inform customers by email where appropriate.
 
 ## 17. Contact
-[Company name], [Registered address]. Email: [Privacy contact email]. See also our [contact and imprint page](contact.html).
+[Your full legal name], [Postal address / country]. Email: [Privacy contact email]. See also our [contact and imprint page](contact.html).

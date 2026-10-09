@@ -9,22 +9,20 @@ Flexhub、ご注文、返品、保証に関するご質問は、[Contact email] 
 セットアップについては、トラブルシューティングを含む[ユーザーガイド](guide.html)をご覧ください。
 
 ## 2. 事業者情報
-- [Company name]、[Legal form]
-- [Registered address]
-- 代表者：[Managing director or legal representative]
+- [Your full legal name] — Flexhub / visualbuild.shop
+- [Postal address / country]
 - メール：[Contact email]
 - 電話：[Phone number]
-- 商業登記：[Register court or authority and registration number]
-- 付加価値税（VAT）番号：[VAT ID]
-- コンテンツ責任者：[Name and address of the person responsible for content]
+- 商業登記：[Trade registration number, if applicable]
+- 付加価値税（VAT）番号：[VAT ID, if applicable]
+- コンテンツ責任者：[Your full legal name]、[Postal address / country]
 
 ## 3. 消費者紛争の解決
 [Statement on participation in consumer dispute resolution proceedings, as required in your jurisdiction.]
 
 ## 4. 日本のお客様向け情報（特定商取引法に基づく表記）
-- 販売業者：[Company name]
-- 代表者：[Managing director or legal representative]
-- 所在地：[Registered address]
+- 販売業者：[Your full legal name]
+- 所在地：[Postal address / country]
 - 電話番号：[Phone number]
 - メールアドレス：[Contact email]
 - 販売価格：各商品ページおよび決済画面に表示（該当する場合は消費税込み）。
@@ -34,4 +32,4 @@ Flexhub、ご注文、返品、保証に関するご質問は、[Contact email] 
 - 返品・キャンセル：[返金・返品ポリシー](refund.html)をご覧ください。
 
 ## 5. コンテンツおよびリンクに関する責任
-当社は本サイトのコンテンツを注意して作成していますが、常に完全、正確かつ最新であることを保証することはできません。本サイトには外部サイトへのリンクが含まれていますが、その内容について当社は関与できず、各提供者が責任を負います。権利侵害を認識した場合は、速やかに該当するリンクを削除します。
+当店は本サイトのコンテンツを注意して作成していますが、常に完全、正確かつ最新であることを保証することはできません。本サイトには外部サイトへのリンクが含まれていますが、その内容について当店は関与できず、各提供者が責任を負います。権利侵害を認識した場合は、速やかに該当するリンクを削除します。

@@ -30,4 +30,4 @@ Please check that your shipping address is complete and correct. If you notice a
 If your parcel has not arrived within the expected time, or arrives damaged, contact us at [Contact email] with your order number and, for damage, photos of the parcel and its contents. We will investigate with the carrier and send a replacement or refund you, in accordance with your statutory rights. For consumers, we bear the risk of loss or damage until the parcel is delivered.
 
 ## 9. Contact
-[Company name], [Registered address]. Email: [Contact email].
+[Your full legal name], [Postal address / country]. Email: [Contact email].

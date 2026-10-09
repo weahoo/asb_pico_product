@@ -9,22 +9,20 @@ For questions about Flexhub, orders, returns or warranty, email us at [Contact e
 For setup help, see the [user guide](guide.html), which includes a troubleshooting section.
 
 ## 2. Provider information (imprint)
-- [Company name], [Legal form]
-- [Registered address]
-- Represented by: [Managing director or legal representative]
+- [Your full legal name] — Flexhub / visualbuild.shop
+- [Postal address / country]
 - Email: [Contact email]
 - Phone: [Phone number]
-- Commercial register: [Register court or authority and registration number]
-- VAT identification number: [VAT ID]
-- Responsible for content: [Name and address of the person responsible for content]
+- Commercial register: [Trade registration number, if applicable]
+- VAT identification number: [VAT ID, if applicable]
+- Responsible for content: [Your full legal name], [Postal address / country]
 
 ## 3. Consumer dispute resolution
 [Statement on participation in consumer dispute resolution proceedings, as required in your jurisdiction.]
 
 ## 4. Information for customers in Japan (Act on Specified Commercial Transactions)
-- Seller: [Company name]
-- Representative: [Managing director or legal representative]
-- Address: [Registered address]
+- Seller: [Your full legal name]
+- Address: [Postal address / country]
 - Phone: [Phone number]
 - Email: [Contact email]
 - Price: shown on each product page and at checkout, including consumption tax where applicable.

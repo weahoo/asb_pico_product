@@ -3,7 +3,7 @@ description: Conditions de vente et d’utilisation des appareils Flexhub achet�
 h1: Conditions de vente et d’utilisation
 nav: Conditions
 ---
-Les présentes conditions de vente et d’utilisation (les « Conditions ») s’appliquent à tous les achats d’appareils et d’accessoires Flexhub (les « Produits ») effectués sur visualbuild.shop (le « Site ») ainsi qu’à l’utilisation du Site, de l’appareil Flexhub et de son micrologiciel. Le vendeur est [Company name], [Registered address] (« nous »). Veuillez lire attentivement ces Conditions avant de passer commande.
+Les présentes conditions de vente et d’utilisation (les « Conditions ») s’appliquent à tous les achats d’appareils et d’accessoires Flexhub (les « Produits ») effectués sur visualbuild.shop (le « Site ») ainsi qu’à l’utilisation du Site, de l’appareil Flexhub et de son micrologiciel. Le vendeur est [Your full legal name], personne physique (entrepreneur individuel) exerçant sous la marque Flexhub / visualbuild.shop, [Postal address / country] (« nous »). Veuillez lire attentivement ces Conditions avant de passer commande.
 
 ## 1. Champ d’application
 1.1 Les présentes Conditions s’appliquent aux consommateurs et aux clients professionnels. Est consommateur toute personne qui achète à des fins qui n’entrent pas principalement dans le cadre de son activité commerciale, industrielle, artisanale ou libérale.
@@ -106,7 +106,7 @@ Vous ne devez pas utiliser le Produit, son micrologiciel ou le Site :
 14.4 Pour les clients professionnels, et sous réserve de l’article 14.1, notre responsabilité totale au titre de chaque contrat est limitée au prix payé pour les Produits concernés.
 
 ## 15. Droit applicable et juridiction
-15.1 Les présentes Conditions et tout contrat conclu en vertu de celles-ci sont régis par le droit de [Governing law]. La Convention des Nations unies sur les contrats de vente internationale de marchandises (CVIM) ne s’applique pas.
+15.1 Les présentes Conditions et tout contrat conclu en vertu de celles-ci sont régis par le droit de [Governing law / jurisdiction]. La Convention des Nations unies sur les contrats de vente internationale de marchandises (CVIM) ne s’applique pas.
 
 15.2 Si vous êtes consommateur, ce choix de loi ne vous prive pas de la protection des dispositions impératives du droit du pays de votre résidence habituelle, et vous pouvez saisir les tribunaux de ce pays.
 
@@ -122,4 +122,4 @@ Nous pouvons modifier les présentes Conditions pour les commandes futures. Les 
 Si une disposition des présentes Conditions est nulle ou inapplicable, les autres dispositions restent en vigueur. Les traductions des présentes Conditions sont fournies à titre de commodité ; en cas de divergence, la version anglaise prévaut, sauf disposition impérative contraire.
 
 ## 19. Contact
-[Company name], [Registered address]. E-mail : [Contact email]. Les informations sur l’entreprise figurent sur notre page [Contact et mentions légales](contact.html).
+[Your full legal name], [Postal address / country]. E-mail : [Contact email]. Les informations sur le vendeur figurent sur notre page [Contact et mentions légales](contact.html).

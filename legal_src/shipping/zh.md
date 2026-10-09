@@ -21,4 +21,4 @@ nav: 配送
 ## 8. 包裹丢失或损坏
 如果你的包裹未在预计时间内送达，或到达时已损坏，请携订单号联系 [Contact email]；如有损坏，请附上包裹及内容物的照片。我们会与承运人核查，并依照你的法定权利为你补发或退款。对于消费者，在包裹送达之前，丢失或损坏的风险由我们承担。
 ## 9. 联系我们
-[Company name]，[Registered address]。电子邮件：[Contact email]。
+[Your full legal name]，[Postal address / country]。电子邮件：[Contact email]。

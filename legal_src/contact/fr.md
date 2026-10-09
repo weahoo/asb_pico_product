@@ -9,22 +9,20 @@ Pour toute question sur Flexhub, les commandes, les retours ou la garantie, écr
 Pour l’aide à la configuration, consultez le [guide d’utilisation](guide.html), qui comprend une section de dépannage.
 
 ## 2. Informations sur l’éditeur (mentions légales)
-- [Company name], [Legal form]
-- [Registered address]
-- Représentée par : [Managing director or legal representative]
+- [Your full legal name] — Flexhub / visualbuild.shop
+- [Postal address / country]
 - E-mail : [Contact email]
 - Téléphone : [Phone number]
-- Registre du commerce : [Register court or authority and registration number]
-- Numéro d’identification à la TVA : [VAT ID]
-- Responsable du contenu : [Name and address of the person responsible for content]
+- Registre du commerce : [Trade registration number, if applicable]
+- Numéro d’identification à la TVA : [VAT ID, if applicable]
+- Responsable du contenu : [Your full legal name], [Postal address / country]
 
 ## 3. Règlement des litiges de consommation
 [Statement on participation in consumer dispute resolution proceedings, as required in your jurisdiction.]
 
 ## 4. Informations pour les clients au Japon (loi sur les transactions commerciales spécifiées)
-- Vendeur : [Company name]
-- Représentant : [Managing director or legal representative]
-- Adresse : [Registered address]
+- Vendeur : [Your full legal name]
+- Adresse : [Postal address / country]
 - Téléphone : [Phone number]
 - E-mail : [Contact email]
 - Prix : indiqué sur chaque page produit et lors du paiement, taxe sur la consommation incluse le cas échéant.

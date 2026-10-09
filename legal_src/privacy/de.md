@@ -3,11 +3,11 @@ description: Wie Flexhub und visualbuild.shop personenbezogene Daten verarbeiten
 h1: Datenschutzerklärung
 nav: Datenschutz
 ---
-Diese Datenschutzerklärung erläutert, wie [Company name] („wir“, „uns“) personenbezogene Daten verarbeitet, wenn Sie visualbuild.shop (die „Website“) besuchen, ein Flexhub-Gerät kaufen, uns kontaktieren oder das Flexhub-Gerät und seine integrierte Steuerseite nutzen. Bitte lesen Sie sie zusammen mit unseren [Verkaufs- und Nutzungsbedingungen](terms.html).
+Diese Datenschutzerklärung erläutert, wie [Your full legal name] („wir“, „uns“) personenbezogene Daten verarbeitet, wenn Sie visualbuild.shop (die „Website“) besuchen, ein Flexhub-Gerät kaufen, uns kontaktieren oder das Flexhub-Gerät und seine integrierte Steuerseite nutzen. Bitte lesen Sie sie zusammen mit unseren [Verkaufs- und Nutzungsbedingungen](terms.html).
 ## 1. Verantwortlicher
-Verantwortlicher für die in dieser Erklärung beschriebene Verarbeitung ist:
-- [Company name], [Legal form]
-- [Registered address]
+Verantwortlicher für die in dieser Erklärung beschriebene Verarbeitung ist die Einzelperson (Einzelunternehmer), die Flexhub und visualbuild.shop betreibt:
+- [Your full legal name] — Flexhub / visualbuild.shop
+- [Postal address / country]
 - E-Mail: [Contact email]
 Für Fragen und Anfragen zum Datenschutz schreiben Sie an [Privacy contact email]. Soweit gesetzlich erforderlich, ist unser Vertreter in der Europäischen Union [EU representative (Art. 27 GDPR), if required] und im Vereinigten Königreich [UK representative, if required].
 ## 2. Zusammenfassung
@@ -88,4 +88,4 @@ Zur Ausübung Ihrer Rechte senden Sie eine E-Mail an [Privacy contact email]. Wi
 ## 16. Änderungen dieser Erklärung
 Wir können diese Erklärung aktualisieren, wenn sich unsere Dienste oder die Rechtslage ändern. Die aktuelle Fassung ist stets mit ihrem Aktualisierungsdatum auf dieser Seite veröffentlicht. Bei wesentlichen Änderungen informieren wir Kunden gegebenenfalls per E-Mail.
 ## 17. Kontakt
-[Company name], [Registered address]. E-Mail: [Privacy contact email]. Siehe auch unsere Seite [Kontakt und Impressum](contact.html).
+[Your full legal name], [Postal address / country]. E-Mail: [Privacy contact email]. Siehe auch unsere Seite [Kontakt und Impressum](contact.html).

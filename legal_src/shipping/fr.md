@@ -30,4 +30,4 @@ Veuillez vérifier que votre adresse de livraison est complète et correcte. Si 
 Si votre colis n’est pas arrivé dans le délai prévu ou arrive endommagé, contactez-nous à [Contact email] avec votre numéro de commande et, en cas de dommage, des photos du colis et de son contenu. Nous enquêterons avec le transporteur et vous enverrons un remplacement ou vous rembourserons, conformément à vos droits légaux. Pour les consommateurs, nous supportons le risque de perte ou de dommage jusqu’à la livraison du colis.
 
 ## 9. Contact
-[Company name], [Registered address]. E-mail : [Contact email].
+[Your full legal name], [Postal address / country]. E-mail : [Contact email].

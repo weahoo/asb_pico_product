@@ -3,7 +3,7 @@ description: Terms of sale and use for Flexhub devices bought on visualbuild.sho
 h1: Terms of Sale and Use
 nav: Terms
 ---
-These Terms of Sale and Use ("Terms") apply to all purchases of Flexhub devices and accessories ("Products") through visualbuild.shop (the "Website") and to the use of the Website, the Flexhub device and its firmware. The seller is [Company name], [Registered address] ("we", "us", "our"). Please read these Terms carefully before placing an order.
+These Terms of Sale and Use ("Terms") apply to all purchases of Flexhub devices and accessories ("Products") through visualbuild.shop (the "Website") and to the use of the Website, the Flexhub device and its firmware. The seller is [Your full legal name], an individual (sole proprietor) trading as Flexhub / visualbuild.shop, [Postal address / country] ("we", "us", "our"). Please read these Terms carefully before placing an order.
 
 ## 1. Scope
 1.1 These Terms apply to consumers and business customers. A consumer is a person who buys for purposes that are mainly outside their trade, business or profession.
@@ -106,7 +106,7 @@ You must not use the Product, its firmware or the Website:
 14.4 For business customers, and subject to section 14.1, our total liability under each contract is limited to the price paid for the Products concerned.
 
 ## 15. Governing law and jurisdiction
-15.1 These Terms and any contract under them are governed by the laws of [Governing law]. The UN Convention on Contracts for the International Sale of Goods (CISG) does not apply.
+15.1 These Terms and any contract under them are governed by the laws of [Governing law / jurisdiction]. The UN Convention on Contracts for the International Sale of Goods (CISG) does not apply.
 
 15.2 If you are a consumer, this choice of law does not deprive you of the protection of the mandatory provisions of the law of the country where you have your habitual residence, and you may bring proceedings in the courts of that country.
 
@@ -122,4 +122,4 @@ We may change these Terms for future orders. The Terms that apply to your order 
 If any provision of these Terms is invalid or unenforceable, the remaining provisions remain in effect. Translations of these Terms are provided for convenience; in case of any difference, the English version prevails, unless mandatory law requires otherwise.
 
 ## 19. Contact
-[Company name], [Registered address]. Email: [Contact email]. Company details are listed on our [contact and imprint page](contact.html).
+[Your full legal name], [Postal address / country]. Email: [Contact email]. Seller details are listed on our [contact and imprint page](contact.html).

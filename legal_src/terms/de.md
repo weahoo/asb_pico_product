@@ -3,7 +3,7 @@ description: Verkaufs- und Nutzungsbedingungen für Flexhub-Geräte von visualbu
 h1: Verkaufs- und Nutzungsbedingungen
 nav: AGB
 ---
-Diese Verkaufs- und Nutzungsbedingungen („Bedingungen“) gelten für alle Käufe von Flexhub-Geräten und Zubehör („Produkte“) über visualbuild.shop (die „Website“) sowie für die Nutzung der Website, des Flexhub-Geräts und seiner Firmware. Verkäufer ist [Company name], [Registered address] („wir“, „uns“, „unser“). Bitte lesen Sie diese Bedingungen sorgfältig, bevor Sie eine Bestellung aufgeben.
+Diese Verkaufs- und Nutzungsbedingungen („Bedingungen“) gelten für alle Käufe von Flexhub-Geräten und Zubehör („Produkte“) über visualbuild.shop (die „Website“) sowie für die Nutzung der Website, des Flexhub-Geräts und seiner Firmware. Verkäufer ist [Your full legal name], eine Einzelperson (Einzelunternehmer), die unter der Marke Flexhub / visualbuild.shop handelt, [Postal address / country] („wir“, „uns“, „unser“). Bitte lesen Sie diese Bedingungen sorgfältig, bevor Sie eine Bestellung aufgeben.
 
 ## 1. Geltungsbereich
 1.1 Diese Bedingungen gelten für Verbraucher und Geschäftskunden. Verbraucher ist, wer zu Zwecken kauft, die überwiegend weder seiner gewerblichen noch seiner selbständigen beruflichen Tätigkeit zugerechnet werden können.
@@ -106,7 +106,7 @@ Sie dürfen das Produkt, seine Firmware oder die Website nicht verwenden,
 14.4 Gegenüber Geschäftskunden ist unsere Gesamthaftung je Vertrag, vorbehaltlich Abschnitt 14.1, auf den für die betreffenden Produkte gezahlten Preis begrenzt.
 
 ## 15. Anwendbares Recht und Gerichtsstand
-15.1 Diese Bedingungen und alle darunter geschlossenen Verträge unterliegen dem Recht von [Governing law]. Das UN-Übereinkommen über Verträge über den internationalen Warenkauf (CISG) findet keine Anwendung.
+15.1 Diese Bedingungen und alle darunter geschlossenen Verträge unterliegen dem Recht von [Governing law / jurisdiction]. Das UN-Übereinkommen über Verträge über den internationalen Warenkauf (CISG) findet keine Anwendung.
 
 15.2 Wenn Sie Verbraucher sind, wird Ihnen durch diese Rechtswahl nicht der Schutz der zwingenden Bestimmungen des Rechts des Landes entzogen, in dem Sie Ihren gewöhnlichen Aufenthalt haben, und Sie können vor den Gerichten dieses Landes klagen.
 
@@ -122,4 +122,4 @@ Wir können diese Bedingungen für künftige Bestellungen ändern. Für Ihre Bes
 Sollte eine Bestimmung dieser Bedingungen unwirksam oder nicht durchsetzbar sein, bleiben die übrigen Bestimmungen wirksam. Übersetzungen dieser Bedingungen dienen nur der Information; bei Abweichungen ist die englische Fassung maßgeblich, sofern zwingendes Recht nichts anderes vorschreibt.
 
 ## 19. Kontakt
-[Company name], [Registered address]. E-Mail: [Contact email]. Die Unternehmensangaben finden Sie auf unserer Seite [Kontakt und Impressum](contact.html).
+[Your full legal name], [Postal address / country]. E-Mail: [Contact email]. Die Angaben zum Verkäufer finden Sie auf unserer Seite [Kontakt und Impressum](contact.html).

@@ -19,7 +19,7 @@ If you are a consumer in the European Union, the European Economic Area or the U
 ### Right of withdrawal
 You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the goods. If you ordered several goods in one order that are delivered separately, the period expires 14 days after you or your nominee receives the last item.
 
-To exercise the right of withdrawal, you must inform us ([Company name], [Registered address], email: [Contact email]) of your decision to withdraw from this contract by an unequivocal statement (for example, a letter sent by post or an email). You may use the model withdrawal form below, but it is not obligatory. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.
+To exercise the right of withdrawal, you must inform us ([Your full legal name], [Postal address / country], email: [Contact email]) of your decision to withdraw from this contract by an unequivocal statement (for example, a letter sent by post or an email). You may use the model withdrawal form below, but it is not obligatory. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.
 
 ### Effects of withdrawal
 If you withdraw from this contract, we shall reimburse to you all payments received from you, including the costs of delivery (with the exception of the supplementary costs resulting from your choice of a type of delivery other than the least expensive type of standard delivery offered by us), without undue delay and in any event not later than 14 days from the day on which we are informed about your decision to withdraw from this contract. We will carry out such reimbursement using the same means of payment as you used for the initial transaction, unless you have expressly agreed otherwise; in any event, you will not incur any fees as a result of such reimbursement. We may withhold reimbursement until we have received the goods back or you have supplied evidence of having sent back the goods, whichever is the earliest.
@@ -28,7 +28,7 @@ You shall send back the goods or hand them over to us at [Return address] withou
 
 ### Model withdrawal form
 (Complete and return this form only if you wish to withdraw from the contract.)
-- To: [Company name], [Registered address], email: [Contact email]
+- To: [Your full legal name], [Postal address / country], email: [Contact email]
 - I/We (*) hereby give notice that I/We (*) withdraw from my/our (*) contract of sale of the following goods (*):
 - Ordered on (*) / received on (*):
 - Name of consumer(s):
@@ -64,4 +64,4 @@ You can cancel a pre-order at any time before it ships by emailing [Contact emai
 We refund to the original payment method within 14 days of receiving the returned Product (or proof that you sent it, for withdrawals). We will confirm the refund by email. Depending on your bank or card issuer, it may take a few additional business days for the amount to appear in your account.
 
 ## 9. Contact
-[Company name], [Registered address]. Email: [Contact email].
+[Your full legal name], [Postal address / country]. Email: [Contact email].

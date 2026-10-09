@@ -9,22 +9,20 @@ Bei Fragen zu Flexhub, Bestellungen, Rücksendungen oder Garantie schreiben Sie 
 Hilfe bei der Einrichtung bietet das [Benutzerhandbuch](guide.html) mit einem Abschnitt zur Fehlerbehebung.
 
 ## 2. Anbieterkennzeichnung (Impressum)
-- [Company name], [Legal form]
-- [Registered address]
-- Vertreten durch: [Managing director or legal representative]
+- [Your full legal name] — Flexhub / visualbuild.shop
+- [Postal address / country]
 - E-Mail: [Contact email]
 - Telefon: [Phone number]
-- Handelsregister: [Register court or authority and registration number]
-- Umsatzsteuer-Identifikationsnummer: [VAT ID]
-- Verantwortlich für den Inhalt: [Name and address of the person responsible for content]
+- Handelsregister: [Trade registration number, if applicable]
+- Umsatzsteuer-Identifikationsnummer: [VAT ID, if applicable]
+- Verantwortlich für den Inhalt: [Your full legal name], [Postal address / country]
 
 ## 3. Verbraucherstreitbeilegung
 [Statement on participation in consumer dispute resolution proceedings, as required in your jurisdiction.]
 
 ## 4. Informationen für Kunden in Japan (Gesetz über bestimmte gewerbliche Transaktionen)
-- Verkäufer: [Company name]
-- Vertreter: [Managing director or legal representative]
-- Anschrift: [Registered address]
+- Verkäufer: [Your full legal name]
+- Anschrift: [Postal address / country]
 - Telefon: [Phone number]
 - E-Mail: [Contact email]
 - Preis: auf jeder Produktseite und beim Bezahlvorgang angegeben, gegebenenfalls einschließlich Verbrauchsteuer.
