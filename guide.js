@@ -18,6 +18,8 @@
     ko: "Flexhub \uc0ac\uc6a9 \uc124\uba85\uc11c \u2014 USB\u00b7\ubb34\uc120 \ubaa8\ub4dc \uc124\uc815, \ud398\uc5b4\ub9c1, \ub9e4\ud06c\ub85c, \ubb38\uc81c \ud574\uacb0",
     ar: "\u062f\u0644\u064a\u0644 \u0645\u0633\u062a\u062e\u062f\u0645 Flexhub \u2014 \u0648\u0636\u0639\u0627 USB \u0648\u0627\u0644\u0644\u0627\u0633\u0644\u0643\u064a: \u0627\u0644\u0625\u0639\u062f\u0627\u062f \u0648\u0627\u0644\u0627\u0642\u062a\u0631\u0627\u0646 \u0648\u0627\u0644\u0645\u0627\u0643\u0631\u0648 \u0648\u0627\u0633\u062a\u0643\u0634\u0627\u0641 \u0627\u0644\u0623\u062e\u0637\u0627\u0621"
   };
+  var descs = {"en": "Complete Flexhub user guide: USB mode (driver-free keyboard and mouse) and wireless mode (power only, Bluetooth pairing as flexhub), the flexhub Wi‑Fi page, macros, Presenter, TV remotes, firmware updates and troubleshooting.", "zh": "Flexhub 完整使用说明：USB 模式（免驱键盘鼠标）与无线模式（只供电，蓝牙配对 flexhub）、flexhub Wi‑Fi 页面、宏、演示器、电视遥控、固件升级与常见问题。", "de": "Vollständige Flexhub-Anleitung: USB-Modus (Tastatur und Maus ohne Treiber) und Funkmodus (nur Strom, Bluetooth-Pairing als flexhub), die flexhub-Wi‑Fi-Seite, Makros, Presenter, TV-Fernbedienungen, Firmware-Updates und Fehlerbehebung.", "fr": "Guide complet de Flexhub : mode USB (clavier et souris sans pilote) et mode sans fil (alimentation seule, appairage Bluetooth « flexhub »), la page Wi‑Fi flexhub, macros, présentateur, télécommandes TV, mises à jour du firmware et dépannage.", "ja": "Flexhub 完全ガイド：USB モード（ドライバ不要のキーボードとマウス）とワイヤレスモード（電源のみ、Bluetooth で flexhub とペアリング）、flexhub Wi‑Fi ページ、マクロ、プレゼンター、TV リモコン、ファームウェア更新、トラブルシューティング。", "ko": "Flexhub 전체 사용 설명서: USB 모드(드라이버 없는 키보드·마우스)와 무선 모드(전원만, Bluetooth로 flexhub 페어링), flexhub Wi‑Fi 페이지, 매크로, 프레젠터, TV 리모컨, 펌웨어 업데이트, 문제 해결.", "ar": "دليل Flexhub الكامل: وضع USB (لوحة مفاتيح وفأرة بدون تعريف) والوضع اللاسلكي (طاقة فقط، اقتران Bluetooth باسم flexhub)، وصفحة Wi‑Fi، والماكرو، وجهاز العرض، وأجهزة تحكم التلفاز، وتحديثات البرنامج الثابت واستكشاف الأخطاء."};
+  function setMeta(sel, val) { var m = doc.querySelector(sel); if (m && val) m.setAttribute("content", val); }
   var LANGS = ["en","zh","de","fr","ja","ko","ar"];
   var LANG_HTML = {en:"en", zh:"zh-Hans", de:"de", fr:"fr", ja:"ja", ko:"ko", ar:"ar"};
   var lang = "en";
@@ -42,6 +44,10 @@
     root.lang = LANG_HTML[lang] || "en";
     root.dir = lang === "ar" ? "rtl" : "ltr";
     doc.title = titles[lang] || titles.en;
+    var dsc = descs[lang] || descs.en;
+    setMeta('meta[name="description"]', dsc);
+    setMeta('meta[property="og:title"]', doc.title);
+    setMeta('meta[property="og:description"]', dsc);
     store("flexhub_lang", lang);
     var sel = doc.getElementById("lang");
     if (sel) sel.value = lang;

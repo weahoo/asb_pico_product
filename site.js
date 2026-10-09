@@ -914,11 +914,24 @@ const LANG_HTML = {en:"en", zh:"zh-Hans", de:"de", fr:"fr", ja:"ja", ko:"ko", ar
     return "en";
   }
 
+  const META = {"en": {"t": "Flexhub — wireless shortcuts & light touch from your phone | Wi‑Fi hotspot, no app", "d": "Flexhub turns an old phone into a cheap wireless shortcut panel for your desk PC — macros, trackpad, presenter, signature pad and light annotate. Driver-free USB.", "ot": "Flexhub — wireless shortcuts from your phone"}, "zh": {"t": "Flexhub — 用手机无线快捷键与轻度触控 | Wi‑Fi 热点，无需 App", "d": "Flexhub 把闲置手机变成桌面电脑的便宜无线快捷面板——宏、触控板、演示器、签名板和轻度批注。USB 免驱。", "ot": "Flexhub — 用手机做无线快捷键"}, "de": {"t": "Flexhub — kabellose Shortcuts & leichte Bedienung vom Smartphone | Wi‑Fi-Hotspot, keine App", "d": "Flexhub macht ein altes Smartphone zum günstigen kabellosen Shortcut-Panel für den PC — Makros, Trackpad, Presenter, Unterschriftenfeld und leichte Anmerkungen. USB ohne Treiber.", "ot": "Flexhub — kabellose Shortcuts vom Smartphone"}, "fr": {"t": "Flexhub — raccourcis sans fil et toucher léger depuis votre téléphone | Hotspot Wi‑Fi, sans app", "d": "Flexhub transforme un vieux téléphone en panneau de raccourcis sans fil pour votre PC — macros, trackpad, présentateur, pad de signature et annotation légère. USB sans pilote.", "ot": "Flexhub — raccourcis sans fil depuis votre téléphone"}, "ja": {"t": "Flexhub — スマホからワイヤレスショートカットと軽いタッチ | Wi‑Fi ホットスポット、アプリ不要", "d": "Flexhub は古いスマホをデスク PC 向けの手頃なワイヤレスショートカットパネルに変えます — マクロ、トラックパッド、プレゼンター、署名パッド、軽い注釈。USB ドライバ不要。", "ot": "Flexhub — スマホからワイヤレスショートカット"}, "ko": {"t": "Flexhub — 폰으로 하는 무선 단축키와 가벼운 터치 | Wi‑Fi 핫스팟, 앱 없음", "d": "Flexhub는 오래된 폰을 책상 PC용 저렴한 무선 단축 패널로 바꿉니다 — 매크로, 트랙패드, 프레젠터, 서명 패드, 가벼운 주석. 드라이버 없는 USB.", "ot": "Flexhub — 폰으로 하는 무선 단축키"}, "ar": {"t": "Flexhub — اختصارات لاسلكية ولمس خفيف من هاتفك | نقطة Wi‑Fi، بلا تطبيق", "d": "يحوّل Flexhub هاتفاً قديماً إلى لوحة اختصارات لاسلكية رخيصة لحاسوب المكتب — ماكرو، لوحة تتبع، جهاز عرض، لوحة توقيع وتعليق خفيف. USB بدون تعريف.", "ot": "Flexhub — اختصارات لاسلكية من هاتفك"}};
+  function setMeta(sel, val) { const m = document.querySelector(sel); if (m && val) m.setAttribute("content", val); }
+  function applyMeta(lang) {
+    const m = META[lang] || META.en;
+    document.title = m.t;
+    setMeta('meta[name="description"]', m.d);
+    setMeta('meta[property="og:title"]', m.ot);
+    setMeta('meta[property="og:description"]', m.d);
+    setMeta('meta[name="twitter:title"]', m.ot);
+    setMeta('meta[name="twitter:description"]', m.d);
+  }
+
   function applyLang(lang) {
     if (ALL_LANGS.indexOf(lang) < 0) lang = "en";
     const pack = dict[lang] || dict.en;
     document.documentElement.lang = LANG_HTML[lang] || "en";
     document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    applyMeta(lang);
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const key = el.getAttribute("data-i18n");
       if (pack[key] != null) el.textContent = pack[key];
