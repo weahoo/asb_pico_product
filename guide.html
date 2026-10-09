@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Flexhub user guide — USB mode &amp; wireless mode setup, pairing, macros, troubleshooting</title>
+  <meta name="description" content="Complete Flexhub user guide: USB mode (driver-free keyboard and mouse) and wireless mode (power only, Bluetooth pairing as flexhub), the flexhub Wi‑Fi page, macros, Presenter, TV remotes, firmware updates and troubleshooting.">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://visualbuild.shop/guide.html">
+  <meta property="og:site_name" content="Flexhub">
+  <meta property="og:title" content="Flexhub user guide — USB mode &amp; wireless mode">
+  <meta property="og:description" content="Step-by-step setup for both ways of using Flexhub, plus pairing paths, macros, Presenter and troubleshooting.">
+  <meta property="og:url" content="https://visualbuild.shop/guide.html">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://visualbuild.shop/assets/product-illustration.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="guide.css">
+  <script>(function(){try{var l=localStorage.getItem("flexhub_lang");if(!l)l=/^zh\b/i.test(navigator.language||"")?"zh":"en";document.documentElement.lang=l==="zh"?"zh-Hans":"en";}catch(e){}})();</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://visualbuild.shop/guide.html#article",
+      "headline": "Flexhub user guide — USB mode and wireless mode",
+      "description": "How to set up and use Flexhub in USB mode (driver-free keyboard and mouse) and wireless mode (power only, Bluetooth HID named flexhub), controlled from a browser over the flexhub Wi‑Fi hotspot.",
+      "inLanguage": ["en", "zh-Hans"],
+      "about": {"@id": "https://visualbuild.shop/#product"},
+      "publisher": {"@id": "https://visualbuild.me/#organization"},
+      "isPartOf": {"@id": "https://visualbuild.shop/#website"},
+      "url": "https://visualbuild.shop/guide.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Flexhub", "item": "https://visualbuild.shop/"},
+        {"@type": "ListItem", "position": 2, "name": "User guide", "item": "https://visualbuild.shop/guide.html"}
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body data-mode="usb">
+  <a class="skip" href="#main"><span data-l="en">Skip to content</span><span data-l="zh">跳到正文</span></a>
+
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="/">
+        <div class="brand-mark" aria-hidden="true"><span>FH</span></div>
+        <div class="brand-text"><b>Flexhub</b><small><span data-l="en">User guide</span><span data-l="zh">使用说明</span></small></div>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/#benefits"><span data-l="en">What it does</span><span data-l="zh">能做什么</span></a>
+        <a href="/#modes"><span data-l="en">Two ways to connect</span><span data-l="zh">两种连接方式</span></a>
+        <a href="/#how"><span data-l="en">How it works</span><span data-l="zh">怎么用</span></a>
+        <a href="guide.html" aria-current="page"><span data-l="en">User guide</span><span data-l="zh">使用说明</span></a>
+        <a href="/#buy"><span data-l="en">Buy</span><span data-l="zh">购买</span></a>
+        <a href="/#faq"><span data-l="en">FAQ</span><span data-l="zh">常见问题</span></a>
+      </nav>
+      <div class="nav-actions">
+        <label class="sr-only" for="lang">Language</label>
+        <select id="lang" class="lang" aria-label="Language">
+          <option value="en">EN</option>
+          <option value="zh">中文</option>
+        </select>
+        <a class="btn btn-primary btn-sm" href="/#buy"><span data-l="en">Get Flexhub</span><span data-l="zh">入手 Flexhub</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="g-hero" id="choose">
+      <div class="wrap">
+        <span class="eyebrow"><span data-l="en">User guide · firmware 0.7.43</span><span data-l="zh">使用说明 · 固件 0.7.43</span></span>
+        <h1><span data-l="en">Two ways to use Flexhub.<br><span class="accent">Pick yours — the guide follows.</span></span><span data-l="zh">Flexhub 有两种用法。<br><span class="accent">选好一种，整页跟着切换。</span></span></h1>
+        <p class="lead"><span data-l="en">Every time Flexhub powers up it settles into one of two modes, automatically. Choose the one that matches your setup and every section below — steps, timing, tips and troubleshooting — switches to it.</span><span data-l="zh">Flexhub 每次通电都会自动进入两种模式之一。选择跟你的接法一致的那一种，下面所有内容——步骤、等待时间、小贴士和常见问题——都会跟着切换。</span></p>
+        <div class="choose" role="group" aria-label="Choose a mode">
+          <button type="button" data-set-mode="usb" data-go="setup" aria-pressed="true">
+            <span class="c-top"><span class="c-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"/><path d="M8 8l4-4 4 4"/><circle cx="12" cy="18" r="2"/><path d="M7 14h2M15 12h2"/><circle cx="6" cy="14" r="1.5"/><rect x="14.5" y="10.5" width="3" height="3" rx=".5"/></svg></span><span class="c-check"><span data-l="en">Selected</span><span data-l="zh">已选</span></span></span>
+            <b><span data-l="en">USB mode — plugged into a computer</span><span data-l="zh">USB 模式 —— 插在电脑上</span></b>
+            <span class="c-p"><span data-l="en">A USB data cable runs from Flexhub to the computer you want to control. It shows up instantly as a keyboard and mouse — no driver, no pairing.</span><span data-l="zh">用 USB 数据线把 Flexhub 接到要控制的电脑。电脑立刻把它识别成键盘和鼠标——不装驱动，不用配对。</span></span>
+          </button>
+          <button type="button" data-set-mode="ble" data-go="setup" aria-pressed="false">
+            <span class="c-top"><span class="c-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8l10 8-5 4V4l5 4L7 16"/></svg></span><span class="c-check"><span data-l="en">Selected</span><span data-l="zh">已选</span></span></span>
+            <b><span data-l="en">Wireless mode — power only + Bluetooth</span><span data-l="zh">无线模式 —— 只供电 + 蓝牙</span></b>
+            <span class="c-p"><span data-l="en">Flexhub only gets power from a charger or power bank, then pairs over Bluetooth as “flexhub” with a tablet, computer or TV box.</span><span data-l="zh">Flexhub 只接充电头或充电宝取电，再以「flexhub」的名字和平板、电脑或电视盒子蓝牙配对。</span></span>
+          </button>
+        </div>
+        <p class="both-note"><span data-l="en"><b>Same in both modes:</b> you hold a phone, tablet or second computer, join Flexhub’s own Wi‑Fi hotspot <b>flexhub</b> and control everything from a web page — no app for everyday use.</span><span data-l="zh"><b>两种模式都一样：</b>你手里拿手机、平板或另一台电脑，连上 Flexhub 自己的 Wi‑Fi 热点 <b>flexhub</b>，在网页里操作——日常使用不需要 App。</span></p>
+      </div>
+    </section>
+
+    <div class="modebar">
+      <div class="wrap modebar-inner">
+        <div class="mswitch" role="group" aria-label="Mode">
+          <button type="button" data-set-mode="usb" aria-pressed="true"><span data-l="en">USB mode</span><span data-l="zh">USB 模式</span></button>
+          <button type="button" data-set-mode="ble" aria-pressed="false"><span data-l="en">Wireless mode</span><span data-l="zh">无线模式</span></button>
+        </div>
+        <nav class="toc" aria-label="On this page">
+          <a href="#differences"><span data-l="en">Differences</span><span data-l="zh">区别</span></a>
+          <a href="#setup"><span data-l="en">Setup</span><span data-l="zh">上手</span></a>
+          <a href="#remote"><span data-l="en">Remote page</span><span data-l="zh">遥控页面</span></a>
+          <a href="#macros"><span data-l="en">Macros</span><span data-l="zh">宏</span></a>
+          <a href="#settings"><span data-l="en">Settings</span><span data-l="zh">设置</span></a>
+          <a href="#update"><span data-l="en">Updates</span><span data-l="zh">升级</span></a>
+          <a href="#trouble"><span data-l="en">Troubleshooting</span><span data-l="zh">常见问题</span></a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="g-sec" id="overview" aria-labelledby="ovT">
+      <div class="wrap g-grid">
+        <div>
+          <div class="section-head">
+            <small><span data-l="en">The picture</span><span data-l="zh">一图看懂</span></small>
+            <h2 id="ovT"><span class="only-usb"><span data-l="en">Cable to the computer, phone in your hand.</span><span data-l="zh">线连电脑，手机在手。</span></span><span class="only-ble"><span data-l="en">Power from a charger, Bluetooth to the screen.</span><span data-l="zh">充电头供电，蓝牙连屏幕。</span></span></h2>
+            <p class="only-usb"><span data-l="en">Flexhub talks to the computer over the USB cable and to your phone over its own Wi‑Fi. Whatever you do on the phone’s web page arrives at the computer as ordinary keyboard and mouse input.</span><span data-l="zh">Flexhub 通过 USB 线跟电脑沟通，通过自己的 Wi‑Fi 跟手机沟通。你在手机网页上的操作，到电脑那边就是普通的键盘和鼠标输入。</span></p>
+            <p class="only-ble"><span data-l="en">Flexhub sits on a charger, talks to your phone over its own Wi‑Fi, and to the tablet, computer or TV box over Bluetooth as a keyboard + mouse named <b>flexhub</b>.</span><span data-l="zh">Flexhub 接在充电头上，用自己的 Wi‑Fi 跟手机沟通，再通过蓝牙以名为 <b>flexhub</b> 的键盘 + 鼠标连接平板、电脑或电视盒子。</span></p>
+          </div>
+          <dl class="facts">
+            <div><dt><span data-l="en">Wi‑Fi hotspot</span><span data-l="zh">Wi‑Fi 热点</span></dt><dd>flexhub</dd></div>
+            <div><dt><span data-l="en">Wi‑Fi password</span><span data-l="zh">Wi‑Fi 密码</span></dt><dd>build.me</dd></div>
+            <div><dt><span data-l="en">Web page</span><span data-l="zh">网页地址</span></dt><dd>http://192.168.4.1/<br>http://flexhub.local/</dd></div>
+            <div><dt><span data-l="en">Sign-in password</span><span data-l="zh">登录密码</span></dt><dd>build.me <small style="font-weight:500;color:var(--muted)"><span data-l="en">(until you change it)</span><span data-l="zh">（可在设置里修改）</span></small></dd></div>
+            <div class="only-ble"><dt><span data-l="en">Bluetooth name</span><span data-l="zh">蓝牙名称</span></dt><dd>flexhub</dd></div>
+            <div class="only-usb"><dt><span data-l="en">Shows up as</span><span data-l="zh">电脑里显示为</span></dt><dd><span data-l="en">Flexhub keyboard + mouse</span><span data-l="zh">Flexhub 键盘 + 鼠标</span></dd></div>
+          </dl>
+        </div>
+        <figure class="scene">
+          <svg class="only-usb" viewBox="0 0 640 250" role="img" aria-label="Computer connected to Flexhub by USB cable; phone connected to Flexhub over Wi-Fi">
+            <rect class="s-soft" x="30" y="36" width="200" height="128" rx="10"/>
+            <rect class="s-gray" x="42" y="48" width="176" height="104" rx="4"/>
+            <path class="s-line" d="M14 186h232l-16-22H30z"/>
+            <g class="s-cursor"><path d="M80 70l0 22 6-6 5 10 4-2-5-10 8 0z" fill="#1a1a1a"/></g>
+            <path class="s-flow" d="M236 150 C 268 150, 270 172, 296 172"/>
+            <rect class="s-soft" x="296" y="150" width="84" height="46" rx="12"/>
+            <rect class="s-red" x="366" y="162" width="6" height="22" rx="3"/>
+            <text class="s-label" x="310" y="178">Flexhub</text>
+            <path class="s-wave" d="M402 150 q14 -18 0 -36"/>
+            <path class="s-wave w2" d="M420 160 q24 -32 0 -64"/>
+            <path class="s-wave w3" d="M438 170 q34 -46 0 -92"/>
+            <rect class="s-soft" x="492" y="30" width="112" height="196" rx="20"/>
+            <rect class="s-gray" x="504" y="92" width="88" height="104" rx="10"/>
+            <rect x="504" y="50" width="88" height="30" rx="8" fill="#fff" stroke="#e8e8e8"/>
+            <circle class="s-finger" cx="530" cy="120" r="9" fill="rgba(255,106,26,.35)" stroke="#ff6a1a" stroke-width="2"/>
+            <text class="s-label" x="78" y="214"><tspan data-l="en">Computer</tspan><tspan data-l="zh">电脑</tspan></text>
+            <text class="s-label" x="262" y="222"><tspan data-l="en">USB data cable</tspan><tspan data-l="zh">USB 数据线</tspan></text>
+            <text class="s-label" x="414" y="64">Wi‑Fi</text>
+            <text class="s-label" x="508" y="244"><tspan data-l="en">Your phone</tspan><tspan data-l="zh">你的手机</tspan></text>
+          </svg>
+          <svg class="only-ble" viewBox="0 0 640 250" role="img" aria-label="Power bank powering Flexhub; Flexhub paired to a TV over Bluetooth and to a phone over Wi-Fi">
+            <rect class="s-soft" x="24" y="20" width="230" height="130" rx="8"/>
+            <rect class="s-gray" x="36" y="32" width="206" height="106" rx="4"/>
+            <rect x="52" y="62" width="40" height="40" rx="6" fill="#fff" stroke="#e8e8e8"/>
+            <rect x="104" y="62" width="40" height="40" rx="6" fill="#fff" stroke="#e8e8e8"/>
+            <rect x="156" y="62" width="40" height="40" rx="6" fill="#fff" stroke="#e8e8e8"/>
+            <g class="s-tile"><rect x="50" y="60" width="44" height="44" rx="7" fill="none" stroke="#ff6a1a" stroke-width="3"/></g>
+            <path class="s-line" d="M110 150v14M170 150v14M90 166h100"/>
+            <rect class="s-soft" x="40" y="192" width="92" height="40" rx="10"/>
+            <path d="M78 200l-6 12h8l-4 12 12-16h-8l4-8z" fill="#6b6b6b"/>
+            <path class="s-flow" d="M132 212 C 200 212, 240 196, 300 196"/>
+            <rect class="s-soft" x="300" y="174" width="84" height="46" rx="12"/>
+            <rect class="s-red" x="370" y="186" width="6" height="22" rx="3"/>
+            <text class="s-label" x="314" y="202">Flexhub</text>
+            <path class="s-bt" d="M330 174 C 320 130, 290 110, 254 100"/>
+            <path d="M300 120l10 8-5 4v-16l5 4-10 8" fill="none" stroke="#6b6b6b" stroke-width="2" stroke-linejoin="round"/>
+            <path class="s-wave" d="M404 174 q14 -18 0 -36"/>
+            <path class="s-wave w2" d="M422 184 q24 -32 0 -64"/>
+            <path class="s-wave w3" d="M440 194 q34 -46 0 -92"/>
+            <rect class="s-soft" x="492" y="30" width="112" height="196" rx="20"/>
+            <rect class="s-gray" x="504" y="92" width="88" height="104" rx="10"/>
+            <rect x="504" y="50" width="88" height="30" rx="8" fill="#fff" stroke="#e8e8e8"/>
+            <circle class="s-finger" cx="530" cy="120" r="9" fill="rgba(255,106,26,.35)" stroke="#ff6a1a" stroke-width="2"/>
+            <text class="s-label" x="150" y="246"><tspan data-l="en">Charger / power bank</tspan><tspan data-l="zh">充电头 / 充电宝</tspan></text>
+            <text class="s-label" x="262" y="92"><tspan data-l="en">Bluetooth</tspan><tspan data-l="zh">蓝牙</tspan></text>
+            <text class="s-label" x="414" y="88">Wi‑Fi</text>
+            <text class="s-label" x="508" y="244"><tspan data-l="en">Your phone</tspan><tspan data-l="zh">你的手机</tspan></text>
+          </svg>
+          <figcaption><span class="only-usb"><span data-l="en">USB mode: the computer gets keyboard + mouse over the cable; your phone drives it over Wi‑Fi.</span><span data-l="zh">USB 模式：电脑通过数据线得到键盘 + 鼠标；手机通过 Wi‑Fi 操作。</span></span><span class="only-ble"><span data-l="en">Wireless mode: a charger powers Flexhub; the TV, tablet or computer is paired over Bluetooth.</span><span data-l="zh">无线模式：充电头给 Flexhub 供电；电视、平板或电脑通过蓝牙配对。</span></span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="g-sec" id="differences" aria-labelledby="dfT">
+      <div class="wrap">
+        <div class="compare-head">
+          <h3 id="dfT"><span data-l="en">What’s different between the two modes</span><span data-l="zh">两种模式有什么不同</span></h3>
+          <p><span data-l="en">Your current mode is highlighted. Flexhub decides once per power-up — to switch, unplug it and power it up the other way.</span><span data-l="zh">当前选中的模式会高亮。Flexhub 每次通电只判断一次——想换模式，拔下来换一种接法重新通电。</span></p>
+        </div>
+        <div class="compare-scroll" role="region" aria-label="USB mode versus wireless mode" tabindex="0">
+          <table class="compare-table">
+            <thead><tr>
+              <th scope="col"><span data-l="en">Topic</span><span data-l="zh">项目</span></th>
+              <th scope="col" class="c-usb"><span class="compare-pill"><span data-l="en">USB mode</span><span data-l="zh">USB 模式</span></span></th>
+              <th scope="col" class="c-ble"><span class="compare-pill"><span data-l="en">Wireless mode</span><span data-l="zh">无线模式</span></span></th>
+            </tr></thead>
+            <tbody>
+              <tr><th scope="row"><span data-l="en">How Flexhub is connected</span><span data-l="zh">Flexhub 怎么接</span></th>
+                <td class="c-usb"><span data-l="en">USB data cable into the computer you control</span><span data-l="zh">USB 数据线插到要控制的电脑</span></td>
+                <td class="c-ble"><span data-l="en">Charger or power bank only; Bluetooth to the target</span><span data-l="zh">只接充电头或充电宝；蓝牙连目标设备</span></td></tr>
+              <tr><th scope="row"><span data-l="en">Good for</span><span data-l="zh">适合</span></th>
+                <td class="c-usb"><span data-l="en">Desk PC, laptop — anything that takes a USB keyboard and mouse</span><span data-l="zh">台式机、笔记本——能接 USB 键鼠的设备</span></td>
+                <td class="c-ble"><span data-l="en">iPad / Android tablets, Mac / Windows over Bluetooth, Apple TV, Google TV, Xiaomi TV</span><span data-l="zh">iPad / 安卓平板、蓝牙连接的 Mac / Windows、Apple TV、Google TV、小米电视</span></td></tr>
+              <tr><th scope="row"><span data-l="en">Pairing</span><span data-l="zh">配对</span></th>
+                <td class="c-usb"><span data-l="en">None — works a few seconds after plugging in</span><span data-l="zh">不需要——插上几秒就能用</span></td>
+                <td class="c-ble"><span data-l="en">Pair “flexhub” in the target’s Bluetooth settings (appears about 2 minutes after power-up)</span><span data-l="zh">在目标设备的蓝牙设置里配对「flexhub」（通电约 2 分钟后出现）</span></td></tr>
+              <tr><th scope="row"><span data-l="en">Wi‑Fi web page</span><span data-l="zh">Wi‑Fi 网页</span></th>
+                <td class="c-usb" colspan="2"><span data-l="en">Same in both: join <b>flexhub</b> (build.me), open http://192.168.4.1/ — ready right after power-up</span><span data-l="zh">两者相同：连 <b>flexhub</b>（build.me），打开 http://192.168.4.1/——通电后就能用</span></td></tr>
+              <tr><th scope="row"><span data-l="en">Creative Pad</span><span data-l="zh">创意画板</span></th>
+                <td class="c-usb"><span data-l="en">Absolute: a spot on the pad = the same spot on screen</span><span data-l="zh">绝对定位：画板上哪一点，就对应屏幕上哪一点</span></td>
+                <td class="c-ble"><span data-l="en">Relative movement, with Move scale 1×–8× (default 3×)</span><span data-l="zh">相对移动，可调「移动倍数」1×–8×（默认 3×）</span></td></tr>
+              <tr><th scope="row"><span data-l="en">Apple TV / Google TV tabs</span><span data-l="zh">Apple TV / Google TV 标签</span></th>
+                <td class="c-usb"><span data-l="en">Just send the same keys to the computer</span><span data-l="zh">只会把同样的按键发给电脑</span></td>
+                <td class="c-ble"><span data-l="en">Made for this mode — control a paired TV box</span><span data-l="zh">为这个模式设计——遥控已配对的电视盒子</span></td></tr>
+              <tr><th scope="row"><span data-l="en">Game controller page</span><span data-l="zh">手柄页面</span></th>
+                <td class="c-usb"><span data-l="en">Available (DualSense-style and classic Bluetooth pads, bridged to USB)</span><span data-l="zh">可用（DualSense 类与经典蓝牙手柄，转接到 USB）</span></td>
+                <td class="c-ble"><span data-l="en">Hidden — not available</span><span data-l="zh">隐藏——不可用</span></td></tr>
+              <tr><th scope="row"><span data-l="en">BOOTSEL options that only work here</span><span data-l="zh">只在本模式有效的 BOOTSEL 选项</span></th>
+                <td class="c-usb"><span data-l="en">“Pair gamepad (USB mode)”</span><span data-l="zh">「手柄重新配对（USB 模式）」</span></td>
+                <td class="c-ble"><span data-l="en">“Make Flexhub discoverable (BLE)”</span><span data-l="zh">「让 Flexhub 可被发现（蓝牙 HID）」</span></td></tr>
+              <tr><th scope="row"><span data-l="en">Switching</span><span data-l="zh">切换</span></th>
+                <td colspan="2"><span data-l="en">Decided automatically at every power-up: data connection to a computer → USB; power only → wireless. Plugging the computer in later doesn’t switch — reconnect power.</span><span data-l="zh">每次通电自动决定：和电脑有数据连接 → USB；只有供电 → 无线。通电后再插电脑不会切换——要重新通电。</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="g-sec" id="setup" aria-labelledby="suT">
+      <div class="wrap g-grid">
+        <div>
+          <div class="section-head">
+            <small><span class="only-usb"><span data-l="en">USB mode · setup</span><span data-l="zh">USB 模式 · 上手</span></span><span class="only-ble"><span data-l="en">Wireless mode · setup</span><span data-l="zh">无线模式 · 上手</span></span></small>
+            <h2 id="suT"><span data-l="en">From the box to control, step by step.</span><span data-l="zh">从拆封到上手，一步一步来。</span></h2>
+            <p class="only-usb"><span data-l="en">You need: Flexhub, a USB <b>data</b> cable, the computer to control, and a phone, tablet or second computer with a web browser.</span><span data-l="zh">准备：Flexhub、一根 USB <b>数据线</b>、要控制的电脑，以及一台带浏览器的手机、平板或另一台电脑。</span></p>
+            <p class="only-ble"><span data-l="en">You need: Flexhub, a USB charger or power bank with a cable, the device to control (with Bluetooth), and a phone, tablet or computer with a web browser.</span><span data-l="zh">准备：Flexhub、USB 充电头或充电宝及线、要控制的设备（需有蓝牙），以及一台带浏览器的手机、平板或电脑。</span></p>
+          </div>
+
+          <div class="stepper only-usb">
+            <div class="st-head"><span class="st-count"></span><span class="mode-tag"><span data-l="en">USB mode</span><span data-l="zh">USB 模式</span></span></div>
+            <div class="progress" aria-hidden="true"><span></span></div>
+            <div class="st-dots"></div>
+            <ol class="steps">
+              <li><h3><span class="n">1</span><span data-l="en">Plug Flexhub into the computer</span><span data-l="zh">把 Flexhub 插到电脑上</span></h3>
+                <p><span data-l="en">Use a USB data cable — charge-only cables don’t carry data. Nothing to install: the computer sees a standard keyboard and mouse named <b>Flexhub</b> (Windows, macOS, Linux and other systems that accept a USB keyboard and mouse).</span><span data-l="zh">一定要用 USB 数据线——只能充电的线传不了数据。不用装任何东西：电脑会看到一个名为 <b>Flexhub</b> 的标准键盘和鼠标（Windows、macOS、Linux 等支持 USB 键鼠的系统都行）。</span></p></li>
+              <li><h3><span class="n">2</span><span data-l="en">Join the flexhub Wi‑Fi</span><span data-l="zh">连上 flexhub Wi‑Fi</span></h3>
+                <p><span data-l="en">On the phone, tablet or computer in your hand, connect to Wi‑Fi <b>flexhub</b>, password <b>build.me</b>. The hotspot starts as soon as Flexhub has power. Your phone may say “no internet” — that’s expected, stay connected.</span><span data-l="zh">在你手里的手机、平板或电脑上连接 Wi‑Fi <b>flexhub</b>，密码 <b>build.me</b>。Flexhub 一通电热点就会开启。手机可能提示「无法上网」——这是正常的，保持连接即可。</span></p></li>
+              <li><h3><span class="n">3</span><span data-l="en">Open the Flexhub page</span><span data-l="zh">打开 Flexhub 网页</span></h3>
+                <p><span data-l="en">Many phones pop up a “sign in to network” sheet that opens Flexhub by itself. If not, open the browser and go to <b>http://192.168.4.1/</b>. <b>http://flexhub.local/</b> works on many devices too — give it about 10 seconds after joining, and use the number address if the name won’t load.</span><span data-l="zh">很多手机会自动弹出「登录网络」页，直接打开 Flexhub。如果没有，就在浏览器里输入 <b>http://192.168.4.1/</b>。<b>http://flexhub.local/</b> 在很多设备上也能用——连上后等约 10 秒；名字打不开就用数字地址。</span></p></li>
+              <li><h3><span class="n">4</span><span data-l="en">Sign in and pick a language</span><span data-l="zh">登录并选择语言</span></h3>
+                <p><span data-l="en">Choose English or 中文 at the top of the sign-in page, then enter the access password — it starts as <b>build.me</b>. Change it any time in Settings → Security. (The Wi‑Fi password gets you onto the hotspot; this one unlocks control.)</span><span data-l="zh">在登录页顶部选择 English 或中文，然后输入访问密码——初始为 <b>build.me</b>，之后可在「设置 → 安全」里修改。（Wi‑Fi 密码用来连热点，这个密码用来解锁控制。）</span></p></li>
+              <li><h3><span class="n">5</span><span data-l="en">Check “Ready” and start</span><span data-l="zh">看到「就绪」就开始</span></h3>
+                <p><span data-l="en">The status at the top of Remote control should read <b>Ready</b>. <b>Detecting connection</b> means Flexhub is still deciding (first seconds after power-up); <b>Connect target device</b> means the computer isn’t seen — check the cable. Then pick a tab: Mouse, Creative Pad, Keyboard, Presenter…</span><span data-l="zh">「遥控」页顶部的状态应显示<b>就绪</b>。显示<b>正在检测连接</b>说明 Flexhub 还在判断（通电后最初几秒）；显示<b>请连接目标设备</b>说明没识别到电脑——检查数据线。然后选择标签：鼠标、创意画板、键盘、演示器……</span></p></li>
+            </ol>
+            <div class="st-nav"><button type="button" class="btn btn-ghost btn-sm" data-prev><span data-l="en">← Back</span><span data-l="zh">← 上一步</span></button><button type="button" class="btn btn-primary btn-sm" data-next><span data-l="en">Next →</span><span data-l="zh">下一步 →</span></button></div>
+          </div>
+
+          <div class="stepper only-ble">
+            <div class="st-head"><span class="st-count"></span><span class="mode-tag"><span data-l="en">Wireless mode</span><span data-l="zh">无线模式</span></span></div>
+            <div class="progress" aria-hidden="true"><span></span></div>
+            <div class="st-dots"></div>
+            <ol class="steps">
+              <li><h3><span class="n">1</span><span data-l="en">Give Flexhub power only</span><span data-l="zh">只给 Flexhub 供电</span></h3>
+                <p><span data-l="en">Plug it into a USB phone charger or power bank — not into a computer (a computer data connection puts it in USB mode). About 10–15 seconds after power-up, with no computer answering, Flexhub settles into wireless mode.</span><span data-l="zh">插在 USB 手机充电头或充电宝上——不要插电脑（和电脑有数据连接就会进入 USB 模式）。通电约 10–15 秒后，没有电脑应答，Flexhub 就进入无线模式。</span></p></li>
+              <li><h3><span class="n">2</span><span data-l="en">Join the Wi‑Fi and sign in (while you wait)</span><span data-l="zh">连 Wi‑Fi 并登录（边等边做）</span></h3>
+                <p><span data-l="en">On the phone in your hand: Wi‑Fi <b>flexhub</b>, password <b>build.me</b>. Open the pop-up sign-in sheet or <b>http://192.168.4.1/</b> (or http://flexhub.local/ after ~10 s). Pick English / 中文 and sign in with the access password — <b>build.me</b> until you change it.</span><span data-l="zh">在你手里的手机上：连 Wi‑Fi <b>flexhub</b>，密码 <b>build.me</b>。打开自动弹出的登录页，或输入 <b>http://192.168.4.1/</b>（约 10 秒后也可用 http://flexhub.local/）。选择 English / 中文，用访问密码登录——未修改前是 <b>build.me</b>。</span></p></li>
+              <li><h3><span class="n">3</span><span data-l="en">Pair “flexhub” on the device you want to control</span><span data-l="zh">在要控制的设备上配对「flexhub」</span></h3>
+                <p><span data-l="en">Bluetooth starts about <b>2 minutes</b> after power-up (it waits so phones can join the hotspot first). Then open Bluetooth settings on the tablet, computer or TV box — <b>not</b> on the phone in your hand — and choose <b>flexhub</b>. Exact menu paths are in the picker below.</span><span data-l="zh">蓝牙在通电约 <b>2 分钟</b>后启动（先让手机连上热点）。之后在平板、电脑或电视盒子的蓝牙设置里——<b>不是</b>你手里的手机——选择 <b>flexhub</b>。各系统的具体菜单见下方选择器。</span></p></li>
+              <li><h3><span class="n">4</span><span data-l="en">Check the status</span><span data-l="zh">确认状态</span></h3>
+                <p><span data-l="en">On Remote control, <b>Ready</b> means a Bluetooth target is connected. <b>Connect target device</b> (“pair in target Bluetooth settings”) means nothing is paired yet. The page can’t see what a TV does — always check the result on the target screen.</span><span data-l="zh">在「遥控」页，<b>就绪</b>表示蓝牙目标已连接；<b>请连接目标设备</b>（“请在目标设备蓝牙设置中配对”）表示还没配对。网页看不到电视的实际反应——以目标屏幕上的结果为准。</span></p></li>
+              <li><h3><span class="n">5</span><span data-l="en">Control it</span><span data-l="zh">开始操作</span></h3>
+                <p><span data-l="en">Use Mouse, Keyboard, Creative Pad and Presenter for tablets and computers; use the <b>Apple TV</b> or <b>Google TV</b> tab for TV boxes (Google TV tab also suits Xiaomi and other Android TV).</span><span data-l="zh">平板和电脑用鼠标、键盘、创意画板、演示器；电视盒子用 <b>Apple TV</b> 或 <b>Google TV</b> 标签（Google TV 标签也适用于小米等 Android TV）。</span></p></li>
+            </ol>
+            <div class="st-nav"><button type="button" class="btn btn-ghost btn-sm" data-prev><span data-l="en">← Back</span><span data-l="zh">← 上一步</span></button><button type="button" class="btn btn-primary btn-sm" data-next><span data-l="en">Next →</span><span data-l="zh">下一步 →</span></button></div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="how-note" style="margin-top:0">
+            <b><span data-l="en">What Flexhub does at power-up</span><span data-l="zh">Flexhub 通电后会做什么</span></b>
+            <ol class="tl only-usb" style="margin-top:14px">
+              <li><span class="t">0 s</span><b><span data-l="en">Hotspot on</span><span data-l="zh">热点开启</span></b><p><span data-l="en">The flexhub Wi‑Fi starts right away.</span><span data-l="zh">flexhub Wi‑Fi 立刻开启。</span></p></li>
+              <li><span class="t">~5 s</span><b><span data-l="en">Computer found → USB mode</span><span data-l="zh">发现电脑 → USB 模式</span></b><p><span data-l="en">The computer accepts the Flexhub keyboard + mouse. Locked in until the next power-up.</span><span data-l="zh">电脑接受 Flexhub 键盘 + 鼠标。直到下次通电前都保持这个模式。</span></p></li>
+              <li><span class="t"><span data-l="en">now</span><span data-l="zh">现在</span></span><b><span data-l="en">Control from your phone</span><span data-l="zh">用手机操作</span></b><p><span data-l="en">Join the hotspot, sign in, go.</span><span data-l="zh">连热点、登录，开始。</span></p></li>
+              <li><span class="t">~2 min</span><b><span data-l="en">Bluetooth wakes (background)</span><span data-l="zh">蓝牙在后台启动</span></b><p><span data-l="en">Only used for the optional game-controller bridge in USB mode.</span><span data-l="zh">USB 模式下只用于可选的手柄转接功能。</span></p></li>
+            </ol>
+            <ol class="tl only-ble" style="margin-top:14px">
+              <li><span class="t">0 s</span><b><span data-l="en">Hotspot on</span><span data-l="zh">热点开启</span></b><p><span data-l="en">The flexhub Wi‑Fi starts right away — you can join and sign in now.</span><span data-l="zh">flexhub Wi‑Fi 立刻开启——现在就可以连接并登录。</span></p></li>
+              <li><span class="t">~10–15 s</span><b><span data-l="en">No computer → wireless mode</span><span data-l="zh">没有电脑 → 无线模式</span></b><p><span data-l="en">Locked in until the next power-up.</span><span data-l="zh">直到下次通电前都保持这个模式。</span></p></li>
+              <li><span class="t">~2 min</span><b><span data-l="en">“flexhub” appears in Bluetooth</span><span data-l="zh">蓝牙里出现「flexhub」</span></b><p><span data-l="en">Pair it on the target. Faster: set BOOTSEL single press to “Make Flexhub discoverable (BLE)” and press it.</span><span data-l="zh">在目标设备上配对。想更快：把 BOOTSEL 单击设为「让 Flexhub 可被发现（蓝牙 HID）」，然后按一下。</span></p></li>
+              <li><span class="t"><span data-l="en">paired</span><span data-l="zh">配对后</span></span><b><span data-l="en">Control from your phone</span><span data-l="zh">用手机操作</span></b><p><span data-l="en">Flexhub stops advertising so the hotspot stays smooth.</span><span data-l="zh">Flexhub 停止蓝牙广播，让热点保持顺畅。</span></p></li>
+            </ol>
+          </div>
+          <div class="how-note">
+            <b><span data-l="en">Your phone and the internet</span><span data-l="zh">手机会断网吗</span></b>
+            <p><span data-l="en">The flexhub hotspot has no internet. While joined, many phones lose cloud apps; some keep mobile data via “Wi‑Fi assist” / “switch to mobile data”, but that’s up to the phone, not Flexhub. Tip: use a spare phone or tablet as the controller.</span><span data-l="zh">flexhub 热点本身不能上网。连上后很多手机的联网 App 会暂时断网；部分手机开启「Wi‑Fi 助理」/「自动切换移动数据」后仍可用蜂窝网络，但这取决于手机，不是 Flexhub。小贴士：用闲置手机或平板当遥控器最省心。</span></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="g-sec band only-ble" id="pair" aria-labelledby="paT">
+      <div class="wrap g-grid">
+        <div>
+          <div class="section-head">
+            <small><span data-l="en">Wireless mode · Bluetooth</span><span data-l="zh">无线模式 · 蓝牙</span></small>
+            <h2 id="paT"><span data-l="en">Pair flexhub on your device.</span><span data-l="zh">在你的设备上配对 flexhub。</span></h2>
+            <p><span data-l="en">Pick the device you want to control. Do this on that device — never on the phone you hold. Menu names can differ by brand and system version.</span><span data-l="zh">选择你要控制的设备。要在那台设备上操作——不是你手里的手机。菜单名称可能因品牌和系统版本而不同。</span></p>
+          </div>
+          <div class="mode" data-picker>
+            <div class="picker" role="group" aria-label="Device"><button type="button" data-pick="win" aria-pressed="false">Windows</button><button type="button" data-pick="mac" aria-pressed="false">Mac</button><button type="button" data-pick="ipad" aria-pressed="false">iPad / iPhone</button><button type="button" data-pick="android" aria-pressed="false">Android</button><button type="button" data-pick="atv" aria-pressed="false">Apple TV</button><button type="button" data-pick="gtv" aria-pressed="false">Google TV</button><button type="button" data-pick="mi" aria-pressed="false">小米 / Xiaomi TV</button></div>
+            <div class="pick-panel" data-panel="win"><b>Windows</b><div class="path"><span><span data-l="en">Settings</span><span data-l="zh">设置</span></span><i>→</i><span><span data-l="en">Bluetooth &amp; devices</span><span data-l="zh">蓝牙和其他设备</span></span><i>→</i><span><span data-l="en">Add device</span><span data-l="zh">添加设备</span></span><i>→</i><span><span data-l="en">Bluetooth</span><span data-l="zh">蓝牙</span></span><i>→</i><span class="end">flexhub</span></div><p><span data-l="en">Windows may call it a keyboard or mouse; either is fine.</span><span data-l="zh">Windows 可能显示为键盘或鼠标，都正常。</span></p></div><div class="pick-panel" data-panel="mac"><b>Mac</b><div class="path"><span><span data-l="en">System Settings</span><span data-l="zh">系统设置</span></span><i>→</i><span><span data-l="en">Bluetooth</span><span data-l="zh">蓝牙</span></span><i>→</i><span class="end"><span data-l="en">flexhub → Connect</span><span data-l="zh">flexhub → 连接</span></span></div><p><span data-l="en">If macOS opens the Keyboard Setup Assistant, follow it or close it.</span><span data-l="zh">如果 macOS 弹出「键盘设置助理」，按提示完成或直接关闭。</span></p></div><div class="pick-panel" data-panel="ipad"><b>iPad / iPhone</b><div class="path"><span><span data-l="en">Settings</span><span data-l="zh">设置</span></span><i>→</i><span><span data-l="en">Bluetooth</span><span data-l="zh">蓝牙</span></span><i>→</i><span><span data-l="en">Other Devices</span><span data-l="zh">其他设备</span></span><i>→</i><span class="end">flexhub</span></div><p><span data-l="en">With a Bluetooth keyboard paired, iPad hides the on-screen keyboard; Flexhub’s Keyboard tab types for you.</span><span data-l="zh">配对蓝牙键盘后 iPad 会隐藏屏幕键盘，用 Flexhub 的「键盘」标签输入即可。</span></p></div><div class="pick-panel" data-panel="android"><b>Android</b><div class="path"><span><span data-l="en">Settings</span><span data-l="zh">设置</span></span><i>→</i><span><span data-l="en">Connected devices</span><span data-l="zh">已连接的设备</span></span><i>→</i><span><span data-l="en">Pair new device</span><span data-l="zh">与新设备配对</span></span><i>→</i><span class="end">flexhub</span></div><p><span data-l="en">Menu names vary a little by brand.</span><span data-l="zh">各品牌菜单名称略有不同。</span></p></div><div class="pick-panel" data-panel="atv"><b>Apple TV</b><div class="path"><span><span data-l="en">Settings</span><span data-l="zh">设置</span></span><i>→</i><span><span data-l="en">Remotes and Devices</span><span data-l="zh">遥控器与设备</span></span><i>→</i><span><span data-l="en">Bluetooth</span><span data-l="zh">蓝牙</span></span><i>→</i><span class="end">flexhub</span></div><p><span data-l="en">Then use the Apple TV tab. Play, volume and power are sent as media keys and may not match the original remote.</span><span data-l="zh">之后使用「Apple TV」标签。播放、音量、电源以媒体按键发送，效果不一定与原装遥控器一致。</span></p></div><div class="pick-panel" data-panel="gtv"><b>Google TV</b><div class="path"><span><span data-l="en">Settings</span><span data-l="zh">设置</span></span><i>→</i><span><span data-l="en">Remotes &amp; Accessories</span><span data-l="zh">遥控器和配件</span></span><i>→</i><span><span data-l="en">Pair remote or accessory</span><span data-l="zh">配对遥控器或配件</span></span><i>→</i><span class="end">flexhub</span></div><p><span data-l="en">Then use the Google TV tab. Flexhub advertises as a keyboard so TVs list it.</span><span data-l="zh">之后使用「Google TV」标签。Flexhub 以键盘身份广播，电视才会列出它。</span></p></div><div class="pick-panel" data-panel="mi"><b>小米 / Xiaomi TV</b><div class="path"><span><span data-l="en">Settings</span><span data-l="zh">设置</span></span><i>→</i><span><span data-l="en">Remotes &amp; Accessories / Bluetooth</span><span data-l="zh">遥控器和配件 / 蓝牙</span></span><i>→</i><span><span data-l="en">Add accessory</span><span data-l="zh">添加配件</span></span><i>→</i><span class="end">flexhub</span></div><p><span data-l="en">Menu names differ between Xiaomi models and system versions. Then use the Google TV tab.</span><span data-l="zh">小米各型号和系统版本菜单名称不同。配对后使用「Google TV」标签。</span></p></div>
+          </div>
+        </div>
+        <div>
+          <div class="how-note" style="margin-top:0">
+            <b><span data-l="en">“flexhub” isn’t in the list?</span><span data-l="zh">列表里没有「flexhub」？</span></b>
+            <p><span data-l="en">Wait until about 2 minutes after power-up and refresh the Bluetooth list. To make it discoverable on demand: open Settings → Device → Physical button · BOOTSEL, set <b>Single press</b> to <b>Make Flexhub discoverable (BLE)</b>, save, then press BOOTSEL once — Flexhub stays discoverable for about 90 seconds (LED blinks 3 times).</span><span data-l="zh">等到通电约 2 分钟后再刷新蓝牙列表。想随时让它可被发现：打开「设置 → 设备 → 实体按键 · BOOTSEL」，把<b>单击</b>设为<b>让 Flexhub 可被发现（蓝牙 HID）</b>并保存，然后按一下 BOOTSEL——约 90 秒内可被发现（指示灯闪 3 下）。</span></p>
+          </div>
+          <div class="how-note">
+            <b><span data-l="en">Switch to another device / re-pair</span><span data-l="zh">换一台设备 / 重新配对</span></b>
+            <p><span data-l="en">Flexhub connects to one Bluetooth device at a time. On the old device, choose “Forget” / “Remove” for flexhub. Then make Flexhub discoverable again (BOOTSEL as above, or unplug and re-power it and wait ~2 min) and pair the new device. <b>After every firmware update</b>, forget flexhub and pair again — that’s expected.</span><span data-l="zh">Flexhub 一次只连一台蓝牙设备。先在旧设备上对 flexhub 选择「忽略」/「移除」，再让 Flexhub 重新可被发现（按上面方法按 BOOTSEL，或拔电重新通电后等约 2 分钟），然后用新设备配对。<b>每次升级固件后</b>，都要忽略 flexhub 后重新配对——这是正常的。</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="g-sec" id="remote" aria-labelledby="rmT">
+      <div class="wrap">
+        <div class="section-head">
+          <small><span data-l="en">Both modes · Remote control page</span><span data-l="zh">两种模式 · 遥控页面</span></small>
+          <h2 id="rmT"><span data-l="en">Tour the remote page.</span><span data-l="zh">看看遥控页面。</span></h2>
+          <p><span data-l="en">Tap a tab on the phone to see what it does. Notes change with the mode you picked. Top bar: ● Record, ■ Stop, ▶ Play, the recording library and Full screen. The menu also has Recording library and Settings.</span><span data-l="zh">点手机上的标签看看各自的功能，说明会随你选的模式变化。顶栏：● 录制、■ 停止、▶ 播放、录制库和全屏。菜单里还有「录制库」和「设置」。</span></p>
+        </div>
+        <div class="tour" data-tour>
+          <div class="phone" aria-label="Flexhub remote page preview">
+            <div class="ph-top" aria-hidden="true"><i class="rec"></i><i></i><i></i><i></i><i></i></div>
+            <div class="ph-tabs" role="tablist" aria-label="Remote tabs"><button type="button" role="tab" id="tb-mouse" data-tab="mouse" aria-controls="pn-mouse"><span data-l="en">Mouse</span><span data-l="zh">鼠标</span></button><button type="button" role="tab" id="tb-creative" data-tab="creative" aria-controls="pn-creative"><span data-l="en">Creative Pad</span><span data-l="zh">创意画板</span></button><button type="button" role="tab" id="tb-keys" data-tab="keys" aria-controls="pn-keys"><span data-l="en">Keyboard</span><span data-l="zh">键盘</span></button><button type="button" role="tab" id="tb-presenter" data-tab="presenter" aria-controls="pn-presenter"><span data-l="en">Presenter</span><span data-l="zh">演示器</span></button><button type="button" role="tab" id="tb-apple" data-tab="apple" aria-controls="pn-apple"><span data-l="en">Apple TV</span><span data-l="zh">Apple TV</span></button><button type="button" role="tab" id="tb-google" data-tab="google" aria-controls="pn-google"><span data-l="en">Google TV</span><span data-l="zh">Google TV</span></button></div>
+            
+<div class="ph-pane" id="pn-mouse" role="tabpanel" aria-labelledby="tb-mouse" data-pane="mouse"><div class="mk-tiles"><i></i><i></i><i></i><i></i><i></i><i class="pen"></i><i></i></div><div class="mk-pad"><span class="finger"></span></div></div>
+<div class="ph-pane" id="pn-creative" role="tabpanel" aria-labelledby="tb-creative" data-pane="creative"><div class="mk-canvas"><svg viewBox="0 0 200 120" aria-hidden="true"><path d="M20 92 C 46 18, 92 22, 108 62 S 168 104, 184 28"/></svg></div><div class="mk-tools"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="mk-sw"><i style="background:#fff"></i><i style="background:#1d1d1f"></i><i style="background:#ff3b30"></i><i style="background:#ff9500"></i><i style="background:#ffcc00"></i><i style="background:#34c759"></i><i style="background:#007aff"></i><i style="background:#af52de"></i></div></div>
+<div class="ph-pane" id="pn-keys" role="tabpanel" aria-labelledby="tb-keys" data-pane="keys"><div class="mk-type"><span>Hello</span><b>Send</b></div><div class="mk-keys"><div><i class="w hot">Esc</i><i class="w">PrtSc</i><i class="w">Ins</i></div><div><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i></div><div><i>q</i><i>w</i><i>e</i><i>r</i><i>t</i><i>y</i><i>u</i><i>i</i><i>o</i></div><div><i>a</i><i>s</i><i>d</i><i>f</i><i>g</i><i>h</i><i>j</i><i>k</i><i>l</i></div><div><i class="w hot2">Ctrl</i><i class="w">Alt</i><i class="w">Gui</i><i class="w">Space</i></div><div><i>←</i><i>↑</i><i>↓</i><i>→</i><i class="w">PgUp</i><i class="w">PgDn</i></div></div></div>
+<div class="ph-pane" id="pn-presenter" role="tabpanel" aria-labelledby="tb-presenter" data-pane="presenter"><div class="mk-pres"><b>‹ <span data-l="en">Previous</span><span data-l="zh">上一页</span></b><b><span data-l="en">Next</span><span data-l="zh">下一页</span> ›</b></div><div class="mk-pres3"><b>F5</b><b>⌥⌘P</b><b>Esc</b></div></div>
+<div class="ph-pane" id="pn-apple" role="tabpanel" aria-labelledby="tb-apple" data-pane="apple"><div class="mk-tv"><div class="mk-side"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="mk-dpad"><span class="u"></span><span class="l"></span><span class="r"></span><span class="d"></span><span class="c"></span><span class="ripple"></span></div></div></div>
+<div class="ph-pane" id="pn-google" role="tabpanel" aria-labelledby="tb-google" data-pane="google"><div class="mk-tv"><div class="mk-side"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="mk-dpad"><span class="u"></span><span class="l"></span><span class="r"></span><span class="d"></span><span class="c"></span><span class="ripple"></span></div></div></div>
+
+          </div>
+          <div><div class="tour-desc" data-desc="mouse"><h3><span data-l="en">Mouse</span><span data-l="zh">鼠标</span></h3><ul><li><span data-l="en">Slide one finger on the trackpad to move the pointer; a quick tap is a left click; two fingers up/down scroll.</span><span data-l="zh">单指在触控板上滑动移动指针；轻点一下是左键单击；双指上下滑动是滚动。</span></li><li><span data-l="en">Buttons: left, middle and right click (hold to drag), scroll up, scroll down.</span><span data-l="zh">按钮：左键、中键、右键（按住可拖动）、向上滚动、向下滚动。</span></li><li><span data-l="en"><b>Pencil</b>: while it’s on, sliding holds the left button — handy for selecting text or quick doodles.</span><span data-l="zh"><b>铅笔</b>：打开后，滑动时会按住左键——适合选文字或随手画两笔。</span></li><li><span data-l="en"><b>Release all keys</b> (padlock): frees any key or button that seems stuck.</span><span data-l="zh"><b>松开所有按键</b>（锁形图标）：按键或鼠标似乎卡住时点它。</span></li></ul></div><div class="tour-desc" data-desc="creative"><h3><span data-l="en">Creative Pad</span><span data-l="zh">创意画板</span></h3><p class="mode-note only-usb"><span data-l="en"><b>USB mode:</b> the pad maps to the whole screen — touch a spot and the pointer lands on the same spot. Set <b>Canvas ratio</b> (16:9, 4:3, 16:10, 3:2, 9:16, 3:4 or Fill) to match the screen.</span><span data-l="zh"><b>USB 模式：</b>画板对应整块屏幕——点哪里，指针就到屏幕上同一位置。用<b>画布比例</b>（16:9、4:3、16:10、3:2、9:16、3:4 或填满）对齐目标屏幕。</span></p><p class="mode-note only-ble"><span data-l="en"><b>Wireless mode:</b> Bluetooth mice can’t jump to a spot, so the pad moves the pointer relative to your finger. Use <b>Move scale</b> 1×–8× (default 3×) so strokes travel far enough on big screens.</span><span data-l="zh"><b>无线模式：</b>蓝牙鼠标无法直接跳到某一点，画板按手指移动量相对移动指针。用<b>移动倍数</b> 1×–8×（默认 3×）让笔画在大屏上走得够远。</span></p><ul><li><span data-l="en">Shortcut buttons: Undo (Ctrl+Z), Redo (Ctrl+Shift+Z), Eraser (E), Brush (B), Zoom −/+ (Ctrl − / Ctrl +). They use common drawing-app keys; check your app.</span><span data-l="zh">快捷按钮：撤销（Ctrl+Z）、重做（Ctrl+Shift+Z）、橡皮（E）、画笔（B）、缩放 −/+（Ctrl − / Ctrl +）。采用常见绘图软件快捷键，请以你的软件为准。</span></li><li><span data-l="en"><b>Pick image</b> puts a reference picture under the pad (it stays in your browser); Bg− / Bg+ resize it, Clear image removes it.</span><span data-l="zh"><b>选图</b>把参考图放在画板下方（只留在你的浏览器里）；Bg− / Bg+ 缩放，清除图片可移除。</span></li><li><span data-l="en">8 pen colours and <b>Clear trail</b> control the guide lines shown on your own screen (not sent to the target). Turn trail lines off in Settings → Device. Rotating your device clears the trail.</span><span data-l="zh">8 种笔色和<b>清除笔迹</b>用于你自己屏幕上的参考笔迹（不会发送到目标）。可在「设置 → 设备」里关闭笔迹标线。旋转设备会清除笔迹。</span></li><li><span data-l="en">No pressure levels — great for signatures, PDF notes and light doodles, not a pro pen tablet.</span><span data-l="zh">没有压感——适合签名、PDF 批注和轻度涂鸦，不是专业数位板。</span></li></ul></div><div class="tour-desc" data-desc="keys"><h3><span data-l="en">Keyboard</span><span data-l="zh">键盘</span></h3><ul><li><span data-l="en">Type a phrase in the box and tap <b>Send</b>. English letters, numbers and standard symbols only — no Chinese or emoji; the result also depends on the target’s keyboard layout and input method.</span><span data-l="zh">在输入框里打好一句话，点<b>发送</b>。仅支持英文字母、数字和常用半角符号——不支持中文和表情；实际结果还取决于目标设备的键盘布局和输入法。</span></li><li><span data-l="en">Full keyboard with an <kbd>Esc</kbd> <kbd>PrtSc</kbd> <kbd>Ins</kbd> row, Tab, Caps, Shift, Sym, Enter, Bksp, Del, arrows, Home/End and PgUp/PgDn.</span><span data-l="zh">完整键盘：顶部是 <kbd>Esc</kbd> <kbd>PrtSc</kbd> <kbd>Ins</kbd>，另有 Tab、Caps、Shift、Sym、Enter、Bksp、Del、方向键、Home/End 和 PgUp/PgDn。</span></li><li><span data-l="en">Combos: <kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>Gui</kbd> stay held until tapped again — tap Ctrl, then C to copy. Gui is the Windows key or ⌘ on a Mac; Alt is ⌥ Option.</span><span data-l="zh">组合键：<kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>Gui</kbd> 点一下保持按住，再点一下松开——先点 Ctrl 再点 C 就是复制。Gui 是 Windows 键，在 Mac 上是 ⌘；Alt 在 Mac 上是 ⌥ Option。</span></li></ul></div><div class="tour-desc" data-desc="presenter"><h3><span data-l="en">Presenter</span><span data-l="zh">演示器</span></h3><ul><li><span data-l="en"><b>Previous / Next</b> send Page Up / Page Down — works in PowerPoint, WPS, Keynote and most PDF viewers.</span><span data-l="zh"><b>上一页 / 下一页</b>发送 Page Up / Page Down——PowerPoint、WPS、Keynote 和大多数 PDF 阅读器都能用。</span></li><li><span data-l="en"><b>F5</b> starts the slideshow in PowerPoint / WPS; <b>⌥⌘P</b> starts Keynote on a Mac; <b>Esc</b> exits.</span><span data-l="zh"><b>F5</b> 在 PowerPoint / WPS 中开始放映；<b>⌥⌘P</b> 在 Mac 上开始 Keynote 播放；<b>Esc</b> 退出。</span></li><li><span data-l="en">The presentation app must be the active window on the target.</span><span data-l="zh">演示软件需要是目标设备上的当前窗口。</span></li></ul></div><div class="tour-desc" data-desc="apple"><h3>Apple TV</h3><p class="mode-note only-usb"><span data-l="en"><b>USB mode:</b> these tabs simply send the same keys to the computer. For a TV box, use wireless mode.</span><span data-l="zh"><b>USB 模式：</b>这些标签只会把同样的按键发给电脑。要遥控电视盒子，请用无线模式。</span></p><p class="mode-note only-ble"><span data-l="en"><b>Wireless mode:</b> pair first — Apple TV Settings → Remotes and Devices → Bluetooth → flexhub.</span><span data-l="zh"><b>无线模式：</b>先配对——Apple TV「设置 → 遥控器与设备 → 蓝牙 → flexhub」。</span></p><p><span data-l="en">Swipe on the pad to move, tap to select, or use the arrows. Side buttons: Play/Pause, Home, Back, Esc, Mute, Volume −/+, Power. They are sent as keyboard and media keys, so results can differ from the original remote — check on the TV.</span><span data-l="zh">在触控区滑动导航，轻点确认，也可用方向键。侧边按钮：播放/暂停、Home、返回、Esc、静音、音量 −/+、电源。它们以键盘和媒体按键发送，效果可能和原装遥控器不同——以电视上的反应为准。</span></p></div><div class="tour-desc" data-desc="google"><h3>Google TV</h3><p class="mode-note only-usb"><span data-l="en"><b>USB mode:</b> these tabs simply send the same keys to the computer. For a TV box, use wireless mode.</span><span data-l="zh"><b>USB 模式：</b>这些标签只会把同样的按键发给电脑。要遥控电视盒子，请用无线模式。</span></p><p class="mode-note only-ble"><span data-l="en"><b>Wireless mode:</b> for Google TV, Xiaomi and other Android TV boxes — pair flexhub under Remotes &amp; Accessories first.</span><span data-l="zh"><b>无线模式：</b>适用于 Google TV、小米及其他 Android TV 盒子——先在「遥控器和配件」里配对 flexhub。</span></p><p><span data-l="en">Swipe on the pad to move, tap to select, or use the arrows. Side buttons: Play/Pause, Home, Back, Esc, Mute, Volume −/+, Power. They are sent as keyboard and media keys, so results can differ from the original remote — check on the TV.</span><span data-l="zh">在触控区滑动导航，轻点确认，也可用方向键。侧边按钮：播放/暂停、Home、返回、Esc、静音、音量 −/+、电源。它们以键盘和媒体按键发送，效果可能和原装遥控器不同——以电视上的反应为准。</span></p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="g-sec band" id="macros" aria-labelledby="mcT">
+      <div class="wrap">
+        <div class="section-head">
+          <small><span data-l="en">Both modes · Macros &amp; custom shortcuts</span><span data-l="zh">两种模式 · 宏与自定义快捷键</span></small>
+          <h2 id="mcT"><span data-l="en">Record it once, replay it with one press.</span><span data-l="zh">录一次，之后按一下就重放。</span></h2>
+          <p><span data-l="en">Recordings live in your browser; one of them can also be stored on Flexhub and run from its BOOTSEL button — no page needed.</span><span data-l="zh">录制内容保存在你的浏览器里；其中一个还可以存到 Flexhub 上，用 BOOTSEL 键直接运行——不用打开网页。</span></p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="num">1</div><h3><span data-l="en">Record</span><span data-l="zh">录制</span></h3><p><span data-l="en">Tap ● Record, then use the Mouse and Keyboard tabs as usual. Tap ■ Stop, then ▶ Play to try it. Up to 10 minutes.</span><span data-l="zh">点 ● 录制，然后像平时一样用鼠标和键盘标签。点 ■ 停止，再点 ▶ 播放试一下。最长 10 分钟。</span></p></article>
+          <article class="card"><div class="num">2</div><h3><span data-l="en">Save &amp; organise</span><span data-l="zh">保存与管理</span></h3><p><span data-l="en">Open the <b>Recording library</b>, name it and Save — that keeps a copy in this browser. Export makes a backup .json file; Import brings it into another browser.</span><span data-l="zh">打开<b>录制库</b>，起名并保存——副本保存在当前浏览器里。导出会生成 .json 备份文件，可在另一个浏览器里导入。</span></p></article>
+          <article class="card"><div class="num">3</div><h3><span data-l="en">Put it on the button</span><span data-l="zh">放到实体键上</span></h3><p><span data-l="en">In the Recording library choose <b>Save to this device</b> — it replaces the stored script and binds BOOTSEL double press. Then <b>double-press BOOTSEL</b> to play it, no page needed. Press BOOTSEL once while it plays to stop and release all keys.</span><span data-l="zh">在录制库里选<b>保存到本设备</b>——它会替换已存的脚本并绑定 BOOTSEL 双击。之后<b>双击 BOOTSEL</b> 即可播放，不用打开网页。播放中按一下 BOOTSEL 即停止并松开所有按键。</span></p></article>
+        </div>
+        <div class="g-grid" style="margin-top:22px">
+          <div class="how-note" style="margin-top:0;max-width:none">
+            <b><span data-l="en">What gets recorded</span><span data-l="zh">哪些会被录下来</span></b>
+            <p><span data-l="en">Pointer moves, clicks, scrolling, regular keys (letters, numbers, Ctrl/Alt/Gui/Shift, Enter, Tab, Esc, arrows, Home/End, PgUp/PgDn, media keys) and typed text. <b>Not recorded:</b> F5, ⌥⌘P, PrtSc, Ins, and Creative Pad strokes and its shortcut buttons — they still work when tapped live. Flexhub stores one device script at a time; text must be English letters, numbers and standard symbols.</span><span data-l="zh">指针移动、点击、滚动、常规按键（字母、数字、Ctrl/Alt/Gui/Shift、Enter、Tab、Esc、方向键、Home/End、PgUp/PgDn、媒体键）以及发送的文字。<b>不会录入：</b>F5、⌥⌘P、PrtSc、Ins，以及创意画板的笔画和快捷按钮——现场点按仍然有效。Flexhub 一次只存一个设备脚本；文字仅支持英文字母、数字和常用半角符号。</span></p>
+          </div>
+          <div class="how-note" style="margin-top:0;max-width:none">
+            <b><span data-l="en">Custom shortcut on the BOOTSEL button</span><span data-l="zh">给 BOOTSEL 键设快捷键</span></b>
+            <p><span data-l="en">Settings → Device → Physical button · BOOTSEL. For <b>Single press</b> and <b>Double press</b> choose: Original action · No action · Release all keys · Pair gamepad (USB mode) · Make Flexhub discoverable (BLE) · Run device script · Send key / shortcut (up to 8 keys, e.g. <code>ctrl+alt+delete</code>; media keys such as <code>playpause</code> on their own). Holding BOOTSEL for 5 seconds always restores settings.</span><span data-l="zh">「设置 → 设备 → 实体按键 · BOOTSEL」。<b>单击</b>和<b>双击</b>各自可选：原有动作 · 不执行 · 松开所有按键 · 手柄重新配对（USB 模式）· 让 Flexhub 可被发现（蓝牙 HID）· 运行设备脚本 · 发送按键／组合键（最多 8 个键，如 <code>ctrl+alt+delete</code>；<code>playpause</code> 等媒体键需单独使用）。按住 BOOTSEL 5 秒始终是恢复设置。</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="g-sec" id="settings" aria-labelledby="seT">
+      <div class="wrap">
+        <div class="section-head">
+          <small><span data-l="en">Both modes · Settings</span><span data-l="zh">两种模式 · 设置</span></small>
+          <h2 id="seT"><span data-l="en">What’s in Settings.</span><span data-l="zh">设置里有什么。</span></h2>
+        </div>
+        <div class="benefits">
+          <article class="benefit"><h3><span data-l="en">Network</span><span data-l="zh">网络</span></h3><ul class="g-list"><li><span data-l="en">Status of the hotspot and Bluetooth.</span><span data-l="zh">热点和蓝牙的状态。</span></li><li><span data-l="en">Optional: let Flexhub also join your home / office Wi‑Fi (the hotspot stays on).</span><span data-l="zh">可选：让 Flexhub 同时加入家里 / 办公室 Wi‑Fi（热点保持开启）。</span></li><li><span data-l="en">Factory reset clears the saved Wi‑Fi.</span><span data-l="zh">恢复出厂会清除保存的 Wi‑Fi。</span></li></ul></article>
+          <article class="benefit"><h3><span data-l="en">Security</span><span data-l="zh">安全</span></h3><ul class="g-list"><li><span data-l="en">Device access password (4–64 characters). After saving, sign in again.</span><span data-l="zh">设备访问密码（4–64 个字符），保存后需重新登录。</span></li><li><span data-l="en">BLE command reception: advanced, off by default and has no password — leave it off. It doesn’t affect pairing as “flexhub”.</span><span data-l="zh">BLE 指令接收：高级选项，默认关闭且没有密码保护——保持关闭即可，不影响「flexhub」的蓝牙配对。</span></li></ul></article>
+          <article class="benefit"><h3><span data-l="en">Device</span><span data-l="zh">设备</span></h3><ul class="g-list"><li><span data-l="en">Physical button · BOOTSEL (see Macros).</span><span data-l="zh">实体按键 · BOOTSEL（见「宏」）。</span></li><li><span data-l="en">Boot greeting: types a greeting into the focused field when Flexhub starts — open a blank text editor first.</span><span data-l="zh">开机问候：Flexhub 启动时向当前焦点输入一句问候——请先打开空白文本编辑器。</span></li><li><span data-l="en">Creative Pad trail lines, Language, and About (firmware version).</span><span data-l="zh">创意画板笔迹标线、语言，以及关于（固件版本）。</span></li></ul></article>
+        </div>
+        <div class="how-note">
+          <b><span data-l="en">Forgot the password? Reset with the button</span><span data-l="zh">忘了密码？用按键恢复</span></b>
+          <p><span data-l="en">Hold BOOTSEL for 5 seconds (the LED blinks quickly). This clears the saved home Wi‑Fi and access password (back to build.me), restores BOOTSEL button settings, and turns the boot greeting and BLE command reception off. The script stored on Flexhub is kept (only a firmware flash clears it).</span><span data-l="zh">按住 BOOTSEL 5 秒（指示灯快速闪烁）。这会清除保存的家用 Wi‑Fi 和访问密码（恢复为 build.me），恢复 BOOTSEL 按键设置，并关闭开机问候和 BLE 指令接收。存在 Flexhub 上的脚本会保留（只有烧录固件会清除）。</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="g-sec band" id="update" aria-labelledby="upT">
+      <div class="wrap">
+        <div class="section-head">
+          <small><span data-l="en">Firmware updates</span><span data-l="zh">固件升级</span></small>
+          <h2 id="upT"><span data-l="en">The only time you need an app.</span><span data-l="zh">唯一需要 App 的时候。</span></h2>
+          <p><span data-l="en">Updates come as a firmware file (.uf2). Use the update app on Android, or a computer.</span><span data-l="zh">升级文件是一个固件文件（.uf2）。用 Android 上的升级 App，或用电脑都可以。</span></p>
+        </div>
+        <div class="modes">
+          <article class="mode"><div class="mode-head"><h3 style="margin:0"><span data-l="en">Update app (Android)</span><span data-l="zh">升级 App（Android）</span></h3><span class="mode-tag"><span data-l="en">Recommended</span><span data-l="zh">推荐</span></span></div>
+            <ol class="g-list"><li><span data-l="en">Open the update app and choose the firmware file.</span><span data-l="zh">打开升级 App，选择固件文件。</span></li><li><span data-l="en">Connect Flexhub to the Android phone with a USB cable (OTG adapter if needed).</span><span data-l="zh">用 USB 线把 Flexhub 接到 Android 手机（必要时用 OTG 转接头）。</span></li><li><span data-l="en">Tap <b>Find automatically</b> — no button pressing needed. If it isn’t found: unplug, hold BOOTSEL while plugging back in, release, then pick the Flexhub boot folder.</span><span data-l="zh">点<b>自动查找</b>——不用按键。如果找不到：拔下，按住 BOOTSEL 再插上，松开后选择 Flexhub 启动盘文件夹。</span></li><li><span data-l="en">Install and keep it connected until Flexhub restarts.</span><span data-l="zh">开始安装，保持连接直到 Flexhub 重启。</span></li></ol></article>
+          <article class="mode"><div class="mode-head"><h3 style="margin:0"><span data-l="en">Computer (drag &amp; drop)</span><span data-l="zh">电脑（拖放）</span></h3><span class="mode-tag"><span data-l="en">Fallback</span><span data-l="zh">备用</span></span></div>
+            <ol class="g-list"><li><span data-l="en">Hold BOOTSEL while plugging Flexhub into a computer, then release.</span><span data-l="zh">按住 BOOTSEL 把 Flexhub 插到电脑上，然后松开。</span></li><li><span data-l="en">A USB drive appears (named like RP2350).</span><span data-l="zh">电脑上出现一个 U 盘（名称类似 RP2350）。</span></li><li><span data-l="en">Drag the .uf2 file onto it. Flexhub restarts by itself.</span><span data-l="zh">把 .uf2 文件拖进去，Flexhub 会自动重启。</span></li></ol></article>
+        </div>
+        <div class="how-note">
+          <b><span data-l="en">After updating</span><span data-l="zh">升级之后</span></b>
+          <p><span data-l="en">Wireless mode: on each Bluetooth device, forget flexhub and pair it again. The script stored on Flexhub is cleared by a firmware flash — save it again from your Recording library (export a backup first). Check the version in Settings → Device → About.</span><span data-l="zh">无线模式：在每台蓝牙设备上忽略 flexhub 后重新配对。存在 Flexhub 上的脚本会在烧录固件时被清除——请从录制库重新保存（先导出备份）。可在「设置 → 设备 → 关于」里查看版本。</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="g-sec" id="older" aria-labelledby="olT">
+      <div class="wrap g-grid">
+        <div>
+          <div class="section-head">
+            <small><span data-l="en">Older phones &amp; tablets</span><span data-l="zh">旧手机与旧平板</span></small>
+            <h2 id="olT"><span data-l="en">Give that old iPad a new job.</span><span data-l="zh">让旧 iPad 再上岗。</span></h2>
+            <p><span data-l="en">The remote page is kept light so devices like a first-gen iPad mini (Safari 9) can drive it. A few tips:</span><span data-l="zh">遥控页面尽量做得轻量，第一代 iPad mini（Safari 9）这类设备也能用。几个小贴士：</span></p>
+          </div>
+        </div>
+        <ul class="how-note g-list" style="margin-top:0;padding-left:2.2em"><li><span data-l="en">Use <b>http://192.168.4.1/</b> — older iPads often can’t open “.local” names.</span><span data-l="zh">使用 <b>http://192.168.4.1/</b>——旧 iPad 往往打不开 “.local” 地址。</span></li><li><span data-l="en">Wait about 10 seconds after joining before opening the page.</span><span data-l="zh">连上热点后等约 10 秒再打开网页。</span></li><li><span data-l="en">The Full screen button is greyed out on iOS before 12 — that’s normal.</span><span data-l="zh">iOS 12 以前「全屏」按钮是灰色的——属于正常。</span></li><li><span data-l="en">Keep just one Flexhub page open; a second one shows “Another page is controlling”.</span><span data-l="zh">只保留一个 Flexhub 页面；第二个会显示“其他页面正在控制”。</span></li><li><span data-l="en">Picking a background image in Creative Pad may not be available in very old browsers.</span><span data-l="zh">很旧的浏览器可能无法在创意画板里选择背景图。</span></li></ul>
+      </div>
+    </section>
+
+    <section id="trouble" class="g-sec band" aria-labelledby="tsT">
+      <div class="wrap faq">
+        <div class="section-head">
+          <small><span data-l="en">Troubleshooting</span><span data-l="zh">常见问题</span></small>
+          <h2 id="tsT"><span data-l="en">Something not working?</span><span data-l="zh">哪里不对？</span></h2>
+        </div>
+        <div class="ts-tools">
+          <input id="tsFilter" type="search" data-ph-en="Search problems, e.g. Bluetooth, password" data-ph-zh="搜索问题，例如 蓝牙、密码" placeholder="Search problems, e.g. Bluetooth, password" aria-label="Search troubleshooting">
+          <button type="button" class="btn btn-ghost btn-sm" id="tsExpand"><span data-l="en">Expand / collapse all</span><span data-l="zh">全部展开 / 收起</span></button>
+        </div>
+        <div id="tsList"><details id="ts-wifi"><summary><span data-l="en">I can’t see the flexhub Wi‑Fi</span><span data-l="zh">找不到 flexhub Wi‑Fi</span></summary><ul><li><span data-l="en">Give Flexhub a few seconds after power-up, move closer, and refresh the Wi‑Fi list.</span><span data-l="zh">通电后等几秒，靠近一点，刷新 Wi‑Fi 列表。</span></li><li><span data-l="en">Still nothing: unplug Flexhub, wait a moment and power it again.</span><span data-l="zh">还是没有：拔下 Flexhub，稍等后重新通电。</span></li></ul></details><details id="ts-page"><summary><span data-l="en">The page won’t open</span><span data-l="zh">网页打不开</span></summary><ul><li><span data-l="en">Use http://192.168.4.1/ (type the http:// part).</span><span data-l="zh">使用 http://192.168.4.1/（记得输入 http://）。</span></li><li><span data-l="en">Wait about 10 seconds after joining; flexhub.local may not work on every device.</span><span data-l="zh">连上后等约 10 秒；flexhub.local 并非所有设备都支持。</span></li><li><span data-l="en">Turn off VPN on the controlling phone, and make sure it’s still on flexhub.</span><span data-l="zh">关闭手机上的 VPN，并确认仍连着 flexhub。</span></li></ul></details><details id="ts-pass"><summary><span data-l="en">The sign-in password doesn’t work</span><span data-l="zh">登录密码不对</span></summary><ul><li><span data-l="en">It starts as build.me. If you changed and forgot it, hold BOOTSEL for 5 seconds to reset it (see Settings).</span><span data-l="zh">初始密码是 build.me。改过又忘了，就按住 BOOTSEL 5 秒恢复（见「设置」）。</span></li></ul></details><details id="ts-usb"><summary><span data-l="en">USB mode: the computer doesn’t react</span><span data-l="zh">USB 模式：电脑没反应</span></summary><ul><li><span data-l="en">Use a data cable, not a charge-only one, and check both ends.</span><span data-l="zh">使用数据线而不是充电线，并检查两端。</span></li><li><span data-l="en">If Flexhub was powered before the cable reached the computer, it may have started in wireless mode (“USB detected late”). Unplug and plug straight into the computer.</span><span data-l="zh">如果 Flexhub 先通电、后接电脑，可能已进入无线模式（“USB 识别较晚”）。拔下后直接插到电脑上。</span></li></ul></details><details id="ts-bt"><summary><span data-l="en">Wireless mode: “flexhub” isn’t in the Bluetooth list</span><span data-l="zh">无线模式：蓝牙列表里没有「flexhub」</span></summary><ul><li><span data-l="en">Wait until about 2 minutes after power-up.</span><span data-l="zh">等到通电约 2 分钟后。</span></li><li><span data-l="en">Is it already paired to another device? Forget it there first — Flexhub connects to one at a time.</span><span data-l="zh">是不是已经连着另一台设备？先在那台上忽略它——Flexhub 一次只连一台。</span></li><li><span data-l="en">Set BOOTSEL single press to “Make Flexhub discoverable (BLE)” and press it (about 90 s window).</span><span data-l="zh">把 BOOTSEL 单击设为「让 Flexhub 可被发现（蓝牙 HID）」并按一下（约 90 秒）。</span></li><li><span data-l="en">Make sure Flexhub is on a charger, not a computer.</span><span data-l="zh">确认 Flexhub 接的是充电头，而不是电脑。</span></li></ul></details><details id="ts-repair"><summary><span data-l="en">Bluetooth stopped connecting after an update</span><span data-l="zh">升级后蓝牙连不上</span></summary><ul><li><span data-l="en">Forget flexhub in the target’s Bluetooth settings, then pair again. This is expected after every firmware update.</span><span data-l="zh">在目标设备蓝牙设置里忽略 flexhub，再重新配对。每次升级固件后都是这样。</span></li></ul></details><details id="ts-stuck"><summary><span data-l="en">A key or mouse button seems stuck</span><span data-l="zh">按键或鼠标似乎卡住了</span></summary><ul><li><span data-l="en">Tap Release all keys (padlock on the Mouse tab). Also check Ctrl / Alt / Gui / Shift aren’t still highlighted on the Keyboard tab.</span><span data-l="zh">点「松开所有按键」（鼠标标签里的锁形图标）。并检查键盘标签里 Ctrl / Alt / Gui / Shift 是否仍在高亮。</span></li></ul></details><details id="ts-text"><summary><span data-l="en">Typed text isn’t sent or comes out wrong</span><span data-l="zh">文字发不出去或变了样</span></summary><ul><li><span data-l="en">Only English letters, numbers and standard symbols can be sent. Switch the target’s input method to English, and check its keyboard layout.</span><span data-l="zh">只能发送英文字母、数字和常用半角符号。把目标设备输入法切到英文，并检查键盘布局。</span></li></ul></details><details id="ts-status"><summary><span data-l="en">The page says Disconnected / Another page is controlling</span><span data-l="zh">页面显示已断开 / 其他页面正在控制</span></summary><ul><li><span data-l="en">Disconnected: keep the page in front; it reconnects by itself. Check the phone is still on flexhub.</span><span data-l="zh">已断开：保持页面在前台，会自动重连。确认手机仍连着 flexhub。</span></li><li><span data-l="en">Another page is controlling: close other Flexhub tabs or devices — one controller at a time.</span><span data-l="zh">其他页面正在控制：关闭其他 Flexhub 标签页或设备——同一时间只能有一个控制端。</span></li></ul></details><details id="ts-draw"><summary><span data-l="en">Drawing moves too little or too much (wireless)</span><span data-l="zh">画画移动太少或太多（无线模式）</span></summary><ul><li><span data-l="en">Change Move scale on the Creative Pad (1×–8×). In USB mode, set Canvas ratio to the screen shape instead.</span><span data-l="zh">在创意画板里调整移动倍数（1×–8×）。USB 模式下则把画布比例调成屏幕形状。</span></li></ul></details><details id="ts-slides"><summary><span data-l="en">Presenter keys do nothing</span><span data-l="zh">演示器按键没反应</span></summary><ul><li><span data-l="en">Click into the presentation on the target first so it’s the active window. Use F5 for PowerPoint / WPS and ⌥⌘P for Keynote.</span><span data-l="zh">先在目标设备上点一下演示文稿，让它成为当前窗口。PowerPoint / WPS 用 F5，Keynote 用 ⌥⌘P。</span></li></ul></details><details id="ts-net"><summary><span data-l="en">My phone lost internet</span><span data-l="zh">手机断网了</span></summary><ul><li><span data-l="en">Expected while on the flexhub hotspot. Turn on “Wi‑Fi assist” / “switch to mobile data” if your phone has it, or use a spare device as the controller.</span><span data-l="zh">连着 flexhub 热点时属于正常。如手机支持，可打开「Wi‑Fi 助理」/「自动切换移动数据」，或用闲置设备做遥控器。</span></li></ul></details></div>
+        <p class="ts-empty" id="tsEmpty"><span data-l="en">No match — try another word.</span><span data-l="zh">没有匹配的问题，换个词试试。</span></p>
+        <div class="how-note">
+          <b><span data-l="en">Made for light, everyday use</span><span data-l="zh">为轻量日常使用而生</span></b>
+          <p><span data-l="en">Flexhub is a portable shortcut and macro panel, second pointer, presenter, signature pad and light drawing tool. It has no pressure levels and isn’t meant to replace a pro pen tablet or your main mouse.</span><span data-l="zh">Flexhub 是随身的快捷键与宏面板、第二指针、演示器、签名板和轻度绘画工具。它没有压感，也不是用来取代专业数位板或你的主鼠标的。</span></p>
+        </div>
+        <a class="btn btn-ghost g-top-link" href="#choose"><span data-l="en">↑ Back to mode choice</span><span data-l="zh">↑ 回到模式选择</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div class="foot-brand">Flexhub</div>
+      <div>
+        <a href="guide.html"><span data-l="en">User guide</span><span data-l="zh">使用说明</span></a> ·
+        <a href="privacy.html"><span data-l="en">Privacy</span><span data-l="zh">隐私</span></a> ·
+        <a href="terms.html"><span data-l="en">Terms</span><span data-l="zh">条款</span></a> ·
+        <a href="refund.html"><span data-l="en">Refunds</span><span data-l="zh">退换</span></a>
+      </div>
+      <p style="margin:0;width:100%">© 2026 Flexhub · visualbuild.shop</p>
+    </div>
+  </footer>
+
+  <style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}</style>
+  <script src="guide.js"></script>
+</body>
+</html>
