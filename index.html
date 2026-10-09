@@ -10,6 +10,14 @@
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="author" content="Flexhub">
   <link rel="canonical" href="https://visualbuild.shop/">
+  <link rel="alternate" hreflang="en" href="https://visualbuild.shop/?lang=en">
+  <link rel="alternate" hreflang="zh-Hans" href="https://visualbuild.shop/?lang=zh">
+  <link rel="alternate" hreflang="de" href="https://visualbuild.shop/?lang=de">
+  <link rel="alternate" hreflang="fr" href="https://visualbuild.shop/?lang=fr">
+  <link rel="alternate" hreflang="ja" href="https://visualbuild.shop/?lang=ja">
+  <link rel="alternate" hreflang="ko" href="https://visualbuild.shop/?lang=ko">
+  <link rel="alternate" hreflang="ar" href="https://visualbuild.shop/?lang=ar">
+  <link rel="alternate" hreflang="x-default" href="https://visualbuild.shop/">
   <meta property="og:site_name" content="Flexhub">
   <meta property="og:title" content="Flexhub — wireless shortcuts from your phone">
   <meta property="og:description" content="Flexhub turns an old phone into a cheap wireless shortcut panel for your desk PC — macros, trackpad, presenter, signature pad and light annotate. Driver-free USB.">
@@ -25,7 +33,8 @@
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>(function(){try{var L=["en","zh","de","fr","ja","ko","ar"],q=new URLSearchParams(location.search).get("lang"),l=q&&L.indexOf(q)>=0?q:null;if(!l){try{l=localStorage.getItem("flexhub_lang")}catch(e){}}if(!l||L.indexOf(l)<0){var n=(navigator.language||"").toLowerCase();l=/^zh/.test(n)?"zh":/^de/.test(n)?"de":/^fr/.test(n)?"fr":/^ja/.test(n)?"ja":/^ko/.test(n)?"ko":/^ar/.test(n)?"ar":"en"}var map={en:"en",zh:"zh-Hans",de:"de",fr:"fr",ja:"ja",ko:"ko",ar:"ar"};document.documentElement.lang=map[l]||"en";document.documentElement.dir=l==="ar"?"rtl":"ltr";}catch(e){}})();</script>
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
 {
@@ -50,10 +59,7 @@
       "publisher": {
         "@id": "https://visualbuild.me/#organization"
       },
-      "inLanguage": [
-        "en",
-        "zh-Hans"
-      ]
+      "inLanguage": ["en","zh-Hans","de","fr","ja","ko","ar"]
     },
     {
       "@type": "Product",
@@ -166,6 +172,11 @@
         <select id="lang" class="lang" aria-label="Language">
           <option value="en">EN</option>
           <option value="zh">中文</option>
+          <option value="de">DE</option>
+          <option value="fr">FR</option>
+          <option value="ja">日本語</option>
+          <option value="ko">한국어</option>
+          <option value="ar">العربية</option>
         </select>
         <a class="btn btn-primary btn-sm" href="#buy" data-i18n="nav.cta">Get Flexhub</a>
       </div>

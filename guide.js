@@ -10,22 +10,48 @@
 
   /* Language (same key as the landing page) */
   var titles = {
-    en: "Flexhub user guide — USB mode & wireless mode setup, pairing, macros, troubleshooting",
-    zh: "Flexhub 使用说明 — USB 模式与无线模式：连接、配对、宏、常见问题"
+    en: "Flexhub user guide \u2014 USB mode & wireless mode setup, pairing, macros, troubleshooting",
+    zh: "Flexhub \u4f7f\u7528\u8bf4\u660e \u2014 USB \u6a21\u5f0f\u4e0e\u65e0\u7ebf\u6a21\u5f0f\uff1a\u8fde\u63a5\u3001\u914d\u5bf9\u3001\u5b8f\u3001\u5e38\u89c1\u95ee\u9898",
+    de: "Flexhub Bedienungsanleitung \u2014 USB- & Funkmodus: Einrichtung, Pairing, Makros, Fehlerbehebung",
+    fr: "Guide Flexhub \u2014 modes USB et sans fil : configuration, appairage, macros, d\u00e9pannage",
+    ja: "Flexhub \u30e6\u30fc\u30b6\u30fc\u30ac\u30a4\u30c9 \u2014 USB / \u30ef\u30a4\u30e4\u30ec\u30b9\u30e2\u30fc\u30c9\u306e\u8a2d\u5b9a\u3001\u30da\u30a2\u30ea\u30f3\u30b0\u3001\u30de\u30af\u30ed\u3001\u30c8\u30e9\u30d6\u30eb\u30b7\u30e5\u30fc\u30c6\u30a3\u30f3\u30b0",
+    ko: "Flexhub \uc0ac\uc6a9 \uc124\uba85\uc11c \u2014 USB\u00b7\ubb34\uc120 \ubaa8\ub4dc \uc124\uc815, \ud398\uc5b4\ub9c1, \ub9e4\ud06c\ub85c, \ubb38\uc81c \ud574\uacb0",
+    ar: "\u062f\u0644\u064a\u0644 \u0645\u0633\u062a\u062e\u062f\u0645 Flexhub \u2014 \u0648\u0636\u0639\u0627 USB \u0648\u0627\u0644\u0644\u0627\u0633\u0644\u0643\u064a: \u0627\u0644\u0625\u0639\u062f\u0627\u062f \u0648\u0627\u0644\u0627\u0642\u062a\u0631\u0627\u0646 \u0648\u0627\u0644\u0645\u0627\u0643\u0631\u0648 \u0648\u0627\u0633\u062a\u0643\u0634\u0627\u0641 \u0627\u0644\u0623\u062e\u0637\u0627\u0621"
   };
+  var LANGS = ["en","zh","de","fr","ja","ko","ar"];
+  var LANG_HTML = {en:"en", zh:"zh-Hans", de:"de", fr:"fr", ja:"ja", ko:"ko", ar:"ar"};
   var lang = "en";
+  function detectLang() {
+    try {
+      var q = new URLSearchParams(location.search).get("lang");
+      if (q && LANGS.indexOf(q) >= 0) return q;
+    } catch (e) {}
+    var s = store("flexhub_lang");
+    if (s && LANGS.indexOf(s) >= 0) return s;
+    var nav = (navigator.language || "").toLowerCase();
+    if (/^zh/.test(nav)) return "zh";
+    if (/^de/.test(nav)) return "de";
+    if (/^fr/.test(nav)) return "fr";
+    if (/^ja/.test(nav)) return "ja";
+    if (/^ko/.test(nav)) return "ko";
+    if (/^ar/.test(nav)) return "ar";
+    return "en";
+  }
   function setLang(l) {
-    lang = l === "zh" ? "zh" : "en";
-    root.lang = lang === "zh" ? "zh-Hans" : "en";
-    doc.title = titles[lang];
+    lang = LANGS.indexOf(l) >= 0 ? l : "en";
+    root.lang = LANG_HTML[lang] || "en";
+    root.dir = lang === "ar" ? "rtl" : "ltr";
+    doc.title = titles[lang] || titles.en;
     store("flexhub_lang", lang);
     var sel = doc.getElementById("lang");
     if (sel) sel.value = lang;
-    all("[data-ph-en]").forEach(function (el) { el.setAttribute("placeholder", el.getAttribute("data-ph-" + lang)); });
+    all("[data-ph-en]").forEach(function (el) {
+      var ph = el.getAttribute("data-ph-" + lang) || el.getAttribute("data-ph-en");
+      if (ph) el.setAttribute("placeholder", ph);
+    });
     all(".stepper").forEach(function (s) { if (s._render) s._render(); });
   }
-  var savedLang = store("flexhub_lang");
-  setLang(savedLang || (/^zh\b/i.test(navigator.language || "") ? "zh" : "en"));
+  setLang(detectLang());
   var langSel = doc.getElementById("lang");
   if (langSel) langSel.addEventListener("change", function () { setLang(langSel.value); });
 
@@ -75,7 +101,16 @@
         if (k === i) b.setAttribute("aria-current", "step"); else b.removeAttribute("aria-current");
       });
       if (bar) bar.style.width = ((i + 1) / n * 100) + "%";
-      if (count) count.textContent = lang === "zh" ? ("第 " + (i + 1) + " 步，共 " + n + " 步") : ("Step " + (i + 1) + " of " + n);
+      if (count) {
+        var cur = i + 1;
+        if (lang === "zh") count.textContent = "第 " + cur + " 步，共 " + n + " 步";
+        else if (lang === "de") count.textContent = "Schritt " + cur + " von " + n;
+        else if (lang === "fr") count.textContent = "Étape " + cur + " sur " + n;
+        else if (lang === "ja") count.textContent = cur + " / " + n + " ステップ";
+        else if (lang === "ko") count.textContent = cur + " / " + n + " 단계";
+        else if (lang === "ar") count.textContent = "الخطوة " + cur + " من " + n;
+        else count.textContent = "Step " + cur + " of " + n;
+      }
       if (prev) prev.disabled = i === 0;
       if (next) next.disabled = i === n - 1;
     }

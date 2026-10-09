@@ -1,5 +1,15 @@
 /* Flexhub user guide — extends styles.css only: same tokens (white · #1a1a1a · orange accent for CTAs/active state · 1px gray rules · #6b6b6b icons), no shadows. */
-html[lang="en"] [data-l="zh"],html[lang="zh-Hans"] [data-l="en"]{display:none!important}
+/* i18n: show active language only */
+[data-l]{display:none!important}
+html[lang="en"] [data-l="en"],
+html[lang="zh-Hans"] [data-l="zh"],
+html[lang="de"] [data-l="de"],
+html[lang="fr"] [data-l="fr"],
+html[lang="ja"] [data-l="ja"],
+html[lang="ko"] [data-l="ko"],
+html[lang="ar"] [data-l="ar"]{display:inline!important}
+html[dir="rtl"] .st-actions{flex-direction:row-reverse}
+
 body[data-mode="usb"] .only-ble,body[data-mode="ble"] .only-usb{display:none!important}
 
 /* Hero + mode choice */
