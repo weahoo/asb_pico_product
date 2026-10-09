@@ -95,9 +95,10 @@ body[data-mode="usb"] .compare-table tbody td.c-usb[colspan]{box-shadow:none}
 .st-head .mode-tag{padding:5px 12px;border-radius:999px;border:var(--rule);color:var(--muted);font-size:.78rem;font-weight:700;letter-spacing:.04em}
 .progress{height:3px;background:var(--gray);border-radius:3px;margin:14px 0 12px;overflow:hidden}
 .progress span{display:block;height:100%;width:20%;background:var(--accent);transition:width .35s ease}
-.st-dots{display:flex;gap:6px;margin-bottom:6px}
+.st-dots{display:flex;align-items:center;gap:8px;margin-bottom:8px}
 .st-dots:empty{display:none}
-.st-dots button{width:30px;height:30px;border-radius:50%;border:var(--rule);background:#fff;color:var(--muted);font-weight:800;font-size:.82rem;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.st-dots button{width:12px;height:12px;padding:0;border-radius:50%;border:var(--rule);background:#fff;font-size:0;line-height:0;cursor:pointer;transition:background .15s,border-color .15s,transform .15s}
+.st-dots button[aria-current="step"]{transform:scale(1.25)}
 .st-dots button.done{background:#6b6b6b;border-color:#6b6b6b;color:#fff}
 .st-dots button[aria-current="step"]{background:var(--accent);border-color:var(--accent);color:#fff}
 .steps{list-style:none;margin:0;padding:0}

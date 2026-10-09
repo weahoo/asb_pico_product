@@ -61,6 +61,8 @@ UI_LITERALS = ["Another page is controlling", "Connect target device", "Detectin
                "Disconnected", "Ready", "English", "\u4e2d\u6587", "Send", "Hello", "PrtSc", "Bksp", "Sym", "Caps", "Gui",
                "Ins", "Del", "PgUp", "PgDn", "Home", "End", "Bg\u2212", "Bg+", "FH", "Apple TV", "Google TV", "Xiaomi",
                "WPS", "DualSense", "Keynote", "Safari", "mini", "Page Up", "Page Down", "Move scale", "Mute"]
+# Exact visible strings allowed as-is (e.g. the "EN" language toggle drawn in the device UI illustration).
+UI_EXACT = {"EN"}
 UI_LITERALS_RX = re.compile("|".join(re.escape(x) for x in sorted(UI_LITERALS, key=len, reverse=True)))
 PLACEHOLDER_RX = re.compile(r"(x{3,}\d*x*|\bXX+\b|\bP\d+x\b|__+\w*__+|\[\[|\]\]|\{\{|\}\}|\bPH\d+\b|\bTERM\d+\b|\(x+\d*x*\))", re.I)
 STEP_PREFIX_RX = re.compile(r"^\s*(?:\d+|[\u0660-\u0669]+|[\uff10-\uff19]+)\s*[.)\u3001\uff0e\uff09:\-\u2013]\s*\S")
@@ -77,6 +79,17 @@ def numbers(s):
     s = strip_tags(s).translate(DIGIT_MAP)
     s = URL_RX.sub(" ", s)
     return Counter(re.findall(r"\d+", s))
+
+
+def numbers_mismatch(en_s, s):
+    """Compare digits of a translation with EN. Missing EN numbers are errors, except 1-3,
+    which languages often spell out (e.g. Arabic dual forms). Extra numbers are only errors
+    when they are 0 or larger than 12 (small extras come from spelled-out English numbers,
+    e.g. 'one minute' -> '1\ubd84', 'first generation' -> '1\uc138\ub300')."""
+    a, b = numbers(en_s), numbers(s)
+    missing = [n for n in (a - b).elements() if not (1 <= int(n) <= 3)]
+    extra = [n for n in (b - a).elements() if int(n) == 0 or int(n) > 12]
+    return missing, extra
 
 
 def latin_words(text):
@@ -100,6 +113,8 @@ def script_issues(lang, text):
     """Return list of (kind, detail) problems for a visible string in `lang`."""
     issues = []
     if not text or not text.strip():
+        return issues
+    if text.strip() in UI_EXACT:
         return issues
     raw = text
     text = UI_LITERALS_RX.sub(" ", text)
@@ -278,8 +293,8 @@ def check_guide_static(issues):
                 add(issues, "tags-unbalanced", where, l, s[:120])
             elif tag_seq(s) != en_tags:
                 add(issues, "tags-differ", where, l, "%s vs en %s" % (dict(tag_seq(s)), dict(en_tags)), "warn")
-            if l != "en" and numbers(s) != en_nums:
-                add(issues, "numbers-differ", where, l, "%s vs en %s | %s" % (dict(numbers(s)), dict(en_nums), txt[:70]))
+            if l != "en" and any(numbers_mismatch(en, s)):
+                add(issues, "numbers-differ", where, l, "missing %s extra %s | %s" % (numbers_mismatch(en, s) + (txt[:70],)))
             for kind, d in script_issues(l, txt):
                 add(issues, kind, where, l, "%s | %s" % (d, txt[:80]), "warn" if kind == "latin-fragment" else "error")
             if STEP_PREFIX_RX.match(txt) and not STEP_PREFIX_RX.match(en_txt):
@@ -344,8 +359,8 @@ def check_site_static(issues):
                 add(issues, "tags-unbalanced", where, l, v[:100])
             elif tag_seq(v) != tag_seq(en[k]):
                 add(issues, "tags-differ", where, l, "%s vs en %s" % (dict(tag_seq(v)), dict(tag_seq(en[k]))), "warn")
-            if l != "en" and numbers(v) != numbers(en[k]):
-                add(issues, "numbers-differ", where, l, "%s vs en %s | %s" % (dict(numbers(v)), dict(numbers(en[k])), txt[:70]))
+            if l != "en" and any(numbers_mismatch(en[k], v)):
+                add(issues, "numbers-differ", where, l, "missing %s extra %s | %s" % (numbers_mismatch(en[k], v) + (txt[:70],)))
             for kind, det in script_issues(l, txt):
                 add(issues, kind, where, l, "%s | %s" % (det, txt[:80]), "warn" if kind == "latin-fragment" else "error")
             if STEP_PREFIX_RX.match(txt) and not STEP_PREFIX_RX.match(strip_tags(en[k]).strip()):
@@ -353,7 +368,7 @@ def check_site_static(issues):
             if l != "en" and v == en[k] and unknown_latin(strip_tags(v)):
                 add(issues, "untranslated", where, l, txt[:70], "warn" if l in ("de", "fr") else "error")
             for l2 in LANGS:
-                if l2 != l and l2 != "en" and l2 in d and d[l2].get(k) == v and len(txt) > 6 and l != "en":
+                if l2 != l and l2 != "en" and l2 in d and d[l2].get(k) == v and len(txt) > 6 and l != "en" and unknown_latin(txt):
                     if LANGS.index(l2) < LANGS.index(l):
                         add(issues, "copied-across-langs", where, l + "," + l2, txt[:70])
 
@@ -406,12 +421,14 @@ STEPS_JS = r"""
       const shown = [];
       const b = li.querySelector('h3 .n'); if (b && vis(b)) shown.push('badge:' + b.textContent.trim());
       if (marker(li) && vis(li)) shown.push('marker');
-      const dot = box.querySelectorAll('.st-dots button')[k]; if (dot && vis(dot)) shown.push('dot:' + dot.textContent.trim());
+      const dot = box.querySelectorAll('.st-dots button')[k]; if (dot && vis(dot)) { const bc = getComputedStyle(dot, '::before').content; const dt = (dot.textContent + ' ' + (bc && bc !== 'none' && bc !== 'normal' ? bc.replace(/"/g, '') : '')).trim(); if (/\d/.test(dt)) shown.push('dot:' + dt); }
       const h = li.querySelector('h3'); if (h) { const tx = [...h.childNodes].filter(c => !(c.classList && c.classList.contains('n'))).map(c => c.textContent).join(' ').trim();
         const vt = [...h.querySelectorAll('[data-l]')].filter(vis).map(e => e.textContent).join(' ').trim() || tx;
         if (startsNum(vt)) shown.push('text:' + vt.slice(0, 12)); }
-      if (shown.length !== 1) res.push({kind: 'step-number-count', box: box.className, step: k + 1, detail: shown.join(' + ') || 'none'});
-      const exp = String(k + 1); shown.filter(s => /^(badge|dot):/.test(s)).forEach(s => { if (s.split(':')[1] !== exp) res.push({kind: 'step-number-wrong', box: box.className, step: k+1, detail: s}); });
+      // Only the active step is displayed; inactive steps are checked when their dot is clicked (dyn states).
+      if (vis(li) && shown.length !== 1) res.push({kind: 'step-number-count', box: box.className, step: k + 1, detail: shown.join(' + ') || 'none'});
+      if (!b || !/^\d+$/.test(b.textContent.trim())) res.push({kind: 'step-number-count', box: box.className, step: k + 1, detail: 'missing badge'});
+      const exp = String(k + 1); (b ? ['badge:' + b.textContent.trim()] : []).concat(shown.filter(s => /^dot:/.test(s))).forEach(s => { if (s.split(':')[1] !== exp) res.push({kind: 'step-number-wrong', box: box.className, step: k+1, detail: s}); });
     });
   });
   document.querySelectorAll('ol').forEach(ol => { if (ol.closest('.stepper') || !vis(ol)) return;
@@ -483,7 +500,7 @@ def check_dynamic(issues, base, cdp):
                 for t, where in texts.items():
                     for kind, d in script_issues(lang, t):
                         add(issues, kind, label + " " + where, lang, "%s | %s" % (d, t[:80]), "warn" if kind == "latin-fragment" else "error")
-                    if lang != "en" and t in en_texts.get(label, ()) and len(t) > 12 and len(unknown_latin(t)) >= 2:
+                    if lang != "en" and t in en_texts.get(label, ()) and len(t) > 12 and len(unknown_latin(UI_LITERALS_RX.sub(" ", t))) >= 2:
                         add(issues, "english-leak", label + " " + where, lang, t[:80], "error" if lang in NATIVE else "warn")
                 for typ, txt in console:
                     add(issues, "console-error", label, lang, txt[:200])

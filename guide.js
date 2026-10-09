@@ -39,6 +39,8 @@
     if (/^ar/.test(nav)) return "ar";
     return "en";
   }
+  var A11Y = {"nav": {"en": "Primary", "zh": "主导航", "de": "Hauptnavigation", "fr": "Navigation principale", "ja": "メインナビゲーション", "ko": "주 메뉴", "ar": "التنقل الرئيسي"}, "lang": {"en": "Language", "zh": "语言", "de": "Sprache", "fr": "Langue", "ja": "言語", "ko": "언어", "ar": "اللغة"}, "choose": {"en": "Choose a mode", "zh": "选择模式", "de": "Modus wählen", "fr": "Choisir un mode", "ja": "モードを選択", "ko": "모드 선택", "ar": "اختر الوضع"}, "mode": {"en": "Mode", "zh": "模式", "de": "Modus", "fr": "Mode", "ja": "モード", "ko": "모드", "ar": "الوضع"}, "toc": {"en": "On this page", "zh": "本页内容", "de": "Auf dieser Seite", "fr": "Sur cette page", "ja": "このページの内容", "ko": "이 페이지의 내용", "ar": "في هذه الصفحة"}, "sceneUsb": {"en": "Computer connected to Flexhub by USB cable; phone connected to Flexhub over Wi‑Fi", "zh": "电脑通过 USB 线连接 Flexhub；手机通过 Wi‑Fi 连接 Flexhub", "de": "Computer per USB-Kabel mit Flexhub verbunden; Handy per Wi‑Fi mit Flexhub verbunden", "fr": "Ordinateur relié à Flexhub par câble USB ; téléphone connecté à Flexhub en Wi‑Fi", "ja": "パソコンは USB ケーブルで Flexhub に接続、スマホは Wi‑Fi で Flexhub に接続", "ko": "컴퓨터는 USB 케이블로 Flexhub에 연결되고, 휴대폰은 Wi‑Fi로 Flexhub에 연결됨", "ar": "الحاسوب موصول بـ Flexhub بكابل USB، والهاتف متصل بـ Flexhub عبر Wi‑Fi"}, "sceneBle": {"en": "Power bank powering Flexhub; Flexhub paired to a TV over Bluetooth and to a phone over Wi‑Fi", "zh": "充电宝为 Flexhub 供电；Flexhub 通过蓝牙配对电视，通过 Wi‑Fi 连接手机", "de": "Powerbank versorgt Flexhub mit Strom; Flexhub per Bluetooth mit einem Fernseher gekoppelt und per Wi‑Fi mit einem Handy verbunden", "fr": "Batterie externe alimentant Flexhub ; Flexhub appairé à un téléviseur en Bluetooth et connecté à un téléphone en Wi‑Fi", "ja": "モバイルバッテリーで Flexhub に給電し、Flexhub は Bluetooth でテレビとペアリング、Wi‑Fi でスマホと接続", "ko": "보조배터리로 Flexhub에 전원 공급, Flexhub는 Bluetooth로 TV와 페어링되고 Wi‑Fi로 휴대폰과 연결됨", "ar": "بطارية متنقلة تزوّد Flexhub بالطاقة، وFlexhub مقترن بالتلفاز عبر Bluetooth ومتصل بالهاتف عبر Wi‑Fi"}, "compare": {"en": "USB mode versus wireless mode", "zh": "USB 模式与无线模式对比", "de": "USB-Modus und Funkmodus im Vergleich", "fr": "Mode USB et mode sans fil comparés", "ja": "USB モードとワイヤレスモードの比較", "ko": "USB 모드와 무선 모드 비교", "ar": "مقارنة بين وضع USB والوضع اللاسلكي"}, "device": {"en": "Device", "zh": "设备", "de": "Gerät", "fr": "Appareil", "ja": "デバイス", "ko": "기기", "ar": "الجهاز"}, "preview": {"en": "Flexhub remote page preview", "zh": "Flexhub 遥控页面预览", "de": "Vorschau der Flexhub-Fernbedienungsseite", "fr": "Aperçu de la page de télécommande Flexhub", "ja": "Flexhub リモコンページのプレビュー", "ko": "Flexhub 리모컨 페이지 미리보기", "ar": "معاينة صفحة التحكم في Flexhub"}, "tabs": {"en": "Remote tabs", "zh": "遥控标签页", "de": "Tabs der Fernbedienung", "fr": "Onglets de la télécommande", "ja": "リモコンのタブ", "ko": "리모컨 탭", "ar": "تبويبات صفحة التحكم"}, "search": {"en": "Search troubleshooting", "zh": "搜索常见问题", "de": "Fehlerbehebung durchsuchen", "fr": "Rechercher dans le dépannage", "ja": "トラブルシューティングを検索", "ko": "문제 해결 검색", "ar": "البحث في استكشاف الأخطاء"}, "step": {"en": "Step {n}", "zh": "第 {n} 步", "de": "Schritt {n}", "fr": "Étape {n}", "ja": "ステップ {n}", "ko": "{n}단계", "ar": "الخطوة {n}"}};
+  function t11(key) { var e = A11Y[key]; return e ? (e[lang] || e.en) : ""; }
   function setLang(l) {
     lang = LANGS.indexOf(l) >= 0 ? l : "en";
     root.lang = LANG_HTML[lang] || "en";
@@ -54,6 +56,13 @@
     all("[data-ph-en]").forEach(function (el) {
       var ph = el.getAttribute("data-ph-" + lang) || el.getAttribute("data-ph-en");
       if (ph) el.setAttribute("placeholder", ph);
+    });
+    all("[data-a11y]").forEach(function (el) {
+      el.getAttribute("data-a11y").split(";").forEach(function (pair) {
+        var i = pair.indexOf(":"); if (i < 0) return;
+        var v = t11(pair.slice(i + 1).trim());
+        if (v) el.setAttribute(pair.slice(0, i).trim(), v);
+      });
     });
     all(".stepper").forEach(function (s) { if (s._render) s._render(); });
   }
@@ -94,8 +103,8 @@
     var btns = [];
     items.forEach(function (li, k) {
       var b = doc.createElement("button");
-      b.type = "button"; b.textContent = String(k + 1);
-      b.setAttribute("aria-label", "Step " + (k + 1));
+      b.type = "button";
+      b.setAttribute("aria-label", t11("step").replace("{n}", String(k + 1)));
       b.addEventListener("click", function () { go(k); });
       dots.appendChild(b); btns.push(b);
     });
@@ -105,6 +114,7 @@
       btns.forEach(function (b, k) {
         b.className = k < i ? "done" : "";
         if (k === i) b.setAttribute("aria-current", "step"); else b.removeAttribute("aria-current");
+        b.setAttribute("aria-label", t11("step").replace("{n}", String(k + 1)));
       });
       if (bar) bar.style.width = ((i + 1) / n * 100) + "%";
       if (count) {
