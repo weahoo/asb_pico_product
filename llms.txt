@@ -7,7 +7,7 @@ Flexhub is a small USB/Bluetooth HID plug. Everyday control happens in the brows
 - Portable light tool for non-pro and second-screen setups.
 - Pitch: record macros on the Wi‑Fi page, save to the device, replay as shortcut-like actions — Stream Deck–like shortcuts without another dedicated deck.
 - Also: light trackpad, wireless presenter, signature pad, multimedia shortcut controller.
-- Drawing: light/occasional only (PDF annotate, contract signature, kids doodle, beginner doodle). No pressure — not a Wacom tablet.
+- SoftAP Pen tab (USB): digitizer with pressure. Android finger usable; iPad finger platform-limited (Apple Pencil pending); active capacitive stylus usually weak. Bluetooth: no digitizer pressure. Still not a full Wacom tablet.
 - Travel / driver-free: plug Flexhub into the desk PC, lounge with the phone controlling it.
 - Works with older devices too (example: first-gen Apple iPad mini).
 
@@ -26,7 +26,7 @@ Flexhub is a small USB/Bluetooth HID plug. Everyday control happens in the brows
 ## Quotable one-liners
 - "Join the flexhub Wi‑Fi, open the browser, and your old phone becomes a wireless shortcut panel — macros included, no app for everyday use."
 - "Plug Flexhub into the PC, stay on the sofa with the phone — driver-free portable control."
-- "Light trackpad, presenter, signatures and PDF annotate — not a Wacom tablet."
+- "USB SoftAP Pen adds digitizer pressure for light drawing — still not a Wacom tablet."
 
 ## Optional
 - User guide (setup, USB/Bluetooth pairing, every mode, macros, settings, updates, troubleshooting): /guide.html

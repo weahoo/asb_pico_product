@@ -9,8 +9,9 @@ Product marketing site for **Flexhub** (asb_pico_ds5 Wi-Fi hotspot remote / Pico
 - Product illustration: keep the original line drawing — white device body with red accents (matches the real hardware); do not recolor
 - Languages: EN + 中文 (toggle in header)
 - Audience: end customers (not developers). Tone: sunny, friendly, benefit-first, minimal tech talk
-- Storefront copy rule: **no ASB Agent / MCP / AI / Skill / enterprise automation narrative** on customer pages. Product sells mouse · keyboard · drawing pad · USB/Bluetooth HID · optional spare remote. `asb.local` is only the hotspot page address from firmware, not a product brand claim.
-- Messaging pillars: (1) your phone, tablet or computer becomes a **mouse, keyboard and drawing pad**, (2) works with phones, tablets and computers (old or new), (3) no app for everyday use (app only for updates). Remote control is only a small bonus, never the headline.
+- Storefront copy rule: **no ASB Agent / MCP / AI / Skill / enterprise automation narrative** on customer pages. Product sells shortcuts/macros · mouse · keyboard · USB pressure pen · USB/Bluetooth HID · optional spare remote. SoftAP page is `flexhub.local` / `192.168.4.1` from firmware, not a product brand claim.
+- Messaging pillars: (1) your phone, tablet or computer becomes a **shortcut panel, mouse, keyboard and USB pressure pen**, (2) works with phones, tablets and computers (old or new), (3) no app for everyday use (app only for updates). Remote control is only a small bonus, never the headline.
+- SoftAP **Pen** (digitizer): USB pressure to host. Honest status — Android finger usable; iPad finger works but platform-limited (Apple Pencil pending); active capacitive stylus usually weak. Bluetooth drawing stays mouse-style.
 - Two usage modes (confirmed against asb_pico_ds5 firmware `src/main.cpp` chooseLink/startSharedRadio and hotspot UI strings): **USB** — Flexhub plugged into the target device with a USB data cable acts as a USB keyboard/mouse; **Bluetooth** — Flexhub on power only (charger/power bank) advertises as `flexhub` and is paired in the target device's Bluetooth settings. Mode is picked automatically at power-up; replug to switch. In both modes the controlling phone/tablet/computer joins Flexhub's Wi-Fi hotspot (`asb.local`) and uses the web page — no app.
 
 ## Stack
@@ -63,6 +64,6 @@ Files added for crawlers / AI answer engines:
 - `llms.txt` — short entity facts for ChatGPT/Perplexity-style citation (no ASB/AI claims)
 - JSON-LD `Organization` + `WebSite` + `Product` + `FAQPage` in `index.html`
 
-Primary EN keywords: Wi‑Fi hotspot remote, phone as mouse/keyboard/drawing pad, old phone remote, no app, Flexhub, BLE HID / flexhub.
+Primary EN keywords: Wi‑Fi hotspot remote, phone as mouse/keyboard/pressure pen, old phone remote, no app, Flexhub, BLE HID / flexhub.
 
 **Do not auto-publish narrative changes to production without an explicit OK** if Vercel is wired to this repo.
