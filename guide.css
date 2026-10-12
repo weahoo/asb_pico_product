@@ -326,3 +326,9 @@ ul.how-note li{margin:0 0 8px}
   .st-ill .a-prog2{transform:translateX(320px)}
   .st-ill .a-tap{opacity:0}
 }
+
+
+/* Real SoftAP screenshots inside phone mock */
+.g-shot{margin:0}
+.g-shot img{width:100%;height:auto;border-radius:14px;border:1px solid #ececec;display:block}
+.g-shot figcaption{margin-top:8px;font-size:.78rem;color:var(--muted);line-height:1.4}
