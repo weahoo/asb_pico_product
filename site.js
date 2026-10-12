@@ -1092,6 +1092,12 @@ const LANG_HTML = {en:"en", zh:"zh-Hans", de:"de", fr:"fr", ja:"ja", ko:"ko", ar
     try { localStorage.setItem("flexhub_lang", lang); } catch (_) {}
     const sel = document.getElementById("lang");
     if (sel) sel.value = lang;
+    const shotLoc = lang === "zh" ? "zh" : "en";
+    document.querySelectorAll("img.softap-shot[data-softap]").forEach((img) => {
+      const key = img.getAttribute("data-softap");
+      if (!key) return;
+      img.src = "assets/shots/softap-" + key + "-" + shotLoc + ".png";
+    });
   }
 
   applyLang(detectLang());

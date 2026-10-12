@@ -65,6 +65,12 @@
       });
     });
     all(".stepper").forEach(function (s) { if (s._render) s._render(); });
+    var shotLoc = lang === "zh" ? "zh" : "en";
+    all("img.softap-shot[data-softap]").forEach(function (img) {
+      var key = img.getAttribute("data-softap");
+      if (!key) return;
+      img.src = "assets/shots/softap-" + key + "-" + shotLoc + ".png";
+    });
   }
   setLang(detectLang());
   var langSel = doc.getElementById("lang");
