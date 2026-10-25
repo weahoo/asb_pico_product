@@ -1,0 +1,233 @@
+{
+  "zh": {
+    "title": "离线文件传输指南",
+    "intro": "手机通过 Transfer Hub 热点发送，电脑通过 USB 接收。准备好离线包后，无需互联网。",
+    "download": "下载离线版 ZIP",
+    "open": "打开接收网页",
+    "html": "仅下载接收网页",
+    "hint": "包含接收网页和七语言指南。先解压，再用桌面 Chrome / Edge 打开 HTML。",
+    "needs": "需要专用 FlexHub 文件传输固件、USB 数据线，以及支持 USB 串口和文件夹写入的桌面 Chrome / Edge。普通键鼠固件和 Safari 不支持此接收方式。",
+    "headings": [
+      "准备离线包",
+      "电脑接收",
+      "手机发送",
+      "常见问题与限制"
+    ],
+    "steps": [
+      "下载 FlexHub-Offline.zip，选择“全部解压”；不要在压缩包预览中打开 HTML。保留整个解压文件夹。",
+      "通过 USB 数据线连接 Transfer Hub 和接收电脑，关闭占用该串口的其他程序或网页。",
+      "在 Chrome / Edge 打开 FlexHub-Receiver.html。输入设备登录密码，点击“连接 USB 并登录”，在弹窗中选择 Transfer Hub 串口。COM 编号因电脑而异。",
+      "选择接收文件夹并允许写入，等待接收就绪。离线包不包含密码；设备登录密码可能不同于 Wi-Fi 密码。",
+      "手机连接 FlexHub-Transfer 热点，使用设备 Wi-Fi 密码。提示无互联网时选择保持连接。",
+      "在弹出的选择页进入发送端；未弹出或无法选择文件时，用普通浏览器打开 http://192.168.77.1/。",
+      "输入设备登录密码、选择文件，等电脑就绪后发送。等待手机确认电脑保存完成且校验通过，再检查接收文件夹。"
+    ],
+    "notes": [
+      "保持两端网页打开、设备唤醒。电脑不必连接 Transfer Hub Wi-Fi，文件通过 USB 到达电脑。",
+      "等待接收端：检查 USB 登录和文件夹授权。拔插或烧录后，重新连接 USB 并选择文件夹。",
+      "找不到串口：检查 USB 数据线、专用固件，以及是否有其他页面或程序占用串口。",
+      "Transfer Hub 的 HTTP 页面与 captive 弹窗不能直接访问 USB；接收时使用本地 HTML 或可信 HTTPS 页面。",
+      "一次一个文件，代码上限 4 GiB，大文件上限尚未实机验证；还受磁盘空间和文件系统限制。先传小文件测试。",
+      "断线后需要重新发送，暂不支持断点续传。同名文件改名保存，网页刷新会清除页面内的传输记录。",
+      "文件不上传到网站。下载后本地接收页无需互联网。接收操作界面目前为中文，以上指南对应其中的按钮。"
+    ]
+  },
+  "en": {
+    "title": "Offline file transfer guide",
+    "intro": "Send from a phone over Transfer Hub Wi-Fi and receive on a computer over USB. No internet is needed after downloading the offline package.",
+    "download": "Download offline ZIP",
+    "open": "Open receiver",
+    "html": "Download HTML only",
+    "hint": "Includes the receiver and a guide in seven languages. Extract first, then open the HTML in desktop Chrome / Edge.",
+    "needs": "Requires dedicated FlexHub file-transfer firmware, a USB data cable, and desktop Chrome / Edge with Web Serial and writable-folder support. HID-only firmware and Safari cannot act as this receiver.",
+    "headings": [
+      "Prepare the offline package",
+      "Receive on the computer",
+      "Send from the phone",
+      "Troubleshooting and limits"
+    ],
+    "steps": [
+      "Download FlexHub-Offline.zip and extract all files. Do not open the HTML inside a ZIP preview. Keep the extracted folder.",
+      "Connect Transfer Hub to the receiving computer using a USB data cable. Close other apps or tabs using its serial port.",
+      "Open FlexHub-Receiver.html in Chrome / Edge. Enter the device login password, click “连接 USB 并登录” (connect USB and log in), then select Transfer Hub in the permission dialog. COM numbers vary.",
+      "Click “选择接收文件夹” (choose receiving folder), allow writing, and wait until ready. Passwords are not bundled; the device login password may differ from the Wi-Fi password.",
+      "On the phone, join FlexHub-Transfer using the device Wi-Fi password. Stay connected despite the no-internet notice.",
+      "Choose “发送文件” (send) in the captive portal. If it does not appear or cannot select a file, open http://192.168.77.1/ in a normal browser.",
+      "Log in with the device password, select a file, and send once the computer is ready. Wait for confirmation that the computer saved and verified the file, then check the folder."
+    ],
+    "notes": [
+      "Keep both pages open and devices awake. The computer need not join Transfer Hub Wi-Fi; files reach it over USB.",
+      "Waiting for receiver: check USB login and folder permission. After unplugging or flashing, reconnect and choose the folder again.",
+      "Missing port: check the data cable, dedicated firmware, and other apps or tabs that may own the port.",
+      "The Transfer Hub HTTP page and captive mini-browser cannot directly access USB. Use the downloaded HTML or a trusted HTTPS receiver page.",
+      "One file at a time; configured maximum 4 GiB, not yet hardware-tested at that size. Disk space and filesystem limits also apply. Start with a small file.",
+      "Interrupted transfers must restart; resume is not supported. Duplicate filenames are renamed. Reloading clears the page's transfer history.",
+      "Files are not uploaded to the website. The downloaded receiver works without internet. The transfer controls currently use Chinese; this guide includes the matching button labels."
+    ]
+  },
+  "de": {
+    "title": "Anleitung zur Offline-Dateiübertragung",
+    "intro": "Das Smartphone sendet über das Transfer Hub-WLAN, der Computer empfängt über USB. Nach dem Download wird kein Internet benötigt.",
+    "download": "Offline-ZIP herunterladen",
+    "open": "Empfangsseite öffnen",
+    "html": "Nur HTML herunterladen",
+    "hint": "Enthält die Empfangsseite und eine Anleitung in sieben Sprachen. Erst entpacken, dann die HTML-Datei in Chrome / Edge am Computer öffnen.",
+    "needs": "Erforderlich sind die spezielle FlexHub-Dateiübertragungsfirmware, ein USB-Datenkabel und Chrome / Edge am Computer mit Unterstützung für serielle USB-Verbindungen und Ordnerzugriff. Reine HID-Firmware und Safari eignen sich hierfür nicht.",
+    "headings": [
+      "Offline-Paket vorbereiten",
+      "Am Computer empfangen",
+      "Vom Smartphone senden",
+      "Fehlerbehebung und Grenzen"
+    ],
+    "steps": [
+      "FlexHub-Offline.zip herunterladen und vollständig entpacken. Die HTML-Datei nicht direkt in der ZIP-Vorschau öffnen. Den entpackten Ordner aufbewahren.",
+      "Transfer Hub per USB-Datenkabel mit dem empfangenden Computer verbinden. Andere Programme oder Tabs schließen, die den seriellen Anschluss verwenden.",
+      "FlexHub-Receiver.html in Chrome / Edge öffnen. Gerätepasswort eingeben, „连接 USB 并登录“ (USB verbinden und anmelden) anklicken und Transfer Hub im Berechtigungsdialog auswählen. COM-Nummern können abweichen.",
+      "„选择接收文件夹“ (Empfangsordner auswählen) anklicken und Schreibzugriff erlauben. Auf Bereitschaft warten. Passwörter sind nicht enthalten; das Gerätepasswort kann vom WLAN-Passwort abweichen.",
+      "Das Smartphone mit FlexHub-Transfer verbinden und das WLAN-Passwort des Geräts verwenden. Trotz Hinweis auf fehlendes Internet verbunden bleiben.",
+      "Im Anmeldefenster „发送文件“ (Datei senden) wählen. Falls es nicht erscheint oder keine Dateiauswahl erlaubt, http://192.168.77.1/ im normalen Browser öffnen.",
+      "Mit dem Gerätepasswort anmelden, Datei auswählen und senden, sobald der Computer bereit ist. Die Bestätigung über Speicherung und Prüfung abwarten, dann den Zielordner prüfen."
+    ],
+    "notes": [
+      "Beide Seiten geöffnet und Geräte wach halten. Der Computer muss nicht im Transfer Hub-WLAN sein; er empfängt per USB.",
+      "Warten auf Empfänger: USB-Anmeldung und Ordnerfreigabe prüfen. Nach Abziehen oder Flashen erneut verbinden und Ordner auswählen.",
+      "Anschluss fehlt: Datenkabel, Firmware und andere Programme oder Tabs prüfen, die den Anschluss belegen.",
+      "Die HTTP-Seite des Transfer Hub und das captive Anmeldefenster können USB nicht direkt nutzen. Lokale HTML-Datei oder vertrauenswürdige HTTPS-Seite verwenden.",
+      "Eine Datei gleichzeitig; konfiguriertes Limit 4 GiB, in dieser Größe noch nicht am Gerät getestet. Speicherplatz und Dateisystem begrenzen zusätzlich. Mit einer kleinen Datei beginnen.",
+      "Nach Abbruch neu senden; keine Wiederaufnahme. Gleiche Dateinamen werden umbenannt. Neuladen löscht den Verlauf auf der Seite.",
+      "Dateien werden nicht auf die Website hochgeladen. Die lokale Seite benötigt kein Internet. Die Übertragungsoberfläche ist derzeit chinesisch; die passenden Schaltflächen stehen in dieser Anleitung."
+    ]
+  },
+  "fr": {
+    "title": "Guide du transfert de fichiers hors ligne",
+    "intro": "Le téléphone envoie via le Wi-Fi du Transfer Hub ; l’ordinateur reçoit par USB. Aucun accès Internet n’est nécessaire après le téléchargement.",
+    "download": "Télécharger le ZIP hors ligne",
+    "open": "Ouvrir la réception",
+    "html": "Télécharger uniquement le HTML",
+    "hint": "Contient la page de réception et un guide en sept langues. Décompressez, puis ouvrez le HTML dans Chrome / Edge sur ordinateur.",
+    "needs": "Nécessite le micrologiciel dédié au transfert FlexHub, un câble USB de données et Chrome / Edge sur ordinateur avec accès au port série USB et à un dossier en écriture. Le micrologiciel HID seul et Safari ne conviennent pas.",
+    "headings": [
+      "Préparer le paquet hors ligne",
+      "Recevoir sur l’ordinateur",
+      "Envoyer depuis le téléphone",
+      "Dépannage et limites"
+    ],
+    "steps": [
+      "Téléchargez FlexHub-Offline.zip et extrayez tous les fichiers. N’ouvrez pas le HTML dans l’aperçu du ZIP. Conservez le dossier extrait.",
+      "Reliez le Transfer Hub à l’ordinateur récepteur avec un câble USB de données. Fermez les autres applications ou onglets utilisant son port série.",
+      "Ouvrez FlexHub-Receiver.html dans Chrome / Edge. Saisissez le mot de passe de connexion de l’appareil, cliquez sur « 连接 USB 并登录 » (connexion USB), puis choisissez Transfer Hub dans la fenêtre d’autorisation. Le numéro COM peut varier.",
+      "Cliquez sur « 选择接收文件夹 » (choisir le dossier), autorisez l’écriture et attendez que le récepteur soit prêt. Aucun mot de passe n’est inclus ; le mot de passe de connexion peut différer de celui du Wi-Fi.",
+      "Connectez le téléphone au réseau FlexHub-Transfer avec le mot de passe Wi-Fi de l’appareil. Restez connecté malgré l’avertissement d’absence d’Internet.",
+      "Choisissez « 发送文件 » (envoyer) dans le portail captif. Si la page ne s’affiche pas ou ne permet pas de choisir un fichier, ouvrez http://192.168.77.1/ dans un navigateur normal.",
+      "Connectez-vous avec le mot de passe de l’appareil, choisissez un fichier et envoyez-le lorsque l’ordinateur est prêt. Attendez la confirmation de sauvegarde et de vérification avant de contrôler le dossier."
+    ],
+    "notes": [
+      "Gardez les deux pages ouvertes et les appareils éveillés. L’ordinateur n’a pas besoin de rejoindre le Wi-Fi du Transfer Hub ; il reçoit par USB.",
+      "En attente du récepteur : vérifiez la connexion USB et l’autorisation du dossier. Après un débranchement ou un flashage, reconnectez-vous et choisissez le dossier.",
+      "Port introuvable : vérifiez le câble de données, le micrologiciel et les autres applications ou onglets utilisant le port.",
+      "La page HTTP du Transfer Hub et le portail captif ne peuvent pas accéder directement à l’USB. Utilisez le HTML local ou une page HTTPS de confiance.",
+      "Un fichier à la fois ; limite configurée de 4 GiB, pas encore testée sur matériel à cette taille. L’espace disque et le système de fichiers imposent aussi des limites. Commencez par un petit fichier.",
+      "Un transfert interrompu doit être recommencé ; pas de reprise. Les noms en double sont renommés. Recharger efface l’historique affiché.",
+      "Les fichiers ne sont pas envoyés au site Web. La page locale fonctionne sans Internet. Les commandes de transfert sont actuellement en chinois ; leurs libellés sont indiqués dans ce guide."
+    ]
+  },
+  "ja": {
+    "title": "オフラインファイル転送ガイド",
+    "intro": "スマートフォンから Transfer Hub の Wi-Fi 経由で送信し、パソコンで USB 経由で受信します。オフラインパッケージのダウンロード後はインターネット不要です。",
+    "download": "オフライン ZIP をダウンロード",
+    "open": "受信ページを開く",
+    "html": "HTML のみダウンロード",
+    "hint": "受信ページと7言語のガイドを含みます。解凍してから、パソコンの Chrome / Edge で HTML を開いてください。",
+    "needs": "FlexHub ファイル転送専用ファームウェア、USB データケーブル、USB シリアルとフォルダーへの書き込みに対応したパソコン版 Chrome / Edge が必要です。HID 専用ファームウェアや Safari では受信できません。",
+    "headings": [
+      "オフライン版の準備",
+      "パソコンで受信",
+      "スマートフォンから送信",
+      "トラブル対処と制限"
+    ],
+    "steps": [
+      "FlexHub-Offline.zip をダウンロードし、すべて解凍します。ZIP のプレビュー内から HTML を開かず、解凍したフォルダーを保管してください。",
+      "USB データケーブルで Transfer Hub と受信側パソコンを接続します。同じシリアルポートを使うアプリやタブを閉じてください。",
+      "Chrome / Edge で FlexHub-Receiver.html を開きます。機器のログインパスワードを入力し、「连接 USB 并登录」（USB 接続とログイン）を押して、許可画面で Transfer Hub を選びます。COM 番号は環境によって異なります。",
+      "「选择接收文件夹」（保存先フォルダーの選択）を押し、書き込みを許可して準備完了を待ちます。パスワードは同梱していません。ログイン用と Wi-Fi 用のパスワードは異なる場合があります。",
+      "スマートフォンを FlexHub-Transfer に接続し、機器の Wi-Fi パスワードを使います。インターネット未接続と表示されても接続を維持してください。",
+      "自動表示されたページで「发送文件」（ファイル送信）を選びます。表示されない、またはファイルを選べない場合は、通常のブラウザーで http://192.168.77.1/ を開きます。",
+      "機器のパスワードでログインし、ファイルを選び、パソコンの準備完了後に送信します。保存と検証の完了通知を待ってから、保存先を確認してください。"
+    ],
+    "notes": [
+      "両方のページを開いたままにし、端末をスリープさせないでください。パソコンは Transfer Hub の Wi-Fi に接続する必要がなく、USB で受信します。",
+      "受信待ちのままなら USB ログインとフォルダー許可を確認します。抜き差しや書き込み後は USB の再接続とフォルダー選択が必要です。",
+      "ポートが見つからない場合は、データケーブル、専用ファームウェア、ポートを使用中のアプリやタブを確認します。",
+      "Transfer Hub の HTTP ページや自動ログイン画面から USB には直接アクセスできません。ダウンロードした HTML または信頼できる HTTPS ページを使ってください。",
+      "一度に1ファイル、設定上限は 4 GiB です。このサイズでの実機検証は未完了です。空き容量とファイルシステムにも制限があります。最初は小さなファイルで試してください。",
+      "中断時は最初から再送してください。再開機能はありません。同名ファイルは別名で保存し、ページ再読み込みで画面上の履歴は消えます。",
+      "ファイルを Web サイトにアップロードすることはありません。ローカル受信ページはネット不要です。転送操作画面は現在中国語のため、このガイドに対応するボタン名を記載しています。"
+    ]
+  },
+  "ko": {
+    "title": "오프라인 파일 전송 안내",
+    "intro": "휴대전화는 Transfer Hub Wi-Fi로 전송하고 컴퓨터는 USB로 받습니다. 오프라인 패키지를 내려받은 후에는 인터넷이 필요하지 않습니다.",
+    "download": "오프라인 ZIP 다운로드",
+    "open": "수신 페이지 열기",
+    "html": "HTML만 다운로드",
+    "hint": "수신 페이지와 7개 언어 안내가 포함됩니다. 압축을 푼 다음 컴퓨터의 Chrome / Edge에서 HTML을 여세요.",
+    "needs": "FlexHub 파일 전송 전용 펌웨어, USB 데이터 케이블, USB 시리얼 및 폴더 쓰기를 지원하는 데스크톱 Chrome / Edge가 필요합니다. HID 전용 펌웨어와 Safari는 이 수신 방식에 사용할 수 없습니다.",
+    "headings": [
+      "오프라인 패키지 준비",
+      "컴퓨터에서 받기",
+      "휴대전화에서 보내기",
+      "문제 해결 및 제한"
+    ],
+    "steps": [
+      "FlexHub-Offline.zip을 내려받고 모든 파일의 압축을 푸세요. ZIP 미리 보기 안에서 HTML을 열지 말고 압축을 푼 폴더를 보관하세요.",
+      "USB 데이터 케이블로 Transfer Hub와 수신 컴퓨터를 연결하세요. 같은 시리얼 포트를 사용하는 다른 앱이나 탭을 닫으세요.",
+      "Chrome / Edge에서 FlexHub-Receiver.html을 여세요. 기기 로그인 비밀번호를 입력하고 ‘连接 USB 并登录’(USB 연결 및 로그인)을 누른 뒤 권한 창에서 Transfer Hub를 선택하세요. COM 번호는 컴퓨터마다 다릅니다.",
+      "‘选择接收文件夹’(수신 폴더 선택)를 누르고 쓰기를 허용한 뒤 준비 완료를 기다리세요. 비밀번호는 패키지에 포함되지 않으며 로그인 비밀번호와 Wi-Fi 비밀번호는 다를 수 있습니다.",
+      "휴대전화를 FlexHub-Transfer에 연결하고 기기의 Wi-Fi 비밀번호를 사용하세요. 인터넷 연결이 없다는 안내가 나와도 연결을 유지하세요.",
+      "자동으로 열린 페이지에서 ‘发送文件’(파일 보내기)을 선택하세요. 페이지가 없거나 파일을 선택할 수 없다면 일반 브라우저에서 http://192.168.77.1/을 여세요.",
+      "기기 비밀번호로 로그인하고 파일을 선택한 후 컴퓨터가 준비되면 보내세요. 컴퓨터의 저장과 검증 완료 확인을 기다린 다음 저장 폴더를 확인하세요."
+    ],
+    "notes": [
+      "두 페이지를 열어 두고 기기가 절전 모드로 전환되지 않게 하세요. 컴퓨터는 Transfer Hub Wi-Fi에 연결할 필요가 없으며 USB로 받습니다.",
+      "수신 대기 상태라면 USB 로그인과 폴더 권한을 확인하세요. 케이블 재연결이나 펌웨어 기록 후에는 USB를 다시 연결하고 폴더를 선택하세요.",
+      "포트가 없으면 데이터 케이블, 전용 펌웨어, 포트를 점유하는 다른 앱이나 탭을 확인하세요.",
+      "Transfer Hub의 HTTP 페이지와 자동 로그인 창은 USB에 직접 접근할 수 없습니다. 로컬 HTML이나 신뢰할 수 있는 HTTPS 페이지를 사용하세요.",
+      "한 번에 파일 하나, 설정된 최대 크기는 4 GiB이며 해당 크기의 실기기 검증은 아직 완료되지 않았습니다. 디스크 공간과 파일 시스템 제한도 적용됩니다. 작은 파일부터 시험하세요.",
+      "중단되면 처음부터 다시 보내야 하며 이어받기는 지원하지 않습니다. 같은 이름은 변경하여 저장합니다. 새로고침하면 페이지의 전송 기록이 지워집니다.",
+      "파일을 웹사이트에 업로드하지 않습니다. 내려받은 수신 페이지는 인터넷 없이 작동합니다. 전송 조작 화면은 현재 중국어이며 이 안내에 해당 버튼 이름을 표시했습니다."
+    ]
+  },
+  "ar": {
+    "title": "دليل نقل الملفات دون إنترنت",
+    "intro": "يرسل الهاتف عبر شبكة Wi-Fi الخاصة بـ Transfer Hub ويستقبل الكمبيوتر عبر USB. لا يلزم اتصال بالإنترنت بعد تنزيل الحزمة.",
+    "download": "تنزيل حزمة ZIP للاستخدام دون إنترنت",
+    "open": "فتح صفحة الاستقبال",
+    "html": "تنزيل ملف HTML فقط",
+    "hint": "تتضمن صفحة الاستقبال ودليلاً بسبع لغات. فك الضغط أولاً ثم افتح HTML في Chrome أو Edge على الكمبيوتر.",
+    "needs": "يلزم برنامج FlexHub الثابت المخصص لنقل الملفات، وكابل USB لنقل البيانات، ومتصفح Chrome أو Edge على الكمبيوتر يدعم المنفذ التسلسلي والكتابة في المجلدات. لا تصلح برمجيات HID وحدها أو Safari لهذا الاستقبال.",
+    "headings": [
+      "إعداد الحزمة",
+      "الاستقبال على الكمبيوتر",
+      "الإرسال من الهاتف",
+      "حل المشكلات والحدود"
+    ],
+    "steps": [
+      "نزّل FlexHub-Offline.zip واستخرج جميع الملفات. لا تفتح HTML داخل معاينة ZIP. احتفظ بالمجلد المستخرج.",
+      "صل Transfer Hub بالكمبيوتر المستقبِل بكابل USB للبيانات. أغلق التطبيقات أو علامات التبويب الأخرى التي تستخدم المنفذ التسلسلي.",
+      "افتح FlexHub-Receiver.html في Chrome أو Edge. أدخل كلمة مرور الجهاز واضغط «连接 USB 并登录» (توصيل USB وتسجيل الدخول)، ثم اختر Transfer Hub في نافذة الإذن. يختلف رقم COM بين الأجهزة.",
+      "اضغط «选择接收文件夹» (اختيار مجلد الاستقبال) واسمح بالكتابة وانتظر الجاهزية. لا تحتوي الحزمة على كلمات مرور، وقد تختلف كلمة مرور الدخول عن كلمة مرور Wi-Fi.",
+      "صل الهاتف بشبكة FlexHub-Transfer باستخدام كلمة مرور Wi-Fi للجهاز. أبقِ الاتصال رغم تنبيه عدم توفر الإنترنت.",
+      "اختر «发送文件» (إرسال ملف) في الصفحة المنبثقة. إن لم تظهر أو تعذر اختيار الملف، افتح http://192.168.77.1/ في متصفح عادي.",
+      "سجّل الدخول بكلمة مرور الجهاز واختر الملف وأرسله بعد جاهزية الكمبيوتر. انتظر تأكيد الحفظ والتحقق ثم افحص مجلد الاستقبال."
+    ],
+    "notes": [
+      "أبقِ الصفحتين مفتوحتين والجهازين في حالة يقظة. لا يلزم توصيل الكمبيوتر بشبكة Transfer Hub اللاسلكية؛ فهو يستقبل عبر USB.",
+      "عند انتظار المستقبِل، تحقق من تسجيل الدخول عبر USB وإذن المجلد. بعد فصل الكابل أو تحديث البرنامج الثابت، أعد الاتصال واختر المجلد.",
+      "إذا لم يظهر المنفذ، تحقق من كابل البيانات والبرنامج الثابت ومن التطبيقات أو علامات التبويب التي قد تستخدمه.",
+      "لا تستطيع صفحة HTTP الخاصة بـ Transfer Hub أو نافذة تسجيل الدخول المنبثقة الوصول إلى USB مباشرة. استخدم HTML المحلي أو صفحة HTTPS موثوقة.",
+      "ملف واحد في كل مرة، والحد المحدد 4 GiB، ولم يُختبر هذا الحجم فعلياً بعد. تنطبق أيضاً حدود مساحة القرص ونظام الملفات. ابدأ بملف صغير.",
+      "يلزم بدء النقل من جديد بعد انقطاعه؛ الاستئناف غير مدعوم. تُغيّر أسماء الملفات المتكررة، وتؤدي إعادة تحميل الصفحة إلى مسح سجلها الظاهر.",
+      "لا تُرفع الملفات إلى الموقع. تعمل صفحة الاستقبال المحلية دون إنترنت. واجهة النقل حالياً بالصينية، ويتضمن هذا الدليل أسماء الأزرار المطابقة."
+    ]
+  }
+}

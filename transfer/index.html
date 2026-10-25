@@ -9,8 +9,8 @@ button,.button{font:inherit;font-size:14px;font-weight:650;border:0;border-radiu
 </style></head>
 <body><main>
 <header><div class="brand">Flex<span>Hub</span></div><span id="modeBadge" class="pill">本地文件传送</span></header>
-<div class="eyebrow">LOCAL FILE TRANSFER</div><h1 id="headline">把文件，传到电脑。</h1><p id="intro">连接热点，选择文件。数据通过 Pico 的 USB 直接送达电脑。</p>
-<section id="loginCard" class="card"><h2>登录设备</h2><form id="loginForm"><label for="password">设备登录密码</label><input id="password" type="password" autocomplete="current-password" required maxlength="128" placeholder="输入设备登录密码"><button id="loginButton" class="full" type="submit">登录发送端</button></form><p id="loginHelp" class="small" style="margin-top:14px">电脑端需要打开接收页，并连接 Pico 的 USB。</p></section>
+<div class="eyebrow">LOCAL FILE TRANSFER</div><h1 id="headline">把文件，传到电脑。</h1><p id="intro">连接热点，选择文件。数据通过 Transfer Hub 的 USB 直接送达电脑。</p>
+<section id="loginCard" class="card"><h2>登录设备</h2><form id="loginForm"><label for="password">设备登录密码</label><input id="password" type="password" autocomplete="current-password" required maxlength="128" placeholder="输入设备登录密码"><button id="loginButton" class="full" type="submit">登录发送端</button></form><p id="loginHelp" class="small" style="margin-top:14px">电脑端需要打开接收页，并连接 Transfer Hub 的 USB。</p></section>
 <section id="app" class="hidden">
 <div class="split"><div class="status"><i id="dot" class="dot"></i><span id="connection">等待接收端</span></div><button id="logout" class="quiet">退出登录</button></div>
 <section id="receiverCard" class="card hidden"><h2>USB 接收端</h2><p>选择电脑上的保存文件夹。来自手机的文件会按顺序写入，不需要安装后台程序。</p><button id="folderButton">选择接收文件夹</button><p id="folderName" class="small">尚未选择保存位置</p><div class="notice">接收期间请保持此页面打开、电脑唤醒。此页面只接收，不发送文件。</div></section>
@@ -19,7 +19,7 @@ button,.button{font:inherit;font-size:14px;font-weight:650;border:0;border-radiu
 <section id="historyCard" class="card hidden"><h2>本次传送</h2><div id="history"></div></section>
 </section>
 <p id="message" class="small" role="status" aria-live="polite"></p>
-<div id="downloadReceiver" class="footer">电脑接收页：<a href="https://visualbuild.shop/transfer/" target="_blank" rel="noopener">打开在线接收页</a> · <a href="/receiver.html" download="FlexHub-Receiver.html">下载离线接收页</a>。请在 USB 连接 Pico 的电脑上打开。</div>
+<div id="downloadReceiver" class="footer">电脑接收页：<a href="https://visualbuild.shop/transfer/" target="_blank" rel="noopener">打开在线接收页</a> · <a href="/receiver.html" download="FlexHub-Receiver.html">下载离线接收页</a>。请在 USB 连接 Transfer Hub 的电脑上打开。</div>
 <div id="receiverResources" class="footer hidden"><label for="downloadLang">Guide language / 指南语言</label><select id="downloadLang" style="font:inherit;padding:8px;border:1px solid #ddd;border-radius:8px;background:white"><option value="en">English</option><option value="zh">中文</option><option value="de">Deutsch</option><option value="fr">Français</option><option value="ja">日本語</option><option value="ko">한국어</option><option value="ar">العربية</option></select><div class="row" style="margin-top:14px"><a id="offlineDownload" class="button secondary" href="./FlexHub-Offline.zip" download="FlexHub-Offline.zip">Download offline ZIP</a><a id="offlineGuide" href="./offline-guide.html" target="_blank" rel="noopener">Guide</a></div><p id="offlineHint" class="small"></p><a id="offlineHtml" href="./FlexHub-Receiver.html" download="FlexHub-Receiver.html">Download HTML only</a><p id="offlineState" class="small"></p></div>
 <div class="footer">Wi-Fi 发送 · USB 接收 · 无需云服务<br>手机显示完成，表示电脑已确认保存且 CRC32 校验通过。</div>
 </main>
@@ -83,7 +83,7 @@ $('loginForm').addEventListener('submit',async ev=>{
   if(receiveMode){
    if(!window.isSecureContext||!navigator.serial)throw Error('请在电脑上用 Chrome / Edge 打开本地接收 HTML，或通过可信 HTTPS 加载。');
    if(!window.showDirectoryPicker)throw Error('此浏览器不支持直接保存文件夹，请使用桌面 Chrome / Edge。');
-   await disconnect();port=await navigator.serial.requestPort({filters:[{usbVendorId:0x2e8a}]});await port.open({baudRate:115200});writer=port.writable.getWriter();readSerial();
+   await disconnect();port=await navigator.serial.requestPort({filters:[{usbVendorId:0x2e8a},{usbVendorId:0xffff,usbProductId:0xffff}]});await port.open({baudRate:115200});writer=port.writable.getWriter();readSerial();
    const authenticated=new Promise(resolve=>{authWait=resolve;setTimeout(()=>{if(authWait===resolve){authWait=null;resolve(false);}},6000);});
    await serialSend('AUTH '+to64(new TextEncoder().encode(password)));if(!await authenticated){await disconnect();throw Error('USB 登录失败：请确认密码及专用传输固件。');}
    heartbeat=setInterval(()=>serialSend('PING').catch(()=>{}),2000);showApp();state(false,'USB 已连接，请选择接收文件夹');
@@ -110,7 +110,7 @@ $('sendButton').onclick=async()=>{
 $('cancelButton').onclick=async()=>{if(receiveMode){try{await serialSend('CANCEL');}catch{}await abortReceive();message('已取消接收');}else{cancelRequest=true;message('将在当前数据块结束后取消…');}};
 $('logout').onclick=async()=>{if(active){message('请先取消当前传送，再退出登录',true);return;}clearInterval(statusTimer);if(receiveMode)await disconnect();else{try{await api('/api/logout','');}catch{}token='';}$('app').classList.add('hidden');$('loginCard').classList.remove('hidden');message('已退出登录');};
 window.addEventListener('beforeunload',e=>{if(active){e.preventDefault();e.returnValue='';}});
-if(receiveMode){$('headline').textContent='文件，在这里接收。';$('intro').textContent='用 USB 连接 Pico，让手机通过热点把文件送到这台电脑。';$('modeBadge').textContent='USB · 仅接收';$('loginButton').textContent='连接 USB 并登录';$('loginHelp').textContent='点击后选择 Pico 的 USB 串口。无需安装 ASB 或后台服务。';$('downloadReceiver').classList.add('hidden');$('receiverResources').classList.remove('hidden');if(location.protocol==='file:'){$('receiverResources').classList.add('hidden');}else if(location.protocol==='http:'&&!isSecureContext){$('loginButton').disabled=true;message('此 HTTP 页面不能访问 USB。请下载离线接收页，在电脑 Chrome / Edge 中打开。',true);}}
+if(receiveMode){$('headline').textContent='文件，在这里接收。';$('intro').textContent='用 USB 连接 Transfer Hub，让手机通过热点把文件送到这台电脑。';$('modeBadge').textContent='USB · 仅接收';$('loginButton').textContent='连接 USB 并登录';$('loginHelp').textContent='点击后选择 Transfer Hub 的 USB 串口。无需安装 ASB 或后台服务。';$('downloadReceiver').classList.add('hidden');$('receiverResources').classList.remove('hidden');if(location.protocol==='file:'){$('receiverResources').classList.add('hidden');}else if(location.protocol==='http:'&&!isSecureContext){$('loginButton').disabled=true;message('此 HTTP 页面不能访问 USB。请下载离线接收页，在电脑 Chrome / Edge 中打开。',true);}}
 else{$('modeBadge').textContent='Wi-Fi · 发送端';}
 // Cache only this receiver page and its offline copy; never file contents or passwords.
 if(receiveMode&&isSecureContext&&location.protocol!=='file:'&&'serviceWorker' in navigator){

@@ -1,0 +1,8 @@
+{
+  "receiver_sha256": "d727054a22a8d11958fd4265920968a685d21ee94f04aa803a6cb80480a1e9f1",
+  "identical_receivers": true,
+  "zip_matches": true,
+  "pico_8192_tests": "passed",
+  "bl616_2048_tests": "passed",
+  "published": false
+}
