@@ -12,3 +12,5 @@ python ..\connecthub_pico2w_native\pico2w_usb_transfer\tools\web_assets.py --sit
 ```
 
 Pico captive portal: `/` offers send/receive; `/send` serves sender; `/receiver.html` downloads the offline receiver. LAN HTTP and captive mini-browsers cannot directly use Web Serial. USB CDC alone does not open a captive portal: the computer must join Pico Wi-Fi to fetch the offline page, or use this HTTPS receiver. No certificate bypass or insecure browser flags are required.
+
+Offline ZIP: `FlexHub-Offline.zip`, generated automatically by `web_assets.py`, includes receiver, bilingual guide, and README. The website offers the ZIP before login. Firmware does not need reflashing to use the updated website receiver.
