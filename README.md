@@ -68,3 +68,7 @@ Files added for crawlers / AI answer engines:
 Primary EN keywords: Wi‑Fi hotspot remote, phone as mouse/keyboard/pressure pen, old phone remote, no app, Flexhub, BLE HID / flexhub.
 
 **Do not auto-publish narrative changes to production without an explicit OK** if Vercel is wired to this repo.
+
+## USB file receiver
+
+Dedicated file-transfer firmware receiver: `/transfer/` (see `transfer/README.md`). Open `transfer/index.html` locally or serve via HTTPS.
