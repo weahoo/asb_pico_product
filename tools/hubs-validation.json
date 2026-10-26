@@ -1,0 +1,11 @@
+{
+  "checks": [
+    "index: seven languages/mobile width/links PASS",
+    "transferhub: seven languages/mobile width/links PASS",
+    "stackhub: seven languages/mobile width/links PASS",
+    "transferhub-guide: seven languages/mobile width/links PASS",
+    "stackhub-guide: seven languages/mobile width/links PASS"
+  ],
+  "js_errors": [],
+  "published": false
+}

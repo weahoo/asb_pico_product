@@ -1,0 +1,38 @@
+# Flexhub
+> Wi‑Fi hotspot controller that turns an old phone or tablet into a cheap wireless shortcut / macro panel — plus trackpad, presenter, signature pad and light annotate. No App Store install for everyday use.
+
+Flexhub is a small USB/Bluetooth HID plug. Everyday control happens in the browser after you join the device Wi‑Fi hotspot named flexhub.
+
+## Positioning
+- Portable light tool for non-pro and second-screen setups.
+- Pitch: record macros on the Wi‑Fi page, save to the device, replay as shortcut-like actions — Stream Deck–like shortcuts without another dedicated deck.
+- Also: light trackpad, wireless presenter, signature pad, multimedia shortcut controller.
+- SoftAP Pen tab (USB): digitizer with pressure. Android finger usable; iPad finger platform-limited (Apple Pencil pending); active capacitive stylus usually weak. Bluetooth: no digitizer pressure. Still not a full Wacom tablet.
+- Travel / driver-free: plug Flexhub into the desk PC, lounge with the phone controlling it.
+- Works with older devices too (example: first-gen Apple iPad mini).
+
+## Key facts
+- Product name: Flexhub
+- Shop: https://visualbuild.shop/
+- Wi‑Fi hotspot SSID: flexhub
+- Wi‑Fi hotspot password: build.me
+- Hotspot page: http://flexhub.local/ or http://192.168.4.1/
+- Bluetooth device name: flexhub
+- Everyday use: no App Store / Play Store app required
+- Modes: USB HID into the target (driver-free), or Bluetooth HID while powered from a charger
+- Macros: record on the Wi‑Fi hotspot page, save on-device, replay later
+- No ASB Agent / MCP / AI automation claims on this product page
+
+## Quotable one-liners
+- "Join the flexhub Wi‑Fi, open the browser, and your old phone becomes a wireless shortcut panel — macros included, no app for everyday use."
+- "Plug Flexhub into the PC, stay on the sofa with the phone — driver-free portable control."
+- "USB SoftAP Pen adds digitizer pressure for light drawing — still not a Wacom tablet."
+
+## Optional
+- User guide (setup, USB/Bluetooth pairing, every mode, macros, settings, updates, troubleshooting): /guide.html
+- Privacy (no accounts, no analytics, no cookies; settings and macros stay on the device): /privacy.html
+- Terms: /terms.html
+- Refunds and returns (30-day returns, EU 14-day withdrawal): /refund.html
+- Shipping: /shipping.html
+- Contact and imprint: /contact.html
+- Legal pages are available in en, zh, de, fr, ja, ko, ar via ?lang=; the English version prevails.

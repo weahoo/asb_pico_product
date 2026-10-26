@@ -7,4 +7,9 @@
   <url><loc>https://visualbuild.shop/refund.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://visualbuild.shop/shipping.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://visualbuild.shop/contact.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://visualbuild.shop/flexhub.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://visualbuild.shop/transferhub.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://visualbuild.shop/stackhub.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://visualbuild.shop/transferhub-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://visualbuild.shop/stackhub-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
