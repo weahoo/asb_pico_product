@@ -18,7 +18,7 @@
       "通过 USB 数据线连接 Transfer Hub 和接收电脑，关闭占用该串口的其他程序或网页。",
       "在 Chrome / Edge 打开 FlexHub-Receiver.html。输入设备登录密码，点击“连接 USB 并登录”，在弹窗中选择 Transfer Hub 串口。COM 编号因电脑而异。",
       "选择接收文件夹并允许写入，等待接收就绪。离线包不包含密码；设备登录密码可能不同于 Wi-Fi 密码。",
-      "手机连接 FlexHub-Transfer 热点，使用设备 Wi-Fi 密码。提示无互联网时选择保持连接。",
+      "手机连接 transferhub 热点，使用设备 Wi-Fi 密码。提示无互联网时选择保持连接。",
       "在弹出的选择页进入发送端；未弹出或无法选择文件时，用普通浏览器打开 http://192.168.77.1/。",
       "输入设备登录密码、选择文件，等电脑就绪后发送。等待手机确认电脑保存完成且校验通过，再检查接收文件夹。"
     ],
@@ -52,7 +52,7 @@
       "Connect Transfer Hub to the receiving computer using a USB data cable. Close other apps or tabs using its serial port.",
       "Open FlexHub-Receiver.html in Chrome / Edge. Enter the device login password, click “连接 USB 并登录” (connect USB and log in), then select Transfer Hub in the permission dialog. COM numbers vary.",
       "Click “选择接收文件夹” (choose receiving folder), allow writing, and wait until ready. Passwords are not bundled; the device login password may differ from the Wi-Fi password.",
-      "On the phone, join FlexHub-Transfer using the device Wi-Fi password. Stay connected despite the no-internet notice.",
+      "On the phone, join transferhub using the device Wi-Fi password. Stay connected despite the no-internet notice.",
       "Choose “发送文件” (send) in the captive portal. If it does not appear or cannot select a file, open http://192.168.77.1/ in a normal browser.",
       "Log in with the device password, select a file, and send once the computer is ready. Wait for confirmation that the computer saved and verified the file, then check the folder."
     ],
@@ -86,7 +86,7 @@
       "Transfer Hub per USB-Datenkabel mit dem empfangenden Computer verbinden. Andere Programme oder Tabs schließen, die den seriellen Anschluss verwenden.",
       "FlexHub-Receiver.html in Chrome / Edge öffnen. Gerätepasswort eingeben, „连接 USB 并登录“ (USB verbinden und anmelden) anklicken und Transfer Hub im Berechtigungsdialog auswählen. COM-Nummern können abweichen.",
       "„选择接收文件夹“ (Empfangsordner auswählen) anklicken und Schreibzugriff erlauben. Auf Bereitschaft warten. Passwörter sind nicht enthalten; das Gerätepasswort kann vom WLAN-Passwort abweichen.",
-      "Das Smartphone mit FlexHub-Transfer verbinden und das WLAN-Passwort des Geräts verwenden. Trotz Hinweis auf fehlendes Internet verbunden bleiben.",
+      "Das Smartphone mit transferhub verbinden und das WLAN-Passwort des Geräts verwenden. Trotz Hinweis auf fehlendes Internet verbunden bleiben.",
       "Im Anmeldefenster „发送文件“ (Datei senden) wählen. Falls es nicht erscheint oder keine Dateiauswahl erlaubt, http://192.168.77.1/ im normalen Browser öffnen.",
       "Mit dem Gerätepasswort anmelden, Datei auswählen und senden, sobald der Computer bereit ist. Die Bestätigung über Speicherung und Prüfung abwarten, dann den Zielordner prüfen."
     ],
@@ -120,7 +120,7 @@
       "Reliez le Transfer Hub à l’ordinateur récepteur avec un câble USB de données. Fermez les autres applications ou onglets utilisant son port série.",
       "Ouvrez FlexHub-Receiver.html dans Chrome / Edge. Saisissez le mot de passe de connexion de l’appareil, cliquez sur « 连接 USB 并登录 » (connexion USB), puis choisissez Transfer Hub dans la fenêtre d’autorisation. Le numéro COM peut varier.",
       "Cliquez sur « 选择接收文件夹 » (choisir le dossier), autorisez l’écriture et attendez que le récepteur soit prêt. Aucun mot de passe n’est inclus ; le mot de passe de connexion peut différer de celui du Wi-Fi.",
-      "Connectez le téléphone au réseau FlexHub-Transfer avec le mot de passe Wi-Fi de l’appareil. Restez connecté malgré l’avertissement d’absence d’Internet.",
+      "Connectez le téléphone au réseau transferhub avec le mot de passe Wi-Fi de l’appareil. Restez connecté malgré l’avertissement d’absence d’Internet.",
       "Choisissez « 发送文件 » (envoyer) dans le portail captif. Si la page ne s’affiche pas ou ne permet pas de choisir un fichier, ouvrez http://192.168.77.1/ dans un navigateur normal.",
       "Connectez-vous avec le mot de passe de l’appareil, choisissez un fichier et envoyez-le lorsque l’ordinateur est prêt. Attendez la confirmation de sauvegarde et de vérification avant de contrôler le dossier."
     ],
@@ -154,7 +154,7 @@
       "USB データケーブルで Transfer Hub と受信側パソコンを接続します。同じシリアルポートを使うアプリやタブを閉じてください。",
       "Chrome / Edge で FlexHub-Receiver.html を開きます。機器のログインパスワードを入力し、「连接 USB 并登录」（USB 接続とログイン）を押して、許可画面で Transfer Hub を選びます。COM 番号は環境によって異なります。",
       "「选择接收文件夹」（保存先フォルダーの選択）を押し、書き込みを許可して準備完了を待ちます。パスワードは同梱していません。ログイン用と Wi-Fi 用のパスワードは異なる場合があります。",
-      "スマートフォンを FlexHub-Transfer に接続し、機器の Wi-Fi パスワードを使います。インターネット未接続と表示されても接続を維持してください。",
+      "スマートフォンを transferhub に接続し、機器の Wi-Fi パスワードを使います。インターネット未接続と表示されても接続を維持してください。",
       "自動表示されたページで「发送文件」（ファイル送信）を選びます。表示されない、またはファイルを選べない場合は、通常のブラウザーで http://192.168.77.1/ を開きます。",
       "機器のパスワードでログインし、ファイルを選び、パソコンの準備完了後に送信します。保存と検証の完了通知を待ってから、保存先を確認してください。"
     ],
@@ -188,7 +188,7 @@
       "USB 데이터 케이블로 Transfer Hub와 수신 컴퓨터를 연결하세요. 같은 시리얼 포트를 사용하는 다른 앱이나 탭을 닫으세요.",
       "Chrome / Edge에서 FlexHub-Receiver.html을 여세요. 기기 로그인 비밀번호를 입력하고 ‘连接 USB 并登录’(USB 연결 및 로그인)을 누른 뒤 권한 창에서 Transfer Hub를 선택하세요. COM 번호는 컴퓨터마다 다릅니다.",
       "‘选择接收文件夹’(수신 폴더 선택)를 누르고 쓰기를 허용한 뒤 준비 완료를 기다리세요. 비밀번호는 패키지에 포함되지 않으며 로그인 비밀번호와 Wi-Fi 비밀번호는 다를 수 있습니다.",
-      "휴대전화를 FlexHub-Transfer에 연결하고 기기의 Wi-Fi 비밀번호를 사용하세요. 인터넷 연결이 없다는 안내가 나와도 연결을 유지하세요.",
+      "휴대전화를 transferhub에 연결하고 기기의 Wi-Fi 비밀번호를 사용하세요. 인터넷 연결이 없다는 안내가 나와도 연결을 유지하세요.",
       "자동으로 열린 페이지에서 ‘发送文件’(파일 보내기)을 선택하세요. 페이지가 없거나 파일을 선택할 수 없다면 일반 브라우저에서 http://192.168.77.1/을 여세요.",
       "기기 비밀번호로 로그인하고 파일을 선택한 후 컴퓨터가 준비되면 보내세요. 컴퓨터의 저장과 검증 완료 확인을 기다린 다음 저장 폴더를 확인하세요."
     ],
@@ -222,7 +222,7 @@
       "صل Transfer Hub بالكمبيوتر المستقبِل بكابل USB للبيانات. أغلق التطبيقات أو علامات التبويب الأخرى التي تستخدم المنفذ التسلسلي.",
       "افتح FlexHub-Receiver.html في Chrome أو Edge. أدخل كلمة مرور الجهاز واضغط «连接 USB 并登录» (توصيل USB وتسجيل الدخول)، ثم اختر Transfer Hub في نافذة الإذن. يختلف رقم COM بين الأجهزة.",
       "اضغط «选择接收文件夹» (اختيار مجلد الاستقبال) واسمح بالكتابة وانتظر الجاهزية. لا تحتوي الحزمة على كلمات مرور، وقد تختلف كلمة مرور الدخول عن كلمة مرور Wi-Fi.",
-      "صل الهاتف بشبكة FlexHub-Transfer باستخدام كلمة مرور Wi-Fi للجهاز. أبقِ الاتصال رغم تنبيه عدم توفر الإنترنت.",
+      "صل الهاتف بشبكة transferhub باستخدام كلمة مرور Wi-Fi للجهاز. أبقِ الاتصال رغم تنبيه عدم توفر الإنترنت.",
       "اختر «发送文件» (إرسال ملف) في الصفحة المنبثقة. إن لم تظهر أو تعذر اختيار الملف، افتح http://192.168.77.1/ في متصفح عادي.",
       "سجّل الدخول بكلمة مرور الجهاز واختر الملف وأرسله بعد جاهزية الكمبيوتر. انتظر تأكيد الحفظ والتحقق ثم افحص مجلد الاستقبال."
     ],
