@@ -1,8 +1,17 @@
 {
-  "receiver_sha256": "d727054a22a8d11958fd4265920968a685d21ee94f04aa803a6cb80480a1e9f1",
+  "receiver_sha256": "c69911bafc2a1d05a20257f664c9689ef46b063e84e318f1fbe2b75aad9c0dff",
   "identical_receivers": true,
   "zip_matches": true,
-  "pico_8192_tests": "passed",
-  "bl616_2048_tests": "passed",
+  "pico_forward_chunk_bytes": 16384,
+  "bl616_forward_chunk_bytes": 8192,
+  "reverse_chunk_bytes": 4096,
+  "pico_web_tests": "passed",
+  "pico_duplex_tests": "passed",
+  "pico_resume_tests": "passed",
+  "bl616_web_tests": "passed",
+  "bl616_duplex_tests": "passed",
+  "bl616_host_transfer_c_asan_ubsan": "passed",
+  "bl616_host_reverse_c_asan_ubsan": "passed",
+  "hardware_speed_tested": false,
   "published": false
 }
