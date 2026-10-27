@@ -26,7 +26,7 @@
       "Computer → phone: choose Send on the USB page and offer a file. Choose Receive on the phone and Download. Check the phone’s download list to confirm saving.",
       "Keep both pages open and devices awake. Cancel an interrupted transfer and start again. For offline use, keep the extracted files together."
     ],
-    "tlimits": "Dedicated transfer firmware is required. Reverse transfer requires protocol v2 firmware on Pico or BL616. One file and one direction at a time; no resume. The configured limit is 4 GiB, not a verified maximum-size transfer. Files are streamed in bounded chunks, not stored whole on the hub. USB must use the HTTPS site or offline page, not the hotspot HTTP page. No internet is needed after downloading the offline package. If Linux cannot open the port, check serial-device permissions. Software tests do not establish board throughput.",
+    "tlimits": "Dedicated transfer firmware is required. Reverse transfer requires protocol v2 firmware on Pico or BL616. One file and one direction at a time. Updated firmware and receiver pages support Wi-Fi interruption recovery for up to 10 minutes while USB and the computer page remain open. Phone uploads can resume with the same file; reverse downloads use browser HTTP Range resume where supported. Reboot or USB disconnection requires restarting. The configured limit is 4 GiB, not a verified maximum-size transfer. Files are streamed in bounded chunks, not stored whole on the hub. USB must use the HTTPS site or offline page, not the hotspot HTTP page. No internet is needed after downloading the offline package. If Linux cannot open the port, check serial-device permissions. Software tests do not establish board throughput.",
     "ssetup": "A StackHub, an ASB/MCP host computer with desktop Chrome, Edge or Chromium, a USB data cable, a 2.4 GHz uplink with internet access, and a Chan/Xiaozhi MCP WSS endpoint. StackHub uses the uplink for WSS; the computer browser accesses the backend.",
     "ssteps": [
       "Join the stackhub hotspot (initial password build.me). Open http://192.168.78.1/ manually and sign in with the initial admin password build.me. Saved or changed credentials take precedence.",
@@ -68,7 +68,7 @@
       "电脑 → 手机：USB 网页选择“发送”并选择文件；手机选择“接收”与“下载”。最后在手机浏览器下载列表确认文件保存成功。",
       "传输期间保持两边网页打开、设备唤醒。中断后取消并重新开始。离线使用时保留完整解压目录；若弹出的热点小窗口无法下载，请改用正常浏览器。"
     ],
-    "tlimits": "必须烧录专用传输固件；反向传输需要 Pico／BL616 的协议 v2 固件。一次一个文件、一个方向，不支持断点续传。配置上限为 4 GiB，并非已实测的最大文件。Hub 只缓冲小块数据，不完整存储文件。USB 侧使用 HTTPS 网站或离线网页，不能直接使用热点 HTTP 网页访问 USB。提前下载离线包后无需互联网。Linux 若打不开串口，请检查串口设备权限。软件测试不代表已验证实际板端速度。",
+    "tlimits": "必须烧录专用传输固件；反向传输需要 Pico／BL616 的协议 v2 固件。一次一个文件、一个方向。更新固件和接收页后，在电脑网页及 USB 保持连接时，支持最多 10 分钟的无线断线续传：手机上传重新选择原文件继续，反向下载使用支持 HTTP Range 的浏览器下载续传。重启或 USB 断开后需要重新发送。配置上限为 4 GiB，并非已实测的最大文件。Hub 只缓冲小块数据，不完整存储文件。USB 侧使用 HTTPS 网站或离线网页，不能直接使用热点 HTTP 网页访问 USB。提前下载离线包后无需互联网。Linux 若打不开串口，请检查串口设备权限。软件测试不代表已验证实际板端速度。",
     "ssetup": "准备 StackHub、运行 ASB／MCP 的电脑、桌面 Chrome／Edge／Chromium、USB 数据线、可上网的 2.4 GHz Wi-Fi，以及 Chan／小智提供的 MCP WSS 地址。WSS 由 StackHub 上联；后端 MCP 由电脑浏览器访问。",
     "ssteps": [
       "连接 stackhub 热点，初始密码 build.me。手动打开 http://192.168.78.1/，管理页初始密码也是 build.me。已经修改或保存的密码优先。",
