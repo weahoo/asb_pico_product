@@ -1,0 +1,24 @@
+{
+  "version": "2026.10.27-ackfast1",
+  "status": "built-and-regression-tested; not flashed; not deployed",
+  "target": "Raspberry Pi Pico 2 W / RP2350",
+  "uf2": {
+    "file": "FlexHub-Pico2W-ACKFast.uf2",
+    "bytes": 953344,
+    "sha256": "a2e12cf2379463deed3aa0ec6b70adb209897938256d1225a9de4b0e14831e97"
+  },
+  "offline_zip": {
+    "file": "FlexHub-Offline.zip",
+    "bytes": 27823,
+    "sha256": "c4a3960d5676014436a5685a0c96ea6910ba66c70c55e907dc1cddaebf46502c"
+  },
+  "shared_source_sha256": "fe97f530f07248e0a94dff89066b9e4e3ab13bf13c8c752b346ad10c8506ee96",
+  "release_page_sha256": "1863461d3501c017a848287731f42a6b21d0145329148df433f7d0026cedde4d",
+  "web_tests": {
+    "test_web.py": "PASS",
+    "test_resume_web.py": "PASS",
+    "test_duplex_web.py": "PASS",
+    "test_ackfast_mode.py": "PASS"
+  },
+  "hardware_throughput": "not measured; 500 KB/s remains target, not certified"
+}

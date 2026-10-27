@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="zh-CN" data-role="__ROLE__">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FlexHub · 文件传送</title>
+<style>
+:root{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;color:#242428;background:#f5f5f7;font-synthesis:none;--accent:#ff9500;--muted:#76767d}
+*{box-sizing:border-box}body{margin:0;padding:28px 20px 50px}main{max-width:760px;margin:auto}header{display:flex;justify-content:space-between;align-items:center;margin-bottom:36px}.build-version{font-size:11px;color:#76767d;white-space:nowrap;margin-left:auto;margin-right:8px}.brand{font-size:23px;font-weight:750;letter-spacing:-.8px}.brand span{color:var(--accent)}.pill{font-size:12px;background:white;border:1px solid #dedee3;border-radius:30px;padding:8px 12px;color:#61616a}
+h1{font-size:clamp(28px,5vw,38px);letter-spacing:-1px;margin:8px 0 12px}p{line-height:1.65;color:var(--muted);margin:8px 0 18px}.eyebrow{font-size:11px;font-weight:750;letter-spacing:1.6px;color:#9a651c}.card{background:white;border:1px solid #e4e4e8;border-radius:22px;padding:26px;margin:20px 0;box-shadow:0 4px 20px #11111103}h2{font-size:18px;margin:0 0 18px;letter-spacing:-.4px}label{display:block;font-size:13px;font-weight:600;margin:15px 0 8px}input{font:inherit;width:100%;border:1px solid #dcdce1;background:#fafafa;border-radius:12px;padding:13px 14px;outline:none}input:focus{border-color:var(--accent);box-shadow:0 0 0 3px #ff950018}
+button,.button{font:inherit;font-size:14px;font-weight:650;border:0;border-radius:12px;padding:13px 18px;background:var(--accent);color:#262018;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px}button:disabled{opacity:.4;cursor:default}.secondary{background:#f0f0f3;color:#4d4d57}.quiet{padding:6px 0;background:none;color:#777;font-size:12px}.icon-button{width:38px;height:38px;min-width:38px;padding:0;border-radius:50%;font-size:19px;line-height:1;background:#f0f0f3;color:#333}.ack-mode{width:100%;min-height:42px;padding:9px 12px;border:1px solid #dedee3;border-radius:12px;background:#fff;color:#242428;font:inherit;font-size:14px}.diagnostics{padding:14px 18px}.diagnostics summary{cursor:pointer;font-weight:650;font-size:14px;list-style:none}.diagnostics summary::-webkit-details-marker{display:none}.diagnostics summary:after{content:"＋";float:right;color:var(--muted)}.diagnostics[open] summary:after{content:"－"}.diagnostics-body{padding-top:10px}.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.full{width:100%;margin-top:20px}.small{font-size:12px}.status{display:flex;gap:9px;align-items:center;font-size:13px;color:#63636b}.dot{width:7px;height:7px;background:#b5b5bd;border-radius:50%;flex-shrink:0}.dot.on{background:#ff9500}.notice{border-left:3px solid #ff9500;background:#fff8ed;padding:12px 15px;color:#775a34;font-size:13px;line-height:1.6;border-radius:0 10px 10px 0;margin:15px 0}.drop{border:1.5px dashed #d9d9df;border-radius:16px;padding:30px 18px;text-align:center;background:#fcfcfd}.drop .symbol{display:block;font-size:34px;color:#ff9500;margin-bottom:10px}.drop input{margin-top:12px;background:white;font-size:13px}.filename{font-weight:600;overflow-wrap:anywhere}.metrics{display:flex;justify-content:space-between;margin:16px 0 8px;font-size:12px;color:#777}progress{appearance:none;width:100%;height:7px;border:0;border-radius:10px;overflow:hidden;background:#eee}progress::-webkit-progress-bar{background:#ededf1}progress::-webkit-progress-value{background:var(--accent);border-radius:10px}#message{white-space:pre-wrap;overflow-wrap:anywhere}.error{color:#b33d2f!important}.success{color:#7d561b!important}.hidden{display:none!important}.history{padding:12px 0;border-bottom:1px solid #ededf0;font-size:13px;overflow-wrap:anywhere}.history:last-child{border:0}.footer{font-size:12px;color:#999;line-height:1.7;margin-top:25px}.split{display:flex;justify-content:space-between;gap:12px;align-items:center}@media(max-width:480px){body{padding:22px 16px}.card{padding:21px}header{margin-bottom:28px}.pill{font-size:11px}}
+</style></head>
+<body><main>
+<header><div class="brand">Flex<span>Hub</span></div><span id="buildVersion" class="build-version">版本 2026.10.27-ackmode1</span><span id="modeBadge" class="pill">本地文件传送</span></header>
+<div class="eyebrow">LOCAL FILE TRANSFER</div><h1 id="headline">文件，双向传送。</h1><p id="intro">通过热点与 USB，在手机和电脑之间双向传送文件。</p>
+<section id="loginCard" class="card"><h2>登录设备</h2><form id="loginForm"><label for="password">设备登录密码</label><input id="password" type="password" autocomplete="current-password" required maxlength="128" placeholder="输入设备登录密码"><button id="loginButton" class="full" type="submit">登录发送端</button></form><p id="loginHelp" class="small" style="margin-top:14px">电脑端需要打开接收页，并连接 Transfer Hub 的 USB。</p></section>
+<section id="app" class="hidden">
+<div class="split"><div class="status"><i id="dot" class="dot"></i><span id="connection">等待接收端</span></div><button id="logout" class="quiet">退出登录</button></div>
+<div class="row" style="margin-top:20px"><button id="chooseSend">发送</button><button id="chooseReceive" class="secondary">接收</button></div>
+<section id="receiverCard" class="card hidden"><h2>USB 接收端</h2><p>选择电脑上的保存文件夹。来自手机的文件会按顺序写入，不需要安装后台程序。</p><button id="folderButton">选择接收文件夹</button><p id="folderName" class="small">尚未选择保存位置</p><div class="notice">接收期间请保持此页面打开、电脑唤醒。选择“发送”可把电脑文件送到手机；同一时间只传一个文件。</div></section>
+<section id="senderCard" class="card hidden"><h2>发送文件</h2><div class="drop"><span class="symbol">↗</span><div>选择要发送的文件</div><p class="small">一次一个文件 · 最大 4 GiB · 直接传到电脑</p><input id="file" type="file"></div><label for="ackMode">ACK 模式</label><select id="ackMode" class="ack-mode"><option value="fast" selected>高速模式</option><option value="balanced">均衡模式</option></select><button id="sendButton" class="full" disabled>等待电脑接收端</button></section>
+
+<section id="usbSenderCard" class="card hidden"><h2>发送到手机 / 平板</h2><p>选择电脑文件。对方在热点网页选择接收并点击下载。</p><input id="usbFile" type="file"><button id="usbSendButton" class="full" disabled>准备发送</button><p class="small">无需选择接收文件夹。文件按块读取，不整份装入内存。</p></section>
+<section id="wirelessReceiverCard" class="card hidden"><h2>接收电脑文件</h2><div id="pendingFile" class="filename">暂无待接收文件</div><p id="downloadState">请在 USB 电脑网页选择文件并发送。</p><div class="row"><button id="downloadButton" disabled>下载到本机</button><button id="cancelDownload" class="secondary">取消下载</button></div><p class="small">请用普通浏览器打开本页。下载完成与保存位置请在浏览器下载列表确认。</p></section>
+<section id="progressCard" class="card hidden"><div class="split"><h2 id="transferTitle">正在传送</h2><button id="pauseButton" class="icon-button hidden" type="button" aria-label="暂停传输" title="暂停传输">Ⅱ</button><button id="cancelButton" class="quiet">取消传送</button></div><div id="filename" class="filename"></div><div class="metrics"><span id="bytes">0 B</span><span id="speed">0%</span></div><progress id="progress" max="100" value="0"></progress></section>
+<section id="historyCard" class="card hidden"><h2>本次传送</h2><div id="history"></div></section>
+<details id="diagnosticsCard" class="card diagnostics"><summary>传输诊断</summary><div class="diagnostics-body"><p>状态信息将在登录后更新。</p><div class="row"><span>接收端</span><strong id="diagReceiver">—</strong></div><div class="row"><span>传输状态</span><strong id="diagBusy">—</strong></div><div class="row"><span>数据块</span><strong id="diagChunks">—</strong></div><div class="row"><span>CRC 时间</span><strong id="diagCrc">—</strong></div><div class="row"><span>USB ACK 等待</span><strong id="diagAck">—</strong></div><p id="diagUpdated" class="small">尚未读取状态</p></div></details>
+</section>
+<p id="message" class="small" role="status" aria-live="polite"></p>
+<div id="downloadReceiver" class="footer">电脑接收页：<a href="https://visualbuild.shop/transfer/" target="_blank" rel="noopener">打开在线接收页</a> · <a href="/receiver.html" download="FlexHub-Receiver.html">下载离线接收页</a>。请在 USB 连接 Transfer Hub 的电脑上打开。</div>
+<div id="receiverResources" class="footer hidden"><div class="row"><a id="offlineDownload" class="button secondary" href="./FlexHub-Offline.zip" download="FlexHub-Offline.zip">下载离线版 ZIP</a><a href="./offline-guide.html" target="_blank" rel="noopener">使用指南 / Guide</a></div><p class="small">包含独立接收网页及中英文指南。下载后先解压，再用 Chrome / Edge 打开 HTML，无需安装程序。<br>也可<a href="./FlexHub-Receiver.html" download="FlexHub-Receiver.html">仅下载接收网页</a>。</p><p id="offlineState" class="small"></p></div>
+<div class="footer">Wi-Fi ↔ USB 双向传输 · 无需云服务<br>手机→电脑：确认写入保存。电脑→手机：浏览器负责下载保存。</div>
+</main>
+<script>
+'use strict';
+const role=document.documentElement.dataset.role;
+const receiveMode=role==='receiver'||location.protocol==='file:';
+const $=id=>document.getElementById(id);
+let token='',active=false,receiverReady=false,transferId='',cancelRequest=false,pauseRequest=false,isPaused=false;
+let port=null,writer=null,reader=null,folder=null,current=null,heartbeat=null,statusTimer=null,authWait=null,serialWrites=Promise.resolve();
+const errors={wrong_password:'密码不正确',login_required:'登录已失效，请重新登录',receiver_not_ready:'电脑接收端尚未准备好',busy:'设备正在传送另一个文件',transfer_not_active:'传送已结束或中断，请重新发送',receiver_timeout_or_rejected:'接收端未确认，请检查电脑页面与保存权限',receiver_write_failed:'接收端写入失败或 USB 已断开',save_not_confirmed:'电脑尚未确认保存，请检查接收端',file_limit_4GiB:'文件超过 4 GiB 限制',invalid_name:'文件名无效或过长',incomplete:'文件未传完整',bad_sequence_or_size:'数据顺序错误，请重新发送'};
+function message(text,error=false){$('message').textContent=text;$('message').className='small '+(error?'error':'');}
+function size(n){if(n<1024)return n+' B';if(n<1048576)return(n/1024).toFixed(1)+' KB';if(n<1073741824)return(n/1048576).toFixed(1)+' MB';return(n/1073741824).toFixed(2)+' GB';}
+function to64(bytes){let s='';for(const b of bytes)s+=String.fromCharCode(b);return btoa(s);}
+function from64(s){return Uint8Array.from(atob(s),c=>c.charCodeAt(0));}
+const crcTable=Uint32Array.from({length:256},(_,n)=>{for(let j=0;j<8;j++)n=(n>>>1)^((n&1)?0xedb88320:0);return n>>>0;});
+function crcUpdate(c,data){for(let i=0;i<data.length;i++)c=(c>>>8)^crcTable[(c^data[i])&255];return c>>>0;}
+let lastProgress=0,lastReceipt=null,progressStart=-1,progressBase=0;
+let pendingUpload=null;
+try{pendingUpload=JSON.parse(sessionStorage.getItem('transfer-upload')||'null');}catch{}
+function saveUpload(value){pendingUpload=value;try{if(value)sessionStorage.setItem('transfer-upload',JSON.stringify(value));else sessionStorage.removeItem('transfer-upload');}catch{}}
+async function prefixCRC(file,length){let crc=0xffffffff;for(let n=0;n<length;n+=262144)crc=crcUpdate(crc,new Uint8Array(await file.slice(n,Math.min(n+262144,length)).arrayBuffer()));return (~crc)>>>0;}
+async function retryApi(path,body,method='POST'){let last;for(let attempt=0;attempt<3;attempt++){if(cancelRequest)throw Error('已取消传送');try{return await api(path,body,method);}catch(e){last=e;if(attempt<2){message('连接中断，正在重试当前数据块…',true);await new Promise(r=>setTimeout(r,1000*(attempt+1)));}}}throw last;}
+async function bufferedSlice(source,offset,length){if(!source.cache||offset<source.cacheAt||offset+length>source.cacheAt+source.cache.length){source.cacheAt=offset;source.cache=new Uint8Array(await source.file.slice(offset,offset+262144).arrayBuffer());}return source.cache.subarray(offset-source.cacheAt,offset-source.cacheAt+length);}
+
+function progress(name,n,total,start){if(progressStart!==start){progressStart=start;progressBase=n;lastProgress=0;}const tick=performance.now();if(n!==0&&n!==total&&tick-lastProgress<100)return;lastProgress=tick;$('progressCard').classList.remove('hidden');$('filename').textContent=name;$('bytes').textContent=size(n)+' / '+size(total);$('progress').value=total?100*n/total:0;const elapsed=Math.max(.001,(performance.now()-start)/1000);$('speed').textContent=Math.round(total?100*n/total:0)+'% · '+size(Math.max(0,n-progressBase)/elapsed)+'/s';}
+function history(name,bytes){$('historyCard').classList.remove('hidden');const e=document.createElement('div');e.className='history';e.textContent=name+' · '+size(bytes)+' · 已保存，校验通过';$('history').prepend(e);}
+function state(ready,text){receiverReady=ready;$('dot').classList.toggle('on',ready);$('connection').textContent=text;updateSend();}
+function updateSend(){$('sendButton').disabled=active||!receiverReady||!$('file').files.length;$('sendButton').textContent=active?'正在发送…':receiverReady?(pendingUpload?'继续传输':'发送到电脑'):'等待电脑接收端';}
+function showApp(){$('loginCard').classList.add('hidden');$('app').classList.remove('hidden');$(receiveMode?'receiverCard':'senderCard').classList.remove('hidden');$('password').value='';message('');chooseDirection(receiveMode?'receive':'send');}
+async function api(path,body,method='POST'){const r=await fetch(path,{method,headers:{Authorization:'Bearer '+token},body:method==='GET'?undefined:body,signal:AbortSignal.timeout(23000)});const j=await r.json();if(!r.ok)throw Error(errors[j.error]||j.error||'请求失败');return j;}
+async function poll(){if(!token)return;try{const s=await api('/api/status',undefined,'GET');const put=(id,v)=>{const e=$(id);if(e)e.textContent=v;};put('diagReceiver',s.receiver?'已就绪':'未就绪');put('diagBusy',s.busy?'忙碌 / 传输中':'空闲');put('diagChunks',s.diag_chunks??'—');put('diagCrc',(s.diag_crc_ms??'—')+' ms');put('diagAck',(s.diag_ack_ms??'—')+' ms');put('diagUpdated','版本 2026.10.27-ackmode1 · 更新于 '+new Date().toLocaleTimeString());if(!active)state(s.receiver&&(!s.busy||!!pendingUpload),s.busy?'设备正在传送文件':s.receiver?'电脑接收端已就绪':'等待电脑连接 USB 并选择文件夹');}catch(e){const el=$('diagUpdated');if(el)el.textContent='状态请求失败';if(!active)state(false,'设备暂时不可达');}}
+async function serialSend(line){if(!writer)throw Error('USB 未连接');serialWrites=serialWrites.catch(()=>{}).then(()=>writer.write(new TextEncoder().encode(line+'\n')));return serialWrites;}
+async function abortReceive(){const c=current;current=null;if(c){try{await c.stream.abort();}catch{}try{await folder.removeEntry(c.savedName);}catch{}}active=false;$('folderButton').disabled=false;}
+async function uniqueHandle(name){name=name.replace(/[<>:"/\\|?*\x00-\x1f]/g,'_').replace(/[. ]+$/,'')||'file';name=name.slice(0,180);for(let i=0;i<1000;i++){const chosen=i?name+' ('+i+')':name;let exists=false;try{await folder.getFileHandle(chosen);exists=true;}catch(e){if(e.name!=='NotFoundError')throw e;}if(!exists){const h=await folder.getFileHandle(chosen,{create:true});return {handle:h,name:chosen};}}throw Error('同名文件过多');}
+async function onSerial(e){
+ if(await reverseSerial(e))return;
+ if(e.type==='auth'){firmwareProtocol=e.protocol||1;updateUsbSend();if(authWait){const f=authWait;authWait=null;f(e.ok);}return;}
+ if(e.type==='ready'){state(true,'USB 已连接，等待手机发送');return;}
+ if(e.type==='pong')return;
+ if(e.type==='cancel'){if(current&&current.id===e.id){await abortReceive();message('发送端已取消，未保留未完成文件');}return;}
+ if(e.type==='start'){
+  if(current||!folder||reverseSource){await serialSend('NAK '+e.id+' 0 0');return;}
+  try{const name=new TextDecoder().decode(from64(e.name64));const out=await uniqueHandle(name);const stream=await out.handle.createWritable();current={id:e.id,name,savedName:out.name,stream,size:e.size,buffer:new Uint8Array(262144),buffered:0,bytes:0,seq:0,crc:0xffffffff,start:performance.now()};active=true;$('folderButton').disabled=true;$('transferTitle').textContent='正在接收';progress(name,0,e.size,current.start);message('正在从手机接收文件…');await serialSend('ACK '+e.id+' 0 0');}
+  catch(err){await abortReceive();message('无法创建文件：'+err.message,true);await serialSend('NAK '+e.id+' 0 0');}return;
+ }
+ if(e.type==='chunk'){
+  try{
+   const c=current;if(c&&c.id===e.id&&e.seq===c.seq&&e.crc===c.lastCRC&&e.data===c.lastData){await serialSend('ACK '+e.id+' '+e.seq+' '+e.crc);return;}if(!c||c.id!==e.id||e.seq!==c.seq+1)throw Error('数据顺序不匹配');
+   const data=from64(e.data);const crc=(~crcUpdate(0xffffffff,data))>>>0;if(crc!==(e.crc>>>0)||c.bytes+data.length>c.size)throw Error('数据校验失败');
+   if(c.buffered+data.length>c.buffer.length){await c.stream.write(c.buffer.subarray(0,c.buffered));c.buffered=0;}c.buffer.set(data,c.buffered);c.buffered+=data.length;c.crc=crcUpdate(c.crc,data);c.bytes+=data.length;c.seq=e.seq;c.lastCRC=e.crc;c.lastData=e.data;progress(c.name,c.bytes,c.size,c.start);await serialSend('ACK '+e.id+' '+e.seq+' '+crc);
+  }catch(err){await abortReceive();message(err.message,true);await serialSend('NAK '+e.id+' '+e.seq+' 0');}return;
+ }
+ if(e.type==='end'){
+  if(lastReceipt&&lastReceipt.id===e.id&&lastReceipt.seq===e.seq&&lastReceipt.crc===e.crc){await serialSend('ACK '+e.id+' '+e.seq+' '+e.crc);return;}
+  try{
+   const c=current;if(!c||c.id!==e.id||e.seq!==c.seq+1||c.bytes!==c.size||((~c.crc)>>>0)!==(e.crc>>>0))throw Error('文件完整性校验未通过');
+   if(c.buffered)await c.stream.write(c.buffer.subarray(0,c.buffered));await c.stream.close();lastReceipt={id:e.id,seq:e.seq,crc:e.crc};current=null;active=false;$('folderButton').disabled=false;history(c.savedName,c.size);$('transferTitle').textContent='已保存到电脑';$('progress').value=100;message('接收完成，文件已保存。');await serialSend('ACK '+e.id+' '+e.seq+' '+(e.crc>>>0));
+  }catch(err){await abortReceive();message('保存失败：'+err.message,true);await serialSend('NAK '+e.id+' '+e.seq+' 0');}
+ }
+}
+async function readSerial(){
+ let text='';
+ try{reader=port.readable.getReader();while(true){const {value,done}=await reader.read();if(done)break;text+=new TextDecoder().decode(value);if(text.length>30000&&!text.includes('\n'))throw Error('USB 消息过长');let at;while((at=text.indexOf('\n'))>=0){const line=text.slice(0,at).trim();text=text.slice(at+1);if(line.startsWith('{')){let e;try{e=JSON.parse(line);}catch{continue;}await onSerial(e);}}}}
+ catch(e){message('USB 连接中断：'+e.message,true);}
+ finally{clearReverse();if(reader){try{reader.releaseLock();}catch{}reader=null;}clearInterval(heartbeat);await abortReceive();state(false,'USB 已断开，请重新登录');if(authWait){const f=authWait;authWait=null;f(false);}$('loginCard').classList.remove('hidden');$('app').classList.add('hidden');}
+}
+async function disconnect(){clearReverse();clearInterval(heartbeat);if(writer){try{await serialSend('LOGOUT');}catch{}try{writer.releaseLock();}catch{}writer=null;}if(reader)try{await reader.cancel();}catch{}if(port)try{await port.close();}catch{}port=null;await abortReceive();}
+// Shared protocol-v2 USB sender and wireless browser download UI.
+let direction=receiveMode?'receive':'send',firmwareProtocol=1,reverseSource=null,offerWait=null,wirelessOffer=null,wirelessDownloading='';
+function chooseDirection(next){
+ if(active){message('请先结束当前传输，再切换方向',true);return;}
+ direction=next;
+ $('receiverCard').classList.toggle('hidden',!receiveMode||next!=='receive');
+ $('senderCard').classList.toggle('hidden',receiveMode||next!=='send');
+ $('usbSenderCard').classList.toggle('hidden',!receiveMode||next!=='send');
+ $('wirelessReceiverCard').classList.toggle('hidden',receiveMode||next!=='receive');
+ $('chooseSend').classList.toggle('secondary',next!=='send');$('chooseReceive').classList.toggle('secondary',next!=='receive');
+ if(receiveMode&&next==='send'&&firmwareProtocol<2)message('当前固件仅支持手机发送。双向传输需要更新 Transfer 固件。',true);
+ if(!receiveMode&&next==='receive')pollReverse();
+ updateUsbSend();
+}
+function updateUsbSend(){$('usbSendButton').disabled=active||!writer||firmwareProtocol<2||!$('usbFile').files.length;}
+function clearReverse(){reverseSource=null;active=false;updateUsbSend();if(offerWait){const w=offerWait;offerWait=null;w.resolve({ok:false});}}
+async function reverseSerial(e){
+ if(e.type==='offer'){if(offerWait&&e.tag===offerWait.tag){const w=offerWait;offerWait=null;w.resolve(e);}return true;}
+ if(e.type==='reverse_retained'){
+  if(reverseSource&&reverseSource.id===e.id){$('transferTitle').textContent=e.ok?'下载连接已发送完毕':'下载连接中断';message('可在手机浏览器下载列表继续下载。请保持 USB 网页打开；续传保留 10 分钟。完成后点击取消释放通道。',!e.ok);}return true;
+ }
+ if(e.type==='reverse_pull'){
+  const s=reverseSource;
+  if(s&&s.id===e.id&&e.reset===true&&e.seq===1&&Number.isSafeInteger(e.offset)&&e.offset>=0&&e.offset<=s.file.size){s.seq=0;s.offset=e.offset;s.crc=0xffffffff;}
+  try{
+   if(!s||s.id!==e.id||e.seq!==s.seq+1||e.offset!==s.offset||!Number.isInteger(e.length)||e.length<0||e.length>4096||e.length!==Math.min(4096,s.file.size-s.offset))throw Error('发送请求顺序或长度不匹配');
+   const data=await bufferedSlice(s,s.offset,e.length);
+   if(reverseSource!==s)return true;
+   if(data.length!==e.length)throw Error('无法读取完整文件块');
+   s.crc=crcUpdate(s.crc,data);s.offset+=data.length;s.seq=e.seq;
+   await serialSend('RDATA '+s.id+' '+e.seq+' '+((~crcUpdate(0xffffffff,data))>>>0)+' '+((~s.crc)>>>0)+' '+(data.length?to64(data):'-'));
+   progress(s.file.name,s.offset,s.file.size,s.started);
+  }catch(err){await serialSend('RCANCEL').catch(()=>{});clearReverse();message(err.message,true);}
+  return true;
+ }
+ if(e.type==='reverse_done'){
+  if(reverseSource&&reverseSource.id===e.id){const s=reverseSource;clearReverse();$('transferTitle').textContent=e.ok?'已提交手机下载连接':'传输已中断';message(e.ok?'USB 数据已读完并提交下载连接，CRC 校验通过。请在手机的下载列表确认文件已保存。':'传输取消、超时或 USB/网络中断。请重新选择文件发送。',!e.ok);if(e.ok)$('progress').value=100;}
+  return true;
+ }
+ return false;
+}
+async function offerUsbFile(file){
+ if(active||!writer||firmwareProtocol<2)return;
+ if(!file||file.size>4294967296||new TextEncoder().encode(file.name).length>240)throw Error('文件超过 4 GiB 或文件名超过 240 字节');
+ active=true;updateUsbSend();const tag=Array.from(crypto.getRandomValues(new Uint8Array(8)),b=>b.toString(16).padStart(2,'0')).join('');
+ try{
+  const offered=new Promise(resolve=>{offerWait={tag,resolve};});
+  const timeout=setTimeout(()=>{if(offerWait?.tag===tag){const w=offerWait;offerWait=null;w.resolve({ok:false});}},6000);
+  let r;try{await serialSend('OFFER '+tag+' '+to64(new TextEncoder().encode(file.name))+' '+file.size);r=await offered;}finally{clearTimeout(timeout);}
+  if(!r.ok)throw Error('设备忙、发送请求被拒绝或固件未更新');
+  reverseSource={id:r.id,file,seq:0,offset:0,crc:0xffffffff,started:performance.now()};
+  $('transferTitle').textContent='等待手机点击下载';progress(file.name,0,file.size,reverseSource.started);message('手机打开热点网页，选择“接收”并点击下载。等待超过两分钟会取消。');
+ }catch(e){await serialSend('RCANCEL').catch(()=>{});clearReverse();throw e;}
+}
+async function pollReverse(){
+ if(receiveMode||!token||direction!=='receive')return;
+ try{
+  const r=await api('/api/reverse',undefined,'GET');wirelessOffer=r.available?r:null;
+  if(r.available){const name=new TextDecoder().decode(from64(r.name64));$('pendingFile').textContent=name+' · '+size(r.size);$('downloadButton').disabled=r.claimed||active;$('downloadState').textContent=r.streaming?'浏览器正在下载；请在下载列表查看进度。':r.claimed?'文件已被领取，等待下载连接。':'电脑已准备好，点击下载到本机。';}
+  else{$('pendingFile').textContent='暂无待接收文件';$('downloadButton').disabled=true;$('downloadState').textContent=wirelessDownloading?'传输通道已结束，请检查浏览器下载列表。':'请在 USB 电脑网页选择文件并发送。';if(wirelessDownloading){active=false;wirelessDownloading='';}}
+ }catch(e){$('downloadState').textContent='无法读取待接收文件；请确认连接及双向 Transfer 固件。';}
+}
+$('chooseSend').onclick=()=>chooseDirection('send');$('chooseReceive').onclick=()=>chooseDirection('receive');
+$('usbFile').onchange=updateUsbSend;
+$('usbSendButton').onclick=()=>offerUsbFile($('usbFile').files[0]).catch(e=>message(e.message,true));
+$('downloadButton').onclick=async()=>{
+ if(!wirelessOffer||wirelessOffer.claimed||active)return;
+ try{
+  const r=await api('/api/reverse/claim?id='+wirelessOffer.id,'');wirelessDownloading=wirelessOffer.id;active=true;$('downloadButton').disabled=true;
+  const a=document.createElement('a');a.href=r.url;a.download=new TextDecoder().decode(from64(wirelessOffer.name64));document.body.append(a);a.click();a.remove();
+  message('已请求下载。若网络中断，可在浏览器下载列表点击继续；保持 USB 网页打开，最长保留 10 分钟。下载完成后点击取消释放通道。');
+ }catch(e){message(e.message,true);}
+};
+$('cancelDownload').onclick=async()=>{if(wirelessOffer){await api('/api/reverse/cancel?id='+wirelessOffer.id,'').catch(()=>{});message('已请求取消；浏览器可能保留未完成的下载。');}};
+setInterval(pollReverse,2000);
+
+$('loginForm').addEventListener('submit',async ev=>{
+ ev.preventDefault();const password=$('password').value;$('loginButton').disabled=true;
+ try{
+  if(receiveMode){
+   if(!window.isSecureContext||!navigator.serial)throw Error('请在电脑上用 Chrome / Edge 打开本地接收 HTML，或通过可信 HTTPS 加载。');
+   if(!window.showDirectoryPicker)throw Error('此浏览器不支持直接保存文件夹，请使用桌面 Chrome / Edge。');
+   await disconnect();port=await navigator.serial.requestPort({filters:[{usbVendorId:0x2e8a},{usbVendorId:0xffff,usbProductId:0xffff}]});await port.open({baudRate:115200});writer=port.writable.getWriter();readSerial();
+   const authenticated=new Promise(resolve=>{authWait=resolve;setTimeout(()=>{if(authWait===resolve){authWait=null;resolve(false);}},6000);});
+   await serialSend('AUTH '+to64(new TextEncoder().encode(password)));if(!await authenticated){await disconnect();throw Error('USB 登录失败：请确认密码及专用传输固件。');}
+   heartbeat=setInterval(()=>serialSend('PING').catch(()=>{}),2000);showApp();state(false,'USB 已连接，请选择接收文件夹');
+  }else{
+   const r=await fetch('/api/login',{method:'POST',body:password,signal:AbortSignal.timeout(8000)});const j=await r.json();if(!r.ok)throw Error(errors[j.error]||'登录失败');
+   token=j.token;try{sessionStorage.setItem('transfer-token',token);}catch{}saveUpload(null);showApp();await poll();statusTimer=setInterval(poll,3000);
+  }
+ }catch(e){message(e.name==='NotFoundError'?'已取消选择 USB 设备':e.message,true);}
+ finally{$('loginButton').disabled=false;}
+});
+$('folderButton').onclick=async()=>{try{folder=await showDirectoryPicker({mode:'readwrite'});$('folderName').textContent='保存位置：'+folder.name;await serialSend('READY');}catch(e){if(e.name!=='AbortError')message(e.message,true);}};
+$('file').onchange=updateSend;
+$('sendButton').onclick=async()=>{
+ const file=$('file').files[0];if(!file||active||!receiverReady)return;
+ if(file.size>4294967296||new TextEncoder().encode(file.name).length>240){message('文件超过 4 GiB 或文件名过长',true);return;}
+ active=true;cancelRequest=false;pauseRequest=false;isPaused=false;updateSend();$('pauseButton').classList.remove('hidden');$('pauseButton').disabled=false;$('pauseButton').textContent='Ⅱ';$('pauseButton').setAttribute('aria-label','暂停传输');$('pauseButton').title='暂停传输';const started=performance.now();$('transferTitle').textContent='正在发送';message('正在准备电脑接收端…');
+ try{
+  let offset=0,seq=0,chunk=0;
+  if(pendingUpload){
+   transferId=pendingUpload.id;
+   if(file.name!==pendingUpload.name||file.size!==pendingUpload.size||file.lastModified!==pendingUpload.modified)throw Error('请选择上次的同一个文件继续，或先点击取消清除未完成任务。');
+   const state=await retryApi('/api/resume?id='+transferId,undefined,'GET');
+   if(state.size!==file.size||state.offset<0||state.offset>file.size||await prefixCRC(file,state.offset)!==state.crc)throw Error('续传文件校验不匹配，请取消后重新发送。');
+   if(state.saved){saveUpload(null);history(file.name,file.size);message('电脑已确认保存。');return;}
+   offset=state.offset;seq=state.seq;chunk=state.chunk;
+  }else{
+   const init=await api('/api/start',to64(new TextEncoder().encode(file.name))+'\n'+file.size);
+   transferId=init.id;chunk=init.chunk;saveUpload({id:init.id,name:file.name,size:file.size,modified:file.lastModified});
+  }
+  if(!Number.isInteger(chunk)||chunk<=0||chunk>65536)throw Error('无效的数据块大小');
+  const source={file};progress(file.name,offset,file.size,started);message('正在发送，请保持接收页面和 USB 连接…');
+  while(offset<file.size){
+   if(cancelRequest)throw Error('已取消传送');
+   const data=await bufferedSlice(source,offset,Math.min(chunk,file.size-offset));
+   await retryApi('/api/chunk?id='+transferId+'&seq='+(seq+1),data);
+   seq++;offset+=data.byteLength;progress(file.name,offset,file.size,started);
+   if(pauseRequest){isPaused=true;$('transferTitle').textContent='已暂停';message('已暂停，断点已保留。点击播放图标继续传输。');return;}
+  }
+  await retryApi('/api/end?id='+transferId,'');saveUpload(null);$('progress').value=100;$('transferTitle').textContent='电脑已确认保存';history(file.name,file.size);message('传送完成，电脑已确认保存且校验通过。');
+ }catch(e){
+  if(cancelRequest){if(transferId)await api('/api/cancel?id='+transferId,'').catch(()=>{});saveUpload(null);message('已取消传送');}
+  else message(e.message+(pendingUpload?'。已保留续传状态；网络恢复后选择同一文件，点击继续传输。接收网页和 USB 必须保持连接，最长等待 10 分钟。':''),true);
+ }finally{active=false;transferId='';pauseRequest=false;$('pauseButton').disabled=false;if(isPaused&&pendingUpload){$('pauseButton').classList.remove('hidden');$('pauseButton').textContent='▶';$('pauseButton').setAttribute('aria-label','继续传输');$('pauseButton').title='继续传输';}else{$('pauseButton').classList.add('hidden');isPaused=false;}updateSend();poll();}
+};
+$('pauseButton').onclick=()=>{if(receiveMode)return;if(isPaused){isPaused=false;$('pauseButton').textContent='Ⅱ';$('pauseButton').setAttribute('aria-label','暂停传输');$('pauseButton').title='暂停传输';$('sendButton').click();return;}if(!active)return;pauseRequest=true;$('pauseButton').disabled=true;$('pauseButton').textContent='…';$('pauseButton').setAttribute('aria-label','正在暂停');$('pauseButton').title='正在暂停';message('正在完成当前数据块并保存断点…');};
+$('cancelButton').onclick=async()=>{if(reverseSource){await serialSend('RCANCEL').catch(()=>{});message('已请求取消发送');return;}if(receiveMode){try{await serialSend('CANCEL');}catch{}await abortReceive();message('已取消接收');}else{cancelRequest=true;if(!active&&pendingUpload){await api('/api/cancel?id='+pendingUpload.id,'').catch(()=>{});saveUpload(null);updateSend();poll();}message('已请求取消传输');}};
+$('logout').onclick=async()=>{if(active){message('请先取消当前传送，再退出登录',true);return;}clearInterval(statusTimer);if(receiveMode)await disconnect();else{try{await api('/api/logout','');}catch{}token='';saveUpload(null);try{sessionStorage.removeItem('transfer-token');}catch{}}$('app').classList.add('hidden');$('loginCard').classList.remove('hidden');message('已退出登录');};
+window.addEventListener('beforeunload',e=>{if(active){e.preventDefault();e.returnValue='';}});
+if(receiveMode){$('headline').textContent='文件，双向传送。';$('intro').textContent='USB 连接 Transfer Hub，选择发送或接收。手机使用热点网页。';$('modeBadge').textContent='USB · 发送 / 接收';$('loginButton').textContent='连接 USB 并登录';$('loginHelp').textContent='点击后选择 Transfer Hub 的 USB 串口。无需安装 ASB 或后台服务。';$('downloadReceiver').classList.add('hidden');$('receiverResources').classList.remove('hidden');if(location.protocol==='file:'){$('receiverResources').classList.add('hidden');}else if(location.protocol==='http:'&&!isSecureContext){$('loginButton').disabled=true;message('此 HTTP 页面不能访问 USB。请下载离线接收页，在电脑 Chrome / Edge 中打开。',true);}}
+else{$('modeBadge').textContent='Wi-Fi · 发送 / 接收';}
+if(!receiveMode){try{token=sessionStorage.getItem('transfer-token')||'';}catch{}if(token){showApp();poll();statusTimer=setInterval(poll,3000);}}
+// Cache only this receiver page and its offline copy; never file contents or passwords.
+if(receiveMode&&isSecureContext&&location.protocol!=='file:'&&'serviceWorker' in navigator){
+ navigator.serviceWorker.register('./sw.js').then(()=>navigator.serviceWorker.ready).then(()=>{
+  $('offlineState').textContent='离线页面已缓存。浏览器保留缓存时，可断网重新打开；可靠离线使用请下载接收页。';
+ }).catch(()=>{$('offlineState').textContent='未能缓存页面；离线使用请下载接收页。';});
+}
+</script></body></html>
+

@@ -1,0 +1,9 @@
+FlexHub Pico 2 W ACKFast candidate
+
+1. Do not flash a different board: this UF2 targets Raspberry Pi Pico 2 W (RP2350).
+2. Hold BOOTSEL while connecting the Pico 2 W by USB.
+3. Copy FlexHub-Pico2W-ACKFast.uf2 to the RPI-RP2 drive. Wait for the drive to disappear/reboot.
+4. Join the Transfer Hub hotspot and open the transfer page. Fast mode is available on the Pico 2 W firmware; choose Balanced if stability is preferred.
+5. Keep FlexHub-Offline.zip for the offline desktop receiver; extract it and open FlexHub-Receiver.html in desktop Chrome/Edge.
+
+This package has been built and software-regression-tested but has NOT been flashed or hardware-accepted. 500 KB/s has not been measured or certified.
