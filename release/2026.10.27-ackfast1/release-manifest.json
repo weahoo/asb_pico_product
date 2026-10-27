@@ -1,6 +1,6 @@
 {
   "version": "2026.10.27-ackfast1",
-  "status": "built-and-regression-tested; not flashed; not deployed",
+  "status": "rebuilt-8KiB-stability-recovery; not flashed; not deployed",
   "target": "Raspberry Pi Pico 2 W / RP2350",
   "uf2": {
     "file": "FlexHub-Pico2W-ACKFast.uf2",
@@ -20,5 +20,27 @@
     "test_duplex_web.py": "PASS",
     "test_ackfast_mode.py": "PASS"
   },
-  "hardware_throughput": "not measured; 500 KB/s remains target, not certified"
+  "hardware_throughput": "not measured; 500 KB/s remains target, not certified",
+  "uf2_sha256": "8bccad3c67f4875d86aab865bd480f439d81134d46b0a57255bb50d81990d168",
+  "uf2_size_bytes": 953344,
+  "chunk_bytes": 8192,
+  "captive_portal_pixel7": "not yet physically re-tested; previous 32KiB build suspected memory-pressure regression",
+  "web_regression_tests": [
+    {
+      "test": "test_web.py",
+      "status": "MISSING"
+    },
+    {
+      "test": "test_resume_web.py",
+      "status": "MISSING"
+    },
+    {
+      "test": "test_duplex_web.py",
+      "status": "MISSING"
+    },
+    {
+      "test": "test_ackfast_mode.py",
+      "status": "MISSING"
+    }
+  ]
 }
