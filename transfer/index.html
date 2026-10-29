@@ -8,20 +8,20 @@ h1{font-size:clamp(28px,5vw,38px);letter-spacing:-1px;margin:8px 0 12px}p{line-h
 button,.button{font:inherit;font-size:14px;font-weight:650;border:0;border-radius:12px;padding:13px 18px;background:var(--accent);color:#262018;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px}button:disabled{opacity:.4;cursor:default}.secondary{background:#f0f0f3;color:#4d4d57}.quiet{padding:6px 0;background:none;color:#777;font-size:12px}.icon-button{width:38px;height:38px;min-width:38px;padding:0;border-radius:50%;font-size:19px;line-height:1;background:#f0f0f3;color:#333}.ack-mode{width:100%;min-height:42px;padding:9px 12px;border:1px solid #dedee3;border-radius:12px;background:#fff;color:#242428;font:inherit;font-size:14px}.diagnostics{padding:14px 18px}.diagnostics summary{cursor:pointer;font-weight:650;font-size:14px;list-style:none}.diagnostics summary::-webkit-details-marker{display:none}.diagnostics summary:after{content:"＋";float:right;color:var(--muted)}.diagnostics[open] summary:after{content:"－"}.diagnostics-body{padding-top:10px}.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.full{width:100%;margin-top:20px}.small{font-size:12px}.status{display:flex;gap:9px;align-items:center;font-size:13px;color:#63636b}.dot{width:7px;height:7px;background:#b5b5bd;border-radius:50%;flex-shrink:0}.dot.on{background:#ff9500}.notice{border-left:3px solid #ff9500;background:#fff8ed;padding:12px 15px;color:#775a34;font-size:13px;line-height:1.6;border-radius:0 10px 10px 0;margin:15px 0}.drop{border:1.5px dashed #d9d9df;border-radius:16px;padding:30px 18px;text-align:center;background:#fcfcfd}.drop .symbol{display:block;font-size:34px;color:#ff9500;margin-bottom:10px}.drop input{margin-top:12px;background:white;font-size:13px}.filename{font-weight:600;overflow-wrap:anywhere}.metrics{display:flex;justify-content:space-between;margin:16px 0 8px;font-size:12px;color:#777}progress{appearance:none;width:100%;height:7px;border:0;border-radius:10px;overflow:hidden;background:#eee}progress::-webkit-progress-bar{background:#ededf1}progress::-webkit-progress-value{background:var(--accent);border-radius:10px}#message{white-space:pre-wrap;overflow-wrap:anywhere}.error{color:#b33d2f!important}.success{color:#7d561b!important}.hidden{display:none!important}.history{padding:12px 0;border-bottom:1px solid #ededf0;font-size:13px;overflow-wrap:anywhere}.history:last-child{border:0}.footer{font-size:12px;color:#999;line-height:1.7;margin-top:25px}.split{display:flex;justify-content:space-between;gap:12px;align-items:center}@media(max-width:480px){body{padding:22px 16px}.card{padding:21px}header{margin-bottom:28px}.pill{font-size:11px}}
 </style></head>
 <body><main>
-<header><div class="brand">Flex<span>Hub</span></div><span id="buildVersion" class="build-version">版本 2026.10.27-ackfast1</span><span id="modeBadge" class="pill">本地文件传送</span></header>
+<header><div class="brand">Flex<span>Hub</span></div><span id="buildVersion" class="build-version">版本 2026.10.28-pico-extreme1</span><span id="modeBadge" class="pill">本地文件传送</span></header>
 <div class="eyebrow">LOCAL FILE TRANSFER</div><h1 id="headline">文件，双向传送。</h1><p id="intro">通过热点与 USB，在手机和电脑之间双向传送文件。</p>
 <section id="loginCard" class="card"><h2>登录设备</h2><form id="loginForm"><label for="password">设备登录密码</label><input id="password" type="password" autocomplete="current-password" required maxlength="128" placeholder="输入设备登录密码"><button id="loginButton" class="full" type="submit">登录发送端</button></form><p id="loginHelp" class="small" style="margin-top:14px">电脑端需要打开接收页，并连接 Transfer Hub 的 USB。</p></section>
 <section id="app" class="hidden">
 <div class="split"><div class="status"><i id="dot" class="dot"></i><span id="connection">等待接收端</span></div><button id="logout" class="quiet">退出登录</button></div>
 <div class="row" style="margin-top:20px"><button id="chooseSend">发送</button><button id="chooseReceive" class="secondary">接收</button></div>
 <section id="receiverCard" class="card hidden"><h2>USB 接收端</h2><p>选择电脑上的保存文件夹。来自手机的文件会按顺序写入，不需要安装后台程序。</p><button id="folderButton">选择接收文件夹</button><p id="folderName" class="small">尚未选择保存位置</p><div class="notice">接收期间请保持此页面打开、电脑唤醒。选择“发送”可把电脑文件送到手机；同一时间只传一个文件。</div></section>
-<section id="senderCard" class="card hidden"><h2>发送文件</h2><div class="drop"><span class="symbol">↗</span><div>选择要发送的文件</div><p class="small">一次一个文件 · 最大 4 GiB · 直接传到电脑</p><input id="file" type="file"></div><div id="ackModeWrap"><label for="ackMode">ACK 模式</label><select id="ackMode" class="ack-mode"><option value="fast" selected>高速模式</option><option value="balanced">均衡模式</option></select></div><button id="sendButton" class="full" disabled>等待电脑接收端</button></section>
+<section id="senderCard" class="card hidden"><h2>发送文件</h2><div class="drop"><span class="symbol">↗</span><div>选择要发送的文件</div><p class="small">一次一个文件 · 最大 4 GiB · 直接传到电脑</p><input id="file" type="file"></div><label for="ackMode">传输挡位</label><select id="ackMode" class="ack-mode"><option value="balanced">均衡模式</option><option value="fast" selected>高速模式</option><option value="extreme">极速模式</option></select><p class="small">均衡：8 KB 文本，每块等电脑确认，并且每块新开连接。高速：同样的文本和逐块确认，但复用连接。极速：二进制帧，入队就回应，电脑请用本次固件配套的接收页。</p><p id="activeGear" class="small"></p><button id="sendButton" class="full" disabled>等待电脑接收端</button></section>
 
 <section id="usbSenderCard" class="card hidden"><h2>发送到手机 / 平板</h2><p>选择电脑文件。对方在热点网页选择接收并点击下载。</p><input id="usbFile" type="file"><button id="usbSendButton" class="full" disabled>准备发送</button><p class="small">无需选择接收文件夹。文件按块读取，不整份装入内存。</p></section>
 <section id="wirelessReceiverCard" class="card hidden"><h2>接收电脑文件</h2><div id="pendingFile" class="filename">暂无待接收文件</div><p id="downloadState">请在 USB 电脑网页选择文件并发送。</p><div class="row"><button id="downloadButton" disabled>下载到本机</button><button id="cancelDownload" class="secondary">取消下载</button></div><p class="small">请用普通浏览器打开本页。下载完成与保存位置请在浏览器下载列表确认。</p></section>
 <section id="progressCard" class="card hidden"><div class="split"><h2 id="transferTitle">正在传送</h2><button id="pauseButton" class="icon-button hidden" type="button" aria-label="暂停传输" title="暂停传输">Ⅱ</button><button id="cancelButton" class="quiet">取消传送</button></div><div id="filename" class="filename"></div><div class="metrics"><span id="bytes">0 B</span><span id="speed">0%</span></div><progress id="progress" max="100" value="0"></progress></section>
 <section id="historyCard" class="card hidden"><h2>本次传送</h2><div id="history"></div></section>
-<details id="diagnosticsCard" class="card diagnostics"><summary>传输诊断</summary><div class="diagnostics-body"><p>状态信息将在登录后更新。</p><div class="row"><span>接收端</span><strong id="diagReceiver">—</strong></div><div class="row"><span>传输状态</span><strong id="diagBusy">—</strong></div><div class="row"><span>数据块</span><strong id="diagChunks">—</strong></div><div class="row"><span>CRC 时间</span><strong id="diagCrc">—</strong></div><div class="row"><span>USB ACK 等待</span><strong id="diagAck">—</strong></div><p id="diagUpdated" class="small">尚未读取状态</p></div></details>
+<details id="diagnosticsCard" class="card diagnostics"><summary>传输诊断</summary><div class="diagnostics-body"><p>状态信息将在登录后更新。</p><div class="row"><span>接收端</span><strong id="diagReceiver">—</strong></div><div class="row"><span>传输状态</span><strong id="diagBusy">—</strong></div><div class="row"><span>数据块</span><strong id="diagChunks">—</strong></div><div class="row"><span>挡位</span><strong id="diagGear" style="flex:1;min-width:12em;overflow-wrap:anywhere">—</strong></div><div class="row"><span>CRC 时间</span><strong id="diagCrc">—</strong></div><div class="row"><span>USB ACK 等待</span><strong id="diagAck">—</strong></div><p id="diagUpdated" class="small">尚未读取状态</p></div></details>
 </section>
 <p id="message" class="small" role="status" aria-live="polite"></p>
 <div id="downloadReceiver" class="footer">电脑接收页：<a href="https://visualbuild.shop/transfer/" target="_blank" rel="noopener">打开在线接收页</a> · <a href="/receiver.html" download="FlexHub-Receiver.html">下载离线接收页</a>。请在 USB 连接 Transfer Hub 的电脑上打开。</div>
@@ -35,6 +35,7 @@ const receiveMode=role==='receiver'||location.protocol==='file:';
 const $=id=>document.getElementById(id);
 let token='',active=false,receiverReady=false,transferId='',cancelRequest=false,pauseRequest=false,isPaused=false;
 let port=null,writer=null,reader=null,folder=null,current=null,heartbeat=null,statusTimer=null,authWait=null,serialWrites=Promise.resolve();
+let transferGear='',diskChain=Promise.resolve();
 const errors={wrong_password:'密码不正确',login_required:'登录已失效，请重新登录',receiver_not_ready:'电脑接收端尚未准备好',busy:'设备正在传送另一个文件',transfer_not_active:'传送已结束或中断，请重新发送',receiver_timeout_or_rejected:'接收端未确认，请检查电脑页面与保存权限',receiver_write_failed:'接收端写入失败或 USB 已断开',save_not_confirmed:'电脑尚未确认保存，请检查接收端',file_limit_4GiB:'文件超过 4 GiB 限制',invalid_name:'文件名无效或过长',incomplete:'文件未传完整',bad_sequence_or_size:'数据顺序错误，请重新发送'};
 function message(text,error=false){$('message').textContent=text;$('message').className='small '+(error?'error':'');}
 function size(n){if(n<1024)return n+' B';if(n<1048576)return(n/1024).toFixed(1)+' KB';if(n<1073741824)return(n/1048576).toFixed(1)+' MB';return(n/1073741824).toFixed(2)+' GB';}
@@ -56,7 +57,40 @@ function state(ready,text){receiverReady=ready;$('dot').classList.toggle('on',re
 function updateSend(){$('sendButton').disabled=active||!receiverReady||!$('file').files.length;$('sendButton').textContent=active?'正在发送…':receiverReady?(pendingUpload?'继续传输':'发送到电脑'):'等待电脑接收端';}
 function showApp(){$('loginCard').classList.add('hidden');$('app').classList.remove('hidden');$(receiveMode?'receiverCard':'senderCard').classList.remove('hidden');$('password').value='';message('');chooseDirection(receiveMode?'receive':'send');}
 async function api(path,body,method='POST'){const r=await fetch(path,{method,headers:{Authorization:'Bearer '+token},body:method==='GET'?undefined:body,signal:AbortSignal.timeout(23000)});const j=await r.json();if(!r.ok)throw Error(errors[j.error]||j.error||'请求失败');return j;}
-async function poll(){if(!token)return;try{const s=await api('/api/status',undefined,'GET');const put=(id,v)=>{const e=$(id);if(e)e.textContent=v;};put('diagReceiver',s.receiver?'已就绪':'未就绪');put('diagBusy',s.busy?'忙碌 / 传输中':'空闲');put('diagChunks',s.diag_chunks??'—');put('diagCrc',(s.diag_crc_ms??'—')+' ms');put('diagAck',(s.diag_ack_ms??'—')+' ms');put('diagUpdated','版本 2026.10.27-ackfast1 · 更新于 '+new Date().toLocaleTimeString());if(!active)state(s.receiver&&(!s.busy||!!pendingUpload),s.busy?'设备正在传送文件':s.receiver?'电脑接收端已就绪':'等待电脑连接 USB 并选择文件夹');}catch(e){const el=$('diagUpdated');if(el)el.textContent='状态请求失败';if(!active)state(false,'设备暂时不可达');}}
+
+const GEAR={
+ balanced:{usb:'json',wait:'ack',conn:'close',chunk:8192,label:'均衡模式'},
+ fast:{usb:'json',wait:'ack',conn:'keep',chunk:8192,label:'高速模式'},
+ extreme:{usb:'bin',wait:'queue',conn:'keep',chunk:8192,label:'极速模式'}
+};
+function enforceGear(state,requested){
+ const g=GEAR[state.mode];
+ if(!g)throw Error('设备返回了未知挡位');
+ if(state.usb!==g.usb||state.wait!==g.wait||state.conn!==g.conn||state.chunk!==g.chunk)throw Error('挡位和设备路径不一致：'+state.mode+' / '+state.usb+' / '+state.wait+' / '+state.conn+' / '+state.chunk);
+ if(requested&&requested!==state.mode)throw Error('设备未按所选挡位执行：选了'+requested+'，设备是'+state.mode);
+ const box=$('ackMode');if(box)box.value=state.mode;
+ transferGear=state.mode;
+ const note=$('activeGear');if(note)note.textContent='本次实际路径：'+g.label+' · '+(g.usb==='bin'?'二进制 USB':'文本 USB')+' · '+(g.conn==='keep'?'复用连接':'每块新连接')+' · '+(g.wait==='queue'?'入队即回应':'等电脑确认再回应');
+ return state.chunk;
+}
+function showGear(s){
+ const el=$('diagGear');if(!el||!s)return;
+ if(!s.mode||s.mode==='idle'){el.textContent='空闲';el.style.color='';return;}
+ const names={balanced:'均衡',fast:'高速',extreme:'极速'};
+ const g=GEAR[s.mode];
+ const mismatch=!!(g&&(s.usb!==g.usb||s.wait!==g.wait||s.conn!==g.conn||(s.chunk!=null&&Number(s.chunk)!==g.chunk)));
+ const path=s.usb==='bin'?'二进制':s.usb==='json'?'文本':'未知路径';
+ const wait=s.wait==='queue'?'入队即回应':s.wait==='ack'?'等确认再回应':'等待未声明';
+ const conn=s.conn==='keep'?'复用连接':s.conn==='close'?'每块新连接':'连接未声明';
+ let text=(names[s.mode]||s.mode)+' · '+path+' · '+wait+' · '+conn;
+ if(typeof s.offset==='number')text+=' · 已确认 '+s.offset;
+ if(typeof s.queued==='number')text+=' · 在途 '+s.queued;
+ if(s.legacy)text+=' · 旧固件未声明挡位';
+ if(mismatch)text+=' · 字段与挡位不一致';
+ if(transferGear&&transferGear!==s.mode)text+=' · 页面正在按'+(GEAR[transferGear]?GEAR[transferGear].label:transferGear)+'发送';
+ el.textContent=text;el.style.color=(mismatch||(transferGear&&transferGear!==s.mode))?'#9b1c1c':'';
+}
+async function poll(){if(!token)return;try{const s=await api('/api/status',undefined,'GET');const put=(id,v)=>{const e=$(id);if(e)e.textContent=v;};put('diagReceiver',s.receiver?'已就绪':'未就绪');put('diagBusy',s.busy?'忙碌 / 传输中':'空闲');put('diagChunks',s.diag_chunks??'—');put('diagCrc',(s.diag_crc_ms??'—')+' ms');put('diagAck',(s.diag_ack_ms??'—')+' ms');showGear(s);put('diagUpdated','版本 2026.10.28-pico-extreme1 · 更新于 '+new Date().toLocaleTimeString());if(active&&transferGear&&s.mode&&s.mode!=='idle'&&s.mode!==transferGear)message('设备挡位是'+s.mode+'，页面正在按'+transferGear+'发送',true);if(!active)state(s.receiver&&(!s.busy||!!pendingUpload),s.busy?'设备正在传送文件':s.receiver?'电脑接收端已就绪':'等待电脑连接 USB 并选择文件夹');}catch(e){const el=$('diagUpdated');if(el)el.textContent='状态请求失败';if(!active)state(false,'设备暂时不可达');}}
 async function serialSend(line){if(!writer)throw Error('USB 未连接');serialWrites=serialWrites.catch(()=>{}).then(()=>writer.write(new TextEncoder().encode(line+'\n')));return serialWrites;}
 async function abortReceive(){const c=current;current=null;if(c){try{await c.stream.abort();}catch{}try{await folder.removeEntry(c.savedName);}catch{}}active=false;$('folderButton').disabled=false;}
 async function uniqueHandle(name){name=name.replace(/[<>:"/\\|?*\x00-\x1f]/g,'_').replace(/[. ]+$/,'')||'file';name=name.slice(0,180);for(let i=0;i<1000;i++){const chosen=i?name+' ('+i+')':name;let exists=false;try{await folder.getFileHandle(chosen);exists=true;}catch(e){if(e.name!=='NotFoundError')throw e;}if(!exists){const h=await folder.getFileHandle(chosen,{create:true});return {handle:h,name:chosen};}}throw Error('同名文件过多');}
@@ -64,16 +98,16 @@ async function onSerial(e){
  if(await reverseSerial(e))return;
  if(e.type==='auth'){firmwareProtocol=e.protocol||1;updateUsbSend();if(authWait){const f=authWait;authWait=null;f(e.ok);}return;}
  if(e.type==='ready'){state(true,'USB 已连接，等待手机发送');return;}
- if(e.type==='pong')return;
+ if(e.type==='pong'||e.type==='diag'){if(e.mode)showGear(e);if(receiveMode&&e.mode){const stamp=$('diagUpdated');if(stamp)stamp.textContent='来自 USB · 版本 2026.10.28-pico-extreme1';}return;}
  if(e.type==='cancel'){if(current&&current.id===e.id){await abortReceive();message('发送端已取消，未保留未完成文件');}return;}
  if(e.type==='start'){
   if(current||!folder||reverseSource){await serialSend('NAK '+e.id+' 0 0');return;}
-  try{const name=new TextDecoder().decode(from64(e.name64));const out=await uniqueHandle(name);const stream=await out.handle.createWritable();current={id:e.id,name,savedName:out.name,stream,size:e.size,buffer:new Uint8Array(262144),buffered:0,bytes:0,seq:0,crc:0xffffffff,start:performance.now()};active=true;$('folderButton').disabled=true;$('transferTitle').textContent='正在接收';progress(name,0,e.size,current.start);message('正在从手机接收文件…');await serialSend('ACK '+e.id+' 0 0');}
+  try{const declared=!!(e.mode||e.usb||e.wait||e.conn);if(declared){const g=GEAR[e.mode];if(!g||e.usb!==g.usb||e.wait!==g.wait||e.conn!==g.conn){showGear(e);throw Error('挡位和 USB 路径不一致：'+(e.mode||'?')+' / '+(e.usb||'?')+' / '+(e.wait||'?')+' / '+(e.conn||'?'));}showGear(e);}else showGear({mode:'balanced',usb:'json',wait:'ack',conn:'close',legacy:1});const name=new TextDecoder().decode(from64(e.name64));const out=await uniqueHandle(name);const stream=await out.handle.createWritable();current={id:e.id,name,savedName:out.name,stream,size:e.size,buffer:new Uint8Array(262144),buffered:0,bytes:0,seq:0,crc:0xffffffff,start:performance.now(),usb:declared&&e.usb==='bin'?'bin':'json',mode:declared?e.mode:'balanced'};diskChain=Promise.resolve();active=true;$('folderButton').disabled=true;$('transferTitle').textContent='正在接收';progress(name,0,e.size,current.start);const gearName={balanced:'均衡',fast:'高速',extreme:'极速'};message('正在从手机接收'+(gearName[current.mode]?'（'+gearName[current.mode]+'）':'')+'…');await serialSend('ACK '+e.id+' 0 0');}
   catch(err){await abortReceive();message('无法创建文件：'+err.message,true);await serialSend('NAK '+e.id+' 0 0');}return;
  }
  if(e.type==='chunk'){
   try{
-   const c=current;if(c&&c.id===e.id&&e.seq===c.seq&&e.crc===c.lastCRC&&e.data===c.lastData){await serialSend('ACK '+e.id+' '+e.seq+' '+e.crc);return;}if(!c||c.id!==e.id||e.seq!==c.seq+1)throw Error('数据顺序不匹配');
+   const c=current;if(c&&c.usb==='bin')throw Error('极速传输不应收到文本块');if(c&&c.id===e.id&&e.seq===c.seq&&e.crc===c.lastCRC&&e.data===c.lastData){await serialSend('ACK '+e.id+' '+e.seq+' '+e.crc);return;}if(!c||c.id!==e.id||e.seq!==c.seq+1)throw Error('数据顺序不匹配');
    const data=from64(e.data);const crc=(~crcUpdate(0xffffffff,data))>>>0;if(crc!==(e.crc>>>0)||c.bytes+data.length>c.size)throw Error('数据校验失败');
    if(c.buffered+data.length>c.buffer.length){await c.stream.write(c.buffer.subarray(0,c.buffered));c.buffered=0;}c.buffer.set(data,c.buffered);c.buffered+=data.length;c.crc=crcUpdate(c.crc,data);c.bytes+=data.length;c.seq=e.seq;c.lastCRC=e.crc;c.lastData=e.data;progress(c.name,c.bytes,c.size,c.start);await serialSend('ACK '+e.id+' '+e.seq+' '+crc);
   }catch(err){await abortReceive();message(err.message,true);await serialSend('NAK '+e.id+' '+e.seq+' 0');}return;
@@ -82,16 +116,45 @@ async function onSerial(e){
   if(lastReceipt&&lastReceipt.id===e.id&&lastReceipt.seq===e.seq&&lastReceipt.crc===e.crc){await serialSend('ACK '+e.id+' '+e.seq+' '+e.crc);return;}
   try{
    const c=current;if(!c||c.id!==e.id||e.seq!==c.seq+1||c.bytes!==c.size||((~c.crc)>>>0)!==(e.crc>>>0))throw Error('文件完整性校验未通过');
-   if(c.buffered)await c.stream.write(c.buffer.subarray(0,c.buffered));await c.stream.close();lastReceipt={id:e.id,seq:e.seq,crc:e.crc};current=null;active=false;$('folderButton').disabled=false;history(c.savedName,c.size);$('transferTitle').textContent='已保存到电脑';$('progress').value=100;message('接收完成，文件已保存。');await serialSend('ACK '+e.id+' '+e.seq+' '+(e.crc>>>0));
+   if(c.usb==='bin')await diskChain;if(c.buffered)await c.stream.write(c.buffer.subarray(0,c.buffered));await c.stream.close();lastReceipt={id:e.id,seq:e.seq,crc:e.crc};current=null;active=false;$('folderButton').disabled=false;history(c.savedName,c.size);$('transferTitle').textContent='已保存到电脑';$('progress').value=100;message('接收完成，文件已保存。');await serialSend('ACK '+e.id+' '+e.seq+' '+(e.crc>>>0));
   }catch(err){await abortReceive();message('保存失败：'+err.message,true);await serialSend('NAK '+e.id+' '+e.seq+' 0');}
  }
 }
+function handleBinaryFrame(id,seq,crc,data){
+ const c=current;
+ try{
+  if(!c||c.usb!=='bin'||c.mode!=='extreme')throw Error('当前不是极速传输');
+  if(c.id!==id)throw Error('数据顺序不匹配');
+  if(seq<=c.seq){serialSend('ACK '+id+' '+seq+' '+crc);return;}
+  if(seq!==c.seq+1)throw Error('数据顺序不匹配');
+  const got=(~crcUpdate(0xffffffff,data))>>>0;
+  if(got!==(crc>>>0)||c.bytes+data.length>c.size)throw Error('数据校验失败');
+  if(c.buffered+data.length>c.buffer.length){const slice=c.buffer.slice(0,c.buffered);const stream=c.stream;diskChain=diskChain.then(()=>stream.write(slice)).catch(()=>{});c.buffered=0;}
+  c.buffer.set(data,c.buffered);c.buffered+=data.length;c.crc=crcUpdate(c.crc,data);c.bytes+=data.length;c.seq=seq;c.lastCRC=crc;progress(c.name,c.bytes,c.size,c.start);serialSend('ACK '+id+' '+seq+' '+crc);
+ }catch(err){abortReceive();message(err.message,true);serialSend('NAK '+(id||'0')+' '+(seq||0)+' 0');}
+}
+async function consumeUsb(buf){
+ let o=0;
+ while(o<buf.length){
+  if(buf[o]===13||buf[o]===10){o++;continue;}
+  if(buf[o]===123){let nl=-1;for(let i=o;i<buf.length;i++)if(buf[i]===10){nl=i;break;}if(nl<0)break;const line=new TextDecoder().decode(buf.subarray(o,nl)).trim();o=nl+1;if(line.startsWith('{')){let e;try{e=JSON.parse(line);}catch{continue;}await onSerial(e);}continue;}
+  if(buf.length-o<4)break;
+  if(buf[o]===0x46&&buf[o+1]===0x48&&buf[o+2]===0x42&&buf[o+3]===0x31){
+   if(buf.length-o<31)break;const len=buf[o+13]|(buf[o+14]<<8);if(len>8192)throw Error('USB 块过长');if(buf.length-o<31+len)break;
+   const seq=(buf[o+5]|(buf[o+6]<<8)|(buf[o+7]<<16)|(buf[o+8]<<24))>>>0;const crc=(buf[o+9]|(buf[o+10]<<8)|(buf[o+11]<<16)|(buf[o+12]<<24))>>>0;
+   let id='';for(let i=0;i<16&&buf[o+15+i];i++)id+=String.fromCharCode(buf[o+15+i]);const data=buf.slice(o+31,o+31+len);o+=31+len;handleBinaryFrame(id,seq,crc,data);continue;
+  }
+  let nl=-1;for(let i=o;i<buf.length;i++)if(buf[i]===10){nl=i;break;}if(nl<0){if(buf.length-o>64)throw Error('USB 消息无法识别');break;}o=nl+1;
+ }
+ return o;
+}
 async function readSerial(){
- let text='';
- try{reader=port.readable.getReader();while(true){const {value,done}=await reader.read();if(done)break;text+=new TextDecoder().decode(value);if(text.length>30000&&!text.includes('\n'))throw Error('USB 消息过长');let at;while((at=text.indexOf('\n'))>=0){const line=text.slice(0,at).trim();text=text.slice(at+1);if(line.startsWith('{')){let e;try{e=JSON.parse(line);}catch{continue;}await onSerial(e);}}}}
+ let carry=new Uint8Array(0);
+ try{reader=port.readable.getReader();while(true){const {value,done}=await reader.read();if(done)break;if(!value||!value.length)continue;const buf=new Uint8Array(carry.length+value.length);buf.set(carry,0);buf.set(value,carry.length);const used=await consumeUsb(buf);carry=buf.slice(used);if(carry.length>65536)throw Error('USB 消息过长');}}
  catch(e){message('USB 连接中断：'+e.message,true);}
  finally{clearReverse();if(reader){try{reader.releaseLock();}catch{}reader=null;}clearInterval(heartbeat);await abortReceive();state(false,'USB 已断开，请重新登录');if(authWait){const f=authWait;authWait=null;f(false);}$('loginCard').classList.remove('hidden');$('app').classList.add('hidden');}
 }
+
 async function disconnect(){clearReverse();clearInterval(heartbeat);if(writer){try{await serialSend('LOGOUT');}catch{}try{writer.releaseLock();}catch{}writer=null;}if(reader)try{await reader.cancel();}catch{}if(port)try{await port.close();}catch{}port=null;await abortReceive();}
 // Shared protocol-v2 USB sender and wireless browser download UI.
 let direction=receiveMode?'receive':'send',firmwareProtocol=1,reverseSource=null,offerWait=null,wirelessOffer=null,wirelessDownloading='';
@@ -190,24 +253,24 @@ $('folderButton').onclick=async()=>{try{folder=await showDirectoryPicker({mode:'
 $('file').onchange=updateSend;
 $('sendButton').onclick=async()=>{
  const file=$('file').files[0];if(!file||active||!receiverReady)return;
+ const requested=$('ackMode')?$('ackMode').value:'balanced';
  if(file.size>4294967296||new TextEncoder().encode(file.name).length>240){message('文件超过 4 GiB 或文件名过长',true);return;}
  active=true;cancelRequest=false;pauseRequest=false;isPaused=false;updateSend();$('pauseButton').classList.remove('hidden');$('pauseButton').disabled=false;$('pauseButton').textContent='Ⅱ';$('pauseButton').setAttribute('aria-label','暂停传输');$('pauseButton').title='暂停传输';const started=performance.now();$('transferTitle').textContent='正在发送';message('正在准备电脑接收端…');
  try{
   let offset=0,seq=0,chunk=0;
-  const setAckCapability=n=>{const wrap=$('ackModeWrap');if(wrap)wrap.hidden=n<=8192;if(n<=8192)$('ackMode').value='balanced';};
   if(pendingUpload){
    transferId=pendingUpload.id;
    if(file.name!==pendingUpload.name||file.size!==pendingUpload.size||file.lastModified!==pendingUpload.modified)throw Error('请选择上次的同一个文件继续，或先点击取消清除未完成任务。');
    const state=await retryApi('/api/resume?id='+transferId,undefined,'GET');
    if(state.size!==file.size||state.offset<0||state.offset>file.size||await prefixCRC(file,state.offset)!==state.crc)throw Error('续传文件校验不匹配，请取消后重新发送。');
    if(state.saved){saveUpload(null);history(file.name,file.size);message('电脑已确认保存。');return;}
-   offset=state.offset;seq=state.seq;setAckCapability(state.chunk);chunk=$('ackMode').value==='balanced'?Math.min(state.chunk,8192):state.chunk;
+   if(state.mode){if($('ackMode')&&$('ackMode').value!==state.mode)message('未完成的传输在设备上是'+state.mode+'，已按设备挡位继续');chunk=enforceGear(state,state.mode);}else chunk=state.chunk;offset=state.offset;seq=state.seq;
   }else{
-   const init=await api('/api/start',to64(new TextEncoder().encode(file.name))+'\n'+file.size);
-   transferId=init.id;setAckCapability(init.chunk);chunk=$('ackMode').value==='balanced'?Math.min(init.chunk,8192):init.chunk;saveUpload({id:init.id,name:file.name,size:file.size,modified:file.lastModified});
+   const init=await api('/api/start',to64(new TextEncoder().encode(file.name))+'\n'+file.size+'\n'+requested);
+   transferId=init.id;chunk=enforceGear(init,requested);saveUpload({id:init.id,name:file.name,size:file.size,modified:file.lastModified});
   }
   if(!Number.isInteger(chunk)||chunk<=0||chunk>65536)throw Error('无效的数据块大小');
-  const source={file};progress(file.name,offset,file.size,started);message('正在发送，请保持接收页面和 USB 连接…');
+  const source={file};progress(file.name,offset,file.size,started);message(transferGear==='extreme'?'正在按极速发送。电脑请使用本次固件配套的接收页或离线包。':'正在按'+(GEAR[transferGear]?GEAR[transferGear].label:'当前挡位')+'发送，请保持接收页面和 USB 连接…');
   while(offset<file.size){
    if(cancelRequest)throw Error('已取消传送');
    const data=await bufferedSlice(source,offset,Math.min(chunk,file.size-offset));
@@ -219,7 +282,7 @@ $('sendButton').onclick=async()=>{
  }catch(e){
   if(cancelRequest){if(transferId)await api('/api/cancel?id='+transferId,'').catch(()=>{});saveUpload(null);message('已取消传送');}
   else message(e.message+(pendingUpload?'。已保留续传状态；网络恢复后选择同一文件，点击继续传输。接收网页和 USB 必须保持连接，最长等待 10 分钟。':''),true);
- }finally{active=false;transferId='';pauseRequest=false;$('pauseButton').disabled=false;if(isPaused&&pendingUpload){$('pauseButton').classList.remove('hidden');$('pauseButton').textContent='▶';$('pauseButton').setAttribute('aria-label','继续传输');$('pauseButton').title='继续传输';}else{$('pauseButton').classList.add('hidden');isPaused=false;}updateSend();poll();}
+ }finally{active=false;transferId='';transferGear='';pauseRequest=false;$('pauseButton').disabled=false;if(isPaused&&pendingUpload){$('pauseButton').classList.remove('hidden');$('pauseButton').textContent='▶';$('pauseButton').setAttribute('aria-label','继续传输');$('pauseButton').title='继续传输';}else{$('pauseButton').classList.add('hidden');isPaused=false;}updateSend();poll();}
 };
 $('pauseButton').onclick=()=>{if(receiveMode)return;if(isPaused){isPaused=false;$('pauseButton').textContent='Ⅱ';$('pauseButton').setAttribute('aria-label','暂停传输');$('pauseButton').title='暂停传输';$('sendButton').click();return;}if(!active)return;pauseRequest=true;$('pauseButton').disabled=true;$('pauseButton').textContent='…';$('pauseButton').setAttribute('aria-label','正在暂停');$('pauseButton').title='正在暂停';message('正在完成当前数据块并保存断点…');};
 $('cancelButton').onclick=async()=>{if(reverseSource){await serialSend('RCANCEL').catch(()=>{});message('已请求取消发送');return;}if(receiveMode){try{await serialSend('CANCEL');}catch{}await abortReceive();message('已取消接收');}else{cancelRequest=true;if(!active&&pendingUpload){await api('/api/cancel?id='+pendingUpload.id,'').catch(()=>{});saveUpload(null);updateSend();poll();}message('已请求取消传输');}};
