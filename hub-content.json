@@ -39,7 +39,19 @@
     ],
     "slimits": "The computer browser, not the board, calls the backend. Local 127.0.0.1 refers to that computer. A local ASB backend does not require the computer to join the hub hotspot; a remote backend must be reachable from the computer and allow browser CORS. No stdio process launching, OAuth login, legacy SSE or multi-backend aggregation. One request at a time; large results are limited by firmware. Use search → schema → call instead of exporting the entire catalog. Category availability depends on the installed firmware and backend. Keep real tokens private. Chan end-to-end compatibility must be checked with the installed firmware.",
     "example": "Backend JSON example — replace URL and authentication with your service’s values.",
-    "flow": "Connection path"
+    "flow": "Connection path",
+    "subTitle": "Subscribe to StackHub",
+    "subIntro": "One device, one subscription. Enter the device ID copied from StackHub Bridge, or arrive with the ID automatically filled in. The 24-character recovery code is entered only at checkout.",
+    "subLabel": "Device ID (Product ID)",
+    "subGo": "Continue to secure checkout",
+    "subCopy": "Copy purchase link",
+    "subHelp": "Connect and authenticate the USB device in StackHub Bridge. Copy its device ID; do not put the recovery code in a link.",
+    "subTest": "Test checkout: $6/month, no real payment or charge. Device activation is required for entitlement.",
+    "subInvalid": "Please enter a valid StackHub device ID, such as stackhub-0123456789abcdef.",
+    "subCopied": "Purchase link copied. You can open it on another device.",
+    "subCopyFailed": "Could not copy automatically. Select and copy this link: ",
+    "subAction": "Official subscription checkout",
+    "subPending": "Subscription testing is available for $6/month in Creem test mode. No real charges are made. Hardware purchase inquiries remain separate."
   },
   "zh": {
     "home": "三个 Hub，各司其职。",
@@ -81,7 +93,19 @@
     ],
     "slimits": "后端请求由电脑浏览器执行，不是板子直连；127.0.0.1 指 USB 所连电脑。本地 ASB 不要求电脑接入 Hub 热点；远端服务须能从电脑访问，并允许浏览器跨域。当前不支持 stdio 启动进程、OAuth 登录、旧式 SSE 或多后端聚合。一次一个请求，大结果受固件消息上限限制。优先搜索 → 获取参数 → 调用，避免把全部工具目录塞给 Chan；分类能力以所装固件和后端为准。不要公开真实 token。完整 Chan 链路须以所装固件实测为准。",
     "example": "后端 JSON 示例：将地址和认证替换为你的服务实际值。",
-    "flow": "连接关系"
+    "flow": "连接关系",
+    "subTitle": "StackHub 设备订阅",
+    "subIntro": "每台设备对应一份订阅。可粘贴 Bridge 中复制的设备 ID，或从 Bridge 跳转自动带入。24 位恢复码仅在结账页面输入。",
+    "subLabel": "设备 ID（产品 ID）",
+    "subGo": "前往安全结账",
+    "subCopy": "复制官网购买链接",
+    "subHelp": "在 StackHub Bridge 中连接并认证 USB，然后复制设备 ID。不要将恢复码放入链接。",
+    "subTest": "测试结账：每月 6 美元，不会产生真实扣款；开通权益需要先激活设备。",
+    "subInvalid": "请输入有效设备 ID，例如 stackhub-0123456789abcdef。",
+    "subCopied": "官网购买链接已复制，可在其他设备打开。",
+    "subCopyFailed": "无法自动复制，请手工复制以下链接：",
+    "subAction": "官网订阅",
+    "subPending": "订阅结账正在测试中，Creem 测试价每月 6 美元，不产生真实扣款；硬件购买咨询仍单独处理。"
   },
   "ja": {
     "home": "3つの Hub。用途に合わせて。",
@@ -123,7 +147,19 @@
     ],
     "slimits": "バックエンドはパソコンのブラウザーが呼び出します。127.0.0.1はそのパソコンです。リモートサービスには到達性とCORSが必要。stdio、OAuth、旧SSE、複数バックエンド集約は非対応。1要求ずつ、結果サイズは固件依存。全ツールを渡さず検索→スキーマ→呼出し。カテゴリは固件とサービスに依存。トークンは非公開に。Chan全経路は実機で確認してください。",
     "example": "バックエンドJSON例：URLと認証値を置き換えてください。",
-    "flow": "接続経路"
+    "flow": "接続経路",
+    "subTitle": "StackHub デバイスサブスクリプション",
+    "subIntro": "1 台のデバイスにつき 1 件のサブスクリプション。Bridge でコピーしたデバイス ID を貼り付けるか、Bridge から自動入力してください。24 桁の復旧コードは決済画面でのみ入力します。",
+    "subLabel": "デバイス ID（製品 ID）",
+    "subGo": "安全な決済ページへ",
+    "subCopy": "購入リンクをコピー",
+    "subHelp": "StackHub Bridge で USB 接続と認証を行い、デバイス ID をコピーしてください。復旧コードを URL に含めないでください。",
+    "subTest": "テスト決済：月額 6 米ドル。実際の請求はありません。利用権限にはデバイスの有効化が必要です。",
+    "subInvalid": "正しいデバイス ID を入力してください（例：stackhub-0123456789abcdef）。",
+    "subCopied": "公式購入リンクをコピーしました。別の端末で開けます。",
+    "subCopyFailed": "自動コピーできません。次のリンクをコピーしてください：",
+    "subAction": "公式サブスクリプション",
+    "subPending": "月額 6 米ドルの Creem テスト決済を実施中です。実際の請求はありません。ハードウェア購入の問い合わせは別途受け付けます。"
   },
   "de": {
     "home": "Drei Hubs. Drei klare Aufgaben.",
@@ -165,7 +201,19 @@
     ],
     "slimits": "Das Backend wird vom Computerbrowser angesprochen. 127.0.0.1 bezeichnet diesen Computer. Remote-Dienste müssen erreichbar sein und CORS erlauben. Kein stdio, OAuth, altes SSE oder mehrere Backends gleichzeitig. Eine Anfrage gleichzeitig; Ergebnisgröße firmwareabhängig. Suchen → Schema → Aufrufen statt Gesamtkatalog. Kategorien hängen von Firmware und Backend ab. Tokens geheim halten. Chan-Ende-zu-Ende-Verbindung am Gerät prüfen.",
     "example": "Backend-JSON: URL und Authentifizierung durch eigene Werte ersetzen.",
-    "flow": "Verbindungsweg"
+    "flow": "Verbindungsweg",
+    "subTitle": "StackHub-Geräteabo",
+    "subIntro": "Ein Abonnement pro Gerät. Geräte-ID aus StackHub Bridge einfügen oder über den Bridge-Link automatisch übernehmen. Der 24-stellige Wiederherstellungscode wird erst beim Checkout eingegeben.",
+    "subLabel": "Geräte-ID (Produkt-ID)",
+    "subGo": "Zum sicheren Checkout",
+    "subCopy": "Kauflink kopieren",
+    "subHelp": "USB-Gerät in StackHub Bridge verbinden und authentifizieren, dann Geräte-ID kopieren. Wiederherstellungscode niemals in URLs einfügen.",
+    "subTest": "Test-Checkout: 6 USD/Monat, keine echten Zahlungen. Gerät muss für die Freischaltung aktiviert sein.",
+    "subInvalid": "Bitte gültige Geräte-ID eingeben, z. B. stackhub-0123456789abcdef.",
+    "subCopied": "Offizieller Kauflink kopiert; auf anderem Gerät öffnen.",
+    "subCopyFailed": "Kopieren fehlgeschlagen. Diesen Link manuell kopieren: ",
+    "subAction": "Offizielles Abonnement",
+    "subPending": "Der Creem-Test-Checkout für 6 USD/Monat ist aktiv, ohne echte Abbuchungen. Hardware-Anfragen bleiben separat."
   },
   "fr": {
     "home": "Trois hubs. Trois usages.",
@@ -207,7 +255,19 @@
     ],
     "slimits": "Le navigateur du PC appelle le backend ; 127.0.0.1 désigne ce PC. Un service distant doit être accessible et autoriser CORS. Pas de stdio, OAuth, ancien SSE ou agrégation de backends. Une requête à la fois ; taille limitée par le firmware. Recherche → schéma → appel plutôt que catalogue complet. Catégories selon firmware/backend. Ne partagez pas les jetons. Vérifiez le parcours Chan complet sur matériel.",
     "example": "Exemple JSON : remplacez l’URL et l’authentification.",
-    "flow": "Chemin de connexion"
+    "flow": "Chemin de connexion",
+    "subTitle": "Abonnement StackHub",
+    "subIntro": "Un abonnement par appareil. Collez l’identifiant copié depuis StackHub Bridge ou ouvrez le lien du Bridge pour le préremplir. Le code de récupération à 24 caractères n’est saisi qu’au paiement.",
+    "subLabel": "Identifiant appareil (ID produit)",
+    "subGo": "Accéder au paiement sécurisé",
+    "subCopy": "Copier le lien d’achat",
+    "subHelp": "Connectez et authentifiez l’appareil USB dans StackHub Bridge, puis copiez son identifiant. Ne mettez jamais le code de récupération dans l’URL.",
+    "subTest": "Paiement test : 6 USD/mois, aucun débit réel. L’appareil doit être activé pour bénéficier des droits.",
+    "subInvalid": "Saisissez un identifiant valide, par ex. stackhub-0123456789abcdef.",
+    "subCopied": "Lien officiel copié, à ouvrir sur un autre appareil.",
+    "subCopyFailed": "Copie impossible. Copiez manuellement ce lien : ",
+    "subAction": "Abonnement officiel",
+    "subPending": "Le paiement Creem est en test à 6 USD/mois, sans débit réel. Les demandes d’achat du matériel restent séparées."
   },
   "ko": {
     "home": "세 가지 Hub, 세 가지 역할.",
@@ -249,7 +309,19 @@
     ],
     "slimits": "컴퓨터 브라우저가 백엔드를 호출합니다. 127.0.0.1은 해당 컴퓨터입니다. 원격 서비스에는 접근성과 CORS가 필요합니다. stdio, OAuth, 구형 SSE, 다중 백엔드 통합은 미지원입니다. 한 번에 한 요청, 결과 크기는 펌웨어 제한을 받습니다. 전체 도구 대신 검색→스키마→호출을 사용하세요. 분류 기능은 펌웨어와 서비스에 따라 다릅니다. 토큰을 공개하지 마세요. Chan 전체 경로는 실기 검증이 필요합니다.",
     "example": "백엔드 JSON 예: 주소와 인증을 실제 값으로 바꾸세요.",
-    "flow": "연결 경로"
+    "flow": "연결 경로",
+    "subTitle": "StackHub 기기 구독",
+    "subIntro": "기기당 하나의 구독입니다. StackHub Bridge에서 복사한 기기 ID를 붙여넣거나 Bridge 링크로 자동 입력할 수 있습니다. 24자리 복구 코드는 결제 페이지에서만 입력하세요.",
+    "subLabel": "기기 ID (제품 ID)",
+    "subGo": "안전한 결제 페이지로",
+    "subCopy": "구매 링크 복사",
+    "subHelp": "StackHub Bridge에서 USB 연결 및 인증 후 기기 ID를 복사하세요. 복구 코드를 링크에 포함하지 마세요.",
+    "subTest": "테스트 결제: 월 미화 6달러, 실제 결제 없음. 구독 권한을 받으려면 기기 활성화가 필요합니다.",
+    "subInvalid": "올바른 기기 ID를 입력하세요. 예: stackhub-0123456789abcdef.",
+    "subCopied": "공식 구매 링크를 복사했습니다. 다른 기기에서 열 수 있습니다.",
+    "subCopyFailed": "자동 복사 실패. 다음 링크를 직접 복사하세요: ",
+    "subAction": "공식 구독",
+    "subPending": "Creem 테스트 결제가 월 6달러로 운영 중이며 실제 청구되지 않습니다. 하드웨어 구매 문의는 별도로 받습니다."
   },
   "ar": {
     "home": "ثلاثة أجهزة Hub. ثلاث مهام.",
@@ -291,6 +363,18 @@
     ],
     "slimits": "متصفح الحاسوب هو من يستدعي الخدمة، و127.0.0.1 يعني ذلك الحاسوب. تحتاج الخدمة البعيدة إلى قابلية الوصول وCORS. لا دعم لـstdio أو OAuth أو SSE القديم أو تجميع عدة خدمات. طلب واحد في كل مرة وحدود الحجم حسب البرنامج الثابت. استخدم البحث ثم المخطط ثم الاستدعاء بدلاً من الكتالوج الكامل. التصنيفات حسب البرنامج والخدمة. لا تنشر الرموز. تحقق من مسار Chan الكامل على الجهاز.",
     "example": "مثال JSON: استبدل العنوان والمصادقة بقيم خدمتك.",
-    "flow": "مسار الاتصال"
+    "flow": "مسار الاتصال",
+    "subTitle": "اشتراك جهاز StackHub",
+    "subIntro": "اشتراك واحد لكل جهاز. الصق معرّف الجهاز المنسوخ من StackHub Bridge أو افتح الرابط من Bridge لملئه تلقائياً. أدخل رمز الاستعادة المكون من 24 حرفاً في صفحة الدفع فقط.",
+    "subLabel": "معرّف الجهاز (معرّف المنتج)",
+    "subGo": "المتابعة إلى الدفع الآمن",
+    "subCopy": "نسخ رابط الشراء",
+    "subHelp": "وصّل جهاز USB وصادق عليه في StackHub Bridge ثم انسخ معرّف الجهاز. لا تضع رمز الاستعادة في الرابط.",
+    "subTest": "دفع تجريبي: 6 دولارات شهرياً دون خصم حقيقي. يلزم تفعيل الجهاز للحصول على المزايا.",
+    "subInvalid": "أدخل معرّفاً صالحاً مثل stackhub-0123456789abcdef.",
+    "subCopied": "تم نسخ رابط الشراء الرسمي. يمكنك فتحه على جهاز آخر.",
+    "subCopyFailed": "تعذر النسخ آلياً. انسخ هذا الرابط يدوياً: ",
+    "subAction": "الاشتراك الرسمي",
+    "subPending": "يجري اختبار الدفع عبر Creem بسعر 6 دولارات شهرياً دون خصم فعلي. تبقى استفسارات شراء الجهاز منفصلة."
   }
 }
