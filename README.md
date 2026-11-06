@@ -72,3 +72,7 @@ Primary EN keywords: Wi‑Fi hotspot remote, phone as mouse/keyboard/pressure pe
 ## USB file receiver
 
 Dedicated file-transfer firmware receiver: `/transfer/` (see `transfer/README.md`). Open `transfer/index.html` locally or serve via HTTPS.
+
+## Three-product visual identity (2026-11-06)
+
+Shared pill-button and card geometry: StackHub purple, FlexHub orange, TransferHub grey. Original FlexHub checkout preserved. StackHub copy: stackhub-marketing.json; renderer: tools/stackhub_page.py; public price sync: stackhub-pricing.js. Run python3 tools/build_hubs.py to regenerate. Software pricing excludes separately sold hardware.

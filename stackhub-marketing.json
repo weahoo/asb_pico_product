@@ -1,0 +1,457 @@
+{
+  "zh": {
+    "headline": "让离线电脑，也能获得 AI 能力。",
+    "subhead": "纵向连接受限环境，横向连接不同 AI。访问边界由你决定。",
+    "intro": "StackHub 是独立联网的 USB AI 硬件桥梁。目标电脑无需连接互联网、Wi‑Fi 或以太网，即可通过本地 Bridge 使用获授权的 AI 工具能力。",
+    "features": [
+      "离线目标电脑",
+      "按需开放 MCP 工具",
+      "跨 AI 与桌面机器人"
+    ],
+    "vertical": "纵向 · 让 AI 进入受限环境",
+    "verticalDesc": "实验室、工厂、企业内网等不允许目标电脑连接互联网的环境，也可以在组织允许的前提下，让 AI 使用选定的本地工具。StackHub 自己使用独立 Wi‑Fi 上行。",
+    "horizontal": "横向 · 一套桥接，多种 AI",
+    "horizontalDesc": "从支持 MCP 的 Claude 等 AI，到兼容的 StackChan 系列桌面机器人，跨平台复用同一套设备、桌面 Bridge 和工具配置。Apple Shortcuts / Siri 计划后续接入。",
+    "scenariosTitle": "你可以拿 StackHub 做什么？",
+    "scenarios": [
+      [
+        "隔离电脑上的 AI 能力",
+        "目标电脑不接互联网。AI 通过 StackHub 访问事先配置、获授权的 MCP 工具，省去为电脑开放外网的需求。"
+      ],
+      [
+        "敏感数据的受控访问",
+        "由用户决定可供调用的工具、目录和数据范围；可配置本地脱敏规则。仍存在跨 USB 的数据交换，不能宣称零泄露或绝对隔离。"
+      ],
+      [
+        "工作记忆与自动化",
+        "让 AI 查找 Memory MCP 已保存的项目笔记、决策和背景；按需调用授权的本地工具及 ASB 流程。"
+      ],
+      [
+        "StackChan 桌面机器人",
+        "在兼容设备上切换到 StackChan 模式，连接桌面机器人对应的 AI/MCP 工作流。"
+      ]
+    ],
+    "stepsTitle": "只需三步",
+    "steps": [
+      "配置 StackHub 自身的 Wi‑Fi 并连接电脑 USB。",
+      "启动本地桌面 Bridge，绑定设备，安装 Memory MCP 或配置已有工具。",
+      "用支持 MCP 的 AI 调用授权工具；或切换兼容 StackChan 模式。"
+    ],
+    "siri": "Apple Shortcuts / Siri — Coming Soon",
+    "siriDesc": "计划通过快捷指令或 Siri 触发已授权的 AI 工作流和共享记忆。此功能尚未交付。",
+    "priceTitle": "软件套餐与价格",
+    "priceIntro": "使用已激活的硬件可从免费档开始。需要更多调用或更大消息时，可以一次性购买 Basic / Pro，有效期可选 1、3、12 个月，购买后不会自动续费。",
+    "free": "Free 免费版",
+    "basic": "Basic 基础版",
+    "pro": "Pro 专业版",
+    "month": "月",
+    "calls": "次调用／月",
+    "periods": [
+      "1 个月",
+      "3 个月",
+      "1 年"
+    ],
+    "size": "单次消息上限",
+    "hardwareWarning": "重要：以下价格只包括 StackHub 软件服务，**不包含实体硬件**。使用前必须单独购买并激活 StackHub 设备。",
+    "priceNote": "美元为固定商品价格；人民币仅按约定 1 USD = 6 元换算供参考，实际扣款以结账页显示为准。当前 Creem 仍在测试模式。",
+    "buyPlan": "查看套餐并购买",
+    "hardwareBtn": "咨询购买 StackHub 硬件",
+    "guideBtn": "安装使用指南",
+    "already": "已有 StackHub 设备？",
+    "alreadyDesc": "输入桌面 Bridge 提供的设备 ID，可直接前往 Billing 选择购买期限。24 位恢复码只在 Billing 页面输入。",
+    "security": "安全说明：目标电脑本身可以不联网，但 StackHub 通过 USB 与它交换数据、通过独立 Wi‑Fi 连通外部服务。这不是零数据交换的物理空气隔离，是否接入需遵守组织的 USB 与数据安全政策。脱敏和访问限制也不能替代企业安全审查。",
+    "invalid": "请输入有效的设备 ID（stackhub- 加 16 位字符）。",
+    "copied": "设备购买链接已复制。",
+    "failed": "无法自动复制，请手动复制。"
+  },
+  "en": {
+    "headline": "Bring AI to offline computers.",
+    "subhead": "Across security boundaries. Across AI platforms. On your terms.",
+    "intro": "StackHub is an independently connected USB AI hardware bridge. Your target computer needs no direct internet, Wi‑Fi or Ethernet connection to use authorized AI tool capabilities through a local desktop Bridge.",
+    "features": [
+      "Offline target PC",
+      "Choose authorized MCP tools",
+      "AI and desktop robots"
+    ],
+    "vertical": "Vertical · AI for restricted environments",
+    "verticalDesc": "Bring selected AI tool capabilities to labs, factories and protected workplaces where the target PC is not allowed online—provided your security policy permits this USB bridge. StackHub has its own Wi‑Fi uplink.",
+    "horizontal": "Horizontal · One bridge, multiple AIs",
+    "horizontalDesc": "From MCP-compatible AI such as Claude to supported StackChan-series desktop robots, reuse device identity, desktop Bridge and tools across platforms. Apple Shortcuts / Siri is planned.",
+    "scenariosTitle": "What can you do with StackHub?",
+    "scenarios": [
+      [
+        "AI tools on offline computers",
+        "The target computer stays off the internet. Authorized AI reaches only configured MCP tools through the StackHub bridge."
+      ],
+      [
+        "Controlled access to sensitive data",
+        "Choose the tools, directories and data scopes that can be accessed. Optional local redaction can help. USB data exchange still occurs; this does not guarantee no leaks or a full air gap."
+      ],
+      [
+        "Work memory and automation",
+        "Look up project notes and decisions saved in Memory MCP, or call authorized local tools and ASB workflows."
+      ],
+      [
+        "StackChan desktop robots",
+        "Switch compatible hardware into StackChan mode to connect a desktop robot to its AI/MCP workflow."
+      ]
+    ],
+    "stepsTitle": "Three steps to get started",
+    "steps": [
+      "Configure StackHub's own Wi‑Fi and connect it to the target computer by USB.",
+      "Open local desktop Bridge, bind the device and install Memory MCP or configure existing tools.",
+      "Use compatible AI to call authorized tools, or switch to StackChan mode."
+    ],
+    "siri": "Apple Shortcuts / Siri — Coming Soon",
+    "siriDesc": "Planned: trigger authorized AI workflows and shared memory via Siri and Apple Shortcuts. Not yet available.",
+    "priceTitle": "Software plans and pricing",
+    "priceIntro": "Start with Free after hardware activation. Upgrade to Basic or Pro for more calls and larger messages. One-time, non-renewing terms: 1, 3 or 12 months.",
+    "free": "Free",
+    "basic": "Basic",
+    "pro": "Pro",
+    "month": "mo",
+    "calls": "calls / month",
+    "periods": [
+      "1 month",
+      "3 months",
+      "1 year"
+    ],
+    "size": "Per-message limit",
+    "hardwareWarning": "Important: These prices cover the StackHub software service only. The physical StackHub device is **not included** and must be purchased and activated separately.",
+    "priceNote": "Fixed USD product prices. CNY estimates use the illustrative 1 USD = 6 CNY rate. Checkout shows the actual charges. Creem checkout is currently in test mode.",
+    "buyPlan": "View plans / Buy",
+    "hardwareBtn": "Enquire about StackHub hardware",
+    "guideBtn": "Setup guide",
+    "already": "Already own a StackHub?",
+    "alreadyDesc": "Enter the device ID shown in desktop Bridge to open Billing and choose your term. Enter the 24-character recovery code only in Billing.",
+    "security": "Security note: the target computer may have no network connection, but StackHub exchanges data with it over USB and uses its own Wi‑Fi uplink. This is not a zero-exchange air gap. Follow your organization's USB and data policies; redaction and tool permissions are not a substitute for a security review.",
+    "invalid": "Enter a valid device ID (stackhub- plus 16 characters).",
+    "copied": "Link copied.",
+    "failed": "Could not copy automatically; copy it manually."
+  },
+  "ja": {
+    "headline": "オフラインのPCにもAIの力を。",
+    "subhead": "環境を越え、AIを越え、アクセスはあなたが制御。",
+    "intro": "StackHub is an independently connected USB AI hardware bridge. Your target computer needs no direct internet, Wi‑Fi or Ethernet connection to use authorized AI tool capabilities through a local desktop Bridge.",
+    "features": [
+      "Offline target PC",
+      "Choose authorized MCP tools",
+      "AI and desktop robots"
+    ],
+    "vertical": "Vertical · AI for restricted environments",
+    "verticalDesc": "Bring selected AI tool capabilities to labs, factories and protected workplaces where the target PC is not allowed online—provided your security policy permits this USB bridge. StackHub has its own Wi‑Fi uplink.",
+    "horizontal": "Horizontal · One bridge, multiple AIs",
+    "horizontalDesc": "From MCP-compatible AI such as Claude to supported StackChan-series desktop robots, reuse device identity, desktop Bridge and tools across platforms. Apple Shortcuts / Siri is planned.",
+    "scenariosTitle": "What can you do with StackHub?",
+    "scenarios": [
+      [
+        "AI tools on offline computers",
+        "The target computer stays off the internet. Authorized AI reaches only configured MCP tools through the StackHub bridge."
+      ],
+      [
+        "Controlled access to sensitive data",
+        "Choose the tools, directories and data scopes that can be accessed. Optional local redaction can help. USB data exchange still occurs; this does not guarantee no leaks or a full air gap."
+      ],
+      [
+        "Work memory and automation",
+        "Look up project notes and decisions saved in Memory MCP, or call authorized local tools and ASB workflows."
+      ],
+      [
+        "StackChan desktop robots",
+        "Switch compatible hardware into StackChan mode to connect a desktop robot to its AI/MCP workflow."
+      ]
+    ],
+    "stepsTitle": "Three steps to get started",
+    "steps": [
+      "Configure StackHub's own Wi‑Fi and connect it to the target computer by USB.",
+      "Open local desktop Bridge, bind the device and install Memory MCP or configure existing tools.",
+      "Use compatible AI to call authorized tools, or switch to StackChan mode."
+    ],
+    "siri": "Apple Shortcuts / Siri — Coming Soon",
+    "siriDesc": "Planned: trigger authorized AI workflows and shared memory via Siri and Apple Shortcuts. Not yet available.",
+    "priceTitle": "Software plans and pricing",
+    "priceIntro": "Start with Free after hardware activation. Upgrade to Basic or Pro for more calls and larger messages. One-time, non-renewing terms: 1, 3 or 12 months.",
+    "free": "Free",
+    "basic": "Basic",
+    "pro": "Pro",
+    "month": "mo",
+    "calls": "calls / month",
+    "periods": [
+      "1 month",
+      "3 months",
+      "1 year"
+    ],
+    "size": "Per-message limit",
+    "hardwareWarning": "重要：この価格はソフトウェアサービスのみです。StackHub本体は含まれず、別途購入・有効化が必要です。",
+    "priceNote": "Fixed USD product prices. CNY estimates use the illustrative 1 USD = 6 CNY rate. Checkout shows the actual charges. Creem checkout is currently in test mode.",
+    "buyPlan": "View plans / Buy",
+    "hardwareBtn": "Enquire about StackHub hardware",
+    "guideBtn": "Setup guide",
+    "already": "Already own a StackHub?",
+    "alreadyDesc": "Enter the device ID shown in desktop Bridge to open Billing and choose your term. Enter the 24-character recovery code only in Billing.",
+    "security": "Security note: the target computer may have no network connection, but StackHub exchanges data with it over USB and uses its own Wi‑Fi uplink. This is not a zero-exchange air gap. Follow your organization's USB and data policies; redaction and tool permissions are not a substitute for a security review.",
+    "invalid": "Enter a valid device ID (stackhub- plus 16 characters).",
+    "copied": "Link copied.",
+    "failed": "Could not copy automatically; copy it manually."
+  },
+  "de": {
+    "headline": "KI auch für Offline-Computer.",
+    "subhead": "Über Systemgrenzen und KI-Plattformen hinweg – Sie behalten die Kontrolle.",
+    "intro": "StackHub is an independently connected USB AI hardware bridge. Your target computer needs no direct internet, Wi‑Fi or Ethernet connection to use authorized AI tool capabilities through a local desktop Bridge.",
+    "features": [
+      "Offline target PC",
+      "Choose authorized MCP tools",
+      "AI and desktop robots"
+    ],
+    "vertical": "Vertical · AI for restricted environments",
+    "verticalDesc": "Bring selected AI tool capabilities to labs, factories and protected workplaces where the target PC is not allowed online—provided your security policy permits this USB bridge. StackHub has its own Wi‑Fi uplink.",
+    "horizontal": "Horizontal · One bridge, multiple AIs",
+    "horizontalDesc": "From MCP-compatible AI such as Claude to supported StackChan-series desktop robots, reuse device identity, desktop Bridge and tools across platforms. Apple Shortcuts / Siri is planned.",
+    "scenariosTitle": "What can you do with StackHub?",
+    "scenarios": [
+      [
+        "AI tools on offline computers",
+        "The target computer stays off the internet. Authorized AI reaches only configured MCP tools through the StackHub bridge."
+      ],
+      [
+        "Controlled access to sensitive data",
+        "Choose the tools, directories and data scopes that can be accessed. Optional local redaction can help. USB data exchange still occurs; this does not guarantee no leaks or a full air gap."
+      ],
+      [
+        "Work memory and automation",
+        "Look up project notes and decisions saved in Memory MCP, or call authorized local tools and ASB workflows."
+      ],
+      [
+        "StackChan desktop robots",
+        "Switch compatible hardware into StackChan mode to connect a desktop robot to its AI/MCP workflow."
+      ]
+    ],
+    "stepsTitle": "Three steps to get started",
+    "steps": [
+      "Configure StackHub's own Wi‑Fi and connect it to the target computer by USB.",
+      "Open local desktop Bridge, bind the device and install Memory MCP or configure existing tools.",
+      "Use compatible AI to call authorized tools, or switch to StackChan mode."
+    ],
+    "siri": "Apple Shortcuts / Siri — Coming Soon",
+    "siriDesc": "Planned: trigger authorized AI workflows and shared memory via Siri and Apple Shortcuts. Not yet available.",
+    "priceTitle": "Software plans and pricing",
+    "priceIntro": "Start with Free after hardware activation. Upgrade to Basic or Pro for more calls and larger messages. One-time, non-renewing terms: 1, 3 or 12 months.",
+    "free": "Free",
+    "basic": "Basic",
+    "pro": "Pro",
+    "month": "mo",
+    "calls": "calls / month",
+    "periods": [
+      "1 month",
+      "3 months",
+      "1 year"
+    ],
+    "size": "Per-message limit",
+    "hardwareWarning": "Wichtig: Die Preise gelten nur für die Software. Das StackHub-Gerät ist nicht enthalten und muss separat gekauft und aktiviert werden.",
+    "priceNote": "Fixed USD product prices. CNY estimates use the illustrative 1 USD = 6 CNY rate. Checkout shows the actual charges. Creem checkout is currently in test mode.",
+    "buyPlan": "View plans / Buy",
+    "hardwareBtn": "Enquire about StackHub hardware",
+    "guideBtn": "Setup guide",
+    "already": "Already own a StackHub?",
+    "alreadyDesc": "Enter the device ID shown in desktop Bridge to open Billing and choose your term. Enter the 24-character recovery code only in Billing.",
+    "security": "Security note: the target computer may have no network connection, but StackHub exchanges data with it over USB and uses its own Wi‑Fi uplink. This is not a zero-exchange air gap. Follow your organization's USB and data policies; redaction and tool permissions are not a substitute for a security review.",
+    "invalid": "Enter a valid device ID (stackhub- plus 16 characters).",
+    "copied": "Link copied.",
+    "failed": "Could not copy automatically; copy it manually."
+  },
+  "fr": {
+    "headline": "L'IA même sur les ordinateurs hors ligne.",
+    "subhead": "Au-delà des environnements et des plateformes d'IA, sous votre contrôle.",
+    "intro": "StackHub is an independently connected USB AI hardware bridge. Your target computer needs no direct internet, Wi‑Fi or Ethernet connection to use authorized AI tool capabilities through a local desktop Bridge.",
+    "features": [
+      "Offline target PC",
+      "Choose authorized MCP tools",
+      "AI and desktop robots"
+    ],
+    "vertical": "Vertical · AI for restricted environments",
+    "verticalDesc": "Bring selected AI tool capabilities to labs, factories and protected workplaces where the target PC is not allowed online—provided your security policy permits this USB bridge. StackHub has its own Wi‑Fi uplink.",
+    "horizontal": "Horizontal · One bridge, multiple AIs",
+    "horizontalDesc": "From MCP-compatible AI such as Claude to supported StackChan-series desktop robots, reuse device identity, desktop Bridge and tools across platforms. Apple Shortcuts / Siri is planned.",
+    "scenariosTitle": "What can you do with StackHub?",
+    "scenarios": [
+      [
+        "AI tools on offline computers",
+        "The target computer stays off the internet. Authorized AI reaches only configured MCP tools through the StackHub bridge."
+      ],
+      [
+        "Controlled access to sensitive data",
+        "Choose the tools, directories and data scopes that can be accessed. Optional local redaction can help. USB data exchange still occurs; this does not guarantee no leaks or a full air gap."
+      ],
+      [
+        "Work memory and automation",
+        "Look up project notes and decisions saved in Memory MCP, or call authorized local tools and ASB workflows."
+      ],
+      [
+        "StackChan desktop robots",
+        "Switch compatible hardware into StackChan mode to connect a desktop robot to its AI/MCP workflow."
+      ]
+    ],
+    "stepsTitle": "Three steps to get started",
+    "steps": [
+      "Configure StackHub's own Wi‑Fi and connect it to the target computer by USB.",
+      "Open local desktop Bridge, bind the device and install Memory MCP or configure existing tools.",
+      "Use compatible AI to call authorized tools, or switch to StackChan mode."
+    ],
+    "siri": "Apple Shortcuts / Siri — Coming Soon",
+    "siriDesc": "Planned: trigger authorized AI workflows and shared memory via Siri and Apple Shortcuts. Not yet available.",
+    "priceTitle": "Software plans and pricing",
+    "priceIntro": "Start with Free after hardware activation. Upgrade to Basic or Pro for more calls and larger messages. One-time, non-renewing terms: 1, 3 or 12 months.",
+    "free": "Free",
+    "basic": "Basic",
+    "pro": "Pro",
+    "month": "mo",
+    "calls": "calls / month",
+    "periods": [
+      "1 month",
+      "3 months",
+      "1 year"
+    ],
+    "size": "Per-message limit",
+    "hardwareWarning": "Important : ces prix concernent uniquement le service logiciel. Le matériel StackHub doit être acheté et activé séparément.",
+    "priceNote": "Fixed USD product prices. CNY estimates use the illustrative 1 USD = 6 CNY rate. Checkout shows the actual charges. Creem checkout is currently in test mode.",
+    "buyPlan": "View plans / Buy",
+    "hardwareBtn": "Enquire about StackHub hardware",
+    "guideBtn": "Setup guide",
+    "already": "Already own a StackHub?",
+    "alreadyDesc": "Enter the device ID shown in desktop Bridge to open Billing and choose your term. Enter the 24-character recovery code only in Billing.",
+    "security": "Security note: the target computer may have no network connection, but StackHub exchanges data with it over USB and uses its own Wi‑Fi uplink. This is not a zero-exchange air gap. Follow your organization's USB and data policies; redaction and tool permissions are not a substitute for a security review.",
+    "invalid": "Enter a valid device ID (stackhub- plus 16 characters).",
+    "copied": "Link copied.",
+    "failed": "Could not copy automatically; copy it manually."
+  },
+  "ko": {
+    "headline": "오프라인 컴퓨터에도 AI 기능을.",
+    "subhead": "환경과 AI 플랫폼을 넘어서, 접근 권한은 사용자에게.",
+    "intro": "StackHub is an independently connected USB AI hardware bridge. Your target computer needs no direct internet, Wi‑Fi or Ethernet connection to use authorized AI tool capabilities through a local desktop Bridge.",
+    "features": [
+      "Offline target PC",
+      "Choose authorized MCP tools",
+      "AI and desktop robots"
+    ],
+    "vertical": "Vertical · AI for restricted environments",
+    "verticalDesc": "Bring selected AI tool capabilities to labs, factories and protected workplaces where the target PC is not allowed online—provided your security policy permits this USB bridge. StackHub has its own Wi‑Fi uplink.",
+    "horizontal": "Horizontal · One bridge, multiple AIs",
+    "horizontalDesc": "From MCP-compatible AI such as Claude to supported StackChan-series desktop robots, reuse device identity, desktop Bridge and tools across platforms. Apple Shortcuts / Siri is planned.",
+    "scenariosTitle": "What can you do with StackHub?",
+    "scenarios": [
+      [
+        "AI tools on offline computers",
+        "The target computer stays off the internet. Authorized AI reaches only configured MCP tools through the StackHub bridge."
+      ],
+      [
+        "Controlled access to sensitive data",
+        "Choose the tools, directories and data scopes that can be accessed. Optional local redaction can help. USB data exchange still occurs; this does not guarantee no leaks or a full air gap."
+      ],
+      [
+        "Work memory and automation",
+        "Look up project notes and decisions saved in Memory MCP, or call authorized local tools and ASB workflows."
+      ],
+      [
+        "StackChan desktop robots",
+        "Switch compatible hardware into StackChan mode to connect a desktop robot to its AI/MCP workflow."
+      ]
+    ],
+    "stepsTitle": "Three steps to get started",
+    "steps": [
+      "Configure StackHub's own Wi‑Fi and connect it to the target computer by USB.",
+      "Open local desktop Bridge, bind the device and install Memory MCP or configure existing tools.",
+      "Use compatible AI to call authorized tools, or switch to StackChan mode."
+    ],
+    "siri": "Apple Shortcuts / Siri — Coming Soon",
+    "siriDesc": "Planned: trigger authorized AI workflows and shared memory via Siri and Apple Shortcuts. Not yet available.",
+    "priceTitle": "Software plans and pricing",
+    "priceIntro": "Start with Free after hardware activation. Upgrade to Basic or Pro for more calls and larger messages. One-time, non-renewing terms: 1, 3 or 12 months.",
+    "free": "Free",
+    "basic": "Basic",
+    "pro": "Pro",
+    "month": "mo",
+    "calls": "calls / month",
+    "periods": [
+      "1 month",
+      "3 months",
+      "1 year"
+    ],
+    "size": "Per-message limit",
+    "hardwareWarning": "중요: 가격은 소프트웨어 서비스만 포함합니다. StackHub 하드웨어는 별도 구매 및 활성화가 필요합니다.",
+    "priceNote": "Fixed USD product prices. CNY estimates use the illustrative 1 USD = 6 CNY rate. Checkout shows the actual charges. Creem checkout is currently in test mode.",
+    "buyPlan": "View plans / Buy",
+    "hardwareBtn": "Enquire about StackHub hardware",
+    "guideBtn": "Setup guide",
+    "already": "Already own a StackHub?",
+    "alreadyDesc": "Enter the device ID shown in desktop Bridge to open Billing and choose your term. Enter the 24-character recovery code only in Billing.",
+    "security": "Security note: the target computer may have no network connection, but StackHub exchanges data with it over USB and uses its own Wi‑Fi uplink. This is not a zero-exchange air gap. Follow your organization's USB and data policies; redaction and tool permissions are not a substitute for a security review.",
+    "invalid": "Enter a valid device ID (stackhub- plus 16 characters).",
+    "copied": "Link copied.",
+    "failed": "Could not copy automatically; copy it manually."
+  },
+  "ar": {
+    "headline": "قدرات الذكاء الاصطناعي للحواسيب غير المتصلة بالإنترنت.",
+    "subhead": "عبر البيئات ومنصات الذكاء الاصطناعي، مع بقاء التحكم بيدك.",
+    "intro": "StackHub is an independently connected USB AI hardware bridge. Your target computer needs no direct internet, Wi‑Fi or Ethernet connection to use authorized AI tool capabilities through a local desktop Bridge.",
+    "features": [
+      "Offline target PC",
+      "Choose authorized MCP tools",
+      "AI and desktop robots"
+    ],
+    "vertical": "Vertical · AI for restricted environments",
+    "verticalDesc": "Bring selected AI tool capabilities to labs, factories and protected workplaces where the target PC is not allowed online—provided your security policy permits this USB bridge. StackHub has its own Wi‑Fi uplink.",
+    "horizontal": "Horizontal · One bridge, multiple AIs",
+    "horizontalDesc": "From MCP-compatible AI such as Claude to supported StackChan-series desktop robots, reuse device identity, desktop Bridge and tools across platforms. Apple Shortcuts / Siri is planned.",
+    "scenariosTitle": "What can you do with StackHub?",
+    "scenarios": [
+      [
+        "AI tools on offline computers",
+        "The target computer stays off the internet. Authorized AI reaches only configured MCP tools through the StackHub bridge."
+      ],
+      [
+        "Controlled access to sensitive data",
+        "Choose the tools, directories and data scopes that can be accessed. Optional local redaction can help. USB data exchange still occurs; this does not guarantee no leaks or a full air gap."
+      ],
+      [
+        "Work memory and automation",
+        "Look up project notes and decisions saved in Memory MCP, or call authorized local tools and ASB workflows."
+      ],
+      [
+        "StackChan desktop robots",
+        "Switch compatible hardware into StackChan mode to connect a desktop robot to its AI/MCP workflow."
+      ]
+    ],
+    "stepsTitle": "Three steps to get started",
+    "steps": [
+      "Configure StackHub's own Wi‑Fi and connect it to the target computer by USB.",
+      "Open local desktop Bridge, bind the device and install Memory MCP or configure existing tools.",
+      "Use compatible AI to call authorized tools, or switch to StackChan mode."
+    ],
+    "siri": "Apple Shortcuts / Siri — Coming Soon",
+    "siriDesc": "Planned: trigger authorized AI workflows and shared memory via Siri and Apple Shortcuts. Not yet available.",
+    "priceTitle": "Software plans and pricing",
+    "priceIntro": "Start with Free after hardware activation. Upgrade to Basic or Pro for more calls and larger messages. One-time, non-renewing terms: 1, 3 or 12 months.",
+    "free": "Free",
+    "basic": "Basic",
+    "pro": "Pro",
+    "month": "mo",
+    "calls": "calls / month",
+    "periods": [
+      "1 month",
+      "3 months",
+      "1 year"
+    ],
+    "size": "Per-message limit",
+    "hardwareWarning": "هام: الأسعار لخدمة البرنامج فقط؛ جهاز StackHub غير مشمول ويجب شراؤه وتفعيله بشكل منفصل.",
+    "priceNote": "Fixed USD product prices. CNY estimates use the illustrative 1 USD = 6 CNY rate. Checkout shows the actual charges. Creem checkout is currently in test mode.",
+    "buyPlan": "View plans / Buy",
+    "hardwareBtn": "Enquire about StackHub hardware",
+    "guideBtn": "Setup guide",
+    "already": "Already own a StackHub?",
+    "alreadyDesc": "Enter the device ID shown in desktop Bridge to open Billing and choose your term. Enter the 24-character recovery code only in Billing.",
+    "security": "Security note: the target computer may have no network connection, but StackHub exchanges data with it over USB and uses its own Wi‑Fi uplink. This is not a zero-exchange air gap. Follow your organization's USB and data policies; redaction and tool permissions are not a substitute for a security review.",
+    "invalid": "Enter a valid device ID (stackhub- plus 16 characters).",
+    "copied": "Link copied.",
+    "failed": "Could not copy automatically; copy it manually."
+  }
+}
