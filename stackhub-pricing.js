@@ -5,8 +5,8 @@
   const active = () => document.querySelector('.lang-block.active .sh-landing');
   const money = value => Number(value).toLocaleString('en-US', {maximumFractionDigits:2});
   const label = {
-    zh: {unavailable:'当前购买服务暂不可用，请稍后重试。', test:'测试环境：目前不能完成正式付款。', live:'购买页面将显示最终付款金额。'},
-    en: {unavailable:'Checkout is temporarily unavailable.', test:'Test mode: live payments are not yet available.', live:'Final charges are confirmed at checkout.'}
+    zh: {unavailable:'当前显示参考价格；最新价格和付款状态请以结账页面为准。', test:'测试环境：目前不能完成正式付款。', live:'购买页面将显示最终付款金额。'},
+    en: {unavailable:'Reference prices shown. Confirm current prices and payment status at checkout.', test:'Test mode: live payments are not yet available.', live:'Final charges are confirmed at checkout.'}
   };
   const translations = lang => label[lang] || label.en;
   fetch(endpoint, {method:'GET', mode:'cors', cache:'no-store', credentials:'omit'})
