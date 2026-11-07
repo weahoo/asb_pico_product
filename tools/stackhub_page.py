@@ -51,7 +51,6 @@ def render(lang,m,c):
   <p class="lead">{t(m['intro'])}</p>
   <div class="sh-chips">{chips}</div>
   <div class="actions sh-hero-actions">{nav}</div>
-  <p class="sh-hardware-lead">{warning}</p>
  </section>
  <section class="sh-axes">
   <article class="sh-axis"><span class="sh-axis-label">01 / VERTICAL</span><h2>{t(m['vertical'])}</h2>
@@ -73,7 +72,7 @@ def render(lang,m,c):
  </section>
  <section class="sh-section sh-pricing" id="plans-{lang}"><span class="eyebrow">SOFTWARE PLANS</span>
   <h2>{t(m['priceTitle'])}</h2><p>{t(m['priceIntro'])}</p>
-  <p class="sh-warning"><strong>{warning}</strong></p>
+  <p class="sh-hardware-note">{warning}</p>
   <div class="sh-plan-grid">{cards}</div>
   <p class="sh-price-note">{t(m['priceNote'])}</p>
   <p class="sh-live-status" data-price-status role="status" aria-live="polite"></p>
@@ -93,5 +92,4 @@ def render(lang,m,c):
   <span class="stackhub-l10n" hidden data-invalid="{t(c['subInvalid'])}"
    data-copied="{t(c['subCopied'])}" data-copy-failed="{t(c['subCopyFailed'])}"></span>
  </section>
- <aside class="sh-safety"><strong>SAFETY</strong><p>{t(m['security'])}</p></aside>
 </div>"""

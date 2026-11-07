@@ -55,6 +55,42 @@ class FamilyHomeTest(unittest.TestCase):
             self.assertIn(page,m.links)
             self.assertTrue((ROOT/page).exists())
         self.assertEqual(m.images.count('assets/product-illustration.svg'),7)
+    def test_public_pages_are_customer_facing(self):
+        public_files=['index.html','stackhub.html','transferhub.html',
+                      'stackhub-guide.html','transferhub-guide.html','flexhub.html']
+        internal_phrases=[
+            '不能宣称','绝对隔离','零泄露','空气隔离','物理零连接',
+            '安全审查','Creem','测试环境','测试结账','测试价','测试模式',
+            'not a zero-exchange air gap','security review','test checkout',
+            'Test mode:','tools/install_host.py','YOUR_URL_ENCODED_KEY',
+            'one board does not run all three'
+        ]
+        for name in public_files:
+            markup=(ROOT/name).read_text(encoding='utf-8')
+            for phrase in internal_phrases:
+                self.assertNotIn(phrase.lower(),markup.lower(),f'{name}: {phrase}')
+
+    def test_guides_offer_steps_and_email_mcp_choice(self):
+        import re
+        a=(ROOT/'stackhub-guide.html').read_text(encoding='utf-8')
+        b=(ROOT/'transferhub-guide.html').read_text(encoding='utf-8')
+        for language in COPY:
+            for data in [a,b]:
+                match=re.search(r'<article class="lang-block[^"]*" data-lang="'+language+r'">(.*?)</article>',data,re.S)
+                self.assertIsNotNone(match,language)
+                self.assertGreaterEqual(match.group(1).count('<li>'),5,language)
+        self.assertIn('Authorization: Bearer',a)
+        self.assertIn('完整 MCP URL',a)
+        self.assertIn('http://192.168.77.1/',b)
+        self.assertIn('http://192.168.78.1/',a)
+        self.assertNotIn('python tools/install_host.py',a)
+
+    def test_pricing_status_has_no_internal_payment_mode_text(self):
+        javascript=(ROOT/'stackhub-pricing.js').read_text(encoding='utf-8')
+        self.assertNotIn("billing_mode",javascript)
+        self.assertNotIn("测试环境",javascript)
+        self.assertNotIn("Test mode",javascript)
+
     def test_three_accent_colors_and_responsive_connections(self):
         for selector in ['.family-node-stackhub','.family-node-flexhub',
                          '.family-node-transferhub','.family-node-future',

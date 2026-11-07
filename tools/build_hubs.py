@@ -25,29 +25,12 @@ for l,c in packs.items():
   actions=link(guide,c['guide'],True)+link('contact.html?product='+name,c['buy'])
   if key=='transfer':actions+=link('transfer/index.html',c['open'])+ '<a class="btn" href="transfer/FlexHub-Offline.zip" download>'+esc(c['zip'])+'</a>'
   subscription=''
-  if key=='stack':
-   subscription=(
-     '<section class="section stackhub-subscription" id="subscription-'+l+'" data-subscription-lang="'+l+'">'
-     '<h2>'+esc(c['subTitle'])+'</h2><p>'+esc(c['subIntro'])+'</p>'
-     '<label class="stackhub-id-label" for="stackhub-device-id-'+l+'">'+esc(c['subLabel'])+'</label>'
-     '<input class="stackhub-device-id" id="stackhub-device-id-'+l+'" type="text" '
-     'placeholder="stackhub-0123456789abcdef" maxlength="25" spellcheck="false" autocomplete="off" '
-     'aria-label="'+esc(c['subLabel'])+'">'
-     '<div class="actions"><button type="button" class="btn primary stackhub-subscribe-buy">'+esc(c['subGo'])+'</button>'
-     '<button type="button" class="btn stackhub-subscribe-copy">'+esc(c['subCopy'])+'</button></div>'
-     '<p class="stackhub-subscribe-status" role="status" aria-live="polite"></p>'
-     '<p class="note">'+esc(c['subTest'])+'</p><p>'+esc(c['subHelp'])+'</p>'
-     '<span hidden class="stackhub-l10n" data-invalid="'+esc(c['subInvalid'])+'" '
-     'data-copied="'+esc(c['subCopied'])+'" data-copy-failed="'+esc(c['subCopyFailed'])+'"></span>'
-     '</section>'
-   )
   pages[name][l]='<section class="hero"><span class="eyebrow">'+title.upper()+'</span><h1>'+esc(c[key])+'</h1><div class="actions">'+actions+'</div></section>'+subscription+'<section class="section"><h2>'+esc(c['flow'])+'</h2>'+diagram+'</section><section class="section"><h2>'+esc(c['setup'])+'</h2><p>'+esc(c[stem+'setup'])+'</p></section><section class="section"><h2>'+esc(c['limits'])+'</h2><p>'+esc(c[stem+'limits'])+'</p></section><p class="note">'+esc(c['pending'] if key=='transfer' else c['subPending'])+'</p>'
   if key=='stack':pages[name][l]=render_stackhub(l,marketing[l],c)
   guidebody='<section class="hero"><span class="eyebrow">'+title.upper()+'</span><h1>'+title+' · '+esc(c['guide'])+'</h1><div class="actions">'+link(name+'.html',c['details'])+link('index.html',c['back'])+'</div></section><section class="section"><h2>'+esc(c['setup'])+'</h2><p>'+esc(c[stem+'setup'])+'</p></section><section class="section"><h2>'+esc(c['steps'])+'</h2><ol>'+''.join('<li>'+esc(x)+'</li>' for x in c[stem+'steps'])+'</ol></section>'
   if key=='transfer':guidebody+='<div class="actions">'+link('transfer/index.html',c['open'],True)+'<a class="btn" href="transfer/FlexHub-Offline.zip" download>'+esc(c['zip'])+'</a></div>'
   else:
-   example={'mcpServers':{'local':{'url':'http://127.0.0.1:8800/mcp-http','headers':{'Authorization':'YOUR_SERVICE_AUTH_VALUE'}}}}
-   guidebody+='<section class="section"><p>'+esc(c['example'])+'</p><pre><code>'+esc(json.dumps(example,indent=2))+'</code></pre><pre><code>python tools/install_host.py --asb-root &quot;PATH_TO_ASB&quot;</code></pre><p><code>https://YOUR_MCP_HOST/mcp-http?asb_service_api_key=YOUR_URL_ENCODED_KEY</code></p></section>'
+   guidebody+='<section class="section"><h2>'+esc(c['mcpGuideTitle'])+'</h2><p>'+esc(c['mcpGuideTip'])+'</p></section>'
   guidebody+='<section class="section"><h2>'+esc(c['limits'])+'</h2><p>'+esc(c[stem+'limits'])+'</p></section>'
   pages[name+'-guide'][l]=guidebody
 for name,blocks in pages.items():

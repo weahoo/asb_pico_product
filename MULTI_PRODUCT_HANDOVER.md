@@ -42,3 +42,12 @@ SHA256: 46e7f0c483f0d58d800c8fc33f72a7895ae66329cf2054dd7ba2cd49a345b472
 - Shared purple/orange/grey product accents, responsive connecting lines, and pill-shaped controls are in hubs.css.
 - The SVG illustrates the shared industrial design, not a guarantee of identical boards, firmware or interchangeable hardware.
 - UI checked at widths 320, 375, 390, 768, 1024, 1280 in Chrome CDP, with no horizontal overflow. Static regression: python3 -m unittest discover -s tools -p test_home_family.py.
+
+## Consumer-facing copy and guides (2026-11-07)
+
+- Homepage, StackHub and TransferHub pages, and both user guides now speak to end customers in all seven locales. Technical internal review and test-report wording was removed from public pages.
+- The StackHub user guide explains the recovery code, device WSS/MCP connection details, Desktop Bridge, Memory MCP, and the two email-supported MCP client connection choices (complete URL or JSON with Authorization: Bearer header).
+- The TransferHub guide keeps the practical phone-to-PC and PC-to-phone browser transfer steps.
+- The hardware and StackHub software subscriptions remain separate purchase flows. The Siri feature remains labeled as future/planned.
+- Public pricing UI no longer exposes internal payment-environment mode. The underlying Billing/Creem credentials, service state, and payment-processing configuration were NOT changed; the actual checkout remains authoritative.
+- Regenerate public pages with `python3 tools/build_hubs.py`. Run `python3 -m unittest discover -s tools -p test_home_family.py`. The consumer-copy regression test checks that internal phrasing does not return after rebuilding.

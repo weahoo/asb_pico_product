@@ -5,8 +5,8 @@
   const active = () => document.querySelector('.lang-block.active .sh-landing');
   const money = value => Number(value).toLocaleString('en-US', {maximumFractionDigits:2});
   const label = {
-    zh: {unavailable:'当前显示参考价格；最新价格和付款状态请以结账页面为准。', test:'测试环境：目前不能完成正式付款。', live:'购买页面将显示最终付款金额。'},
-    en: {unavailable:'Reference prices shown. Confirm current prices and payment status at checkout.', test:'Test mode: live payments are not yet available.', live:'Final charges are confirmed at checkout.'}
+    zh: {unavailable:'最新套餐和价格请以订购页面为准。', live:'订购页面会显示最终金额。'},
+    en: {unavailable:'See the order page for current plans and prices.', live:'Your order page shows the final amount.'}
   };
   const translations = lang => label[lang] || label.en;
   fetch(endpoint, {method:'GET', mode:'cors', cache:'no-store', credentials:'omit'})
@@ -18,8 +18,7 @@
         const strings = translations(lang);
         const status = panel.querySelector('[data-price-status]');
         const available = data.one_time.length > 0;
-        status.textContent = data.billing_mode === 'test' ? strings.test :
-          (available ? strings.live : strings.unavailable);
+        status.textContent = available ? strings.live : strings.unavailable;
         for (const tier of ['basic','premium']) {
           const plan = data.plans.find(p => p.id === tier);
           if (plan && Number.isFinite(Number(plan.calls))) {

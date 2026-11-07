@@ -9,9 +9,9 @@
       "跨 AI 与桌面机器人"
     ],
     "vertical": "纵向 · 让 AI 进入受限环境",
-    "verticalDesc": "实验室、工厂、企业内网等不允许目标电脑连接互联网的环境，也可以在组织允许的前提下，让 AI 使用选定的本地工具。StackHub 自己使用独立 Wi‑Fi 上行。",
+    "verticalDesc": "实验室、办公室、车间等场景中，即使电脑不直接连接互联网，也能通过 StackHub 的独立 Wi-Fi 与 USB Bridge 使用选定的 AI 工具。",
     "horizontal": "横向 · 一套桥接，多种 AI",
-    "horizontalDesc": "从支持 MCP 的 Claude 等 AI，到兼容的 StackChan 系列桌面机器人，跨平台复用同一套设备、桌面 Bridge 和工具配置。Apple Shortcuts / Siri 计划后续接入。",
+    "horizontalDesc": "一个 StackHub，连接多种支持 MCP 的 AI 和兼容的 StackChan 桌面机器人；Windows、macOS 和 Linux 都可通过桌面 Bridge 接入。",
     "scenariosTitle": "你可以拿 StackHub 做什么？",
     "scenarios": [
       [
@@ -19,8 +19,8 @@
         "目标电脑不接互联网。AI 通过 StackHub 访问事先配置、获授权的 MCP 工具，省去为电脑开放外网的需求。"
       ],
       [
-        "敏感数据的受控访问",
-        "由用户决定可供调用的工具、目录和数据范围；可配置本地脱敏规则。仍存在跨 USB 的数据交换，不能宣称零泄露或绝对隔离。"
+        "按需连接工作资料",
+        "选择需要开放的本地工具、文件夹和工作流程，让 AI 在你的许可下获取需要的信息并协助完成工作。"
       ],
       [
         "工作记忆与自动化",
@@ -38,9 +38,9 @@
       "用支持 MCP 的 AI 调用授权工具；或切换兼容 StackChan 模式。"
     ],
     "siri": "Apple Shortcuts / Siri — Coming Soon",
-    "siriDesc": "计划通过快捷指令或 Siri 触发已授权的 AI 工作流和共享记忆。此功能尚未交付。",
+    "siriDesc": "未来计划支持通过 Siri 和 Apple 快捷指令发起 AI 工作流程，敬请期待。",
     "priceTitle": "软件套餐与价格",
-    "priceIntro": "使用已激活的硬件可从免费档开始。需要更多调用或更大消息时，可以一次性购买 Basic / Pro，有效期可选 1、3、12 个月，购买后不会自动续费。",
+    "priceIntro": "从免费套餐开始，按使用需求选择 Basic 或 Pro。可选择 1 个月、3 个月或 1 年的服务期限。",
     "free": "Free 免费版",
     "basic": "Basic 基础版",
     "pro": "Pro 专业版",
@@ -52,14 +52,13 @@
       "1 年"
     ],
     "size": "单次消息上限",
-    "hardwareWarning": "重要：以下价格只包括 StackHub 软件服务，**不包含实体硬件**。使用前必须单独购买并激活 StackHub 设备。",
-    "priceNote": "美元为固定商品价格；人民币仅按约定 1 USD = 6 元换算供参考，实际扣款以结账页显示为准。当前 Creem 仍在测试模式。",
-    "buyPlan": "查看套餐并购买",
+    "hardwareWarning": "软件服务适用于已激活的 StackHub 设备，设备与软件套餐分别选购。",
+    "priceNote": "美元为套餐价格；人民币金额仅供参考，实际费用以结账页面为准。",
+    "buyPlan": "查看软件套餐",
     "hardwareBtn": "咨询购买 StackHub 硬件",
     "guideBtn": "安装使用指南",
     "already": "已有 StackHub 设备？",
-    "alreadyDesc": "输入桌面 Bridge 提供的设备 ID，可直接前往 Billing 选择购买期限。24 位恢复码只在 Billing 页面输入。",
-    "security": "安全说明：目标电脑本身可以不联网，但 StackHub 通过 USB 与它交换数据、通过独立 Wi‑Fi 连通外部服务。这不是零数据交换的物理空气隔离，是否接入需遵守组织的 USB 与数据安全政策。脱敏和访问限制也不能替代企业安全审查。",
+    "alreadyDesc": "输入桌面 Bridge 显示的设备 ID，前往套餐页面继续操作。",
     "invalid": "请输入有效的设备 ID（stackhub- 加 16 位字符）。",
     "copied": "设备购买链接已复制。",
     "failed": "无法自动复制，请手动复制。"
@@ -74,9 +73,9 @@
       "AI and desktop robots"
     ],
     "vertical": "Vertical · AI for restricted environments",
-    "verticalDesc": "Bring selected AI tool capabilities to labs, factories and protected workplaces where the target PC is not allowed online—provided your security policy permits this USB bridge. StackHub has its own Wi‑Fi uplink.",
+    "verticalDesc": "Bring selected AI tools to labs, workstations and workshops, even when the target computer stays off the internet. StackHub connects through its own Wi-Fi and a USB Bridge.",
     "horizontal": "Horizontal · One bridge, multiple AIs",
-    "horizontalDesc": "From MCP-compatible AI such as Claude to supported StackChan-series desktop robots, reuse device identity, desktop Bridge and tools across platforms. Apple Shortcuts / Siri is planned.",
+    "horizontalDesc": "One StackHub works with MCP-compatible AIs and supported StackChan desktop robots, with desktop Bridge options for Windows, macOS and Linux.",
     "scenariosTitle": "What can you do with StackHub?",
     "scenarios": [
       [
@@ -84,8 +83,8 @@
         "The target computer stays off the internet. Authorized AI reaches only configured MCP tools through the StackHub bridge."
       ],
       [
-        "Controlled access to sensitive data",
-        "Choose the tools, directories and data scopes that can be accessed. Optional local redaction can help. USB data exchange still occurs; this does not guarantee no leaks or a full air gap."
+        "Work with your local information",
+        "Choose the local tools, folders and workflows you want to share with AI, keeping access in your hands."
       ],
       [
         "Work memory and automation",
@@ -103,9 +102,9 @@
       "Use compatible AI to call authorized tools, or switch to StackChan mode."
     ],
     "siri": "Apple Shortcuts / Siri — Coming Soon",
-    "siriDesc": "Planned: trigger authorized AI workflows and shared memory via Siri and Apple Shortcuts. Not yet available.",
+    "siriDesc": "Siri and Apple Shortcuts integration is on our roadmap. Stay tuned.",
     "priceTitle": "Software plans and pricing",
-    "priceIntro": "Start with Free after hardware activation. Upgrade to Basic or Pro for more calls and larger messages. One-time, non-renewing terms: 1, 3 or 12 months.",
+    "priceIntro": "Start with Free, then choose Basic or Pro as your needs grow. Select a 1-, 3- or 12-month term.",
     "free": "Free",
     "basic": "Basic",
     "pro": "Pro",
@@ -117,14 +116,13 @@
       "1 year"
     ],
     "size": "Per-message limit",
-    "hardwareWarning": "Important: These prices cover the StackHub software service only. The physical StackHub device is **not included** and must be purchased and activated separately.",
-    "priceNote": "Fixed USD product prices. CNY estimates use the illustrative 1 USD = 6 CNY rate. Checkout shows the actual charges. Creem checkout is currently in test mode.",
-    "buyPlan": "View plans / Buy",
+    "hardwareWarning": "StackHub hardware and software plans are available separately. Choose a plan for your activated device.",
+    "priceNote": "USD plan prices are shown; CNY amounts are estimates. Your checkout page confirms the final price.",
+    "buyPlan": "Explore software plans",
     "hardwareBtn": "Enquire about StackHub hardware",
     "guideBtn": "Setup guide",
     "already": "Already own a StackHub?",
-    "alreadyDesc": "Enter the device ID shown in desktop Bridge to open Billing and choose your term. Enter the 24-character recovery code only in Billing.",
-    "security": "Security note: the target computer may have no network connection, but StackHub exchanges data with it over USB and uses its own Wi‑Fi uplink. This is not a zero-exchange air gap. Follow your organization's USB and data policies; redaction and tool permissions are not a substitute for a security review.",
+    "alreadyDesc": "Enter the device ID shown in your desktop Bridge to continue to the plan page.",
     "invalid": "Enter a valid device ID (stackhub- plus 16 characters).",
     "copied": "Link copied.",
     "failed": "Could not copy automatically; copy it manually."
@@ -139,9 +137,9 @@
       "AI and desktop robots"
     ],
     "vertical": "Vertical · AI for restricted environments",
-    "verticalDesc": "Bring selected AI tool capabilities to labs, factories and protected workplaces where the target PC is not allowed online—provided your security policy permits this USB bridge. StackHub has its own Wi‑Fi uplink.",
+    "verticalDesc": "インターネットに直接接続しないPCでも、StackHub独自のWi-FiとUSB Bridgeで、選択したAIツールを利用できます。",
     "horizontal": "Horizontal · One bridge, multiple AIs",
-    "horizontalDesc": "From MCP-compatible AI such as Claude to supported StackChan-series desktop robots, reuse device identity, desktop Bridge and tools across platforms. Apple Shortcuts / Siri is planned.",
+    "horizontalDesc": "ひとつのStackHubでMCP対応AIや対応するStackChanに接続。Windows、macOS、LinuxのデスクトップBridgeと組み合わせられます。",
     "scenariosTitle": "What can you do with StackHub?",
     "scenarios": [
       [
@@ -149,8 +147,8 @@
         "The target computer stays off the internet. Authorized AI reaches only configured MCP tools through the StackHub bridge."
       ],
       [
-        "Controlled access to sensitive data",
-        "Choose the tools, directories and data scopes that can be accessed. Optional local redaction can help. USB data exchange still occurs; this does not guarantee no leaks or a full air gap."
+        "身近なデータをAIと活用",
+        "AIに接続するローカルツールやフォルダー、ワークフローを選んで、必要な作業をサポート。"
       ],
       [
         "Work memory and automation",
@@ -168,9 +166,9 @@
       "Use compatible AI to call authorized tools, or switch to StackChan mode."
     ],
     "siri": "Apple Shortcuts / Siri — Coming Soon",
-    "siriDesc": "Planned: trigger authorized AI workflows and shared memory via Siri and Apple Shortcuts. Not yet available.",
+    "siriDesc": "SiriとAppleショートカットへの対応を今後予定しています。お楽しみに。",
     "priceTitle": "Software plans and pricing",
-    "priceIntro": "Start with Free after hardware activation. Upgrade to Basic or Pro for more calls and larger messages. One-time, non-renewing terms: 1, 3 or 12 months.",
+    "priceIntro": "無料プランから始めて、用途に合わせてBasicまたはProを選択。1・3・12か月の期間をご用意。",
     "free": "Free",
     "basic": "Basic",
     "pro": "Pro",
@@ -182,14 +180,13 @@
       "1 year"
     ],
     "size": "Per-message limit",
-    "hardwareWarning": "重要：この価格はソフトウェアサービスのみです。StackHub本体は含まれず、別途購入・有効化が必要です。",
-    "priceNote": "Fixed USD product prices. CNY estimates use the illustrative 1 USD = 6 CNY rate. Checkout shows the actual charges. Creem checkout is currently in test mode.",
-    "buyPlan": "View plans / Buy",
+    "hardwareWarning": "StackHub本体とソフトウェアプランは別々にお選びいただけます。",
+    "priceNote": "米ドル表示のプラン価格。人民元は参考換算です。最終金額は購入ページでご確認ください。",
+    "buyPlan": "プランを見る",
     "hardwareBtn": "Enquire about StackHub hardware",
     "guideBtn": "Setup guide",
     "already": "Already own a StackHub?",
-    "alreadyDesc": "Enter the device ID shown in desktop Bridge to open Billing and choose your term. Enter the 24-character recovery code only in Billing.",
-    "security": "Security note: the target computer may have no network connection, but StackHub exchanges data with it over USB and uses its own Wi‑Fi uplink. This is not a zero-exchange air gap. Follow your organization's USB and data policies; redaction and tool permissions are not a substitute for a security review.",
+    "alreadyDesc": "デスクトップBridgeに表示されるデバイスIDを入力して、プランページへ進んでください。",
     "invalid": "Enter a valid device ID (stackhub- plus 16 characters).",
     "copied": "Link copied.",
     "failed": "Could not copy automatically; copy it manually."
@@ -204,9 +201,9 @@
       "AI and desktop robots"
     ],
     "vertical": "Vertical · AI for restricted environments",
-    "verticalDesc": "Bring selected AI tool capabilities to labs, factories and protected workplaces where the target PC is not allowed online—provided your security policy permits this USB bridge. StackHub has its own Wi‑Fi uplink.",
+    "verticalDesc": "Auch ohne direkte Internetverbindung des Zielrechners lassen sich ausgewählte KI-Tools über StackHubs eigenes WLAN und die USB-Bridge nutzen.",
     "horizontal": "Horizontal · One bridge, multiple AIs",
-    "horizontalDesc": "From MCP-compatible AI such as Claude to supported StackChan-series desktop robots, reuse device identity, desktop Bridge and tools across platforms. Apple Shortcuts / Siri is planned.",
+    "horizontalDesc": "Ein StackHub verbindet MCP-kompatible KIs und unterstützte StackChan-Geräte über die Desktop-Bridge für Windows, macOS und Linux.",
     "scenariosTitle": "What can you do with StackHub?",
     "scenarios": [
       [
@@ -214,8 +211,8 @@
         "The target computer stays off the internet. Authorized AI reaches only configured MCP tools through the StackHub bridge."
       ],
       [
-        "Controlled access to sensitive data",
-        "Choose the tools, directories and data scopes that can be accessed. Optional local redaction can help. USB data exchange still occurs; this does not guarantee no leaks or a full air gap."
+        "Mit lokalen Arbeitsdaten arbeiten",
+        "Wählen Sie lokale Tools, Ordner und Workflows aus, die Ihre KI bei der täglichen Arbeit unterstützen sollen."
       ],
       [
         "Work memory and automation",
@@ -233,9 +230,9 @@
       "Use compatible AI to call authorized tools, or switch to StackChan mode."
     ],
     "siri": "Apple Shortcuts / Siri — Coming Soon",
-    "siriDesc": "Planned: trigger authorized AI workflows and shared memory via Siri and Apple Shortcuts. Not yet available.",
+    "siriDesc": "Die Anbindung an Siri und Apple Kurzbefehle ist für die Zukunft geplant.",
     "priceTitle": "Software plans and pricing",
-    "priceIntro": "Start with Free after hardware activation. Upgrade to Basic or Pro for more calls and larger messages. One-time, non-renewing terms: 1, 3 or 12 months.",
+    "priceIntro": "Mit Free starten und je nach Bedarf Basic oder Pro wählen. Laufzeiten: 1, 3 oder 12 Monate.",
     "free": "Free",
     "basic": "Basic",
     "pro": "Pro",
@@ -247,14 +244,13 @@
       "1 year"
     ],
     "size": "Per-message limit",
-    "hardwareWarning": "Wichtig: Die Preise gelten nur für die Software. Das StackHub-Gerät ist nicht enthalten und muss separat gekauft und aktiviert werden.",
-    "priceNote": "Fixed USD product prices. CNY estimates use the illustrative 1 USD = 6 CNY rate. Checkout shows the actual charges. Creem checkout is currently in test mode.",
-    "buyPlan": "View plans / Buy",
+    "hardwareWarning": "StackHub-Gerät und Softwaretarife sind separat erhältlich.",
+    "priceNote": "Preise in USD; CNY-Beträge zur Orientierung. Der endgültige Preis erscheint auf der Zahlungsseite.",
+    "buyPlan": "Tarife ansehen",
     "hardwareBtn": "Enquire about StackHub hardware",
     "guideBtn": "Setup guide",
     "already": "Already own a StackHub?",
-    "alreadyDesc": "Enter the device ID shown in desktop Bridge to open Billing and choose your term. Enter the 24-character recovery code only in Billing.",
-    "security": "Security note: the target computer may have no network connection, but StackHub exchanges data with it over USB and uses its own Wi‑Fi uplink. This is not a zero-exchange air gap. Follow your organization's USB and data policies; redaction and tool permissions are not a substitute for a security review.",
+    "alreadyDesc": "Geben Sie die Geräte-ID aus der Desktop-Bridge ein, um die Tarife anzusehen.",
     "invalid": "Enter a valid device ID (stackhub- plus 16 characters).",
     "copied": "Link copied.",
     "failed": "Could not copy automatically; copy it manually."
@@ -269,9 +265,9 @@
       "AI and desktop robots"
     ],
     "vertical": "Vertical · AI for restricted environments",
-    "verticalDesc": "Bring selected AI tool capabilities to labs, factories and protected workplaces where the target PC is not allowed online—provided your security policy permits this USB bridge. StackHub has its own Wi‑Fi uplink.",
+    "verticalDesc": "Accédez aux outils d’IA choisis même si l’ordinateur cible reste hors ligne, grâce au Wi-Fi indépendant de StackHub et au pont USB.",
     "horizontal": "Horizontal · One bridge, multiple AIs",
-    "horizontalDesc": "From MCP-compatible AI such as Claude to supported StackChan-series desktop robots, reuse device identity, desktop Bridge and tools across platforms. Apple Shortcuts / Siri is planned.",
+    "horizontalDesc": "Un StackHub pour les IA compatibles MCP et les appareils StackChan pris en charge, avec une passerelle de bureau sur Windows, macOS et Linux.",
     "scenariosTitle": "What can you do with StackHub?",
     "scenarios": [
       [
@@ -279,8 +275,8 @@
         "The target computer stays off the internet. Authorized AI reaches only configured MCP tools through the StackHub bridge."
       ],
       [
-        "Controlled access to sensitive data",
-        "Choose the tools, directories and data scopes that can be accessed. Optional local redaction can help. USB data exchange still occurs; this does not guarantee no leaks or a full air gap."
+        "Exploitez vos informations locales",
+        "Choisissez les outils, dossiers et processus locaux auxquels l’IA pourra accéder pour faciliter votre travail."
       ],
       [
         "Work memory and automation",
@@ -298,9 +294,9 @@
       "Use compatible AI to call authorized tools, or switch to StackChan mode."
     ],
     "siri": "Apple Shortcuts / Siri — Coming Soon",
-    "siriDesc": "Planned: trigger authorized AI workflows and shared memory via Siri and Apple Shortcuts. Not yet available.",
+    "siriDesc": "Une intégration avec Siri et les raccourcis Apple est prévue. À suivre.",
     "priceTitle": "Software plans and pricing",
-    "priceIntro": "Start with Free after hardware activation. Upgrade to Basic or Pro for more calls and larger messages. One-time, non-renewing terms: 1, 3 or 12 months.",
+    "priceIntro": "Commencez avec Free, puis passez à Basic ou Pro selon vos besoins. Durées : 1, 3 ou 12 mois.",
     "free": "Free",
     "basic": "Basic",
     "pro": "Pro",
@@ -312,14 +308,13 @@
       "1 year"
     ],
     "size": "Per-message limit",
-    "hardwareWarning": "Important : ces prix concernent uniquement le service logiciel. Le matériel StackHub doit être acheté et activé séparément.",
-    "priceNote": "Fixed USD product prices. CNY estimates use the illustrative 1 USD = 6 CNY rate. Checkout shows the actual charges. Creem checkout is currently in test mode.",
-    "buyPlan": "View plans / Buy",
+    "hardwareWarning": "Le matériel StackHub et les forfaits logiciels sont proposés séparément.",
+    "priceNote": "Prix affichés en USD, estimations en CNY. Le montant final est indiqué à la commande.",
+    "buyPlan": "Découvrir les forfaits",
     "hardwareBtn": "Enquire about StackHub hardware",
     "guideBtn": "Setup guide",
     "already": "Already own a StackHub?",
-    "alreadyDesc": "Enter the device ID shown in desktop Bridge to open Billing and choose your term. Enter the 24-character recovery code only in Billing.",
-    "security": "Security note: the target computer may have no network connection, but StackHub exchanges data with it over USB and uses its own Wi‑Fi uplink. This is not a zero-exchange air gap. Follow your organization's USB and data policies; redaction and tool permissions are not a substitute for a security review.",
+    "alreadyDesc": "Saisissez l’identifiant de votre appareil affiché dans la passerelle de bureau pour accéder aux forfaits.",
     "invalid": "Enter a valid device ID (stackhub- plus 16 characters).",
     "copied": "Link copied.",
     "failed": "Could not copy automatically; copy it manually."
@@ -334,9 +329,9 @@
       "AI and desktop robots"
     ],
     "vertical": "Vertical · AI for restricted environments",
-    "verticalDesc": "Bring selected AI tool capabilities to labs, factories and protected workplaces where the target PC is not allowed online—provided your security policy permits this USB bridge. StackHub has its own Wi‑Fi uplink.",
+    "verticalDesc": "대상 PC가 인터넷에 직접 연결되지 않아도 StackHub의 독립 Wi-Fi와 USB Bridge를 통해 선택한 AI 도구를 사용할 수 있습니다.",
     "horizontal": "Horizontal · One bridge, multiple AIs",
-    "horizontalDesc": "From MCP-compatible AI such as Claude to supported StackChan-series desktop robots, reuse device identity, desktop Bridge and tools across platforms. Apple Shortcuts / Siri is planned.",
+    "horizontalDesc": "하나의 StackHub로 MCP 호환 AI와 지원되는 StackChan을 연결하세요. Windows, macOS, Linux용 데스크톱 Bridge와 함께 사용할 수 있습니다.",
     "scenariosTitle": "What can you do with StackHub?",
     "scenarios": [
       [
@@ -344,8 +339,8 @@
         "The target computer stays off the internet. Authorized AI reaches only configured MCP tools through the StackHub bridge."
       ],
       [
-        "Controlled access to sensitive data",
-        "Choose the tools, directories and data scopes that can be accessed. Optional local redaction can help. USB data exchange still occurs; this does not guarantee no leaks or a full air gap."
+        "로컬 업무 자료 활용",
+        "AI와 연결할 로컬 도구, 폴더 및 작업 흐름을 선택하고 업무를 더 편리하게 진행하세요."
       ],
       [
         "Work memory and automation",
@@ -363,9 +358,9 @@
       "Use compatible AI to call authorized tools, or switch to StackChan mode."
     ],
     "siri": "Apple Shortcuts / Siri — Coming Soon",
-    "siriDesc": "Planned: trigger authorized AI workflows and shared memory via Siri and Apple Shortcuts. Not yet available.",
+    "siriDesc": "향후 Siri와 Apple 단축어 연동을 준비하고 있습니다.",
     "priceTitle": "Software plans and pricing",
-    "priceIntro": "Start with Free after hardware activation. Upgrade to Basic or Pro for more calls and larger messages. One-time, non-renewing terms: 1, 3 or 12 months.",
+    "priceIntro": "Free로 시작하고 필요에 따라 Basic 또는 Pro를 선택하세요. 1, 3, 12개월 기간을 제공합니다.",
     "free": "Free",
     "basic": "Basic",
     "pro": "Pro",
@@ -377,14 +372,13 @@
       "1 year"
     ],
     "size": "Per-message limit",
-    "hardwareWarning": "중요: 가격은 소프트웨어 서비스만 포함합니다. StackHub 하드웨어는 별도 구매 및 활성화가 필요합니다.",
-    "priceNote": "Fixed USD product prices. CNY estimates use the illustrative 1 USD = 6 CNY rate. Checkout shows the actual charges. Creem checkout is currently in test mode.",
-    "buyPlan": "View plans / Buy",
+    "hardwareWarning": "StackHub 기기와 소프트웨어 요금제는 별도로 선택할 수 있습니다.",
+    "priceNote": "USD 가격 기준이며 CNY 금액은 참고용입니다. 최종 가격은 결제 페이지에서 확인하세요.",
+    "buyPlan": "요금제 보기",
     "hardwareBtn": "Enquire about StackHub hardware",
     "guideBtn": "Setup guide",
     "already": "Already own a StackHub?",
-    "alreadyDesc": "Enter the device ID shown in desktop Bridge to open Billing and choose your term. Enter the 24-character recovery code only in Billing.",
-    "security": "Security note: the target computer may have no network connection, but StackHub exchanges data with it over USB and uses its own Wi‑Fi uplink. This is not a zero-exchange air gap. Follow your organization's USB and data policies; redaction and tool permissions are not a substitute for a security review.",
+    "alreadyDesc": "데스크톱 Bridge에 표시되는 기기 ID를 입력해 요금제 페이지로 이동하세요.",
     "invalid": "Enter a valid device ID (stackhub- plus 16 characters).",
     "copied": "Link copied.",
     "failed": "Could not copy automatically; copy it manually."
@@ -399,9 +393,9 @@
       "AI and desktop robots"
     ],
     "vertical": "Vertical · AI for restricted environments",
-    "verticalDesc": "Bring selected AI tool capabilities to labs, factories and protected workplaces where the target PC is not allowed online—provided your security policy permits this USB bridge. StackHub has its own Wi‑Fi uplink.",
+    "verticalDesc": "استفد من أدوات الذكاء الاصطناعي المختارة حتى عندما يبقى الحاسوب المستهدف دون اتصال مباشر بالإنترنت، بفضل اتصال StackHub المستقل وجسر USB.",
     "horizontal": "Horizontal · One bridge, multiple AIs",
-    "horizontalDesc": "From MCP-compatible AI such as Claude to supported StackChan-series desktop robots, reuse device identity, desktop Bridge and tools across platforms. Apple Shortcuts / Siri is planned.",
+    "horizontalDesc": "جهاز StackHub واحد يصل تطبيقات الذكاء الاصطناعي المتوافقة مع MCP وأجهزة StackChan المدعومة عبر جسر سطح المكتب على Windows وmacOS وLinux.",
     "scenariosTitle": "What can you do with StackHub?",
     "scenarios": [
       [
@@ -409,8 +403,8 @@
         "The target computer stays off the internet. Authorized AI reaches only configured MCP tools through the StackHub bridge."
       ],
       [
-        "Controlled access to sensitive data",
-        "Choose the tools, directories and data scopes that can be accessed. Optional local redaction can help. USB data exchange still occurs; this does not guarantee no leaks or a full air gap."
+        "استخدم معلومات عملك المحلية",
+        "اختر الأدوات والمجلدات وسير العمل المحلية التي تريد ربطها بالذكاء الاصطناعي لتسهيل مهامك."
       ],
       [
         "Work memory and automation",
@@ -428,9 +422,9 @@
       "Use compatible AI to call authorized tools, or switch to StackChan mode."
     ],
     "siri": "Apple Shortcuts / Siri — Coming Soon",
-    "siriDesc": "Planned: trigger authorized AI workflows and shared memory via Siri and Apple Shortcuts. Not yet available.",
+    "siriDesc": "نعمل على إضافة التكامل مع Siri واختصارات Apple مستقبلاً.",
     "priceTitle": "Software plans and pricing",
-    "priceIntro": "Start with Free after hardware activation. Upgrade to Basic or Pro for more calls and larger messages. One-time, non-renewing terms: 1, 3 or 12 months.",
+    "priceIntro": "ابدأ بالخطة المجانية ثم اختر Basic أو Pro حسب احتياجك، لفترة شهر أو 3 أو 12 شهراً.",
     "free": "Free",
     "basic": "Basic",
     "pro": "Pro",
@@ -442,14 +436,13 @@
       "1 year"
     ],
     "size": "Per-message limit",
-    "hardwareWarning": "هام: الأسعار لخدمة البرنامج فقط؛ جهاز StackHub غير مشمول ويجب شراؤه وتفعيله بشكل منفصل.",
-    "priceNote": "Fixed USD product prices. CNY estimates use the illustrative 1 USD = 6 CNY rate. Checkout shows the actual charges. Creem checkout is currently in test mode.",
-    "buyPlan": "View plans / Buy",
+    "hardwareWarning": "يمكن اختيار جهاز StackHub والخطط البرمجية بشكل منفصل.",
+    "priceNote": "الأسعار بالدولار الأمريكي، ومبالغ اليوان للمرجعية. يظهر المبلغ النهائي في صفحة الدفع.",
+    "buyPlan": "عرض الخطط",
     "hardwareBtn": "Enquire about StackHub hardware",
     "guideBtn": "Setup guide",
     "already": "Already own a StackHub?",
-    "alreadyDesc": "Enter the device ID shown in desktop Bridge to open Billing and choose your term. Enter the 24-character recovery code only in Billing.",
-    "security": "Security note: the target computer may have no network connection, but StackHub exchanges data with it over USB and uses its own Wi‑Fi uplink. This is not a zero-exchange air gap. Follow your organization's USB and data policies; redaction and tool permissions are not a substitute for a security review.",
+    "alreadyDesc": "أدخل معرّف الجهاز الظاهر في جسر سطح المكتب للانتقال إلى صفحة الخطط.",
     "invalid": "Enter a valid device ID (stackhub- plus 16 characters).",
     "copied": "Link copied.",
     "failed": "Could not copy automatically; copy it manually."

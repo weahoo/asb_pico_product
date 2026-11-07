@@ -1,5 +1,4 @@
-"""VisualBuild product-family home. Illustration is the existing FlexHub SVG,
-not a claim of identical internal hardware or interchangeable firmware."""
+"""VisualBuild product-family homepage, with a shared product-form illustration."""
 from html import escape as esc
 
 PRODUCTS=(
@@ -85,6 +84,5 @@ def render(language,m,c):
       f'<span class="eyebrow">{e(m["coming"])}</span>'
       f'<h2>{e(m["moreHeadline"])}</h2><p>{e(m["moreDesc"])}</p>'
       '</div></section>'
-      f'<p class="note family-legal-note">{e(c["note"])}</p>'
       '</div>'
     )
