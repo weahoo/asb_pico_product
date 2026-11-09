@@ -78,7 +78,7 @@ body[class^="page-"] .card{border-radius:24px}
 @media(max-width:850px){.sh-landing .sh-plan-grid{grid-template-columns:1fr 1fr}.sh-landing .sh-plan:first-child{grid-column:1/-1}}
 @media(max-width:680px){.sh-landing .sh-axes,.sh-landing .sh-use-grid,.sh-landing .sh-plan-grid{grid-template-columns:1fr}.sh-landing .sh-plan:first-child{grid-column:auto}.sh-landing .sh-hero{padding:25px 0}.sh-landing .sh-axis,.sh-landing .sh-use,.sh-landing .sh-plan{padding:20px}.sh-landing .sh-path{gap:7px}.sh-landing .sh-path span{padding:8px 11px;font-size:12px}.sh-landing .sh-hero-actions{align-items:stretch}.sh-landing .sh-hero-actions .btn{width:100%}}
 
-/* Product-family homepage: shared Hub outline, connected branches, three identities. */
+/* Homepage: three separate products with independent hardware identities. */
 .page-index{--hub-accent:#6d43cc;--hub-soft:#f3efff;--hub-border:#e6ddfa;--hub-ink:#292235;--hub-focus:#6d43cc}
 .family-home{--family-purple:#6d43cc;--family-orange:#ff6a1a;--family-gray:#575b64;color:#26222c}
 .family-home h1,.family-home h2,.family-home h3{letter-spacing:-.035em}
@@ -193,3 +193,36 @@ body[class^="page-"] .card{border-radius:24px}
  html[dir="rtl"] .family-node-arrow{left:20px;right:auto}
 }
 @media(max-width:660px){html[dir="rtl"] .family-node-arrow{left:14px;right:auto}}
+
+
+/* Three independent products: never suggest one central device branches
+   into three interchangeable modes. */
+.family-home .family-products-overview{padding:16px 8px 30px}
+.family-home .family-product-badges{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;margin:0 auto 22px}
+.family-home .family-product-badge{display:inline-flex;align-items:center;justify-content:center;min-height:62px;min-width:155px;padding:11px 18px;border-radius:18px;border:2px solid currentColor;background:#fff;font-weight:800;font-size:20px;letter-spacing:-.03em}
+.family-home .family-product-badge-stack{color:#6d43cc;background:#f3efff}
+.family-home .family-product-badge-flex{color:#e56b15;background:#fff3e6}
+.family-home .family-product-badge-transfer{color:#575b64;background:#f3f4f5}
+.family-home .family-products-overview .family-device-title strong{font-size:clamp(20px,2.8vw,29px)}
+.family-home .family-products-overview .family-device-note{max-width:730px;font-size:14px;line-height:1.65}
+.family-home .family-node-grid{padding-top:4px}
+.family-home .family-node-grid::before,
+.family-home .family-node-grid::after,
+.family-home .family-node::before{display:none}
+@media(max-width:660px){
+ .family-home .family-product-badges{gap:8px}
+ .family-home .family-product-badge{min-width:0;flex:1 1 120px;min-height:52px;font-size:16px;padding:9px}
+ .family-home .family-node-grid{padding-inline-start:0;padding-top:0}
+}
+
+/* StackHub uses a transparent graphite sketch, not a white JPEG rectangle. */
+.sh-landing .sh-illustration{display:grid;grid-template-columns:minmax(0,.76fr) minmax(0,1.24fr);gap:20px;align-items:center;border:1px solid #e9e1f4;border-radius:26px;background:linear-gradient(120deg,#f7f3ff,#fff 74%);padding:25px 32px;margin:5px 0 37px}
+.sh-landing .sh-illustration-copy h2{font-size:clamp(22px,2.5vw,31px);line-height:1.25;margin:10px 0 13px;color:#342b43}
+.sh-landing .sh-illustration-copy p{color:#605a67;font-size:15px;line-height:1.7;margin:0}
+.sh-landing .sh-illustration-art{margin:0;display:flex;align-items:center;justify-content:center;min-width:0}
+.sh-landing .sh-illustration-art img{display:block;width:100%;max-width:530px;height:auto;object-fit:contain}
+@media(max-width:680px){
+ .sh-landing .sh-illustration{grid-template-columns:1fr;padding:22px 17px;gap:7px;margin-bottom:20px}
+ .sh-landing .sh-illustration-copy h2{font-size:23px}
+ .sh-landing .sh-illustration-art img{max-width:490px}
+}

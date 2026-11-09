@@ -1,4 +1,4 @@
-"""VisualBuild product-family homepage, with a shared product-form illustration."""
+"""VisualBuild product-family homepage for three distinct hardware products."""
 from html import escape as esc
 
 PRODUCTS=(
@@ -14,12 +14,12 @@ def link(href,label,primary=False):
 def render(language,m,c):
     e=lambda value: esc(str(value),quote=True)
     figure=(
-      '<div class="family-device">'
-      '<div class="family-device-glow" aria-hidden="true"></div>'
-      '<figure class="family-device-frame">'
-      f'<img src="assets/product-illustration.svg" loading="eager" decoding="async" '
-      f'width="240" height="217" alt="{e(m["coreDesc"])}">'
-      '</figure>'
+      '<div class="family-device family-products-overview">'
+      '<div class="family-product-badges" aria-hidden="true">'
+      '<span class="family-product-badge family-product-badge-stack">StackHub</span>'
+      '<span class="family-product-badge family-product-badge-flex">FlexHub</span>'
+      '<span class="family-product-badge family-product-badge-transfer">TransferHub</span>'
+      '</div>'
       f'<div class="family-device-title"><span>{e(m["coreEyebrow"])}</span>'
       f'<strong>{e(m["coreTitle"])}</strong></div>'
       f'<p class="family-device-note">{e(m["coreDesc"])}</p>'
@@ -69,7 +69,6 @@ def render(language,m,c):
       '</section>'
       '<section class="family-map" aria-label="'+e(m['mapLabel'])+'">'
       +figure+
-      '<div class="family-branch-stem" aria-hidden="true"></div>'
       '<div class="family-node-grid">'+''.join(nodes)+'</div>'
       '</section>'
       '<section class="family-detail-intro" id="family-details-'+language+'">'

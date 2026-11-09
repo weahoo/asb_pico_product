@@ -38,11 +38,16 @@ class FamilyHomeTest(unittest.TestCase):
             positions=[HTML.index('id="'+name+'"') for name in ids]
             self.assertEqual(positions,sorted(positions),lang)
             self.assertIn('data-lang="'+lang+'"',HTML)
-    def test_reuses_flexhub_svg_without_editing_source(self):
+    def test_independent_product_badges_replace_single_shared_device_picture(self):
+        # Keep the original SVG available, but do not imply a single device
+        # branches into three hardware products.
         self.assertTrue((ROOT/'assets/product-illustration.svg').is_file())
-        self.assertEqual(HTML.count('src="assets/product-illustration.svg"'),7)
+        self.assertNotIn('src="assets/product-illustration.svg"',HTML)
+        for suffix in ('stack','flex','transfer'):
+            self.assertEqual(HTML.count('family-product-badge-'+suffix),7)
+        self.assertNotIn('family-branch-stem',HTML)
     def test_connected_branches_and_future_without_checkout(self):
-        self.assertEqual(HTML.count('family-branch-stem'),7)
+        self.assertEqual(HTML.count('family-branch-stem'),0)
         self.assertEqual(HTML.count('family-node-future'),7)
         self.assertEqual(HTML.count('family-node-stackhub'),7)
         self.assertEqual(HTML.count('family-node-flexhub'),7)
@@ -54,7 +59,7 @@ class FamilyHomeTest(unittest.TestCase):
         for page in ['stackhub.html','flexhub.html','transferhub.html']:
             self.assertIn(page,m.links)
             self.assertTrue((ROOT/page).exists())
-        self.assertEqual(m.images.count('assets/product-illustration.svg'),7)
+        self.assertEqual(m.images.count('assets/product-illustration.svg'),0)
     def test_public_pages_are_customer_facing(self):
         public_files=['index.html','stackhub.html','transferhub.html',
                       'stackhub-guide.html','transferhub-guide.html','flexhub.html']
@@ -94,7 +99,7 @@ class FamilyHomeTest(unittest.TestCase):
     def test_three_accent_colors_and_responsive_connections(self):
         for selector in ['.family-node-stackhub','.family-node-flexhub',
                          '.family-node-transferhub','.family-node-future',
-                         '.family-node-grid::before','.family-branch-stem']:
+                         '.family-product-badge-stack','.family-product-badges']:
             self.assertIn(selector,CSS)
         self.assertIn('#6d43cc',CSS)
         self.assertIn('#ff6a1a',CSS)

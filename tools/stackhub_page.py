@@ -58,6 +58,17 @@ def render(lang,m,c):
   <article class="sh-axis"><span class="sh-axis-label">02 / HORIZONTAL</span><h2>{t(m['horizontal'])}</h2>
    <p>{t(m['horizontalDesc'])}</p><p class="sh-platforms">Claude · MCP AI · StackChan · Windows · macOS · Linux</p></article>
  </section>
+ <section class="sh-illustration" aria-label="{t(m['sceneTitle'])}">
+  <div class="sh-illustration-copy">
+   <span class="eyebrow">STACKHUB / SCENARIO</span>
+   <h2>{t(m['sceneTitle'])}</h2>
+   <p>{t(m['sceneCaption'])}</p>
+  </div>
+  <figure class="sh-illustration-art">
+   <img src="assets/stackhub-scenario-sketch-transparent.png" width="1012" height="920"
+     loading="lazy" decoding="async" alt="{t(m['sceneAlt'])}">
+  </figure>
+ </section>
  <section class="sh-section"><span class="eyebrow">USE CASES</span>
   <h2>{t(m['scenariosTitle'])}</h2><div class="sh-use-grid">{cases}</div>
  </section>

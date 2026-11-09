@@ -61,7 +61,10 @@
     "alreadyDesc": "输入桌面 Bridge 显示的设备 ID，前往套餐页面继续操作。",
     "invalid": "请输入有效的设备 ID（stackhub- 加 16 位字符）。",
     "copied": "设备购买链接已复制。",
-    "failed": "无法自动复制，请手动复制。"
+    "failed": "无法自动复制，请手动复制。",
+    "sceneTitle": "StackHub 使用场景示意",
+    "sceneCaption": "AI 在外部网络发起请求，目标电脑不必直接接入互联网。StackHub 利用独立 Wi-Fi 和 USB Bridge 转发授权的 MCP 调用。",
+    "sceneAlt": "手绘场景：AI Cloud、离线笔记本电脑、StackHub USB 设备与移动终端。"
   },
   "en": {
     "headline": "Bring AI to offline computers.",
@@ -125,7 +128,10 @@
     "alreadyDesc": "Enter the device ID shown in your desktop Bridge to continue to the plan page.",
     "invalid": "Enter a valid device ID (stackhub- plus 16 characters).",
     "copied": "Link copied.",
-    "failed": "Could not copy automatically; copy it manually."
+    "failed": "Could not copy automatically; copy it manually.",
+    "sceneTitle": "See a StackHub scenario",
+    "sceneCaption": "AI sends requests over its network while the target computer stays off the internet. StackHub relays authorized MCP tool calls through separate Wi-Fi and USB Bridge.",
+    "sceneAlt": "Pencil sketch showing AI Cloud, an offline laptop, a StackHub USB device and mobile devices."
   },
   "ja": {
     "headline": "オフラインのPCにもAIの力を。",
@@ -189,7 +195,10 @@
     "alreadyDesc": "デスクトップBridgeに表示されるデバイスIDを入力して、プランページへ進んでください。",
     "invalid": "Enter a valid device ID (stackhub- plus 16 characters).",
     "copied": "Link copied.",
-    "failed": "Could not copy automatically; copy it manually."
+    "failed": "Could not copy automatically; copy it manually.",
+    "sceneTitle": "StackHub の利用シーン",
+    "sceneCaption": "AIは外部ネットワークから要求を送り、対象PCはインターネットに直接接続しません。StackHubが独立したWi-FiとUSB Bridgeで許可済みのMCP呼び出しを中継します。",
+    "sceneAlt": "AI Cloud、オフラインのノートPC、StackHub USBデバイスとモバイル端末の手描き図。"
   },
   "de": {
     "headline": "KI auch für Offline-Computer.",
@@ -253,7 +262,10 @@
     "alreadyDesc": "Geben Sie die Geräte-ID aus der Desktop-Bridge ein, um die Tarife anzusehen.",
     "invalid": "Enter a valid device ID (stackhub- plus 16 characters).",
     "copied": "Link copied.",
-    "failed": "Could not copy automatically; copy it manually."
+    "failed": "Could not copy automatically; copy it manually.",
+    "sceneTitle": "StackHub im Einsatz",
+    "sceneCaption": "KI-Anfragen kommen von außen, während der Zielcomputer offline bleibt. StackHub überträgt autorisierte MCP-Aufrufe über ein eigenes WLAN und die USB Bridge.",
+    "sceneAlt": "Bleistiftskizze mit AI Cloud, Offline-Laptop, StackHub-USB-Gerät und Mobilgeräten."
   },
   "fr": {
     "headline": "L'IA même sur les ordinateurs hors ligne.",
@@ -317,7 +329,10 @@
     "alreadyDesc": "Saisissez l’identifiant de votre appareil affiché dans la passerelle de bureau pour accéder aux forfaits.",
     "invalid": "Enter a valid device ID (stackhub- plus 16 characters).",
     "copied": "Link copied.",
-    "failed": "Could not copy automatically; copy it manually."
+    "failed": "Could not copy automatically; copy it manually.",
+    "sceneTitle": "StackHub en situation",
+    "sceneCaption": "L’IA envoie ses requêtes depuis le réseau externe tandis que le PC cible reste hors Internet. StackHub relaie les appels MCP autorisés par un Wi-Fi indépendant et un pont USB.",
+    "sceneAlt": "Croquis au crayon montrant AI Cloud, un ordinateur hors ligne, un appareil USB StackHub et des appareils mobiles."
   },
   "ko": {
     "headline": "오프라인 컴퓨터에도 AI 기능을.",
@@ -381,7 +396,10 @@
     "alreadyDesc": "데스크톱 Bridge에 표시되는 기기 ID를 입력해 요금제 페이지로 이동하세요.",
     "invalid": "Enter a valid device ID (stackhub- plus 16 characters).",
     "copied": "Link copied.",
-    "failed": "Could not copy automatically; copy it manually."
+    "failed": "Could not copy automatically; copy it manually.",
+    "sceneTitle": "StackHub 사용 시나리오",
+    "sceneCaption": "AI는 외부 네트워크에서 요청하고 대상 PC는 인터넷에 직접 연결되지 않습니다. StackHub가 별도 Wi-Fi와 USB Bridge를 통해 승인된 MCP 호출을 전달합니다.",
+    "sceneAlt": "AI Cloud, 오프라인 노트북, StackHub USB 장치와 모바일 기기를 보여주는 연필 스케치."
   },
   "ar": {
     "headline": "قدرات الذكاء الاصطناعي للحواسيب غير المتصلة بالإنترنت.",
@@ -445,6 +463,9 @@
     "alreadyDesc": "أدخل معرّف الجهاز الظاهر في جسر سطح المكتب للانتقال إلى صفحة الخطط.",
     "invalid": "Enter a valid device ID (stackhub- plus 16 characters).",
     "copied": "Link copied.",
-    "failed": "Could not copy automatically; copy it manually."
+    "failed": "Could not copy automatically; copy it manually.",
+    "sceneTitle": "مثال توضيحي لاستخدام StackHub",
+    "sceneCaption": "يرسل الذكاء الاصطناعي الطلبات من شبكة خارجية، بينما يبقى الحاسوب المستهدف غير متصل بالإنترنت مباشرة. ينقل StackHub استدعاءات MCP المصرح بها عبر شبكة Wi-Fi منفصلة وجسر USB.",
+    "sceneAlt": "رسم بقلم الرصاص يوضح سحابة الذكاء الاصطناعي وحاسوباً محمولاً غير متصل بالإنترنت وجهاز StackHub عبر USB وأجهزة محمولة."
   }
 }
