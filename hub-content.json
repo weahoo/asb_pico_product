@@ -51,7 +51,8 @@
     "subAction": "Official subscription checkout",
     "subPending": "Explore StackHub plans and hardware ordering options on the plan page or contact us.",
     "mcpGuideTitle": "Connect your AI client",
-    "mcpGuideTip": "Your email includes two ways to connect: paste the full MCP URL, or use the standard MCP JSON with an Authorization: Bearer header. Choose whichever your AI client supports."
+    "mcpGuideTip": "Your email includes two ways to connect: paste the full MCP URL, or use the standard MCP JSON with an Authorization: Bearer header. Choose whichever your AI client supports.",
+    "sAiTroubleshooting": "If StackHub performs poorly with one AI, first try another MCP-compatible AI client. Tool-call behavior may vary between AI services."
   },
   "zh": {
     "home": "三个 Hub，各司其职。",
@@ -105,7 +106,8 @@
     "subAction": "官网订阅",
     "subPending": "想了解 StackHub 的套餐或选购设备？可查看套餐页面或联系我们。",
     "mcpGuideTitle": "连接 AI 客户端",
-    "mcpGuideTip": "邮件提供两种连接方法：直接使用完整 MCP URL，或使用包含 Authorization: Bearer Header 的标准 MCP JSON。选择你的 AI 客户端支持的方式即可。"
+    "mcpGuideTip": "邮件提供两种连接方法：直接使用完整 MCP URL，或使用包含 Authorization: Bearer Header 的标准 MCP JSON。选择你的 AI 客户端支持的方式即可。",
+    "sAiTroubleshooting": "如果某个 AI 调用 StackHub 时表现不佳，建议优先切换到另一款支持 MCP 的 AI 再试；不同 AI 客户端的工具调用行为可能不同。"
   },
   "ja": {
     "home": "3つの Hub。用途に合わせて。",
@@ -159,7 +161,8 @@
     "subAction": "公式サブスクリプション",
     "subPending": "StackHubのプランや本体の購入については、プランページまたはお問い合わせからご確認ください。",
     "mcpGuideTitle": "AIクライアントの接続",
-    "mcpGuideTip": "メールには完全なMCP URLと、Authorization: Bearer Headerを含む標準MCP JSONの2つが用意されています。対応する方式を選択してください。"
+    "mcpGuideTip": "メールには完全なMCP URLと、Authorization: Bearer Headerを含む標準MCP JSONの2つが用意されています。対応する方式を選択してください。",
+    "sAiTroubleshooting": "あるAIでStackHubの動作が不安定な場合は、まず別のMCP対応AIでお試しください。AIごとにツールの呼び出し動作が異なる場合があります。"
   },
   "de": {
     "home": "Drei Hubs. Drei klare Aufgaben.",
@@ -213,7 +216,8 @@
     "subAction": "Offizielles Abonnement",
     "subPending": "Informationen zu StackHub-Tarifen und Geräten finden Sie auf der Tarifseite oder auf Anfrage.",
     "mcpGuideTitle": "KI-Client verbinden",
-    "mcpGuideTip": "Die E-Mail bietet zwei Optionen: die vollständige MCP-URL oder Standard-MCP-JSON mit Authorization: Bearer Header. Wählen Sie die von Ihrem KI-Client unterstützte Variante."
+    "mcpGuideTip": "Die E-Mail bietet zwei Optionen: die vollständige MCP-URL oder Standard-MCP-JSON mit Authorization: Bearer Header. Wählen Sie die von Ihrem KI-Client unterstützte Variante.",
+    "sAiTroubleshooting": "Wenn StackHub mit einer KI unzuverlässig arbeitet, probieren Sie zuerst einen anderen MCP-kompatiblen KI-Client. Das Verhalten bei Tool-Aufrufen kann variieren."
   },
   "fr": {
     "home": "Trois hubs. Trois usages.",
@@ -267,7 +271,8 @@
     "subAction": "Abonnement officiel",
     "subPending": "Consultez les formules StackHub et les options pour le matériel sur la page des offres ou contactez-nous.",
     "mcpGuideTitle": "Connecter votre client IA",
-    "mcpGuideTip": "Votre e-mail contient deux options : l’URL MCP complète ou le JSON MCP standard avec un en-tête Authorization: Bearer. Choisissez celle compatible avec votre client."
+    "mcpGuideTip": "Votre e-mail contient deux options : l’URL MCP complète ou le JSON MCP standard avec un en-tête Authorization: Bearer. Choisissez celle compatible avec votre client.",
+    "sAiTroubleshooting": "Si StackHub fonctionne mal avec une IA, essayez d’abord un autre client IA compatible MCP. Le comportement des appels d’outils peut varier."
   },
   "ko": {
     "home": "세 가지 Hub, 세 가지 역할.",
@@ -321,7 +326,8 @@
     "subAction": "공식 구독",
     "subPending": "StackHub 요금제와 하드웨어 구매 방법은 요금제 페이지 또는 문의를 통해 확인해 주세요.",
     "mcpGuideTitle": "AI 클라이언트 연결",
-    "mcpGuideTip": "이메일에는 전체 MCP URL과 Authorization: Bearer Header가 포함된 표준 MCP JSON 두 가지 방법이 있습니다. 지원되는 방식을 선택하세요."
+    "mcpGuideTip": "이메일에는 전체 MCP URL과 Authorization: Bearer Header가 포함된 표준 MCP JSON 두 가지 방법이 있습니다. 지원되는 방식을 선택하세요.",
+    "sAiTroubleshooting": "특정 AI에서 StackHub 동작이 원활하지 않다면 먼저 다른 MCP 호환 AI에서 시도해 보세요. AI마다 도구 호출 동작이 다를 수 있습니다."
   },
   "ar": {
     "home": "ثلاثة أجهزة Hub. ثلاث مهام.",
@@ -375,6 +381,7 @@
     "subAction": "الاشتراك الرسمي",
     "subPending": "تعرّف إلى خطط StackHub وخيارات شراء الجهاز في صفحة الخطط أو تواصل معنا.",
     "mcpGuideTitle": "توصيل تطبيق الذكاء الاصطناعي",
-    "mcpGuideTip": "تتضمن الرسالة خيارين: عنوان MCP الكامل، أو إعداد MCP JSON القياسي مع ترويسة Authorization: Bearer. اختر الطريقة التي يدعمها تطبيقك."
+    "mcpGuideTip": "تتضمن الرسالة خيارين: عنوان MCP الكامل، أو إعداد MCP JSON القياسي مع ترويسة Authorization: Bearer. اختر الطريقة التي يدعمها تطبيقك.",
+    "sAiTroubleshooting": "إذا لم يعمل StackHub جيداً مع أحد تطبيقات الذكاء الاصطناعي، فجرّب أولاً تطبيقاً آخر يدعم MCP، فقد تختلف طريقة استدعاء الأدوات بين التطبيقات."
   }
 }

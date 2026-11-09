@@ -1,5 +1,8 @@
 # StackHub landing page. Never collects recovery codes or payment details.
 from html import escape as e
+from pathlib import Path
+import json
+DOWNLOADS = json.loads((Path(__file__).resolve().parents[1] / "stackhub-downloads.json").read_text(encoding="utf8"))["downloads"]
 
 BILLING='https://stackhub-billing.onrender.com/#payment'
 HARDWARE='contact.html?product=stackhub'
@@ -79,7 +82,18 @@ def render(lang,m,c):
    <b aria-hidden="true">→</b><span>USB Bridge</span><b aria-hidden="true">→</b><span>Offline PC / MCP</span>
   </div>
   <ol class="sh-steps">{steps}</ol>
+  <p class="sh-ai-troubleshooting" role="note">{t(m['aiTroubleshooting'])}</p>
   <p class="sh-coming"><strong>{t(m['siri'])}</strong> — {t(m['siriDesc'])}</p>
+ </section>
+ <section class="sh-section sh-downloads" id="downloads-{lang}">
+  <span class="eyebrow">WINDOWS / LINUX / R2</span>
+  <h2>{t(m['downloadTitle'])}</h2>
+  <p>{t(m['downloadDesc'])}</p>
+  <div class="actions sh-download-actions">
+   <a class="btn sh-btn primary sh-main-btn" href="{t(DOWNLOADS['windows-x86_64']['url'])}" rel="noopener noreferrer">{t(m['downloadWindows'])}</a>
+   <a class="btn sh-btn" href="{t(DOWNLOADS['linux-x86_64']['url'])}" rel="noopener noreferrer">{t(m['downloadLinux'])}</a>
+  </div>
+  <p class="sh-download-caution" role="note">{t(m['downloadCaution'])}</p>
  </section>
  <section class="sh-section sh-pricing" id="plans-{lang}"><span class="eyebrow">SOFTWARE PLANS</span>
   <h2>{t(m['priceTitle'])}</h2><p>{t(m['priceIntro'])}</p>
