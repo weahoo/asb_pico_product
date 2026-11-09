@@ -7,18 +7,23 @@
   "r2_url_type": "public-development-rate-limited",
   "downloads": {
     "windows-x86_64": {
-      "run_id": "42654430498",
+      "run_id": "42659988215",
       "filename": "StackHubBridge-OfflineComplete-windows-x86_64.zip",
-      "size_bytes": 78968728,
-      "sha256": "558ef49141570a3ca18029f3db0cd604cf02680e61b92992ba29b1526ecb535c",
-      "url": "https://pub-31faf223c9e441d2941bfc7d9da9e2bd.r2.dev/stackhub/offline-complete/candidates/79a0b56f675c02708cdcd2ceae4591ac944bdb19/runs/42654430498/windows-x86_64/StackHubBridge-OfflineComplete-windows-x86_64.zip"
+      "size_bytes": 103477152,
+      "sha256": "97e8681767c2a780e2353d825fb5e5ec3cee0c55db87ce71db3d67dbd4e7d86b",
+      "url": "https://pub-31faf223c9e441d2941bfc7d9da9e2bd.r2.dev/stackhub/offline-complete/candidates/594198d28430ca38fd699b074a32451d16b0959d/runs/42659988215/windows-x86_64/StackHubBridge-OfflineComplete-windows-x86_64.zip",
+      "source_sha": "594198d28430ca38fd699b074a32451d16b0959d",
+      "tested_exe_sha256": "86112ee20bf97e821daef75daa4304ac1648745e31941b8eec2456a9f93162a9",
+      "exact_field_tested_rc4": true,
+      "offline_bl616_flash_tool_included": true
     },
     "linux-x86_64": {
       "run_id": "42654436870",
       "filename": "StackHubBridge-OfflineComplete-linux-x86_64.tar.gz",
       "size_bytes": 101646927,
       "sha256": "4747dd7f62f54f3308d734afaace6919b5400373844efdb0274b0b1279110d2a",
-      "url": "https://pub-31faf223c9e441d2941bfc7d9da9e2bd.r2.dev/stackhub/offline-complete/candidates/79a0b56f675c02708cdcd2ceae4591ac944bdb19/runs/42654436870/linux-x86_64/StackHubBridge-OfflineComplete-linux-x86_64.tar.gz"
+      "url": "https://pub-31faf223c9e441d2941bfc7d9da9e2bd.r2.dev/stackhub/offline-complete/candidates/79a0b56f675c02708cdcd2ceae4591ac944bdb19/runs/42654436870/linux-x86_64/StackHubBridge-OfflineComplete-linux-x86_64.tar.gz",
+      "source_sha": "79a0b56f675c02708cdcd2ceae4591ac944bdb19"
     }
   }
 }

@@ -70,7 +70,7 @@
     "downloadDesc": "Windows 与 Linux x86_64 离线完整包（RC4 测试候选版），包含便携 Node.js 与默认 Memory MCP。",
     "downloadWindows": "Windows · 离线 ZIP 下载",
     "downloadLinux": "Linux · 离线 TAR.GZ 下载",
-    "downloadCaution": "测试版尚未签名；Windows 云端构建版暂不含 BL616 离线烧录工具。升级前请备份旧目录并保留 managed-mcp。当前 R2 公开开发域名有限速，不建议用于大规模分发。"
+    "downloadCaution": "未签名测试版。Windows 包内含与真机验收版完全一致的 RC4 EXE 和 BL616 离线烧录工具。升级前请备份旧目录并保留 managed-mcp，以保留记忆与配置。R2 公共开发域名有限速。"
   },
   "en": {
     "headline": "Bring AI to offline computers.",
@@ -143,7 +143,7 @@
     "downloadDesc": "Complete offline Windows and Linux x86_64 bundles (RC4 developer candidates) with portable Node.js and default Memory MCP.",
     "downloadWindows": "Windows · Offline ZIP",
     "downloadLinux": "Linux · Offline TAR.GZ",
-    "downloadCaution": "Unsigned preview builds. The Windows cloud-built package currently excludes the BL616 offline flashing utility. Back up your old folder and retain managed-mcp when upgrading. This public R2 development domain is rate-limited."
+    "downloadCaution": "Unsigned preview builds. The Windows package includes the exact field-tested RC4 EXE and the BL616 offline flashing tool. Back up your old folder and preserve managed-mcp to retain Memory and configuration. The public R2 development domain is rate-limited."
   },
   "ja": {
     "headline": "オフラインのPCにもAIの力を。",
@@ -216,7 +216,7 @@
     "downloadDesc": "Windows/Linux x86_64 向けオフライン一式（RC4 開発候補版）。ポータブル Node.js と標準 Memory MCP を含みます。",
     "downloadWindows": "Windows · オフライン ZIP",
     "downloadLinux": "Linux · オフライン TAR.GZ",
-    "downloadCaution": "未署名のテスト版です。Windows のクラウドビルドには BL616 オフライン書き込みツールが含まれません。更新前にフォルダーをバックアップし、managed-mcp を残してください。公開 R2 開発 URL にはレート制限があります。"
+    "downloadCaution": "未署名のテスト版です。Windows パッケージには実機検証済み RC4 EXE と BL616 オフライン書き込みツールが含まれます。更新前にフォルダーをバックアップし、Memory と設定を保つため managed-mcp を残してください。公開 R2 開発 URL にはレート制限があります。"
   },
   "de": {
     "headline": "KI auch für Offline-Computer.",
@@ -289,7 +289,7 @@
     "downloadDesc": "Vollständige Offline-Pakete für Windows und Linux x86_64 (RC4-Entwicklerkandidaten) mit portablem Node.js und Memory MCP.",
     "downloadWindows": "Windows · Offline-ZIP",
     "downloadLinux": "Linux · Offline-TAR.GZ",
-    "downloadCaution": "Nicht signierte Testversionen. Der Windows-Cloud-Build enthält derzeit kein BL616-Offline-Flash-Tool. Vor dem Update den bisherigen Ordner sichern und managed-mcp behalten. Die öffentliche R2-Entwicklungsdomain ist ratenbegrenzt."
+    "downloadCaution": "Nicht signierte Testversionen. Das Windows-Paket enthält die exakt auf echter Hardware geprüfte RC4-EXE und das BL616-Offline-Flash-Tool. Vor dem Update den bisherigen Ordner sichern und managed-mcp für Memory und Konfiguration behalten. Die öffentliche R2-Entwicklungsdomain ist ratenbegrenzt."
   },
   "fr": {
     "headline": "L'IA même sur les ordinateurs hors ligne.",
@@ -362,7 +362,7 @@
     "downloadDesc": "Paquets hors ligne complets pour Windows et Linux x86_64 (candidats RC4) avec Node.js portable et Memory MCP.",
     "downloadWindows": "Windows · ZIP hors ligne",
     "downloadLinux": "Linux · TAR.GZ hors ligne",
-    "downloadCaution": "Versions de test non signées. La version Windows compilée dans le cloud ne contient pas l’outil de flash BL616 hors ligne. Sauvegardez le dossier et conservez managed-mcp avant la mise à jour. Le domaine R2 de développement public est limité en débit."
+    "downloadCaution": "Versions de test non signées. Le paquet Windows inclut l’EXE RC4 identique à celui validé sur le matériel réel et l’outil de flash BL616 hors ligne. Sauvegardez le dossier et conservez managed-mcp pour préserver Memory et la configuration. Le domaine R2 public de développement est limité en débit."
   },
   "ko": {
     "headline": "오프라인 컴퓨터에도 AI 기능을.",
@@ -435,7 +435,7 @@
     "downloadDesc": "휴대용 Node.js와 기본 Memory MCP가 포함된 Windows 및 Linux x86_64 오프라인 전체 패키지(RC4 개발 후보)입니다.",
     "downloadWindows": "Windows · 오프라인 ZIP",
     "downloadLinux": "Linux · 오프라인 TAR.GZ",
-    "downloadCaution": "서명되지 않은 시험용 빌드입니다. Windows 클라우드 빌드에는 현재 BL616 오프라인 플래시 도구가 포함되지 않습니다. 업데이트 전에 폴더를 백업하고 managed-mcp를 보존하세요. 공개 R2 개발 도메인에는 요청 제한이 있습니다."
+    "downloadCaution": "서명되지 않은 시험용 빌드입니다. Windows 패키지에는 실제 장치에서 검증한 RC4 EXE와 BL616 오프라인 플래시 도구가 그대로 포함됩니다. 업데이트 전에 폴더를 백업하고 Memory와 설정을 유지하려면 managed-mcp를 보존하세요. 공개 R2 개발 도메인에는 요청 제한이 있습니다."
   },
   "ar": {
     "headline": "قدرات الذكاء الاصطناعي للحواسيب غير المتصلة بالإنترنت.",
@@ -508,6 +508,6 @@
     "downloadDesc": "حزم كاملة للاستخدام دون اتصال على Windows وLinux x86_64 (نسخ RC4 تجريبية)، تتضمن Node.js محمولاً وMemory MCP الافتراضي.",
     "downloadWindows": "Windows · ملف ZIP دون اتصال",
     "downloadLinux": "Linux · ملف TAR.GZ دون اتصال",
-    "downloadCaution": "نسخ تجريبية غير موقّعة. لا تتضمن نسخة Windows المبنية سحابياً حالياً أداة تفليش BL616 دون اتصال. احفظ نسخة احتياطية من المجلد السابق واحتفظ بـ managed-mcp عند التحديث. نطاق R2 التطويري العام محدود الطلبات."
+    "downloadCaution": "إصدارات تجريبية غير موقّعة. تتضمن حزمة Windows ملف RC4 EXE المطابق تماماً للنسخة المختبرة على الجهاز الحقيقي وأداة تفليش BL616 دون اتصال. احفظ نسخة احتياطية من المجلد السابق واحتفظ بـ managed-mcp للحفاظ على الذاكرة والإعدادات. نطاق R2 التطويري العام محدود الطلبات."
   }
 }

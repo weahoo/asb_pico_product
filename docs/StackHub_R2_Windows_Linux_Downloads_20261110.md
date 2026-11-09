@@ -3,7 +3,9 @@
 Date: 2026-11-10. This documents the exact packages linked on
 visualbuild.shop/stackhub.html and visualbuild.shop/stackhub-guide.html.
 
-Source: weahoo/stackhub-bl616 main commit 79a0b56f675c02708cdcd2ceae4591ac944bdb19.
+Build sources:
+- Windows: weahoo/stackhub-bl616 main 594198d28430ca38fd699b074a32451d16b0959d.
+- Linux: weahoo/stackhub-bl616 main 79a0b56f675c02708cdcd2ceae4591ac944bdb19.
 
 The packages are unsigned, unnotarized developer candidates, not
 commercially frozen builds. Both are on the existing Cloudflare R2 bucket
@@ -13,7 +15,7 @@ setting was changed by this release.
 
 | Platform | GitHub build run | R2 upload run | Archive size | SHA-256 |
 |---|---:|---:|---:|---|
-| windows-x86_64 | 42654430498 | 42655297583 | 78,968,728 bytes | 558ef49141570a3ca18029f3db0cd604cf02680e61b92992ba29b1526ecb535c |
+| windows-x86_64 | 42659988215 | 42664738891 | 103,477,152 bytes | 97e8681767c2a780e2353d825fb5e5ec3cee0c55db87ce71db3d67dbd4e7d86b |
 | linux-x86_64 | 42654436870 | 42654971476 | 101,646,927 bytes | 4747dd7f62f54f3308d734afaace6919b5400373844efdb0274b0b1279110d2a |
 
 ## Verification performed
@@ -24,10 +26,17 @@ setting was changed by this release.
 - The unsigned, nonexpiring public r2.dev object links both returned
   HTTP 200 for HEAD and HTTP 206 for 1-byte range GET. Public links match
   the archive sizes in the original GitHub build manifests.
-- The Windows Actions archive was independently downloaded, its ZIP CRC
-  and SHA-256 checked, extracted into an isolated directory and run with
-  StackHubBridge.exe --offline-self-check and blocked network proxies.
-  Result: Windows x86_64, Node v26.8.1, Memory=9 tools, status=ok.
+- The *previous* Windows Actions archive was independently downloaded and
+  passed its ZIP CRC and isolated offline self-check. It lacked the flasher
+  and is now superseded.
+- The corrected Windows build run 42659988215 passed the native build,
+  verified the pinned BL616 flasher and exact original EXE SHA, assembled
+  the complete offline distribution, ran its offline self-check and wrote
+  a SHA-256 manifest. R2 upload run 42664738891 verified these exact bytes
+  and performed an authenticated GET check. Public R2 HEAD and range GET
+  were also checked. A separate full-download SHA comparison of the new
+  public ZIP has not been completed; avoid claiming independent whole-ZIP
+  verification until the rate-limited public origin can transfer it reliably.
 - The Linux Actions TAR.GZ was independently downloaded and verified;
   native Linux offline self-check passed on the Ubuntu GitHub runner.
 - Website 15 unittest checks passed. Fourteen viewport/language checks
@@ -35,15 +44,18 @@ setting was changed by this release.
 
 ## Difference from the local Windows RC4 build
 
-- Local Windows EXE: 50,799,479 bytes, includes the separately supplied
-  BL616 offline flashing tool. GitHub Actions EXE: 26,223,590 bytes;
-  the flashing utility is not in the Git repository and is not
-  bundled by GitHub Actions. Accordingly the website explicitly warns
-  that the Windows candidate cannot perform that integrated burn path.
-- The builds differ in embedded source metadata, packaging environment,
-  the optional flashing dependency and resulting bytes. Their SHA-256
-  values are not expected to match, and neither build is a substitute
-  for full USB/BL616/cloud 5 MiB commercial end-to-end acceptance.
+- Corrected GitHub Actions Windows distribution carries the *exact*
+  50,799,479-byte, field-tested RC4 EXE (SHA-256
+  86112ee20bf97e821daef75daa4304ac1648745e31941b8eec2456a9f93162a9).
+  The BL616 flashing tool and its config are embedded and checked against
+  five pinned SHA-256 digests. The previously published 26,223,590-byte
+  incomplete candidate has been superseded by build run 42659988215.
+- The Windows executable is byte-for-byte identical to the field-tested
+  local RC4 and includes its flashing dependency. The complete ZIP itself
+  is assembled by the CI runner with a fresh, verified portable-components
+  tree and may have a different ZIP SHA and timestamps from the original
+  local distribution. Both passed the offline Memory self-check.
+  This does not replace full cloud 5 MiB commercial acceptance.
 
 ## Public R2 development URL limitation
 
@@ -56,5 +68,5 @@ setting was changed by this release.
 
 ## Download URL references
 
-- windows-x86_64: https://pub-31faf223c9e441d2941bfc7d9da9e2bd.r2.dev/stackhub/offline-complete/candidates/79a0b56f675c02708cdcd2ceae4591ac944bdb19/runs/42654430498/windows-x86_64/StackHubBridge-OfflineComplete-windows-x86_64.zip
+- windows-x86_64: https://pub-31faf223c9e441d2941bfc7d9da9e2bd.r2.dev/stackhub/offline-complete/candidates/594198d28430ca38fd699b074a32451d16b0959d/runs/42659988215/windows-x86_64/StackHubBridge-OfflineComplete-windows-x86_64.zip
 - linux-x86_64: https://pub-31faf223c9e441d2941bfc7d9da9e2bd.r2.dev/stackhub/offline-complete/candidates/79a0b56f675c02708cdcd2ceae4591ac944bdb19/runs/42654436870/linux-x86_64/StackHubBridge-OfflineComplete-linux-x86_64.tar.gz

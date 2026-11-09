@@ -23,10 +23,22 @@ class R2DownloadsTest(unittest.TestCase):
             self.assertNotIn('X-Amz-',data['url'])
             self.assertIn(platform,data['url'])
             self.assertIn(data['run_id'],data['url'])
-            self.assertIn(RELEASE['source_sha'],data['url'])
+            self.assertIn(data.get('source_sha', RELEASE['source_sha']), data['url'])
             self.assertTrue(data['url'].endswith(data['filename']))
             self.assertEqual(len(data['sha256']),64)
             self.assertGreater(data['size_bytes'],20_000_000)
+
+    def test_windows_is_identical_to_field_tested_rc4(self):
+        win=RELEASE['downloads']['windows-x86_64']
+        self.assertEqual(win['source_sha'],'594198d28430ca38fd699b074a32451d16b0959d')
+        self.assertEqual(win['run_id'],'42659988215')
+        self.assertEqual(win['size_bytes'],103477152)
+        self.assertEqual(win['sha256'],'97e8681767c2a780e2353d825fb5e5ec3cee0c55db87ce71db3d67dbd4e7d86b')
+        self.assertEqual(win['tested_exe_sha256'],'86112ee20bf97e821daef75daa4304ac1648745e31941b8eec2456a9f93162a9')
+        self.assertTrue(win['offline_bl616_flash_tool_included'])
+        self.assertTrue(win['exact_field_tested_rc4'])
+        self.assertNotIn('暂不含 BL616',MARKETING['zh']['downloadCaution'])
+        self.assertNotIn('excludes the BL616',MARKETING['en']['downloadCaution'])
 
     def test_downloads_available_in_both_pages_each_locale(self):
         for d in RELEASE['downloads'].values():
