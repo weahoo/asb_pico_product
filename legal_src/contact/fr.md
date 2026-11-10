@@ -1,35 +1,13 @@
-title: Contact et mentions légales — Flexhub
-description: Comment contacter l’exploitant de Flexhub et de visualbuild.shop, et les informations légales obligatoires sur l’éditeur (mentions légales).
-h1: Contact et mentions légales
-nav: Contact et mentions légales
+title: Contact — VisualBuild
+description: Contactez VisualBuild par e-mail pour les produits, commandes, l’assistance et les renseignements sur le vendeur.
+h1: Nous contacter
+nav: Contact
 ---
-## 1. Contact
-Pour toute question sur Flexhub, les commandes, les retours ou la garantie, écrivez-nous à [Contact email]. Nous répondons généralement sous [Response time] jours ouvrables. Indiquez votre numéro de commande si votre question concerne une commande.
+## Contact par e-mail
+Pour toute question sur les produits, commandes, retours ou l’assistance, écrivez à :
 
-Pour l’aide à la configuration, consultez le [guide d’utilisation](guide.html), qui comprend une section de dépannage.
+[info@visualbuild.me](mailto:info@visualbuild.me)
 
-## 2. Informations sur l’éditeur (mentions légales)
-- [Your full legal name] — Flexhub / visualbuild.shop
-- [Postal address / country]
-- E-mail : [Contact email]
-- Téléphone : [Phone number]
-- Registre du commerce : [Trade registration number, if applicable]
-- Numéro d’identification à la TVA : [VAT ID, if applicable]
-- Responsable du contenu : [Your full legal name], [Postal address / country]
+Pour obtenir le nom, l’adresse, le numéro de téléphone ou d’autres informations légalement requises concernant le vendeur, faites-en la demande par e-mail. Nous vous les transmettrons rapidement, suffisamment avant votre décision de commande.
 
-## 3. Règlement des litiges de consommation
-[Statement on participation in consumer dispute resolution proceedings, as required in your jurisdiction.]
-
-## 4. Informations pour les clients au Japon (loi sur les transactions commerciales spécifiées)
-- Vendeur : [Your full legal name]
-- Adresse : [Postal address / country]
-- Téléphone : [Phone number]
-- E-mail : [Contact email]
-- Prix : indiqué sur chaque page produit et lors du paiement, taxe sur la consommation incluse le cas échéant.
-- Frais supplémentaires : frais d’expédition indiqués lors du paiement ; des droits d’importation et des taxes peuvent s’appliquer, voir la [Politique de livraison](shipping.html).
-- Moyens et moment du paiement : les moyens de paiement indiqués lors du paiement ; le paiement est exigible au moment de la commande.
-- Livraison : voir la [Politique de livraison](shipping.html).
-- Retours et annulations : voir la [Politique de remboursement et de retour](refund.html).
-
-## 5. Responsabilité quant aux contenus et aux liens
-Nous rédigeons le contenu de ce Site avec soin, mais ne pouvons garantir qu’il soit à tout moment complet, exact et à jour. Ce Site contient des liens vers des sites externes ; nous n’avons aucun contrôle sur leur contenu, dont le fournisseur respectif est responsable. Si nous avons connaissance d’une violation, nous supprimerons rapidement le lien concerné.
+Pour une commande, indiquez si possible le produit et le numéro de commande.
