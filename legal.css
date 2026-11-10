@@ -21,3 +21,14 @@ html[lang="en"] article[data-l="en"],html[lang="zh-Hans"] article[data-l="zh"],h
 .legal-back{margin-top:40px}
 [dir="rtl"] .legal-doc{text-align:right}
 @media (max-width:640px){.legal-toc ol{columns:1}.legal-doc h1{font-size:1.7rem}}
+
+/* VisualBuild minimal contact page — no empty personal/business fields. */
+.legal-contact main{max-width:760px;min-height:calc(100vh - 245px);padding-top:72px;padding-bottom:78px}
+.legal-contact .contact-doc h1{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:22px}
+.legal-contact .contact-doc h2{border:0;padding:0;margin:0 0 14px;font-size:1.15rem;color:var(--text)}
+.legal-contact .contact-doc p{line-height:1.75;margin:13px 0;color:var(--muted)}
+.legal-contact .contact-doc p:has(a[href^="mailto:"]){margin:22px 0 26px}
+.legal-contact .contact-doc a[href^="mailto:"]{display:inline-flex;align-items:center;justify-content:center;max-width:100%;padding:13px 21px;background:#5d4d77;color:white;border-radius:999px;font-size:1.04rem;font-weight:700;text-decoration:none;overflow-wrap:anywhere}
+.legal-contact .contact-doc a[href^="mailto:"]:hover{filter:brightness(.92)}
+.legal-contact .legal-back{margin-top:40px}
+@media(max-width:640px){.legal-contact main{padding-top:52px;padding-bottom:56px}.legal-contact .contact-doc h1{font-size:1.9rem}.legal-contact .contact-doc a[href^="mailto:"]{width:100%;padding:14px}}
