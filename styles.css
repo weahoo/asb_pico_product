@@ -236,3 +236,12 @@ footer{border-top:1px solid var(--gray);padding:36px 0 56px;color:var(--muted);b
 .hero-grid-single>div:first-child{max-width:960px}
 .hero-grid-single .lead{max-width:760px}
 @media(max-width:900px){.hero-grid.hero-grid-single{grid-template-columns:minmax(0,1fr)}}
+
+
+/* FlexHub scenario sketch: same framed graphite-on-transparent treatment as StackHub. */
+.flexhub-scenario{display:grid;grid-template-columns:minmax(0,.76fr) minmax(0,1.24fr);gap:20px;align-items:center;border:1px solid #e9e1f4;border-radius:26px;background:linear-gradient(120deg,#f7f3ff,#fff 74%);padding:25px 32px;margin-top:8px;margin-bottom:37px}
+.flexhub-scenario-copy h2{font-size:clamp(22px,2.5vw,31px);line-height:1.25;margin:10px 0 13px;color:#342b43}
+.flexhub-scenario-copy p{color:#605a67;font-size:15px;line-height:1.7;margin:0}
+.flexhub-scenario-art{margin:0;display:flex;align-items:center;justify-content:center;min-width:0}
+.flexhub-scenario-art img{display:block;width:100%;max-width:530px;height:auto;object-fit:contain}
+@media(max-width:900px){.flexhub-scenario{grid-template-columns:1fr;padding:22px 17px;gap:7px;margin-bottom:20px}.flexhub-scenario-copy h2{font-size:23px}.flexhub-scenario-art img{max-width:490px}}
