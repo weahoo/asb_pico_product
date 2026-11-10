@@ -1,4 +1,6 @@
-/* Flexhub legal pages — extends styles.css (same tokens). Generated pages: see tools/build_legal.py */
+/* VisualBuild policy pages — extends styles.css. Generated pages: see tools/build_legal.py */
+/* VisualBuild legal pages: shared purple accent for text links and controls. */
+body.legal{--accent:#5d4d77}
 [data-l]{display:none!important}
 html[lang="en"] [data-l="en"],html[lang="zh-Hans"] [data-l="zh"],html[lang="de"] [data-l="de"],html[lang="fr"] [data-l="fr"],html[lang="ja"] [data-l="ja"],html[lang="ko"] [data-l="ko"],html[lang="ar"] [data-l="ar"]{display:inline!important}
 html[lang="en"] article[data-l="en"],html[lang="zh-Hans"] article[data-l="zh"],html[lang="de"] article[data-l="de"],html[lang="fr"] article[data-l="fr"],html[lang="ja"] article[data-l="ja"],html[lang="ko"] article[data-l="ko"],html[lang="ar"] article[data-l="ar"]{display:block!important}

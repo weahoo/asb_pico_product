@@ -1,33 +1,18 @@
-title: Politique de livraison — Flexhub
-description: Où Flexhub est livré, délais de traitement et de livraison, frais d’expédition, douane et droits d’importation, suivi, et colis perdus ou endommagés.
+title: Politique de livraison — VisualBuild
+description: Livraison du matériel StackHub, FlexHub et TransferHub : régions, coûts et délais.
 h1: Politique de livraison
 nav: Livraison
 ---
-La présente politique explique comment nous expédions les commandes Flexhub passées sur visualbuild.shop. Elle fait partie de nos [Conditions de vente et d’utilisation](terms.html).
-
-## 1. Zones de livraison
-Nous livrons actuellement vers : [Shipping regions]. Si votre pays n’est pas proposé lors du paiement, nous ne pouvons pas encore y livrer.
-
-## 2. Délai de traitement
-Les commandes de Produits en stock sont généralement expédiées dans un délai de [Processing time] jours ouvrables après le paiement. Les précommandes sont expédiées dès que le stock est disponible ; la date d’expédition prévue est indiquée sur le Site et lors du paiement.
-
-## 3. Délai de livraison
-Après l’expédition, la livraison prend généralement [Delivery time estimates by region]. Les délais de livraison sont des estimations et peuvent être plus longs pendant les fêtes, en raison de contrôles douaniers ou pour les zones éloignées.
-
-## 4. Frais d’expédition
-Les frais d’expédition dépendent de la destination et du mode d’envoi ; ils sont indiqués lors du paiement, avant que vous passiez commande.
-
-## 5. Douane, droits et taxes
-Pour les livraisons vers des pays situés hors de [Seller country or customs area], des droits d’importation, des taxes et des frais de dédouanement peuvent s’appliquer. [State whether duties and taxes are included at checkout (DDP) or paid by the recipient on delivery (DAP).] S’ils sont à la charge du destinataire, ils ne sont pas inclus dans nos prix et sont perçus par le transporteur ou l’administration des douanes. Si vous refusez de les payer et que le colis nous est retourné, nous rembourserons le prix d’achat, déduction faite des frais d’expédition et des frais que nous devons régler.
-
-## 6. Transporteurs et suivi
-Nous expédions avec [Shipping carriers]. Lors de l’expédition de votre commande, vous recevrez un e-mail contenant un numéro de suivi.
-
-## 7. Adresse de livraison
-Veuillez vérifier que votre adresse de livraison est complète et correcte. Si vous constatez une erreur, contactez-nous immédiatement ; nous ne pouvons modifier l’adresse qu’avant l’expédition du colis. Si un colis nous est retourné en raison d’une adresse erronée ou parce qu’il n’a pas été retiré, nous pouvons le réexpédier moyennant des frais d’envoi supplémentaires ou rembourser le prix d’achat, déduction faite des frais d’expédition.
-
-## 8. Colis perdus ou endommagés
-Si votre colis n’est pas arrivé dans le délai prévu ou arrive endommagé, contactez-nous à [Contact email] avec votre numéro de commande et, en cas de dommage, des photos du colis et de son contenu. Nous enquêterons avec le transporteur et vous enverrons un remplacement ou vous rembourserons, conformément à vos droits légaux. Pour les consommateurs, nous supportons le risque de perte ou de dommage jusqu’à la livraison du colis.
-
-## 9. Contact
-[Your full legal name], [Postal address / country]. E-mail : [Contact email].
+Cette politique concerne les appareils StackHub, FlexHub et TransferHub. Les services et abonnements numériques StackHub ne font pas l'objet d'une livraison physique. Contact : [info@visualbuild.me](mailto:info@visualbuild.me).
+## 1. Destinations desservies
+Les pays et régions accessibles dépendent du produit et des modalités de transport. Vérifiez les choix au paiement ou demandez-nous avant de commander. Une destination indisponible n'est pas une promesse de livraison future.
+## 2. Préparation et délai de livraison
+Les estimations d'expédition et de réception figurent, lorsqu'elles existent, sur l'offre, au paiement ou dans la confirmation acceptée. Nous n'annonçons pas de délai universel non vérifié. Si aucune estimation n'est donnée, renseignez-vous avant de payer. Les précommandes peuvent être livrées plus tard ; vérifiez la date indiquée.
+## 3. Frais de port, droits et taxes
+Avant de payer, vérifiez les frais de port et les taxes inclus dans le total. Selon la destination, des droits d'importation, frais de douane ou taxes locales peuvent être dus en plus. Leur paiement anticipé ou à l'importation dépend des conditions de votre commande. En cas de doute, contactez-nous avant d'acheter.
+## 4. Adresse et suivi
+Fournissez une adresse complète et exacte et signalez rapidement les corrections. Si le transporteur ou le processus de commande dispose d'un suivi, nous communiquerons les détails disponibles. Les transporteurs et moyens de suivi varient ; aucun transporteur spécifique n'est garanti sauf mention dans la commande.
+## 5. Colis retardés, perdus ou endommagés
+Pour un retard, une perte ou un dommage, envoyez le produit, le numéro de commande et, si possible, des photos à [info@visualbuild.me](mailto:info@visualbuild.me). Nous enquêterons et appliquerons les recours légaux : réparation, remplacement ou remboursement. Les protections impératives contre les risques de livraison restent applicables.
+## 6. Retours et informations sur le vendeur
+Pour les retours et une adresse communiquée par e-mail, consultez les [retours et remboursements](refund.html) et contactez-nous avant l'envoi. Les informations légales sur le vendeur peuvent être demandées via la [page de contact](contact.html). Nous ne publions pas d'adresse postale, de transporteur ou de délai non confirmé.

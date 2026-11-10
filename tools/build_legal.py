@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the Flexhub legal pages (privacy, terms, refund, shipping, contact) in 7 languages.
 
-Source of truth: legal_src/<page>/en.md (English prevails). Translations: legal_src/<page>/<lang>.md
+Source of truth: legal_src/<page>/en.md (template for structural validation). Translations: legal_src/<page>/<lang>.md
 with exactly the same block structure (same headings / paragraphs / list items in the same order,
 same [placeholders] and same link targets). Shared UI strings: legal_src/common.json.
 
@@ -22,7 +22,7 @@ LANG_HTML = {"en": "en", "zh": "zh-Hans", "de": "de", "fr": "fr", "ja": "ja", "k
 PAGES = ["privacy", "terms", "refund", "shipping", "contact"]
 FOOTER = [("guide.html", "f.guide"), ("privacy.html", "f.privacy"), ("terms.html", "f.terms"),
           ("refund.html", "f.refund"), ("shipping.html", "f.shipping"), ("contact.html", "f.contact")]
-UPDATED = "2026-10-10"
+UPDATED = "2026-11-10"
 SITE = "https://visualbuild.shop/"
 INLINE_RX = re.compile(r"\[([^\]\n]+)\]\(([^)\s]+)\)|\[([^\]\n]+)\]|(https?://[^\s<>()]*[^\s<>().,;:!?\u3002\uff0c])|\*\*(.+?)\*\*")
 PH_RX = re.compile(r"\[([^\]\n]+)\](?!\()")
@@ -105,9 +105,8 @@ def render_doc(page, l, meta, blocks, common):
     h.append("<h1>%s</h1>" % inline(meta["h1"]))
     if page != "contact":
         h.append('<p class="updated">%s <time datetime="%s">%s</time></p>' % (html.escape(common["updated"][l]), UPDATED, UPDATED))
-    if l != "en" and page != "contact":
-        h.append('<p class="prevails">%s <a href="%s.html?lang=en" hreflang="en">%s</a></p>' % (
-            html.escape(common["prevails"][l]), page, html.escape(common["enLink"][l])))
+    # Publish the full localized policy without a generic English-prevails notice.
+    # Mandatory consumer rules can override choice-of-language boilerplate.
     h2s = [t for k, t in blocks if k == "h2"]
     if len(h2s) >= 4:
         h.append('<nav class="legal-toc" aria-label="%s"><b>%s</b><ol>' % (html.escape(common["toc"][l]), html.escape(common["toc"][l])))
@@ -153,7 +152,7 @@ def render_page(page, docs, common, lang_select, early_js):
         "ja":"トップページへ","ko":"홈으로","ar":"العودة للرئيسية"}[l])) for l in LANGS)
         if page == "contact" else spans(common, "back"))
     body = "\n".join(render_doc(page, l, docs[l][0], docs[l][1], common) for l in LANGS)
-    brand = "VisualBuild" if page == "contact" else "Flexhub"
+    brand = "VisualBuild"
     tag = ("".join('<span data-l="%s">%s</span>' % (l, html.escape(docs[l][0]["nav"])) for l in LANGS)
            if page == "contact" else spans(common, "brandTag"))
     contact_script = """

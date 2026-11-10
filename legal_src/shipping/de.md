@@ -1,33 +1,18 @@
-title: Versandrichtlinie — Flexhub
-description: Wohin Flexhub geliefert wird, Bearbeitungs- und Lieferzeiten, Versandkosten, Zoll und Einfuhrabgaben, Sendungsverfolgung sowie verlorene oder beschädigte Pakete.
-h1: Versandrichtlinie
+title: Versandbedingungen — VisualBuild
+description: Versand von StackHub, FlexHub und TransferHub: Regionen, Kosten und Lieferung.
+h1: Versandbedingungen
 nav: Versand
 ---
-Diese Richtlinie erläutert, wie wir auf visualbuild.shop aufgegebene Flexhub-Bestellungen versenden. Sie ist Bestandteil unserer [Verkaufs- und Nutzungsbedingungen](terms.html).
-
+Diese Regeln gelten für den Versand physischer Produkte StackHub, FlexHub und TransferHub. Digitale StackHub-Dienste und Abos werden nicht physisch geliefert. Fragen an [info@visualbuild.me](mailto:info@visualbuild.me).
 ## 1. Liefergebiete
-Wir liefern derzeit nach: [Shipping regions]. Wenn Ihr Land beim Bezahlvorgang nicht verfügbar ist, können wir dorthin noch nicht liefern.
-
-## 2. Bearbeitungszeit
-Bestellungen vorrätiger Produkte werden in der Regel innerhalb von [Processing time] Werktagen nach Zahlungseingang versandt. Vorbestellungen werden versandt, sobald Ware verfügbar ist; das voraussichtliche Versanddatum wird auf der Website und beim Bezahlvorgang angezeigt.
-
-## 3. Lieferzeit
-Nach dem Versand dauert die Zustellung in der Regel [Delivery time estimates by region]. Lieferzeiten sind Schätzungen und können sich an Feiertagen, durch Zollkontrollen oder in abgelegenen Gebieten verlängern.
-
-## 4. Versandkosten
-Die Versandkosten hängen vom Bestimmungsort und der Versandart ab und werden beim Bezahlvorgang angezeigt, bevor Sie Ihre Bestellung aufgeben.
-
-## 5. Zoll, Abgaben und Steuern
-Bei Lieferungen in Länder außerhalb von [Seller country or customs area] können Einfuhrzölle, Steuern und Zollabfertigungsgebühren anfallen. [State whether duties and taxes are included at checkout (DDP) or paid by the recipient on delivery (DAP).] Sind sie vom Empfänger zu zahlen, sind sie nicht in unseren Preisen enthalten und werden vom Versandunternehmen oder der Zollbehörde erhoben. Wenn Sie die Zahlung verweigern und das Paket an uns zurückgeht, erstatten wir den Kaufpreis abzüglich der Versandkosten und etwaiger von uns zu zahlender Gebühren.
-
-## 6. Versandunternehmen und Sendungsverfolgung
-Wir versenden mit [Shipping carriers]. Sobald Ihre Bestellung versandt wird, erhalten Sie eine E-Mail mit einer Sendungsnummer.
-
-## 7. Lieferadresse
-Bitte prüfen Sie, ob Ihre Lieferadresse vollständig und korrekt ist. Wenn Sie einen Fehler bemerken, kontaktieren Sie uns sofort; wir können die Adresse nur vor dem Versand des Pakets ändern. Wird ein Paket wegen einer falschen Adresse oder weil es nicht abgeholt wurde zurückgesandt, können wir es gegen eine zusätzliche Versandgebühr erneut versenden oder den Kaufpreis abzüglich der Versandkosten erstatten.
-
-## 8. Verlorene oder beschädigte Pakete
-Wenn Ihr Paket nicht innerhalb der erwarteten Zeit angekommen ist oder beschädigt ankommt, kontaktieren Sie uns unter [Contact email] mit Ihrer Bestellnummer und, bei Beschädigung, Fotos des Pakets und seines Inhalts. Wir klären den Fall mit dem Versandunternehmen und senden Ihnen entsprechend Ihren gesetzlichen Rechten Ersatz oder erstatten den Betrag. Bei Verbrauchern tragen wir das Risiko von Verlust oder Beschädigung bis zur Zustellung des Pakets.
-
-## 9. Kontakt
-[Your full legal name], [Postal address / country]. E-Mail: [Contact email].
+Verfügbare Länder und Regionen hängen vom Produkt und Versandweg ab. Prüfen Sie die Auswahl beim Checkout oder fragen Sie vor der Bestellung an. Nicht verfügbare Ziele werden nicht für die Zukunft zugesagt.
+## 2. Bearbeitung und Lieferzeit
+Voraussichtliche Versand- und Lieferzeiten ergeben sich aus Produktangebot, Checkout oder bestätigter Bestellung, soweit angegeben. Wir geben keine ungeprüften pauschalen Versandtage oder Ankunftsdaten an. Fehlt eine Schätzung, fragen Sie vor Zahlung nach. Vorbestellungen können später ausgeliefert werden; prüfen Sie den angegebenen Termin.
+## 3. Versandkosten, Zoll und Steuern
+Prüfen Sie Versandkosten und enthaltene Steuern im Checkout vor der Zahlung. Je nach Ziel können weitere Einfuhrabgaben, Zollgebühren oder örtliche Steuern entstehen. Ob diese vorausbezahlt oder bei Einfuhr fällig sind, hängt von den für die Bestellung angegebenen Bedingungen ab. Bei Unklarheit fragen Sie vor dem Kauf nach.
+## 4. Adresse und Sendungsverfolgung
+Geben Sie eine vollständige Lieferadresse an und melden Sie erforderliche Änderungen unverzüglich. Sofern Frachtführer oder Bestellprozess Tracking bereitstellen, erhalten Sie die verfügbaren Versandinformationen. Transportdienstleister und Tracking variieren; ein bestimmter Anbieter wird nur bei ausdrücklicher Angabe zugesagt.
+## 5. Verspätete, verlorene oder beschädigte Sendungen
+Bei Verzögerung, Verlust oder Beschädigung senden Sie Produkt, Bestellnummer und möglichst Bilder an [info@visualbuild.me](mailto:info@visualbuild.me). Wir prüfen den Fall und leisten die gesetzlich vorgesehenen Ansprüche wie Reparatur, Ersatz oder Erstattung. Zwingende Verbraucherrechte zum Transportrisiko bleiben bestehen.
+## 6. Rückgabe und Anbieterangaben
+Für Rückgabehinweise und die per E-Mail mitgeteilte Rücksendeadresse beachten Sie die [Rückgabe- und Erstattungsregeln](refund.html) und kontaktieren uns vor dem Versand. Gesetzlich erforderliche Anbieterangaben können über die [Kontaktseite](contact.html) angefragt werden. Ungeprüfte Postadressen, Carrier oder Lieferpläne werden nicht veröffentlicht.
