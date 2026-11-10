@@ -24,8 +24,28 @@ class SiteIndependenceTest(unittest.TestCase):
             self.assertTrue(copy["coreTitle"])
             self.assertIn(copy["headline"],INDEX,language)
             self.assertIn(copy["coreTitle"],INDEX,language)
-        self.assertIn("三款独立产品",HOME["zh"]["headline"])
-        self.assertIn("not three modes",HOME["en"]["lead"])
+        # Buyer-facing messaging explains value without raising an imagined
+        # "one device / three modes" comparison in any language.
+        forbidden=[
+            "并非同一设备", "三种模式", "三款独立产品", "独立硬件产品",
+            "not three modes", "not interchangeable modes", "separate hardware products",
+            "three independent products", "three distinct products",
+            "1台の機器の3モード", "単一製品のモード切替",
+            "keine drei modi", "nicht um austauschbare betriebsarten",
+            "et non trois modes", "ce ne sont pas des modes interchangeables",
+            "세 가지 모드가 아니라", "전환하는 모드가 아닙니다",
+            "وليست ثلاثة أوضاع لجهاز واحد", "أوضاعاً قابلة للتبديل"
+        ]
+        fields=["headline","lead","coreEyebrow","coreTitle","coreDesc",
+                "detailEyebrow","familyTag"]
+        for language,copy in HOME.items():
+            text=" ".join(copy[key] for key in fields).lower()
+            for phrase in forbidden:
+                self.assertNotIn(phrase.lower(),text,f"{language}: {phrase}")
+                self.assertNotIn(phrase.lower(),INDEX.lower(),phrase)
+        self.assertIn("StackHub",HOME["en"]["lead"])
+        self.assertIn("FlexHub",HOME["en"]["lead"])
+        self.assertIn("TransferHub",HOME["en"]["lead"])
         self.assertNotIn("一种设备形态",INDEX)
         self.assertNotIn("One familiar form",INDEX)
         self.assertNotIn("assets/product-illustration.svg",INDEX)

@@ -68,7 +68,9 @@ class FamilyHomeTest(unittest.TestCase):
             '安全审查','Creem','测试环境','测试结账','测试价','测试模式',
             'not a zero-exchange air gap','security review','test checkout',
             'Test mode:','tools/install_host.py','YOUR_URL_ENCODED_KEY',
-            'one board does not run all three'
+            'one board does not run all three',
+            'not three modes', 'not interchangeable modes',
+            '并非同一设备的三种模式', '三款独立硬件产品',
         ]
         for name in public_files:
             markup=(ROOT/name).read_text(encoding='utf-8')
