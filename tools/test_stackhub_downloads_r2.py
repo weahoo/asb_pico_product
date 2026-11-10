@@ -37,8 +37,8 @@ class R2DownloadsTest(unittest.TestCase):
         self.assertEqual(win['tested_exe_sha256'],'86112ee20bf97e821daef75daa4304ac1648745e31941b8eec2456a9f93162a9')
         self.assertTrue(win['offline_bl616_flash_tool_included'])
         self.assertTrue(win['exact_field_tested_rc4'])
-        self.assertNotIn('暂不含 BL616',MARKETING['zh']['downloadCaution'])
-        self.assertNotIn('excludes the BL616',MARKETING['en']['downloadCaution'])
+        self.assertNotIn('downloadDesc',MARKETING['zh'])
+        self.assertNotIn('downloadCaution',MARKETING['en'])
 
     def test_downloads_available_in_both_pages_each_locale(self):
         for d in RELEASE['downloads'].values():
@@ -49,9 +49,19 @@ class R2DownloadsTest(unittest.TestCase):
             self.assertTrue(copy['downloadTitle'])
             self.assertTrue(copy['downloadWindows'])
             self.assertTrue(copy['downloadLinux'])
-            self.assertTrue(copy['downloadCaution'])
+            self.assertNotIn('downloadDesc',copy)
+            self.assertNotIn('downloadCaution',copy)
             self.assertIn(copy['downloadTitle'],STACK)
             self.assertIn(copy['downloadTitle'],SETUP)
+
+    def test_download_copy_is_compact(self):
+        self.assertEqual(MARKETING['zh']['downloadTitle'],'下载 Stackhub 桌面支持应用')
+        self.assertNotIn('WINDOWS / LINUX / R2',STACK)
+        self.assertEqual(STACK.count('WINDOWS / LINUX</span>'),7)
+        for page in (STACK,SETUP):
+            self.assertNotIn('Windows 与 Linux x86_64 离线完整包',page)
+            self.assertNotIn('未签名测试版。Windows 包内含',page)
+            self.assertNotIn('sh-download-caution',page)
 
     def test_ai_fallback_note_every_locale(self):
         self.assertEqual(set(MARKETING),set(GUIDE))

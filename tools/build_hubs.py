@@ -32,7 +32,11 @@ for l,c in packs.items():
   else:
    guidebody+='<section class="section"><h2>'+esc(c['mcpGuideTitle'])+'</h2><p>'+esc(c['mcpGuideTip'])+'</p></section>'
    guidebody+='<section class="section"><p class="stackhub-ai-troubleshooting" role="note">'+esc(c['sAiTroubleshooting'])+'</p></section>'
-   guidebody+='<section class="section sh-guide-downloads"><h2>'+esc(marketing[l]['downloadTitle'])+'</h2><p>'+esc(marketing[l]['downloadDesc'])+'</p><div class="actions"><a class="btn primary" href="'+esc(DOWNLOADS['windows-x86_64']['url'])+'">'+esc(marketing[l]['downloadWindows'])+'</a><a class="btn" href="'+esc(DOWNLOADS['linux-x86_64']['url'])+'">'+esc(marketing[l]['downloadLinux'])+'</a></div><p class="sh-download-caution" role="note">'+esc(marketing[l]['downloadCaution'])+'</p></section>'
+   guidebody+=(
+    '<section class="section sh-guide-downloads"><h2>'+esc(marketing[l]['downloadTitle'])+'</h2>'
+    +'<div class="actions"><a class="btn primary" href="'+esc(DOWNLOADS['windows-x86_64']['url'])+'">'+esc(marketing[l]['downloadWindows'])+'</a>'
+    +'<a class="btn" href="'+esc(DOWNLOADS['linux-x86_64']['url'])+'">'+esc(marketing[l]['downloadLinux'])+'</a></div></section>'
+   )
   guidebody+='<section class="section"><h2>'+esc(c['limits'])+'</h2><p>'+esc(c[stem+'limits'])+'</p></section>'
   pages[name+'-guide'][l]=guidebody
 for name,blocks in pages.items():

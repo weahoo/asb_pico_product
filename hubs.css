@@ -235,6 +235,5 @@ body[class^="page-"] .card{border-radius:24px}
 .sh-landing .sh-downloads{background:#f8f6fd;border:1px solid #e8e0f5;border-radius:22px;padding:28px 30px;margin:0 0 25px}
 .sh-landing .sh-downloads h2{margin:10px 0}
 .sh-landing .sh-download-actions{margin:20px 0}
-.sh-landing .sh-download-caution,.page-stackhub-guide .sh-download-caution{font-size:13px;line-height:1.65;color:#68616e;max-width:850px}
 .page-stackhub-guide .sh-guide-downloads{background:#f8f6fd;border:1px solid #e8e0f5;border-radius:17px;padding:23px}
 @media(max-width:680px){.sh-landing .sh-downloads{padding:21px 18px}.sh-landing .sh-download-actions{display:flex;flex-direction:column;align-items:stretch}}

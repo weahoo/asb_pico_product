@@ -66,11 +66,9 @@
     "sceneCaption": "AI 在外部网络发起请求，目标电脑不必直接接入互联网。StackHub 利用独立 Wi-Fi 和 USB Bridge 转发授权的 MCP 调用。",
     "sceneAlt": "手绘场景：AI Cloud、离线笔记本电脑、StackHub USB 设备与移动终端。",
     "aiTroubleshooting": "如果某个 AI 调用 StackHub 时表现不佳，建议优先切换到另一款支持 MCP 的 AI 再试；不同 AI 客户端的工具调用行为可能不同。",
-    "downloadTitle": "下载 StackHub Bridge",
-    "downloadDesc": "Windows 与 Linux x86_64 离线完整包（RC4 测试候选版），包含便携 Node.js 与默认 Memory MCP。",
+    "downloadTitle": "下载 Stackhub 桌面支持应用",
     "downloadWindows": "Windows · 离线 ZIP 下载",
-    "downloadLinux": "Linux · 离线 TAR.GZ 下载",
-    "downloadCaution": "未签名测试版。Windows 包内含与真机验收版完全一致的 RC4 EXE 和 BL616 离线烧录工具。升级前请备份旧目录并保留 managed-mcp，以保留记忆与配置。R2 公共开发域名有限速。"
+    "downloadLinux": "Linux · 离线 TAR.GZ 下载"
   },
   "en": {
     "headline": "Bring AI to offline computers.",
@@ -139,11 +137,9 @@
     "sceneCaption": "AI sends requests over its network while the target computer stays off the internet. StackHub relays authorized MCP tool calls through separate Wi-Fi and USB Bridge.",
     "sceneAlt": "Pencil sketch showing AI Cloud, an offline laptop, a StackHub USB device and mobile devices.",
     "aiTroubleshooting": "If StackHub performs poorly with one AI, first try another MCP-compatible AI client. Tool-call behavior may vary between AI services.",
-    "downloadTitle": "Download StackHub Bridge",
-    "downloadDesc": "Complete offline Windows and Linux x86_64 bundles (RC4 developer candidates) with portable Node.js and default Memory MCP.",
+    "downloadTitle": "Download the Stackhub Desktop Support App",
     "downloadWindows": "Windows · Offline ZIP",
-    "downloadLinux": "Linux · Offline TAR.GZ",
-    "downloadCaution": "Unsigned preview builds. The Windows package includes the exact field-tested RC4 EXE and the BL616 offline flashing tool. Back up your old folder and preserve managed-mcp to retain Memory and configuration. The public R2 development domain is rate-limited."
+    "downloadLinux": "Linux · Offline TAR.GZ"
   },
   "ja": {
     "headline": "オフラインのPCにもAIの力を。",
@@ -212,11 +208,9 @@
     "sceneCaption": "AIは外部ネットワークから要求を送り、対象PCはインターネットに直接接続しません。StackHubが独立したWi-FiとUSB Bridgeで許可済みのMCP呼び出しを中継します。",
     "sceneAlt": "AI Cloud、オフラインのノートPC、StackHub USBデバイスとモバイル端末の手描き図。",
     "aiTroubleshooting": "あるAIでStackHubの動作が不安定な場合は、まず別のMCP対応AIでお試しください。AIごとにツールの呼び出し動作が異なる場合があります。",
-    "downloadTitle": "StackHub Bridge をダウンロード",
-    "downloadDesc": "Windows/Linux x86_64 向けオフライン一式（RC4 開発候補版）。ポータブル Node.js と標準 Memory MCP を含みます。",
+    "downloadTitle": "Stackhub デスクトップサポートアプリをダウンロード",
     "downloadWindows": "Windows · オフライン ZIP",
-    "downloadLinux": "Linux · オフライン TAR.GZ",
-    "downloadCaution": "未署名のテスト版です。Windows パッケージには実機検証済み RC4 EXE と BL616 オフライン書き込みツールが含まれます。更新前にフォルダーをバックアップし、Memory と設定を保つため managed-mcp を残してください。公開 R2 開発 URL にはレート制限があります。"
+    "downloadLinux": "Linux · オフライン TAR.GZ"
   },
   "de": {
     "headline": "KI auch für Offline-Computer.",
@@ -285,11 +279,9 @@
     "sceneCaption": "KI-Anfragen kommen von außen, während der Zielcomputer offline bleibt. StackHub überträgt autorisierte MCP-Aufrufe über ein eigenes WLAN und die USB Bridge.",
     "sceneAlt": "Bleistiftskizze mit AI Cloud, Offline-Laptop, StackHub-USB-Gerät und Mobilgeräten.",
     "aiTroubleshooting": "Wenn StackHub mit einer KI unzuverlässig arbeitet, probieren Sie zuerst einen anderen MCP-kompatiblen KI-Client. Das Verhalten bei Tool-Aufrufen kann variieren.",
-    "downloadTitle": "StackHub Bridge herunterladen",
-    "downloadDesc": "Vollständige Offline-Pakete für Windows und Linux x86_64 (RC4-Entwicklerkandidaten) mit portablem Node.js und Memory MCP.",
+    "downloadTitle": "Stackhub Desktop-Support-App herunterladen",
     "downloadWindows": "Windows · Offline-ZIP",
-    "downloadLinux": "Linux · Offline-TAR.GZ",
-    "downloadCaution": "Nicht signierte Testversionen. Das Windows-Paket enthält die exakt auf echter Hardware geprüfte RC4-EXE und das BL616-Offline-Flash-Tool. Vor dem Update den bisherigen Ordner sichern und managed-mcp für Memory und Konfiguration behalten. Die öffentliche R2-Entwicklungsdomain ist ratenbegrenzt."
+    "downloadLinux": "Linux · Offline-TAR.GZ"
   },
   "fr": {
     "headline": "L'IA même sur les ordinateurs hors ligne.",
@@ -358,11 +350,9 @@
     "sceneCaption": "L’IA envoie ses requêtes depuis le réseau externe tandis que le PC cible reste hors Internet. StackHub relaie les appels MCP autorisés par un Wi-Fi indépendant et un pont USB.",
     "sceneAlt": "Croquis au crayon montrant AI Cloud, un ordinateur hors ligne, un appareil USB StackHub et des appareils mobiles.",
     "aiTroubleshooting": "Si StackHub fonctionne mal avec une IA, essayez d’abord un autre client IA compatible MCP. Le comportement des appels d’outils peut varier.",
-    "downloadTitle": "Télécharger StackHub Bridge",
-    "downloadDesc": "Paquets hors ligne complets pour Windows et Linux x86_64 (candidats RC4) avec Node.js portable et Memory MCP.",
+    "downloadTitle": "Télécharger l’application de prise en charge Stackhub pour ordinateur",
     "downloadWindows": "Windows · ZIP hors ligne",
-    "downloadLinux": "Linux · TAR.GZ hors ligne",
-    "downloadCaution": "Versions de test non signées. Le paquet Windows inclut l’EXE RC4 identique à celui validé sur le matériel réel et l’outil de flash BL616 hors ligne. Sauvegardez le dossier et conservez managed-mcp pour préserver Memory et la configuration. Le domaine R2 public de développement est limité en débit."
+    "downloadLinux": "Linux · TAR.GZ hors ligne"
   },
   "ko": {
     "headline": "오프라인 컴퓨터에도 AI 기능을.",
@@ -431,11 +421,9 @@
     "sceneCaption": "AI는 외부 네트워크에서 요청하고 대상 PC는 인터넷에 직접 연결되지 않습니다. StackHub가 별도 Wi-Fi와 USB Bridge를 통해 승인된 MCP 호출을 전달합니다.",
     "sceneAlt": "AI Cloud, 오프라인 노트북, StackHub USB 장치와 모바일 기기를 보여주는 연필 스케치.",
     "aiTroubleshooting": "특정 AI에서 StackHub 동작이 원활하지 않다면 먼저 다른 MCP 호환 AI에서 시도해 보세요. AI마다 도구 호출 동작이 다를 수 있습니다.",
-    "downloadTitle": "StackHub Bridge 다운로드",
-    "downloadDesc": "휴대용 Node.js와 기본 Memory MCP가 포함된 Windows 및 Linux x86_64 오프라인 전체 패키지(RC4 개발 후보)입니다.",
+    "downloadTitle": "Stackhub 데스크톱 지원 앱 다운로드",
     "downloadWindows": "Windows · 오프라인 ZIP",
-    "downloadLinux": "Linux · 오프라인 TAR.GZ",
-    "downloadCaution": "서명되지 않은 시험용 빌드입니다. Windows 패키지에는 실제 장치에서 검증한 RC4 EXE와 BL616 오프라인 플래시 도구가 그대로 포함됩니다. 업데이트 전에 폴더를 백업하고 Memory와 설정을 유지하려면 managed-mcp를 보존하세요. 공개 R2 개발 도메인에는 요청 제한이 있습니다."
+    "downloadLinux": "Linux · 오프라인 TAR.GZ"
   },
   "ar": {
     "headline": "قدرات الذكاء الاصطناعي للحواسيب غير المتصلة بالإنترنت.",
@@ -504,10 +492,8 @@
     "sceneCaption": "يرسل الذكاء الاصطناعي الطلبات من شبكة خارجية، بينما يبقى الحاسوب المستهدف غير متصل بالإنترنت مباشرة. ينقل StackHub استدعاءات MCP المصرح بها عبر شبكة Wi-Fi منفصلة وجسر USB.",
     "sceneAlt": "رسم بقلم الرصاص يوضح سحابة الذكاء الاصطناعي وحاسوباً محمولاً غير متصل بالإنترنت وجهاز StackHub عبر USB وأجهزة محمولة.",
     "aiTroubleshooting": "إذا لم يعمل StackHub جيداً مع أحد تطبيقات الذكاء الاصطناعي، فجرّب أولاً تطبيقاً آخر يدعم MCP، فقد تختلف طريقة استدعاء الأدوات بين التطبيقات.",
-    "downloadTitle": "تنزيل StackHub Bridge",
-    "downloadDesc": "حزم كاملة للاستخدام دون اتصال على Windows وLinux x86_64 (نسخ RC4 تجريبية)، تتضمن Node.js محمولاً وMemory MCP الافتراضي.",
+    "downloadTitle": "تنزيل تطبيق دعم Stackhub لسطح المكتب",
     "downloadWindows": "Windows · ملف ZIP دون اتصال",
-    "downloadLinux": "Linux · ملف TAR.GZ دون اتصال",
-    "downloadCaution": "إصدارات تجريبية غير موقّعة. تتضمن حزمة Windows ملف RC4 EXE المطابق تماماً للنسخة المختبرة على الجهاز الحقيقي وأداة تفليش BL616 دون اتصال. احفظ نسخة احتياطية من المجلد السابق واحتفظ بـ managed-mcp للحفاظ على الذاكرة والإعدادات. نطاق R2 التطويري العام محدود الطلبات."
+    "downloadLinux": "Linux · ملف TAR.GZ دون اتصال"
   }
 }
