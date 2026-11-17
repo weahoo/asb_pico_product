@@ -35,7 +35,7 @@ for l,c in packs.items():
    guidebody+=(
     '<section class="section sh-guide-downloads"><h2>'+esc(marketing[l]['downloadTitle'])+'</h2>'
     +'<div class="actions"><a class="btn primary" href="'+esc(DOWNLOADS['windows-x86_64']['url'])+'">'+esc(marketing[l]['downloadWindows'])+'</a>'
-    +'<a class="btn" href="'+esc(DOWNLOADS['linux-x86_64']['url'])+'">'+esc(marketing[l]['downloadLinux'])+'</a></div></section>'
+     +'</div><p>'+esc(marketing[l]['downloadGuideNote'])+'</p></section>'
    )
   guidebody+='<section class="section"><h2>'+esc(c['limits'])+'</h2><p>'+esc(c[stem+'limits'])+'</p></section>'
   pages[name+'-guide'][l]=guidebody

@@ -32,7 +32,7 @@
       "Power on StackHub. Connect your phone to the stackhub hotspot, open http://192.168.78.1/ in a browser and sign in with the device password.",
       "Connect StackHub to your 2.4 GHz Wi-Fi network and activate your device. Save the 24-character recovery code for future use.",
       "Use your recovery code to retrieve your device-specific WSS and MCP connection details, then follow the device page to complete WSS setup.",
-      "Open StackHub Bridge on your computer, connect the device by USB and select it. Add Memory MCP with one click or configure your preferred MCP tools.",
+      "Download and run StackHubBridge.exe on Windows (no ZIP extraction). Connect StackHub by USB, confirm the device is connected in Bridge, then install Memory MCP with the wizard or configure existing MCP tools.",
       "In your MCP-compatible AI client, paste the complete MCP URL, or use the standard JSON + Header configuration provided in your email.",
       "Find and call StackHub tools in your AI client to start working with local tools and saved work memory."
     ],
@@ -87,7 +87,7 @@
       "接通 StackHub 电源。用手机连接 stackhub 热点，在浏览器打开 http://192.168.78.1/，输入设备管理密码。",
       "按照管理页提示连接 2.4 GHz Wi-Fi 并激活设备，妥善保存你的 24 位恢复码。",
       "使用恢复码获取设备专属 WSS 与 MCP 连接信息，并按设备管理页指引完成 WSS 配置。",
-      "在电脑上启动 StackHub Bridge，使用 USB 连接 StackHub，按提示选择设备。可一键添加 Memory MCP，或配置你常用的 MCP 工具。",
+      "在 Windows 下载并运行 StackHubBridge.exe（无需解压 ZIP）。使用 USB 连接 StackHub，确认桌面 Bridge 显示设备已连接后，再按向导一键安装 Memory MCP 或配置已有 MCP 工具。",
       "在支持 MCP 的 AI 客户端粘贴完整 MCP URL；也可使用邮件提供的标准 JSON + Header 配置，任选一种即可。",
       "在 AI 中搜索 StackHub 工具并尝试调用，开始使用你的本地工具和工作记忆。"
     ],
@@ -142,7 +142,7 @@
       "StackHubの電源を入れ、スマホをstackhubのWi-Fiに接続します。ブラウザーで http://192.168.78.1/ を開き、管理パスワードでログインします。",
       "2.4 GHz Wi-Fiを設定してデバイスを有効化し、発行された24文字のリカバリーコードを保存します。",
       "リカバリーコードでデバイス専用WSSとMCPの接続情報を取得し、管理画面の案内に沿ってWSSを設定します。",
-      "PCでStackHub Bridgeを開き、USBで接続してデバイスを選択します。Memory MCPをワンクリックで追加するか、お好みのMCPツールを設定します。",
+      "Windows で StackHubBridge.exe をダウンロードして実行します（ZIP 解凍不要）。StackHub を USB 接続し、Bridge に接続済みと表示されたことを確認してから Memory MCP を追加または設定します。",
       "AIクライアントにはメール記載の完全なMCP URL、またはHeader付きの標準JSONを入力します。",
       "AIからStackHubのツールを検索・実行して使い始めます。"
     ],
@@ -197,7 +197,7 @@
       "StackHub einschalten. Das Smartphone mit dem WLAN stackhub verbinden, http://192.168.78.1/ öffnen und mit dem Gerätepasswort anmelden.",
       "Das 2,4-GHz-WLAN einrichten, das Gerät aktivieren und den 24-stelligen Wiederherstellungscode sicher aufbewahren.",
       "Mit dem Wiederherstellungscode die WSS- und MCP-Verbindungsdaten abrufen und WSS nach Anleitung im Geräteportal einrichten.",
-      "StackHub Bridge auf dem Computer starten, das Gerät per USB verbinden und auswählen. Memory MCP per Klick hinzufügen oder weitere MCP-Tools einrichten.",
+      "Laden Sie StackHubBridge.exe unter Windows herunter und starten Sie die EXE direkt (keine ZIP-Entpackung). Verbinden Sie StackHub per USB und bestätigen Sie die Verbindung in Bridge, bevor Sie Memory MCP installieren oder andere MCP-Tools konfigurieren.",
       "Im MCP-kompatiblen KI-Client die vollständige MCP-URL oder die Standard-JSON-Konfiguration mit Header aus der E-Mail einfügen.",
       "Im KI-Client StackHub-Tools suchen und aufrufen, um loszulegen."
     ],
@@ -252,7 +252,7 @@
       "Allumez StackHub, connectez le téléphone au Wi-Fi stackhub, ouvrez http://192.168.78.1/ et connectez-vous avec le mot de passe de l’appareil.",
       "Configurez le Wi-Fi 2,4 GHz, activez l’appareil et conservez votre code de récupération de 24 caractères.",
       "À l’aide du code, récupérez vos informations de connexion WSS et MCP et suivez les indications de la page de gestion pour configurer WSS.",
-      "Ouvrez StackHub Bridge sur le PC, branchez StackHub en USB et choisissez l’appareil. Ajoutez Memory MCP en un clic ou configurez vos outils MCP.",
+      "Téléchargez puis exécutez StackHubBridge.exe sous Windows (aucune extraction ZIP). Connectez StackHub via USB et vérifiez que Bridge affiche la connexion avant d’installer Memory MCP ou de configurer vos outils MCP.",
       "Dans votre client IA compatible MCP, collez l’URL MCP complète ou la configuration JSON + Header envoyée par e-mail.",
       "Recherchez et utilisez vos outils StackHub depuis le client IA."
     ],
@@ -307,7 +307,7 @@
       "StackHub 전원을 켜고 휴대폰을 stackhub Wi-Fi에 연결합니다. 브라우저에서 http://192.168.78.1/을 열고 기기 암호로 로그인하세요.",
       "2.4 GHz Wi-Fi를 설정하고 기기를 활성화한 다음 24자리 복구 코드를 안전하게 저장하세요.",
       "복구 코드로 전용 WSS와 MCP 연결 정보를 확인하고 기기 관리 화면의 안내에 따라 WSS를 설정하세요.",
-      "PC에서 StackHub Bridge를 실행하고 USB로 연결한 뒤 장치를 선택합니다. Memory MCP를 한 번에 추가하거나 사용할 MCP 도구를 설정하세요.",
+      "Windows에서 StackHubBridge.exe를 다운로드해 바로 실행하세요(ZIP 압축 해제 불필요). USB로 StackHub를 연결하고 Bridge에서 연결 상태를 확인한 후 Memory MCP를 설치하거나 MCP 도구를 설정하세요.",
       "MCP 지원 AI 클라이언트에 이메일의 전체 MCP URL 또는 Header가 포함된 표준 JSON을 입력하세요.",
       "AI에서 StackHub 도구를 검색하고 호출하여 사용을 시작하세요."
     ],
@@ -362,7 +362,7 @@
       "شغّل StackHub ووصل الهاتف بشبكة stackhub، ثم افتح http://192.168.78.1/ في المتصفح وسجّل الدخول بكلمة مرور الجهاز.",
       "اضبط شبكة Wi-Fi بتردد 2.4 GHz وفعّل الجهاز، ثم احتفظ برمز الاستعادة المكوّن من 24 حرفاً.",
       "استخدم رمز الاستعادة للحصول على بيانات WSS وMCP الخاصة بجهازك، واتبع صفحة الإدارة لإعداد WSS.",
-      "افتح StackHub Bridge على الحاسوب، وصِل الجهاز عبر USB واختره. أضف Memory MCP بنقرة واحدة أو اضبط أدوات MCP التي تفضّلها.",
+      "نزّل StackHubBridge.exe وشغّله مباشرة على Windows (لا حاجة لفك ZIP). وصّل StackHub عبر USB وتأكد من ظهور الاتصال في Bridge قبل تثبيت Memory MCP أو إعداد أدوات MCP الأخرى.",
       "في تطبيق الذكاء الاصطناعي المتوافق مع MCP، ألصق عنوان MCP الكامل أو إعداد JSON مع Header الوارد في البريد.",
       "ابحث عن أدوات StackHub في تطبيق الذكاء الاصطناعي وابدأ استخدامها."
     ],
