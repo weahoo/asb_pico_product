@@ -1,6 +1,6 @@
 # Flexhub 
 
-Product marketing site for **Flexhub** (asb_pico_ds5 Wi-Fi hotspot remote / Pico DualSense hub).
+Product marketing site for **Flexhub** (portable USB / Wi-Fi drawing and shortcut controller).
 
 - Brand: Flexhub
 - Manufacturer: visualbuild.me / visualbuild.local
@@ -12,7 +12,7 @@ Product marketing site for **Flexhub** (asb_pico_ds5 Wi-Fi hotspot remote / Pico
 - Storefront copy rule: **no ASB Agent / MCP / AI / Skill / enterprise automation narrative** on customer pages. Product sells shortcuts/macros · mouse · keyboard · USB pressure pen · USB/Bluetooth HID · optional spare remote. SoftAP page is `flexhub.local` / `192.168.4.1` from firmware, not a product brand claim.
 - Messaging pillars: (1) your phone, tablet or computer becomes a **shortcut panel, mouse, keyboard and USB pressure pen**, (2) works with phones, tablets and computers (old or new), (3) no app for everyday use (app only for updates). Remote control is only a small bonus, never the headline.
 - SoftAP firmware referenced on the guide: **0.7.114**.
-- SoftAP **Pen** (digitizer): USB pressure to host. Honest status — Android finger usable; iPad finger works but platform-limited (Apple Pencil pending); active capacitive stylus usually weak. Bluetooth drawing stays mouse-style.
+- SoftAP **Pen** (digitizer): USB pressure to host. Honest status — iPad + Apple Pencil pressure drawing to Windows and Mac has been user-tested over USB Pen mode; application compatibility may vary. Bluetooth drawing stays mouse-style.
 - Two usage modes (confirmed against asb_pico_ds5 firmware `src/main.cpp` chooseLink/startSharedRadio and hotspot UI strings): **USB** — Flexhub plugged into the target device with a USB data cable acts as a USB keyboard/mouse; **Bluetooth** — Flexhub on power only (charger/power bank) advertises as `flexhub` and is paired in the target device's Bluetooth settings. Mode is picked automatically at power-up; replug to switch. In both modes the controlling phone/tablet/computer joins Flexhub's Wi-Fi hotspot (`asb.local`) and uses the web page — no app.
 
 ## Stack
