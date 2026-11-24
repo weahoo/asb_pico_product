@@ -41,6 +41,7 @@ def render(language,m,c):
           f'<a href="#family-{slug}-{language}" class="family-node family-node-{slug} family-summary" '
           f'aria-label="{e(name)}: {e(summary["title"])}">'
           f'<h3>{name}</h3><p class="family-summary-title">{e(summary["title"])}</p>{subtitle}'
+          f'<figure class="hub-paper-art family-paper-art" aria-hidden="true"><img src="assets/{slug}-paper-cut.svg" width="400" height="480" alt="" decoding="async"></figure>'
           f'<ul class="family-summary-points">{bullets}</ul>'
           f'<span class="family-summary-more">{e(m["explore"])} <span aria-hidden="true">↗</span></span></a>')
     nodes.append(

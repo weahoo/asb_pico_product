@@ -48,13 +48,13 @@ def render(lang,m,c):
     warning=t(m['hardwareWarning']).replace('**','')
     return f"""
 <div class="sh-landing" data-stack-lang="{lang}">
- <section class="sh-hero">
+ <section class="sh-hero hub-paper-hero"><div class="hub-paper-copy">
   <span class="eyebrow">STACKHUB / CONTROLLED AI BRIDGE</span>
   <h1>{t(m['headline'])}</h1><p class="sh-subhead">{t(m['subhead'])}</p>
   <p class="lead">{t(m['intro'])}</p>
   <div class="sh-chips">{chips}</div>
   <div class="actions sh-hero-actions">{nav}</div>
- </section>
+ </div><figure class="hub-paper-art" aria-hidden="true"><img src="assets/stackhub-paper-cut.svg" width="400" height="480" alt="" decoding="async"></figure></section>
  <section class="sh-axes">
   <article class="sh-axis"><span class="sh-axis-label">01 / VERTICAL</span><h2>{t(m['vertical'])}</h2>
    <p>{t(m['verticalDesc'])}</p></article>

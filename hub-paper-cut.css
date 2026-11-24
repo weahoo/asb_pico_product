@@ -1,0 +1,11 @@
+/* Shared paper-cut product illustrations. Copy remains accessible HTML. */
+.hub-paper-art{margin:0;display:flex;align-items:center;justify-content:center;min-width:0;background:#fcfaf6;border-radius:20px;padding:16px;box-sizing:border-box}
+.hub-paper-art img{display:block;width:100%;max-width:320px;height:auto;object-fit:contain}
+.family-home .family-paper-art{background:#fcfaf6;margin:12px 0 4px;padding:12px 8px;flex:none;border-radius:12px}
+.family-home .family-paper-art img{width:100%;max-width:300px}
+.family-home .family-summary h3{color:var(--node-color)}
+.family-home .family-summary-points{border-top:1px solid #e5e0d9}
+.sh-landing .sh-hero.hub-paper-hero,.page-transferhub .hero.hub-paper-hero,.hero-grid.hero-grid-single.hub-paper-hero{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(220px,.85fr);gap:clamp(24px,4vw,52px);align-items:center}
+.hub-paper-hero .hub-paper-copy{min-width:0}
+.hub-paper-hero>.hub-paper-art{justify-self:stretch;max-width:400px;width:100%}
+@media(max-width:820px){.sh-landing .sh-hero.hub-paper-hero,.page-transferhub .hero.hub-paper-hero,.hero-grid.hero-grid-single.hub-paper-hero{grid-template-columns:minmax(0,1fr);gap:22px}.hub-paper-hero>.hub-paper-art{justify-self:center;max-width:360px}.hub-paper-art img{max-width:260px}}

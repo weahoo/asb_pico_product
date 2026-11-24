@@ -14,10 +14,10 @@ p,li{overflow-wrap:anywhere}
 /* VisualBuild product family: common geometry, per-product accent only. */
 :root{--hub-accent:#6d43cc;--hub-soft:#f3efff;--hub-border:#e6ddfa;--hub-ink:#292235;--hub-focus:#6d43cc}
 .page-stackhub{--hub-accent:#6d43cc;--hub-soft:#f3efff;--hub-border:#e6ddfa;--hub-ink:#292235;--hub-focus:#6d43cc}
-.page-transferhub,.page-transferhub-guide{--hub-accent:#575b64;--hub-soft:#f2f3f5;--hub-border:#dfe1e5;--hub-ink:#282c33;--hub-focus:#575b64}
+.page-transferhub,.page-transferhub-guide{--hub-accent:#3d713f;--hub-soft:#eef5eb;--hub-border:#d7e5d4;--hub-ink:#28382a;--hub-focus:#3d713f}
 .page-flexhub,.page-guide{--hub-accent:#ff6a1a;--hub-soft:#fff3e6;--hub-border:#f5d7b8;--hub-ink:#3d291d;--hub-focus:#ff6a1a}
 .page-index .product-flexhub{--card-accent:#ff6a1a;--card-soft:#fff3e6}
-.page-index .product-transferhub{--card-accent:#575b64;--card-soft:#f2f3f5}
+.page-index .product-transferhub{--card-accent:#3d713f;--card-soft:#eef5eb}
 .page-index .product-stackhub{--card-accent:#6d43cc;--card-soft:#f3efff}
 .page-index .card{border-radius:24px;border-color:#e6e4e9;transition:border-color .15s,transform .15s}
 .page-index .card:hover{border-color:var(--card-accent);transform:translateY(-2px)}
@@ -108,7 +108,7 @@ body[class^="page-"] .card{border-radius:24px}
 .family-node-arrow{align-self:flex-end;display:inline-flex;align-items:center;justify-content:center;background:var(--node-soft,#f4f3f5);color:var(--node-color,#666);border-radius:100%;width:29px;height:29px;font-size:18px;font-weight:800}
 .family-node-stackhub{--node-color:#6d43cc;--node-soft:#f3efff;border-top:4px solid #6d43cc}
 .family-node-flexhub{--node-color:#ed710d;--node-soft:#fff3e6;border-top:4px solid #ff6a1a}
-.family-node-transferhub{--node-color:#575b64;--node-soft:#f2f3f5;border-top:4px solid #575b64}
+.family-node-transferhub{--node-color:#3d713f;--node-soft:#eef5eb;border-top:4px solid #3d713f}
 .family-node-future{--node-color:#9b94a4;--node-soft:#faf9fb;border:2px dashed #d7d0dc;background:#faf9fb}
 .family-node-future h3{color:#7c7382}
 .family-node-future:hover{transform:none;box-shadow:none;border-color:#d7d0dc}
@@ -121,7 +121,7 @@ body[class^="page-"] .card{border-radius:24px}
 .family-story{--story-color:#6d43cc;--story-soft:#f3efff;display:grid;grid-template-columns:minmax(230px,.76fr) minmax(0,1.24fr);min-height:305px;background:#fff;border:1px solid #e9e5ed;border-radius:28px;overflow:hidden;scroll-margin-top:28px}
 .family-story-stackhub{--story-color:#6d43cc;--story-soft:#f3efff}
 .family-story-flexhub{--story-color:#f47617;--story-soft:#fff2e8}
-.family-story-transferhub{--story-color:#575b64;--story-soft:#f1f2f4}
+.family-story-transferhub{--story-color:#3d713f;--story-soft:#eef5eb}
 .family-story-identity{padding:34px;background:var(--story-soft);display:flex;flex-direction:column;justify-content:center}
 .family-product-index{font-size:12px;letter-spacing:.14em;font-weight:800;color:var(--story-color)}
 .family-mark{margin:28px 0 18px;display:flex;align-items:center;justify-content:center;border:2px solid var(--story-color);background:white;color:var(--story-color);border-radius:22px;font-size:17px;font-weight:850;letter-spacing:.09em;max-width:220px;min-height:82px;padding:12px;text-align:center}
@@ -202,7 +202,7 @@ body[class^="page-"] .card{border-radius:24px}
 .family-home .family-product-badge{display:inline-flex;align-items:center;justify-content:center;min-height:62px;min-width:155px;padding:11px 18px;border-radius:18px;border:2px solid currentColor;background:#fff;font-weight:800;font-size:20px;letter-spacing:-.03em}
 .family-home .family-product-badge-stack{color:#6d43cc;background:#f3efff}
 .family-home .family-product-badge-flex{color:#e56b15;background:#fff3e6}
-.family-home .family-product-badge-transfer{color:#575b64;background:#f3f4f5}
+.family-home .family-product-badge-transfer{color:#3d713f;background:#eef5eb}
 .family-home .family-products-overview .family-device-title strong{font-size:clamp(20px,2.8vw,29px)}
 .family-home .family-products-overview .family-device-note{max-width:730px;font-size:14px;line-height:1.65}
 .family-home .family-node-grid{padding-top:4px}
