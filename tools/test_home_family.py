@@ -32,6 +32,16 @@ class FamilyHomeTest(unittest.TestCase):
                 self.assertTrue(item.get(field),f'{lang}.{field}')
             for name in ['stackPoints','flexPoints','transferPoints']:
                 self.assertEqual(len(item[name]),3,f'{lang}.{name}')
+    def test_summary_cards(self):
+        for lang,item in COPY.items():
+            self.assertEqual(set(item['summaryCards']),{'stackhub','flexhub','transferhub'})
+            for card in item['summaryCards'].values():
+                self.assertTrue(card['title'])
+                self.assertEqual(len(card['points']),4)
+        self.assertEqual(HTML.count('class="family-summary-points"'),21)
+        self.assertEqual(HTML.count('class="family-summary-en"'),3)
+        self.assertEqual(HTML.count('class="family-summary-more"'),21)
+
     def test_product_order_every_locale(self):
         for lang in COPY:
             ids=[f'family-{product}-{lang}' for product in ['stackhub','flexhub','transferhub']]

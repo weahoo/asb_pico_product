@@ -43,7 +43,36 @@
     "guide": "使用指南",
     "getStarted": "开始了解",
     "learnMore": "了解更多",
-    "familyTag": "AI 工具 · 便捷操控 · 文件传输"
+    "familyTag": "AI 工具 · 便捷操控 · 文件传输",
+    "summaryCards": {
+      "stackhub": {
+        "title": "让离线电脑也能使用 AI",
+        "points": [
+          "独立联网，USB 桥接",
+          "连接支持 MCP 的 AI",
+          "自主授权本地工具与数据",
+          "目标电脑无需直接联网"
+        ]
+      },
+      "flexhub": {
+        "title": "口袋里的多功能电脑控制台",
+        "points": [
+          "键盘、鼠标与快捷宏",
+          "USB 与蓝牙双模式",
+          "iPad + Apple Pencil USB 压感",
+          "浏览器操控，无需额外 App"
+        ]
+      },
+      "transferhub": {
+        "title": "口袋里的独立文件交换网络",
+        "points": [
+          "自建热点，无需路由器",
+          "USB 电脑与无线设备双向互传",
+          "跨平台，无需安装应用",
+          "本地传输，不依赖云端"
+        ]
+      }
+    }
   },
   "en": {
     "eyebrow": "VISUALBUILD / THE HUB FAMILY",
@@ -89,7 +118,36 @@
     "guide": "Setup guide",
     "getStarted": "See the lineup",
     "learnMore": "Learn more",
-    "familyTag": "AI TOOLS · EASY CONTROL · FILE SHARING"
+    "familyTag": "AI TOOLS · EASY CONTROL · FILE SHARING",
+    "summaryCards": {
+      "stackhub": {
+        "title": "AI tools for computers that stay offline",
+        "points": [
+          "Independent Wi-Fi and USB Bridge",
+          "Connect MCP-compatible AI",
+          "Choose authorized local tools and data",
+          "Keep the target computer offline"
+        ]
+      },
+      "flexhub": {
+        "title": "Your phone, your universal desktop controller",
+        "points": [
+          "Keyboard, mouse and shortcut macros",
+          "USB and Bluetooth control",
+          "iPad + Apple Pencil pressure over USB",
+          "Use your browser, no extra app"
+        ]
+      },
+      "transferhub": {
+        "title": "Your pocket-sized private file-sharing network",
+        "points": [
+          "Own hotspot, no router required",
+          "Two-way USB computer ↔ Wi-Fi device transfer",
+          "Cross-platform, browser-based",
+          "Local transfer, no cloud relay"
+        ]
+      }
+    }
   },
   "ja": {
     "eyebrow": "VISUALBUILD / HUB シリーズ",
@@ -135,7 +193,36 @@
     "guide": "使い方",
     "getStarted": "製品を見る",
     "learnMore": "詳しく見る",
-    "familyTag": "AIツール · 簡単操作 · ファイル転送"
+    "familyTag": "AIツール · 簡単操作 · ファイル転送",
+    "summaryCards": {
+      "stackhub": {
+        "title": "オフラインPCにもAIツールを",
+        "points": [
+          "独立したWi-FiとUSB Bridge",
+          "MCP対応AIと接続",
+          "許可したローカルツールとデータ",
+          "対象PCの直接ネット接続は不要"
+        ]
+      },
+      "flexhub": {
+        "title": "ポケットサイズのPC操作パネル",
+        "points": [
+          "キーボード・マウス・マクロ",
+          "USB・Bluetooth対応",
+          "USBでApple Pencilの筆圧入力",
+          "ブラウザーで操作、アプリ不要"
+        ]
+      },
+      "transferhub": {
+        "title": "ポケットの中のファイル共有ネットワーク",
+        "points": [
+          "独自のWi-Fi、ルーター不要",
+          "USB PCとWi-Fi機器間で双方向転送",
+          "ブラウザーで異なるOSに対応",
+          "ローカル転送、クラウド中継不要"
+        ]
+      }
+    }
   },
   "de": {
     "eyebrow": "VISUALBUILD / HUB-FAMILIE",
@@ -181,7 +268,36 @@
     "guide": "Anleitung",
     "getStarted": "Produkte ansehen",
     "learnMore": "Mehr erfahren",
-    "familyTag": "KI-TOOLS · EINFACHE STEUERUNG · DATEITRANSFER"
+    "familyTag": "KI-TOOLS · EINFACHE STEUERUNG · DATEITRANSFER",
+    "summaryCards": {
+      "stackhub": {
+        "title": "KI-Tools für Offline-Computer",
+        "points": [
+          "Eigenes WLAN und USB-Bridge",
+          "MCP-kompatible KI verbinden",
+          "Freigegebene lokale Tools und Daten",
+          "Zielrechner bleibt offline"
+        ]
+      },
+      "flexhub": {
+        "title": "Ihre PC-Steuerung für die Hosentasche",
+        "points": [
+          "Tastatur, Maus und Makros",
+          "USB- und Bluetooth-Steuerung",
+          "Apple Pencil mit Druckstufen per USB",
+          "Im Browser, ohne zusätzliche App"
+        ]
+      },
+      "transferhub": {
+        "title": "Ihr privates Dateinetz für die Hosentasche",
+        "points": [
+          "Eigener Hotspot, kein Router nötig",
+          "USB-PC und WLAN-Geräte: beide Richtungen",
+          "Plattformübergreifend im Browser",
+          "Lokaler Transfer ohne Cloud-Umweg"
+        ]
+      }
+    }
   },
   "fr": {
     "eyebrow": "VISUALBUILD / FAMILLE HUB",
@@ -227,7 +343,36 @@
     "guide": "Guide",
     "getStarted": "Voir la gamme",
     "learnMore": "En savoir plus",
-    "familyTag": "OUTILS IA · CONTRÔLE SIMPLE · TRANSFERT DE FICHIERS"
+    "familyTag": "OUTILS IA · CONTRÔLE SIMPLE · TRANSFERT DE FICHIERS",
+    "summaryCards": {
+      "stackhub": {
+        "title": "Des outils IA pour les PC hors ligne",
+        "points": [
+          "Wi-Fi indépendant et pont USB",
+          "Connexion aux IA compatibles MCP",
+          "Outils et données locales autorisés",
+          "Le PC cible reste hors ligne"
+        ]
+      },
+      "flexhub": {
+        "title": "Votre console PC de poche",
+        "points": [
+          "Clavier, souris et macros",
+          "Commande USB et Bluetooth",
+          "Pression Apple Pencil via USB",
+          "Depuis le navigateur, sans application"
+        ]
+      },
+      "transferhub": {
+        "title": "Votre réseau privé de fichiers de poche",
+        "points": [
+          "Point d’accès autonome, sans routeur",
+          "Transfert USB ↔ Wi-Fi dans les deux sens",
+          "Multiplateforme, via le navigateur",
+          "Transfert local, sans relais cloud"
+        ]
+      }
+    }
   },
   "ko": {
     "eyebrow": "VISUALBUILD / HUB 제품군",
@@ -273,7 +418,36 @@
     "guide": "사용 설명서",
     "getStarted": "제품 둘러보기",
     "learnMore": "자세히 보기",
-    "familyTag": "AI 도구 · 간편한 제어 · 파일 전송"
+    "familyTag": "AI 도구 · 간편한 제어 · 파일 전송",
+    "summaryCards": {
+      "stackhub": {
+        "title": "오프라인 PC에서도 AI 도구 활용",
+        "points": [
+          "독립 Wi-Fi 및 USB Bridge",
+          "MCP 호환 AI 연결",
+          "허용한 로컬 도구와 데이터",
+          "대상 PC는 오프라인 유지"
+        ]
+      },
+      "flexhub": {
+        "title": "주머니 속 PC 제어 콘솔",
+        "points": [
+          "키보드, 마우스, 매크로",
+          "USB 및 Bluetooth 제어",
+          "USB로 Apple Pencil 필압 지원",
+          "브라우저로 조작, 별도 앱 불필요"
+        ]
+      },
+      "transferhub": {
+        "title": "주머니 속 개인 파일 공유 네트워크",
+        "points": [
+          "독립 핫스팟, 공유기 불필요",
+          "USB PC와 Wi-Fi 기기 간 양방향 전송",
+          "브라우저 기반 크로스 플랫폼",
+          "클라우드 중계 없는 로컬 전송"
+        ]
+      }
+    }
   },
   "ar": {
     "eyebrow": "VISUALBUILD / عائلة HUB",
@@ -319,6 +493,35 @@
     "guide": "دليل الإعداد",
     "getStarted": "شاهد المنتجات",
     "learnMore": "معرفة المزيد",
-    "familyTag": "أدوات الذكاء الاصطناعي · تحكم سهل · نقل الملفات"
+    "familyTag": "أدوات الذكاء الاصطناعي · تحكم سهل · نقل الملفات",
+    "summaryCards": {
+      "stackhub": {
+        "title": "أدوات الذكاء الاصطناعي للحواسيب غير المتصلة",
+        "points": [
+          "اتصال Wi-Fi مستقل وجسر USB",
+          "اتصال بالذكاء الاصطناعي المتوافق مع MCP",
+          "أدوات وبيانات محلية مصرح بها",
+          "يبقى الحاسوب المستهدف دون اتصال بالإنترنت"
+        ]
+      },
+      "flexhub": {
+        "title": "وحدة تحكم بالحاسوب في جيبك",
+        "points": [
+          "لوحة مفاتيح وفأرة وماكرو",
+          "تحكم عبر USB وBluetooth",
+          "دعم ضغط Apple Pencil عبر USB",
+          "تحكم بالمتصفح دون تطبيق إضافي"
+        ]
+      },
+      "transferhub": {
+        "title": "شبكة خاصة لمشاركة الملفات في جيبك",
+        "points": [
+          "نقطة اتصال مستقلة دون موجّه",
+          "نقل ثنائي الاتجاه بين USB وWi-Fi",
+          "عبر المتصفح وعلى منصات متعددة",
+          "نقل محلي دون وسيط سحابي"
+        ]
+      }
+    }
   }
 }

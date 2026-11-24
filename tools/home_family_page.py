@@ -7,6 +7,13 @@ PRODUCTS=(
   ('transferhub','TransferHub','transferShort','transferPitch','transferPoints','transferNote','Wi-Fi / USB'),
 )
 
+SUMMARY_ICONS={'wifi': '<path d="M2 8.5a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0M8.5 15.5a5.5 5.5 0 0 1 7 0"/><circle cx="12" cy="19" r=".8" fill="currentColor"/>', 'usb': '<path d="M12 22V3m-3 3 3-3 3 3M12 16l-6-5V7m6 12 6-5v-3"/><circle cx="6" cy="5" r="2"/><rect x="16" y="7" width="4" height="4" rx=".5"/>', 'phone': '<rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/>', 'shield': '<path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/>', 'link': '<path d="m10 13 4-4m-6 7-1 1a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0m2 10a4 4 0 0 0 6 0l4-4a4 4 0 0 0-6-6l-1 1"/>', 'tool': '<path d="M14 7a5 5 0 0 0-6-5l3 3-3 3-3-3a5 5 0 0 0 5 6l-7 7a2 2 0 0 0 3 3l7-7a5 5 0 0 0 6-5l-3 3-3-3z"/>', 'monitor': '<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/>', 'keyboard': '<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M6 9h.1m4 0h.1m4 0h.1m4 0h.1M6 13h.1m4 0h.1m4 0h.1m4 0h.1M8 16h8"/>', 'pen': '<path d="m16 3 5 5M3 21l4-1 14-14a2 2 0 0 0-3-3L4 17l-1 4Z"/>', 'browser': '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20m-16-3h.1m3 0h.1"/>'}
+SUMMARY_ORDER={"stackhub":("wifi","link","shield","monitor"),"flexhub":("keyboard","usb","pen","browser"),"transferhub":("wifi","usb","phone","shield")}
+SUMMARY_EN={'stackhub': 'AI tools for computers that stay offline', 'flexhub': 'Your phone, your universal desktop controller', 'transferhub': 'Your pocket-sized private file-sharing network'}
+
+def summary_icon(name):
+    return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+SUMMARY_ICONS[name]+'</svg>'
+
 def link(href,label,primary=False):
     klass='btn family-btn'+(' primary family-btn-primary' if primary else '')
     return f'<a class="{klass}" href="{esc(href,quote=True)}" data-local>{esc(label)}</a>'
@@ -27,12 +34,15 @@ def render(language,m,c):
     )
     nodes=[]
     for index,(slug,name,desc,_,_,_,_) in enumerate(PRODUCTS,1):
+        summary=m['summaryCards'][slug]
+        bullets=''.join(f'<li>{summary_icon(icon)}<span>{e(point)}</span></li>' for icon,point in zip(SUMMARY_ORDER[slug],summary['points']))
+        subtitle=f'<p class="family-summary-en" lang="en" dir="ltr">{e(SUMMARY_EN[slug])}</p>' if language=='zh' else ''
         nodes.append(
-          f'<a href="#family-{slug}-{language}" class="family-node family-node-{slug}" '
-          f'aria-label="{e(name)}: {e(m[desc])}">'
-          f'<span class="family-node-number">{index:02d}</span>'
-          f'<h3>{name}</h3><p>{e(m[desc])}</p>'
-          f'<span class="family-node-arrow" aria-hidden="true">↗</span></a>')
+          f'<a href="#family-{slug}-{language}" class="family-node family-node-{slug} family-summary" '
+          f'aria-label="{e(name)}: {e(summary["title"])}">'
+          f'<h3>{name}</h3><p class="family-summary-title">{e(summary["title"])}</p>{subtitle}'
+          f'<ul class="family-summary-points">{bullets}</ul>'
+          f'<span class="family-summary-more">{e(m["explore"])} <span aria-hidden="true">↗</span></span></a>')
     nodes.append(
       '<div class="family-node family-node-future">'
       '<span class="family-node-number">04</span>'
