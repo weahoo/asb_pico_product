@@ -25,3 +25,14 @@ MCP hardware gateway for controlled AI access to configured local tools on an of
 - Guide: https://visualbuild.shop/stackhub-guide.html
 - Video: https://www.bilibili.com/video/BV1Zi1JzEEG1/
 - China purchase: https://item.taobao.com/item.htm?id=1100848807774
+
+## Chinese solution guides
+- iPad 如何变成电脑压感数位板？: https://visualbuild.shop/solutions/ipad-drawing-tablet.html
+- 如何录制和重放游戏控制杆宏？: https://visualbuild.shop/solutions/game-macro-controller.html
+- 如何用手机制作电脑自定义快捷键？: https://visualbuild.shop/solutions/custom-shortcuts.html
+- Android 和 Windows 如何实现类似 AirDrop 的文件互传？: https://visualbuild.shop/solutions/airdrop-alternative.html
+- 手机和电脑跨平台文件互传怎么做？: https://visualbuild.shop/solutions/cross-platform-file-transfer.html
+- 如何不经过网盘传送手机和电脑文件？: https://visualbuild.shop/solutions/local-file-transfer.html
+- 如何让 AI 调用断网电脑上的本地工具？: https://visualbuild.shop/solutions/offline-computer-mcp.html
+- 本地大模型如何使用 MCP 工具？: https://visualbuild.shop/solutions/local-ai-mcp.html
+- 什么是 MCP 硬件网关？: https://visualbuild.shop/solutions/mcp-hardware-gateway.html
