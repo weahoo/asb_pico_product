@@ -1,9 +1,27 @@
 # VisualBuild Hub products
 
-Three separate devices/firmware workflows, not simultaneous modes on one board.
+Three separate hardware products. Product guides describe setup, compatibility and limitations.
 
-- FlexHub: phone-browser keyboard, mouse, shortcuts, macros and light drawing. Product: https://visualbuild.shop/flexhub.html ; guide: https://visualbuild.shop/guide.html . Game controller support removed for stability. Extended OS text input requires receiver setup; BL616 u4 adds experimental BLE transport, not confirmed application compatibility.
-- TransferHub: bidirectional streaming between a Wi-Fi phone and USB computer browser. Protocol v2 required for reverse transfer. One file/direction at a time, no resume. Configured 4 GiB ceiling is not hardware-validated. Product: https://visualbuild.shop/transferhub.html ; guide: https://visualbuild.shop/transferhub-guide.html ; app: https://visualbuild.shop/transfer/ ; offline ZIP: https://visualbuild.shop/transfer/FlexHub-Offline.zip .
-- StackHub: Chan WSS on the board, backend HTTP MCP through an authenticated USB browser bridge on the computer. Keep bridge page open. Supports URL or mcpServers JSON for one backend. Not board-direct backend access, not stdio, not an internet router. Product: https://visualbuild.shop/stackhub.html ; guide: https://visualbuild.shop/stackhub-guide.html .
+## FlexHub
+iPad + Apple Pencil pressure drawing on Windows and Mac; USB Pen mode, browser shortcuts and macros.
+iPad 与 Apple Pencil 连接电脑绘画，USB Pen 模式支持压感。
+- Product: https://visualbuild.shop/flexhub.html
+- Guide: https://visualbuild.shop/guide.html
+- Video: https://www.bilibili.com/video/BV1ipyUzoExk/
+- China purchase: https://item.taobao.com/item.htm?id=1102448173286
 
-TransferHub and StackHub checkout/prices are not configured; enquiries only. Do not infer hardware acceptance from software tests.
+## TransferHub
+Local cross-platform phone and computer file transfer via browser, Wi-Fi and USB; no cloud relay in local mode.
+手机与电脑跨平台本地文件互传，无需网盘中转。
+- Product: https://visualbuild.shop/transferhub.html
+- Guide: https://visualbuild.shop/transferhub-guide.html
+- Video: https://www.bilibili.com/video/BV1yf17zRE2V/
+- China purchase: https://item.taobao.com/item.htm?id=1103567020238
+
+## StackHub
+MCP hardware gateway for controlled AI access to configured local tools on an offline computer via USB bridge.
+通过 USB 硬件网关，让支持 MCP 的 AI 受控调用离线电脑的本地工具。
+- Product: https://visualbuild.shop/stackhub.html
+- Guide: https://visualbuild.shop/stackhub-guide.html
+- Video: https://www.bilibili.com/video/BV1Zi1JzEEG1/
+- China purchase: https://item.taobao.com/item.htm?id=1100848807774
